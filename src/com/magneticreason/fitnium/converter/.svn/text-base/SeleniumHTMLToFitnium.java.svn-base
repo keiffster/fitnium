@@ -1,0 +1,696 @@
+package com.magneticreason.fitnium.converter;
+/*
+Copyright 2008-9 Keith Sterling
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+
+import org.w3c.dom.*;
+import org.apache.xerces.parsers.DOMParser;
+
+
+public class SeleniumHTMLToFitnium {
+
+	protected HashMap<String, String> commands = new HashMap<String, String> ();
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		System.out.println ( "Warning: This converter is beta quality... be warned\n");
+		
+		if ( args.length < 2 ) {
+			System.out.println ( "Usage java -cp fitnium.jar com.magneticreason.fitnium.converter.BaseFitniumFixtureHTMLToFitnium BaseFitniumFixture_file fitnium_file");
+			return;
+		}
+		
+		String from = args[0];
+		System.out.println ( "Loading : " + from );
+		
+		String to = args[1];
+		System.out.println ( "Creating : " + to );
+
+		boolean verbose = false;
+		
+		if ( args.length == 3 )
+			verbose = Boolean.parseBoolean( args[2] );
+		
+		SeleniumHTMLToFitnium app = new SeleniumHTMLToFitnium ();
+		
+		if ( verbose )
+			System.out.println ( "Loading commands table...");	
+		app.loadCommands();
+		app.convert ( from, to, verbose );
+		
+		System.out.println ( "Done");
+	}
+
+	protected void convert ( String from, String to, boolean verbose ) {
+		try {
+			if ( verbose )
+				System.out.println ( "Loading BaseFitniumFixture table...");
+
+	   		FileWriter fw = new FileWriter ( to );
+			PrintWriter pw = new PrintWriter ( fw );
+
+			this.writePageHeader ( pw );
+			
+            Document doc = loadDocument ( from );
+			
+			if ( verbose )
+				System.out.println ( "Parsing table...");
+			
+			parseTable ( doc, pw, verbose );
+            
+			this.writePageFooter ( pw );
+	
+			pw.close();
+    		fw.close();
+           
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+	}
+
+    protected Document loadDocument ( String from ) throws Exception {
+    	DOMParser parser = new DOMParser();
+        parser.parse(from);
+        return parser.getDocument();    	
+    }
+
+	protected void parseTable ( Document doc, PrintWriter pw, boolean verbose ) throws Exception {
+	    NodeList htmlList = doc.getElementsByTagName("html");
+	    if ( htmlList.getLength() != 1 )
+	    	throw new Exception ( "Invalid HTML, multiple <html> tags" );
+	    Element htmlEl = (Element)htmlList.item(0);
+	    
+	    NodeList  bodyList = htmlEl.getElementsByTagName("body");
+	    if ( bodyList.getLength() != 1 )
+	    	throw new Exception ( "Invalid HTML, multiple <body> tags" );
+	    Element bodyEl = (Element)bodyList.item(0);
+	    
+	    NodeList  tableList = bodyEl.getElementsByTagName("table");
+	    if ( tableList.getLength() != 1 )
+	    	throw new Exception ( "Invalid HTML, <table> missing" );
+	    Element tableEl = (Element)tableList.item(0);
+	    
+	    NodeList  tbodyList = tableEl.getElementsByTagName("tbody");
+	    if ( tbodyList.getLength() != 1 )
+	    	throw new Exception ( "Invalid HTML, <tbody> missing" );
+	    Element tbodyEl = (Element)tbodyList.item(0);
+	    
+	    NodeList  trList = tbodyEl.getElementsByTagName("tr");
+	    for ( int n = 0; n < trList.getLength(); n ++ ) {
+	    	Element trEl = (Element)trList.item(n);
+	    	
+	     	NodeList tdList = trEl.getElementsByTagName("td");
+	    	Element command = (Element)tdList.item(0);            	
+	    	Element target = (Element)tdList.item(1);
+	    	Element value = (Element)tdList.item(2);
+	    	
+	    	this.writeCommand ( pw, command.getTextContent(), target.getTextContent(), value.getTextContent(), verbose );
+	   }
+	}
+	
+	protected void writeCommand ( PrintWriter pw, String command, String target, String value, boolean verbose ) {
+       	
+		String fitCmd = this.parseCommand(command, target, value);
+
+		if ( verbose )
+			System.out.println ( command + " = " + fitCmd );
+		
+    	pw.print ( fitCmd );
+		pw.println ();
+	}
+	
+	protected void writePageHeader ( PrintWriter pw ) {
+		pw.println ();		
+		pw.println ( "!path fitnium.jar" );
+		pw.println ( "!path BaseFitniumFixture-java-client-driver.jar");
+		pw.println ();
+		pw.println ( "!|com.magneticreason.fitnium.BaseFitniumFixture|");
+		pw.println ();
+		pw.println ( "Set up the browser and connect to BaseFitniumFixture");
+		pw.println ();
+		pw.println ( "|The server is located at | localhost |");
+		pw.println ( "|The server is on port | 4444 |");
+		pw.println ( "|Using the browser | *firefox | start at | http://www.google.co.uk |");
+		pw.println ( "|check | is BaseFitniumFixture initialised | true |");
+		pw.println ( "|set speed to |50| milliseconds |");
+		pw.println ( "|set timeout to |50000| milliseconds |");
+		pw.println ( "|write to debug | starting test |");
+		pw.println ();
+		pw.println ();
+	}
+	
+	protected void writePageFooter ( PrintWriter pw ) {
+		pw.println ();
+		pw.println ();
+		pw.println ( "| close the browser |" );
+		pw.println ();
+	}
+
+	protected void createFile ( String file ) throws IOException {
+	    File f=new File( file );
+	    if(!f.exists()){
+	    	f.createNewFile();
+	    }
+	}
+
+	protected String parseCommand ( String command, String target, String value ) {
+
+		String cmd = commands.get( stripAndWait ( command ) );
+		if ( null == cmd )
+			return command + " - unknown command";
+
+		String	str = cmd.replaceAll( "\\!\\{target\\}", target );
+		
+		str = str.replaceAll( "\\!\\{value\\}", value );
+		
+		return str;
+	}
+	
+	protected String stripAndWait ( String str ) {
+		int pos = str.indexOf( "AndWait" );
+		if ( pos >= 0 )
+			return str.substring( 0, pos );
+		else
+			return str;
+	}
+	
+	/**
+	http://spreadsheets.google.com/ccc?key=pq3bDQaoQ3jphqQfHrfKRYw&gid=0
+	*/
+	protected void loadCommands ( ) {
+		
+		commands.put( "open", 							"| starting at URL | !{target} |" );
+		commands.put( "setTimeout", 					"| set timeout to | !{target} |" );
+		commands.put( "setSpeed", 						"| set speed to | !{target} |" );
+		commands.put( "setMouseSpeed", 					"| set mouse speed to | !{target} |" );
+		
+		commands.put( "addLocationStrategy", 			"| add function | !{value} | to location strategy | !{target} |" );
+		commands.put( "allowNativeXpath", 				"| allow native xpath |" );
+		commands.put( "ignoreAttributesWithoutValue", 	"warning: ignoreAttributesWithoutValue - no suitable command" );
+		
+		commands.put( "assignId", 						"| assign element | !{target} | id | !{value} |" );
+		
+		commands.put( "captureEntirePageScreenShot", 	"| capture screen to file | !{target} |" );
+		
+		commands.put( "setBrowserLogLevel",				"| set browser log level | !{target} |" );
+		commands.put( "echo", 							"| write to debug | !{target} |" );
+		commands.put( "pause", 							"| wait for | !{target} | milliseconds |" );
+		commands.put( "fireEvent", 						"| fire event | !{value} | against Element | !{target} |" );
+		
+		commands.put( "openWindow", 					"| open url | !{target} | in window and assign id | !{value} | " );
+		commands.put( "goBack", 						"| press the back button |" );
+		commands.put( "refresh", 						"| press the refresh button |" );
+		commands.put( "close", 							"| close the browser |" );
+		
+		commands.put( "deleteCookie", 					"| delete cookied named | !{target} |" );
+		commands.put( "deleteAllVisibleCookies", 		"warning: deleteAllVisibleCookies - no suitable command" );
+		commands.put( "createCookie", 					"| create cookie named | !{target} | with value | !{value} |" );
+		
+		commands.put( "check", 							"| click checkbox | !{target} |" );
+		commands.put( "uncheck", 						"| unclick checkbox | !{target} |" );
+		
+		commands.put( "select", 						"| select option | !{value} | in list | !{target} |" );
+		commands.put( "addSelection", 					"| add selection option | !{value} | to list | !{target} |" );
+		commands.put( "removeSelection", 				"| remove selection option | !{value} | from list | !{target} |" );
+		commands.put( "removeAllSelections", 			"| remove all selections from list | !{target} |" );
+		
+		commands.put( "type", 							"| enter | !{value} | in input field | !{target} |" );
+		commands.put( "typeKeys", 						"| type |!{value} | in input field | {!target} |" );
+		commands.put( "setCursorPosition", 				"| set cursor at | !{value} | in element | !{target} |" );
+		commands.put( "keyDown", 						"| press key | !{value} | down in element | !{target} |" );
+		commands.put( "keyPress", 						"| press key sequence | !{value} | in element | !{target} |" );
+		commands.put( "keyUp", 							"| release key | !{value} | up in element | !{target} |" );
+		commands.put( "altKeyDown", 					"| while holding the alt key down |" );
+		commands.put( "altKeyUp", 						"| release the alt key |" );
+		commands.put( "controlKeyDown", 				"| while holding the control key down |" );
+		commands.put( "controlKeyUp", 					"| release the control key |" );
+		commands.put( "metaKeyDown", 					"| while holding the meta key down |" );
+		commands.put( "metaKeyUp", 						"| release the meta key |" );
+		commands.put( "shiftKeyDown", 					"| while holding the shift key down |" );
+		commands.put( "shiftKeyUp", 					"| release the shift key |" );
+		
+		commands.put( "click", 							"| click element | !{target} |" );
+		commands.put( "clickAt", 						"| click element | !{target} | at | !{value} | and | !{value} |" );
+		commands.put( "doubleClick", 					"| double click element | !{target} |" );
+		commands.put( "doubleClickAt", 					"| double click element | !{target} | at | !{value} | and | !{value} |" );
+		commands.put( "contextMenu", 					"warning: contextMenu - no suitable command" );
+		commands.put( "contextMenuAt", 					"warning: contextMenuAt - no suitable command" );
+		commands.put( "mouseDown", 						"| click mouse down on element | !{target} |" );
+		commands.put( "mouseDownAt", 					"| click mouse down on element | !{target} | at | !{value} | and | !{value} |" );
+		commands.put( "mouseMove", 						"| move mouse on element | !{target} |" );
+		commands.put( "mouseMoveAt", 					"| move mouse on element | !{target} | at | !{value} | and | !{value} |" );
+		commands.put( "mouseOut", 						"| move mouse out of element | !{target} |" );
+		commands.put( "mouseOver",	 					"| hover mouse over element | !{target} |" );
+		commands.put( "mouseUp", 						"| release mouse up on element | !{target} |" );
+		commands.put( "mouseUpAt", 						"| release mouse up on element | !{target} | at | !{value} | and | !{value} |" );
+		commands.put( "dragAndDrop", 					"| drag element | !{target} | horizontally | !{value} | pixels and vertically | !{value} | pixels |" );
+		commands.put( "dragAndDropToObject", 			"| drag element | !{target} | to element | !{value} | " );
+		
+		commands.put( "submit", 						"| submit form | !{target} |" );
+		commands.put( "selectFrame", 					"| select frame | !{target} |" );
+		commands.put( "selectWindow", 					"| select window with id | !{target} |" );
+		commands.put( "focus", 							"| |" );
+		commands.put( "highlight", 						"| highlight element | !{target} |" );
+		commands.put( "windowFocus", 					"| set focus to currently selected window  |" );
+		commands.put( "windowMaximize", 				"| maximise currently selected window |" );
+		commands.put( "answerOnNextPrompt", 			"| answer on next prompt | !{target} |" );
+		commands.put( "chooseCancelOnNextConfirmation", "| choose cancel on next confirmation |" );
+		commands.put( "chooseOkOnNextConfirmation", 	"| choose ok on next confirmation |" );
+		
+		commands.put( "store", 							"warning: store - no suitable command" );
+		
+		commands.put( "storeAlert", 					"| store alert dialog message in | !{target} |" ); 
+		commands.put( "assertAlert", 					"| check | is alert dialog message | !{target} | true |" );
+		commands.put( "assertNotAlert", 				"| check | is alert dialog message | !{target} | false |" );
+		commands.put( "verifyAlert", 					"| check | is alert dialog message | !{target} | true |" );
+		commands.put( "verifyNotAlert", 				"| check | is alert dialog message | !{target} | false |" ); 
+		commands.put( "waitForAlert", 					"warning: waitForAlert - no suitable command" );
+		commands.put( "waitForNotAlert", 				"warning: waitForNotAlert - no suitable command" );
+ 
+		commands.put( "storeAlertPresent", 				"| store has alert occured in | !{target} |" );
+		commands.put( "assertAlertPresent", 			"| check | has alert occurred | true |" );
+		commands.put( "assertNotAlertPresent", 			"| check | has alert occurred | false |" );
+		commands.put( "verifyAlertPresent", 			"| check | has alert occurred | true |" );  
+		commands.put( "verifyNotAlertPresent", 			"| check | has alert occurred | false |" );  
+		commands.put( "waitForAlertPresent", 			"warning: waitForAlertPresent" );  
+		commands.put( "waitForNotAlertPresent", 		"warning: waitForNotAlertPresent" );
+  
+		commands.put( "storePrompt", 					"| store prompt dialog message in | !{target} |" ); 
+		commands.put( "assertPrompt", 					"| check | is prompt dialog message | !{target} | true |" ); 
+		commands.put( "assertNotPrompt", 				"| check | is prompt dialog message | !{target} | false |" ); 
+		commands.put( "verifyPrompt", 					"| check | is prompt dialog message | !{target} | true |" ); 
+		commands.put( "verifyNotPrompt", 				"| check | is prompt dialog message | !{target} | false |" ); 
+		commands.put( "waitForPrompt", 					"warning: waitForPrompt - no suitable command" ); 
+		commands.put( "waitForNotPrompt", 				"warning: waitForNotPrompt - no suitable command" );
+ 
+		commands.put( "storePromptPresent", 			"| store has prompt occured in | !{target} |" );
+		commands.put( "assertPromptPresent", 			"| check | has prompt occurred | true |" );
+		commands.put( "assertNotPromptPresent", 		"| check | has prompt occurred | false |" );
+		commands.put( "verifyPromptPresent", 			"| check | has prompt occurred | true |" );  
+		commands.put( "verifyNotPromptPresent", 		"| check | has prompt occurred | false |" );  
+		commands.put( "waitForPromptPresent", 			"warning: waitForPromptPresent" );  
+		commands.put( "waitForNotPromptPresent", 		"warning: waitForNotPromptPresent" );
+
+		commands.put( "storeAllButtons", 				"| store all buttons in | !{target} |" ); 
+		commands.put( "assertAllButtons", 				"| check | do buttons with ids exist | !{target} | true |" ); 
+		commands.put( "assertNotAllButtons", 			"| check | do buttons with ids exist | !{target} | false |" ); 
+		commands.put( "verifyAllButtons", 				"| check | do buttons with ids exist | !{target} | true |" ); 
+		commands.put( "verifyNotAllButtons", 			"| check | do buttons with ids exist | !{target} | false |" ); 
+		commands.put( "waitForAllButtons", 				"warning: waitForAllButtons - no suitable command" ); 
+		commands.put( "waitForNotAllButtons", 			"warning: waitForNotAllButtons - no suitable command" );
+ 
+		commands.put( "storeConfirmation", 				"| store confirmation dialog message in | !{target} |" ); 
+		commands.put( "assertConfirmation", 			"| check | is confirmation dialog message | !{target} | true |" );
+		commands.put( "assertNotConfirmation", 			"| check | is confirmation dialog message | !{target} | false |" );
+		commands.put( "verifyConfirmation", 			"| check | is confirmation dialog message | !{target} | true |" );
+		commands.put( "verifyNotConfirmation", 			"| check | is confirmation dialog message | !{target} | false |" ); 
+		commands.put( "waitForConfirmation", 			"warning: waitForConfirmation - no suitable command" );
+		commands.put( "waitForNotConfirmation", 		"warning: waitForNotConfirmation - no suitable command" );
+ 
+		commands.put( "storeConfirmationPresent", 		"| store has Confirmation occured in | !{target} |" );
+		commands.put( "assertConfirmationPresent", 		"| check | has confirmation occurred | true |" );
+		commands.put( "assertNotConfirmationPresent", 	"| check | has confirmation occurred | false |" );
+		commands.put( "verifyConfirmationPresent", 		"| check | has confirmation occurred | true |" );  
+		commands.put( "verifyNotConfirmationPresent", 	"| check | has confirmation occurred | false |" );  
+		commands.put( "waitForConfirmationPresent", 	"warning: waitForConfirmationPresent" );  
+		commands.put( "waitForNotConfirmationPresent", 	"warning: waitForNotConfirmationPresent" );
+
+		commands.put( "storeAllFields", 				"| store all fields in | !{target} |" ); 
+		commands.put( "assertAllFields", 				"| check | do input fields with ids exist | !{target} | true |" ); 
+		commands.put( "assertNotAllFields", 			"| check | do input fields with ids exist | !{target} | false |" ); 
+		commands.put( "verifyAllFields", 				"| check | do input fields with ids exist | !{target} | true |" ); 
+		commands.put( "verifyNotAllFields", 			"| check | do input fields with ids exist | !{target} | false |" ); 
+		commands.put( "waitForAllFields", 				"warning: waitForAllFields - no suitable command" ); 
+		commands.put( "waitForNotAllFields", 			"warning: waitForNotAllFields - no suitable command" );
+ 
+		commands.put( "storeAllLinks", 					"| store all links in | !{target} |" ); 
+		commands.put( "assertAllLinks", 				"| check | do links with ids exist | !{target} | true |" ); 
+		commands.put( "assertNotAllLinks", 				"| check | do links with ids exist | !{target} | false |" ); 
+		commands.put( "verifyAllLinks", 				"| check | do links with ids exist | !{target} | true |" ); 
+		commands.put( "verifyNotAllLinks", 				"| check | do links with ids exist | !{target} | false |" ); 
+		commands.put( "waitForAllLinks", 				"warning: waitForAllLinks - no suitable command" ); 
+		commands.put( "waitForNotAllLinks", 			"warning: waitForNotAllLinks - no suitable command" );
+ 
+		commands.put( "storeAllWindowIds", 				"| store all window ids in | !{target} |" ); 
+		commands.put( "assertAllWindowIds", 			"| check | do windows with ids exist | !{target} | true |" ); 
+		commands.put( "assertNotAllWindowIds", 			"| check | do windows with ids exist | !{target} | false |" ); 
+		commands.put( "verifyAllWindowIds", 			"| check | do windows with ids exist | !{target} | true |" ); 
+		commands.put( "verifyNotAllWindowIds", 			"| check | do windows with ids exist | !{target} | false |" ); 
+		commands.put( "waitForAllWindowIds", 			"warning: waitForAllWindowIds - no suitable command" ); 
+		commands.put( "waitForNotAllWindowIds", 		"warning: waitForNotAllWindowIdsv" );
+ 
+		commands.put( "storeAllWindowNames", 			"| store all window names in | !{target} |" ); 
+		commands.put( "assertAllWindowNames", 			"| check | do windows with names exist | !{target} | true |" ); 
+		commands.put( "assertNotAllWindowNames", 		"| check | do windows with names exist | !{target} | false |" ); 
+		commands.put( "verifyAllWindowNames", 			"| check | do windows with names exist | !{target} | true |" ); 
+		commands.put( "verifyNotAllWindowNames", 		"| check | do windows with names exist | !{target} | false |" ); 
+		commands.put( "waitForAllWindowNames", 			"warning: waitForAllWindowNames - no suitable command" ); 
+		commands.put( "waitForNotAllWindowNames", 		"warning: waitForNotAllWindowNames - no suitable command" );
+ 
+		commands.put( "storeAllWindowTitles", 			"| store all window titles in | !{target} |" ); 
+		commands.put( "assertAllWindowTitles", 			"| check | do windows with titles exist | !{target} | true |" ); 
+		commands.put( "assertNotAllWindowTitles", 		"| check | do windows with titles exist | !{target} | false |" ); 
+		commands.put( "verifyAllWindowTitles", 			"| check | do windows with titles exist | !{target} | true |" ); 
+		commands.put( "verifyNotAllWindowTitles", 		"| check | do windows with titles exist | !{target} | false |" ); 
+		commands.put( "waitForAllWindowTitles", 		"warning: waitForAllWindowTitles - no suitable command" ); 
+		commands.put( "waitForNotAllWindowTitles", 		"warning: waitForNotAllWindowTitles - no suitable command" );
+ 
+		commands.put( "storeAttribute", 				"| store attribute value in | !{target} | " );
+		commands.put( "assertAttribute", 				"| check attribute value is | !{target} | true |" );
+		commands.put( "assertNotAttribute", 			"| check attribute value is | !{target} | true |" );
+		commands.put( "verifyAttribute", 				"| check attribute value is | !{target} | true |" );
+		commands.put( "verifyNotAttribute", 			"| check attribute value is | !{target} | true |" );
+		commands.put( "waitForAttribute", 				"warning: waitForAttribute - no suitable command" );
+		commands.put( "waitForNotAttribute", 			"warning: waitForNotAttribute - no suitable command" );
+
+		commands.put( "storeAttributeFromAllWindows", 		"| store all window attributes in | !{target} |" );
+		commands.put( "assertAttributeFromAllWindows", 		"| check | does attribute | !{target} | with name exists in any window | true |" );
+		commands.put( "assertNotAttributeFromAllWindows",	"| check | does attribute | !{target} | with name exists in any window | false |" );
+		commands.put( "verifyAttributeFromAllWindows", 		"| check | does attribute | !{target} | with name exists in any window | true |" );
+		commands.put( "verifyNotAttributeFromAllWindows", 	"| check | does attribute | !{target} | with name exists in any window | false |" ); 
+		commands.put( "waitForAttributeFromAllWindows", 	"warning: waitForAttributeFromAllWindows - no suitable command" );
+		commands.put( "waitForNotAttributeFromAllWindows", 	"warning: waitForNotAttributeFromAllWindows - no suitable command" );
+
+		commands.put( "storeBodyText", 					"| store body text in | !{target} |" ); 
+		commands.put( "assertBodyText", 				"| check | is body text | true |" ); 
+		commands.put( "assertNotBodyText", 				"| check | is body text | false |" ); 
+		commands.put( "verifyBodyText", 				"| check | is body text | true |" ); 
+		commands.put( "verifyNotBodyText", 				"| check | is body text | false |" ); 
+		commands.put( "waitForBodyText", 				"warning: waitForBodyText - no suitable command" ); 
+		commands.put( "waitForNotBodyText", 			"warning: waitForBodyText - no suitable command" );
+ 
+		commands.put( "storeChecked", 					"| store is radio button | !{target} | checked | in !{value} |" ); 
+		commands.put( "assertChecked", 					"| check | is radio button | !{target} | checked | true |" ); 
+		commands.put( "assertNotChecked", 				"| check | is radio button | !{target} | checked | false |" ); 
+		commands.put( "verifyChecked", 					"| check | is radio button | !{target} | checked | true |" ); 
+		commands.put( "verifyNotChecked", 				"| check | is radio button | !{target} | checked | false |" ); 
+		commands.put( "waitForChecked", 				"warning: waitForChecked - no suitable command" ); 
+		commands.put( "waitForNotChecked", 				"warning: waitForNotChecked - no suitable command" );
+ 
+		commands.put( "storeCookie", 					"| store value of cookie named | !{target} | in | !{value} |" ); 
+		commands.put( "assertCookie", 					"| check | is value of cookie named | !{target} | !{value} | true |" ); 
+		commands.put( "assertNotCookie", 				"| check | is value of cookie named | !{target} | !{value} | false |" ); 
+		commands.put( "verifyCookie", 					"| check | is value of cookie named | !{target} | !{value} | true |" ); 
+		commands.put( "verifyNotCookie", 				"| check | is value of cookie named | !{target} | !{value} | false |" ); 
+		commands.put( "waitForCookie", 					"warning: - no suitable command" ); 
+		commands.put( "waitForNotCookie", 				"warning: - no suitable command" );
+ 
+		commands.put( "storeCookieByName", 				"| store value of cookie named | !{target} | in | !{value} |" ); 
+		commands.put( "assertCookieByName", 			"| check | is value of cookie named | !{target} | !{value} | true |" ); 
+		commands.put( "assertNotCookieByName", 			"| check | is value of cookie named | !{target} | !{value} | false |" ); 
+		commands.put( "verifyCookieByName", 			"| check | is value of cookie named | !{target} | !{value} | true |" ); 
+		commands.put( "verifyNotCookieByName", 			"| check | is value of cookie named | !{target} | !{value} | false |" ); 
+		commands.put( "waitForCookieByName", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotCookieByName", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeCookiePresent", 			"| store is cookie | !{target} |  present in| !{target} |" ); 
+		commands.put( "assertCookiePresent", 			"| check | is cookie | !{target} | present | true |" ); 
+		commands.put( "assertNotCookiePresent", 		"| check | is cookie | !{target} | present | false |" ); 
+		commands.put( "verifyCookiePresent", 			"| check | is cookie | !{target} | present | true |" ); 
+		commands.put( "verifyNotCookiePresent", 		"| check | is cookie | !{target} | present | false |" ); 
+		commands.put( "waitForCookiePresent", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotCookiePresent", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeCursorPosition", 			"| store cursor position in element | !{target} |in | ![target } |" ); 
+		commands.put( "assertCursorPosition", 			"| check | get cursor position in element | !{target} | true |" ); 
+		commands.put( "assertNotCursorPosition", 		"| check | get cursor position in element | !{target} | false |" ); 
+		commands.put( "verifyCursorPosition", 			"| check | get cursor position in element | !{target} | true |" ); 
+		commands.put( "verifyNotCursorPosition", 		"| check | get cursor position in element | !{target} | false |" ); 
+		commands.put( "waitForCursorPosition", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotCursorPosition", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeEditable", 					"| store is input field | !{target} |editable in | !{target} | " ); 
+		commands.put( "assertEditable", 				"| check | is input field | !{target} | editable | true |" ); 
+		commands.put( "assertNotEditable", 				"| check | is input field | !{target} | editable | false |" ); 
+		commands.put( "verifyEditable", 				"| check | is input field | !{target} | editable | true |" ); 
+		commands.put( "verifyNotEditable", 				"| check | is input field | !{target} | editable | false |" ); 
+		commands.put( "waitForEditable", 				"warning: - no suitable command" ); 
+		commands.put( "waitForNotEditable", 			"warning: - no suitable command" );
+ 
+		commands.put( "storeElementIndex", 				"| store index of element | !{target} | in | !{value} |" ); 
+		commands.put( "assertElementIndex", 			"| check | is index of element | !{target} | !{value} | true |" ); 
+		commands.put( "assertNotElementIndex", 			"| check | is index of element | !{target} | !{value} | false |" ); 
+		commands.put( "verifyElementIndex", 			"| check | is index of element | !{target} | !{value} | true |" ); 
+		commands.put( "verifyNotElementIndex", 			"| check | is index of element | !{target} | !{value} | false |" ); 
+		commands.put( "waitForElementIndex", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotElementIndex", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeElementHeight", 			"| store element | !{target} | height in | !{value} |" ); 
+		commands.put( "assertElementHeight", 			"| check | is element | !{target} | height | !{value} | true |" ); 
+		commands.put( "assertNotElementHeight", 		"| check | is element | !{target} | height | !{value} | false |" ); 
+		commands.put( "verifyElementHeight", 			"| check | is element | !{target} | height | !{value} | true |" ); 
+		commands.put( "verifyNotElementHeight", 		"| check | is element | !{target} | height | !{value} | false |" ); 
+		commands.put( "waitForElementHeight", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotElementHeight", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeElementWidth", 				"| store element | !{target} | width in | !{value} |" ); 
+		commands.put( "assertElementWidth", 			"| check | is element | !{target} | width | !{value} | true |" ); 
+		commands.put( "assertNotElementWidth", 			"| check | is element | !{target} | width | !{value} | false |" ); 
+		commands.put( "verifyElementWidth", 			"| check | is element | !{target} | width | !{value} | true |" ); 
+		commands.put( "verifyNotElementWidth", 			"| check | is element | !{target} | width | !{value} | false |" ); 
+		commands.put( "waitForElementWidth", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotElementWidth", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeElementPositionLeft", 		"| store left position of element | !{target} | in | !{value} |" ); 
+		commands.put( "assertElementPositionLeft", 		"| check | is left position of element | !{target} | !{value} | true |" ); 
+		commands.put( "assertNotElementPositionLeft", 	"| check | is left position of element | !{target} | !{value} | false |" ); 
+		commands.put( "verifyElementPositionLeft", 		"| check | is left position of element | !{target} | !{value} | true |" ); 
+		commands.put( "verifyNotElementPositionLeft", 	"| check | is left position of element | !{target} | !{value} | false |" ); 
+		commands.put( "waitForElementPositionLeft", 	"warning: - no suitable command" ); 
+		commands.put( "waitForNotElementPositionLeft", 	"warning: - no suitable command" );
+ 
+		commands.put( "storeElementPositionTop", 		"| store top position of element | !{target} | in | !{value} |" ); 
+		commands.put( "assertElementPositionTop", 		"| check | is top position of element | !{target} | !{value} | true |" ); 
+		commands.put( "assertNotElementPositionTop", 	"| check | is top position of element | !{target} | !{value} | false |" ); 
+		commands.put( "verifyElementPositionTop", 		"| check | is top position of element | !{target} | !{value} | true |" ); 
+		commands.put( "verifyNotElementPositionTop", 	"| check | is top position of element | !{target} | !{value} | false |" ); 
+		commands.put( "waitForElementPositionTop", 		"warning: - no suitable command" ); 
+		commands.put( "waitForNotElementPositionTop", 	"warning: - no suitable command" );
+ 
+		commands.put( "storeElementPresent", 			"| store is element | !{target} | present in | !{value} |" ); 
+		commands.put( "assertElementPresent", 			"| check | is element | !{target} | present | true |" ); 
+		commands.put( "assertElementNotPresent", 		"| check | is element | !{target} | present | false |" ); 
+		commands.put( "verifyElementPresent", 			"| check | is element | !{target} | present | true |" ); 
+		commands.put( "verifyElementNotPresent", 		"| check | is element | !{target} | present | false |" ); 
+		commands.put( "waitForElementPresent", 			"| wait for element | !{target} | present |" ); 
+		commands.put( "waitForElementNotPresent", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeEval", 						"warning: - no suitable command" ); 
+		commands.put( "assertEval", 					"warning: - no suitable command" ); 
+		commands.put( "assertNotEval", 					"warning: - no suitable command" ); 
+		commands.put( "verifyEval", 					"warning: - no suitable command" );
+		commands.put( "verifyNotEval", 					"warning: - no suitable command" ); 
+		commands.put( "waitForEval", 					"warning: - no suitable command" ); 
+		commands.put( "waitForNotEval", 				"warning: - no suitable command" );
+ 
+		commands.put( "storeExpression", 				"warning: - no suitable command" );
+		commands.put( "assertExpression", 				"warning: - no suitable command" ); 
+		commands.put( "assertNotExpression", 			"warning: - no suitable command" ); 
+		commands.put( "verifyExpression", 				"warning: - no suitable command" ); 
+		commands.put( "verifyNotExpression", 			"warning: - no suitable command" ); 
+		commands.put( "waitForExpression", 				"warning: - no suitable command" ); 
+		commands.put( "waitForNotExpression", 			"warning: - no suitable command" );
+ 
+		commands.put( "storeHtmlSource", 				"warning: storeHtmlSource - no suitable command" ); 
+		commands.put( "assertHtmlSource", 				"warning: assertHtmlSource - no suitable command" ); 
+		commands.put( "assertNotHtmlSource", 			"warning: assertNotHtmlSource - no suitable command" ); 
+		commands.put( "verifyHtmlSource", 				"warning: verifyHtmlSource - no suitable command" ); 
+		commands.put( "verifyNotHtmlSource", 			"warning: verifyNotHtmlSource - no suitable command" ); 
+		commands.put( "waitForHtmlSource", 				"warning: waitForHtmlSource - no suitable command" ); 
+		commands.put( "waitForNotHtmlSource", 			"warning: waitForNotHtmlSource - no suitable command" );
+ 
+		commands.put( "storeLocation", 					"| store absolute url of current page | in | !{value} |" ); 
+		commands.put( "assertLocation", 				"| check | is absolute url of current page | !{target} | true |" ); 
+		commands.put( "assertNotLocation", 				"| check | is absolute url of current page | !{target} | false |" ); 
+		commands.put( "verifyLocation", 				"| check | is absolute url of current page | !{target} | true |" ); 
+		commands.put( "verifyNotLocation", 				"| check | is absolute url of current page | !{target} | false |" );
+		commands.put( "waitForLocation", 				"warning: - no suitable command" ); 
+		commands.put( "waitForNotLocation", 			"warning: - no suitable command" ); 
+ 
+		commands.put( "storeOrdered", 					"warning: storeOrdered - no suitable command" ); 
+		commands.put( "assertOrdered", 					"warning: assertOrdered - no suitable command" );
+		commands.put( "assertNotOrdered", 				"warning: assertNotOrdered - no suitable command" );
+		commands.put( "verifyOrdered", 					"warning: verifyOrdered - no suitable command" );
+		commands.put( "verifyNotOrdered", 				"warning: verifyNotOrdered - no suitable command" );
+		commands.put( "waitForOrdered", 				"warning: waitForOrdered - no suitable command" );
+		commands.put( "waitForNotOrdered", 				"warning: waitForNotOrdered - no suitable command" );
+
+		commands.put( "storeSelectedId", 				"| store List | !{target} | selected item id in | !{value} |" ); 
+		commands.put( "assertSelectedId", 				"| check | is list | !{target} | selected item id | !{target} | true |" ); 
+		commands.put( "assertNotSelectedId", 			"| check | is list | !{target} | selected item id | !{target} | false |" );  
+		commands.put( "verifySelectedId", 				"| check | is list | !{target} | selected item id | !{target} | true |" ); 
+		commands.put( "verifyNotSelectedId", 			"| check | is list | !{target} | selected item id | !{target} | false |" ); 
+		commands.put( "waitForSelectedId", 				"warning: - no suitable command" ); 
+		commands.put( "waitForNotSelectedId", 			"warning: - no suitable command" );
+ 
+		commands.put( "storeSelectedIds", 				"| store list | !{target} | selected item ids in | !{value} |" ); 
+		commands.put( "assertSelectedIds", 				"| check | are list | !{target} | selected item ids | !{value} | true |" ); 
+		commands.put( "assertNotSelectedIds", 			"| check | are list | !{target} | selected item ids | !{value} | false |" ); 
+		commands.put( "verifySelectedIds", 				"| check | are list | !{target} | selected item ids | !{value} | true |" ); 
+		commands.put( "verifyNotSelectedIds", 			"| check | are list | !{target} | selected item ids | !{value} | false |" ); 
+		commands.put( "waitForSelectedIds", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotSelectedIds", 			"warning: - no suitable command" );
+ 
+		commands.put( "storeSelectedIndex", 			"| store list | !{target} | selected item index in | !{value} |" ); 
+		commands.put( "assertSelectedIndex", 			"| check | is list| !{target} | selected item index | !{target} | true |" ); 
+		commands.put( "assertNotSelectedIndex", 		"| check | is list| !{target} | selected item index | !{target} | false |" ); 
+		commands.put( "verifySelectedIndex", 			"| check | is list| !{target} | selected item index | !{target} | true |" ); 
+		commands.put( "verifyNotSelectedIndex", 		"| check | is list| !{target} | selected item index | !{target} | false |" ); 
+		commands.put( "waitForSelectedIndex", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotSelectedIndex", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeSelectedIndexes", 			"| store ist | !{target} | selected item indexes in | !{value} |" ); 
+		commands.put( "assertSelectedIndexes", 			"| check | are list | !{target} | selected item indexes | !{value} | true |" ); 
+		commands.put( "assertNotSelectedIndexes", 		"| check | are list | !{target} | selected item indexes | !{value} | false |" ); 
+		commands.put( "verifySelectedIndexes", 			"| check | are list | !{target} | selected item indexes | !{value} | true |" ); 
+		commands.put( "verifyNotSelectedIndexes", 		"| check | are list | !{target} | selected item indexes | !{value} | false |" ); 
+		commands.put( "waitForSelectedIndexes", 		"warning: - no suitable command" ); 
+		commands.put( "waitForNotSelectedIndexes", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeSelectedLabel", 			"| store list | !{target} | selected item label in | !{value} |" ); 
+		commands.put( "assertSelectedLabel", 			"| check | is list | !{target} | selected item label | !{target} | true |" ); 
+		commands.put( "assertNotSelectedLabel", 		"| check | is list | !{target} | selected item label | !{target} | false |" ); 
+		commands.put( "verifySelectedLabel", 			"| check | is list | !{target} | selected item label | !{target} | true |" ); 
+		commands.put( "verifyNotSelectedLabel", 		"| check | is list | !{target} | selected item label | !{target} | false |" ); 
+		commands.put( "waitForSelectedLabel", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotSelectedLabel", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeSelectedLabels", 			"| store list | !{target} | selected item labels in | !{value} |" ); 
+		commands.put( "assertSelectedLabels", 			"| check | are list | !{target} | selected item labels | !{value} | true |" ); 
+		commands.put( "assertNotSelectedLabels", 		"| check | are list | !{target} | selected item labels | !{value} | false |" ); 
+		commands.put( "verifySelectedLabels", 			"| check | are list | !{target} | selected item labels | !{value} | true |" ); 
+		commands.put( "verifyNotSelectedLabels", 		"| check | are list | !{target} | selected item labels | !{value} | false |" ); 
+		commands.put( "waitForSelectedLabels", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotSelectedLabels", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeSelectedValue", 			"| store list | !{target} | selected item value in | !{value} |" ); 
+		commands.put( "assertSelectedValue", 			"| check | is list| !{target} | selected value id | !{target} | true |" ); 
+		commands.put( "assertNotSelectedValue", 		"| check | is list| !{target} | selected value id | !{target} | false |" ); 
+		commands.put( "verifySelectedValue", 			"| check | is list| !{target} | selected value id | !{target} | true |" ); 
+		commands.put( "verifyNotSelectedValue", 		"| check | is list| !{target} | selected value id | !{target} | false |" ); 
+		commands.put( "waitForSelectedValue", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotSelectedValue", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeSelectedValues", 			"| store list | !{target} | selected item values in | !{value} |" ); 
+		commands.put( "assertSelectedValues", 			"| check | are list | !{target} | selected item values | !{value} | true |" ); 
+		commands.put( "assertNotSelectedValues", 		"| check | are list | !{target} | selected item values | !{value} | false |" ); 
+		commands.put( "verifySelectedValues", 			"| check | are list | !{target} | selected item values | !{value} | true |" ); 
+		commands.put( "verifyNotSelectedValues", 		"| check | are list | !{target} | selected item values | !{value} | false |" ); 
+		commands.put( "waitForSelectedValues", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotSelectedValues", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeSelectOptions", 			"| store list | !{target} | selected item options in | !{value} |" ); 
+		commands.put( "assertSelectOptions", 			"| check | are list | !{target} | selected item options | !{value} | true |" ); 
+		commands.put( "assertNotSelectOptions", 		"| check | are list | !{target} | selected item options | !{value} | false |" ); 
+		commands.put( "verifySelectOptions", 			"| check | are list | !{target} | selected item options | !{value} | true |" ); 
+		commands.put( "verifyNotSelectOptions", 		"| check | are list | !{target} | selected item options | !{value} | false |" ); 
+		commands.put( "waitForSelectOptions", 			"warning: - no suitable command" ); 
+		commands.put( "waitForNotSelectOptions", 		"warning: - no suitable command" );
+ 
+		commands.put( "storeSomethingSelected", 		"| store does list | !{target} | have selection in | in | !{value} |" ); 
+		commands.put( "assertSomethingSelected", 		"| check | does list | !{target} | have selection | !{value} | true |" ); 
+		commands.put( "assertNotSomethingSelected", 	"| check | does list | !{target} | have selection | !{value} | false |" ); 
+		commands.put( "verifySomethingSelected", 		"| check | does list | !{target} | have selection | !{value} | true |" ); 
+		commands.put( "verifyNotSomethingSelected", 	"| check | does list | !{target} | have selection | !{value} | false |" ); 
+		commands.put( "waitForSomethingSelected", 		"warning: - no suitable command" ); 
+		commands.put( "waitForNotSomethingSelected", 	"warning: - no suitable command" );
+ 
+		commands.put( "storeTable", 					"| store text from cell at | !{target} | and | !{target} | in table | !{target} | in | !{value} |" );
+		commands.put( "assertTable", 					"| check | is text from cell at | !{target} | and | !{target} | in table | !{target} | true |" ); 
+		commands.put( "assertNotTable", 				"| check | is text from cell at | !{target} | and | !{target} | in table | !{target} | false |" ); 
+		commands.put( "verifyTable", 					"| check | is text from cell at | !{target} | and | !{target} | in table | !{target} | true |" ); 
+		commands.put( "verifyNotTable", 				"| check | is text from cell at | !{target} | and | !{target} | in table | !{target} | false |" ); 
+		commands.put( "waitForTable", 					"warning: - no suitable command" ); 
+		commands.put( "waitForNotTable", 				"warning: - no suitable command" );
+ 
+		commands.put( "storeText", 						"| store text of element | !{target} | in | !{value} |" ); 
+		commands.put( "assertText", 					"| check | is text of element | !{target} | !{value} | true |" ); 
+		commands.put( "assertNotText", 					"| check | is text of element | !{target} | !{value} | false |" ); 
+		commands.put( "verifyText", 					"| check | is text of element | !{target} | !{value} | true |" ); 
+		commands.put( "verifyNotText", 					"| check | is text of element | !{target} | !{value} | false |" ); 
+		commands.put( "waitForText", 					"warning: - no suitable command" ); 
+		commands.put( "waitForNotText", 				"warning: - no suitable command" );
+ 
+		commands.put( "storeTextPresent", 				"| store is text | !{target} | present in | !{value} |" );
+		commands.put( "assertTextPresent", 				"| check | is text | !{target} | present | !{value} | true |" ); 
+		commands.put( "assertTextNotPresent", 			"| check | is text | !{target} | present | !{value} | false |" ); 
+		commands.put( "verifyTextPresent", 				"| check | is text | !{target} | present | !{value} | true |" ); 
+		commands.put( "verifyTextNotPresent", 			"| check | is text | !{target} | present | !{value} | false |" ); 
+		commands.put( "waitForTextPresent", 			"warning: - no suitable command" ); 
+		commands.put( "waitForTextNotPresent", 			"warning: - no suitable command" );
+ 
+		commands.put( "storeTitle", 					"| store title of current page in | !{target} |" ); 
+		commands.put( "assertTitle", 					"| check | is title of current page | !{target} | true |" ); 
+		commands.put( "assertNotTitle", 				"| check | is title of current page | !{target} | false |" ); 
+		commands.put( "verifyTitle", 					"| check | is title of current page | !{target} | true |" ); 
+		commands.put( "verifyNotTitle", 				"| check | is title of current page | !{target} | false |" ); 
+		commands.put( "waitForTitle", 					"warning: - no suitable command" ); 
+		commands.put( "waitForNotTitle", 				"warning: - no suitable command" );
+ 
+		commands.put( "storeValue", 					"| store value of element | !{target} | in | !{value} |" ); 
+		commands.put( "assertValue", 					"| check | is value of element | !{target } | true |" ); 
+		commands.put( "assertNotValue", 				"| check | is value of element | !{target } | false |" ); 
+		commands.put( "verifyValue", 					"| check | is value of element | !{target } | true |" ); 
+		commands.put( "verifyNotValue", 				"| check | is value of element | !{target } | false |" ); 
+		commands.put( "waitForValue", 					"warning: - no suitable command" ); 
+		commands.put( "waitForNotValue", 				"warning: - no suitable command" );
+ 
+		commands.put( "storeVisible", 					"| store is element | !{target} | visible in | !{value} |" );  
+		commands.put( "assertVisible", 					"| check | is element | !{target} | visible | true |" ); 
+		commands.put( "assertNotVisible", 				"| check | is element | !{target} | visible | false |" ); 
+		commands.put( "verifyVisible", 					"| check | is element | !{target} | visible | true |" ); 
+		commands.put( "verifyNotVisible", 				"| check | is element | !{target} | visible | false |" ); 
+		commands.put( "waitForVisible", 				"warning: - no suitable command" ); 
+		commands.put( "waitForNotVisible", 				"warning: - no suitable command" );
+ 
+		commands.put( "storeWhetherThisFrameMatchFrameExpression", 			"warning: storeWhetherThisFrameMatchFrameExpression - no suitable command" ); 
+		commands.put( "assertWhetherThisFrameMatchFrameExpression", 		"warning: assertWhetherThisFrameMatchFrameExpression - no suitable command" ); 
+		commands.put( "assertNotWhetherThisFrameMatchFrameExpression", 		"warning: assertNotWhetherThisFrameMatchFrameExpression - no suitable command" ); 
+		commands.put( "verifyWhetherThisFrameMatchFrameExpression", 		"warning: verifyWhetherThisFrameMatchFrameExpression - no suitable command" ); 
+		commands.put( "verifyNotWhetherThisFrameMatchFrameExpression", 		"warning: verifyNotWhetherThisFrameMatchFrameExpression - no suitable command" ); 
+		commands.put( "waitForWhetherThisFrameMatchFrameExpression", 		"warning: waitForWhetherThisFrameMatchFrameExpression - no suitable command" ); 
+		commands.put( "waitForNotWhetherThisFrameMatchFrameExpression", 	"warning: waitForNotWhetherThisFrameMatchFrameExpression - no suitable command" ); 
+		
+		commands.put( "storeWhetherThisWindowMatchWindowExpression", 		"warning: storeWhetherThisWindowMatchWindowExpression - no suitable command" ); 
+		commands.put( "assertWhetherThisWindowMatchWindowExpression", 		"warning: assertWhetherThisWindowMatchWindowExpression - no suitable command" ); 
+		commands.put( "assertNotWhetherThisWindowMatchWindowExpression", 	"warning: assertNotWhetherThisWindowMatchWindowExpression - no suitable command" ); 
+		commands.put( "verifyWhetherThisWindowMatchWindowExpression", 		"warning: verifyWhetherThisWindowMatchWindowExpression - no suitable command" ); 
+		commands.put( "verifyNotWhetherThisWindowMatchWindowExpression", 	"warning: verifyNotWhetherThisWindowMatchWindowExpression - no suitable command" ); 
+		commands.put( "waitForWhetherThisWindowMatchWindowExpression", 		"warning: waitForWhetherThisWindowMatchWindowExpression - no suitable command" ); 
+		commands.put( "waitForNotWhetherThisWindowMatchWindowExpression", 	"warning: waitForNotWhetherThisWindowMatchWindowExpression - no suitable command" );
+ 
+		commands.put( "storeXpathCount", 				"| store number of nodes matching xpath | !{target} | in | !{value} | " );  
+		commands.put( "assertXpathCount", 				"| check | is number of nodes matching xpath | !{target} | is | !{value} | true |" ); 
+		commands.put( "assertNotXpathCount", 			"| check | is number of nodes matching xpath | !{target} | is | !{value} | false |" ); 
+		commands.put( "verifyXpathCount", 				"| check | is number of nodes matching xpath | !{target} | is | !{value} | true |" ); 
+		commands.put( "verifyNotXpathCount", 			"| check | is number of nodes matching xpath | !{target} | is | !{value} | false |" ); 
+		commands.put( "waitForXpathCount", 				"warning: waitForXpathCount - no suitable command" ); 
+		commands.put( "waitForNotXpathCount", 			"warning: waitForNotXpathCount - no suitable command" ); 
+
+	}
+	
+
+}
+
+	
