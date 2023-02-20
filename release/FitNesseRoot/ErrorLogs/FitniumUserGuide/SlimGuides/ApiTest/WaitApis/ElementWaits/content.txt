@@ -1,0 +1,9 @@
+!3 !-slim-!
+|'''Date: '''|!-8:44:18 PM (BST) on Wednesday, March 31, 2010-!|
+|'''Test Page: '''|.FitniumUserGuide.SlimGuides.ApiTest.WaitApis.ElementWaits|
+|'''Command: '''|!-java -cp fitnesse.jar;fitnesse.jar;fitlibrary.jar;./dist/fitnium2.jar;./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar fitnesse.slim.SlimService  8087-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-11.879 seconds-!|
+----'''Standard Output:'''
+{{{id=form_firstname
+}}}

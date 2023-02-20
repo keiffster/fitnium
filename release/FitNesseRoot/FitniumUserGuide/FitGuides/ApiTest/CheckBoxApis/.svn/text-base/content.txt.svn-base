@@ -1,0 +1,29 @@
+!1 Check Box APIs
+
+To check a check box, toggling its state from on/checked to off/unchecked
+{{{| click check box | locator |
+}}}
+To uncheck a check box, toggling its state from off/unchecked to on/checked
+{{{| unclick  check box | locator |
+}}}
+To check the the check state of a check box
+{{{| check | is  check box | form_tsandcs | checked | false |
+}}}
+To set a check box to a specific state based on a variable value
+{{{| set check box | locator | to  state | checked|unchecked |
+}}}
+!2 Examples
+| click check box | form_tsandcs |
+| check | is check box | form_tsandcs | checked | true |
+| unclick  check box | form_tsandcs |
+| check | is  check box | form_tsandcs | checked | false |
+
+-| script | Base Fitnium Fixture |
+| set check box | form_tsandcs | to state | unchecked |
+| check | is  check box | form_tsandcs | checked | false |
+| set check box | form_tsandcs | to state | checked |
+| check | is  check box | form_tsandcs | checked | true |
+
+We can also store the state of a check box in a fitnium variable
+
+| store is check box | form_tsandcs | checked in | state |

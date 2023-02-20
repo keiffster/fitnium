@@ -1,0 +1,56 @@
+!1 Keyboard APIs
+!3 Commands to control the  ctrl, alt, shift and meta keys
+Press and Release Control Key
+{{{| while holding the control key down |
+| release the control key |
+}}}
+Press and Release Alt Key
+{{{| while holding the alt key down |
+| release the alt key |
+}}}
+Press and Release the Shift Key
+{{{| while holding the shift key down |
+| release the shift key |
+}}}
+Press and Release the Meta Key
+{{{| while holding the meta key down |
+| release the meta key |
+}}}
+!3 Commands to press specific keys in specific elements
+{{{| press key | letter | down in element | locator  |
+| release key | letter | up in element | locator  |
+}}}
+!3 Commands to control the cursor position in an edit field
+{{{| set Cursor At | pos | In Element | locator |
+| check | get cursor position in element | locator  | pos |
+| store cursor position in element | locator  | in | var |
+}}}
+!2 Examples
+!3 Commands to control the  ctrl, alt, shift and meta keys
+
+| while holding the control key down |
+| release the control key |
+| while holding the alt key down |
+| release the alt key |
+| while holding the shift key down |
+| release the shift key |
+| while holding the meta key down |
+| release the meta key |
+
+!3 Commands to press specific keys in specific elements
+
+| press key | K | down in element | name=firstname |
+| release key | K | up in element | name=firstname |
+| press key | S | down in element | name=firstname |
+| release key | S | up in element | name=firstname |
+
+| press key | K | sequence in element | name=firstname |
+
+!3 Commands to control the cursor position in an edit field
+
+| enter | keith | in input field | form_surname |
+
+| comment |
+| set Cursor At | 3 | In Element | form_surname |
+| check | get cursor position in element | form_surname | 3 |
+| store cursor position in element | form_surname | in | position |

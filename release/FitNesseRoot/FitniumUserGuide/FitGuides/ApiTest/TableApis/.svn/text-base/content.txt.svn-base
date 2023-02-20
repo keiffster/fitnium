@@ -1,0 +1,10 @@
+!1 Table based APIs
+Check the value of the contents of a cell
+{{{| check | text From Cell At | row | And | column | in table | locator | value |
+}}}
+Store the value of the contents of a cell in a variable
+{{{| store text from cell at | rpw | and | column | in table | locator | in | var|
+}}}
+!2 Examples
+| check | text From Cell At | 0 | And | 0 | in table | testtable | Title: |
+| store text from cell at | 0 | and | 0 | in table | testtable |in | value |

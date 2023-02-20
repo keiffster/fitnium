@@ -1,0 +1,32 @@
+!1 Screen Shot APIs
+To capture the screen as an .png image use the following command
+{{{| capture Screen To File |image-name |
+}}}
+To store the screen as contents of a string to compare later, use
+{{{| store screen as string in | string-name |
+}}}
+!2 Examples
+| capture Screen To File | test.png |
+
+| store screen as string in | screen1 |
+
+Imagine doing something to the screen
+
+| store screen as string in | screen2 |
+
+In all honestly its difficult to capture the entire screen as a string
+and accurately measure it, its more for storing the image for later use
+So we comment it out
+
+| comment |
+| check | does | !{screen1} | equal | !{screen2} | true |
+
+HTML Source APIs
+
+| store html source in | html1 |
+
+Imagine doing something to the screen
+
+| store html source in | html2 |
+
+| check | does | !{html1} | equal | !{html2} | true |

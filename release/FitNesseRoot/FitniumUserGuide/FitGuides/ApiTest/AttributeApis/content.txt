@@ -1,0 +1,33 @@
+!1 Element Attribute based methods
+These commands give you access to attributes of specific elements
+{{{
+| check | attribute | <locator> | value | <value> |
+| check | value of attribute | <locator> | is | <value> | true |
+}}}
+These next 2 methods get the attributes from Windows, not from elements in the windows
+{{{
+| check | does attribute with name | <value> | exist in any window | true |
+| check | does attribute with name | <name> | and value | <value> | exist in any window | true |
+}}}
+We can store all attribute values in a fitnium variable
+{{{
+| store attribute | <name> | from all windows in | <attr_name> |
+| check | get fitnium variable called | <attr_name> | <name> |
+}}}
+!2 Examples
+
+| check | attribute | xpath=//input[@id='form_firstname']@name | value | firstname |
+
+| check | value of attribute | xpath=(//input[@id='form_firstname'])@name | is | firstname | true |
+
+Window Attribute based methods
+
+| check | does attribute with name | selenium_main_app_window | exist in any window | true |
+
+| check | does attribute with name | name | and value | selenium_main_app_window | exist in any window | true |
+
+We can store all attribute values in a fitnium variable
+
+| store attribute | name | from all windows in | attrs |
+
+| check | get fitnium variable called | attrs | selenium_main_app_window |

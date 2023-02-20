@@ -1,0 +1,64 @@
+This is a basic test to connect to Google and search for Magnetic Reason
+Website. At the moment the test relies on the fact that my website occurs
+as the first item in a google search. If this changes, the test will fail
+but for now it works
+
+
+!define TEST_SYSTEM {slim}
+
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+|import|
+|fitnesse.slim.test|
+|fitnesse.fixtures|
+|com.magneticreason.fitnium|
+
+The following section is used to configure the browser to talk to selenium
+The server and port are those which you started selenium on
+
+The browser by default is *firefox but can be any support by selenium and the host OS
+
+You can also set speed and timeout periods in this section
+
+| script | Base Fitnium Fixture |
+|the server is located at | localhost |
+|the server is on port | 4444 |
+|using the browser | *firefox | start at | www.google.co.uk |
+|check | is selenium initialised | true |
+|set speed to |50| milliseconds |
+|set timeout to |50000| milliseconds |
+|write to debug | starting test |
+
+Lets first search for Magnetic Reason home page
+
+| script | Base Fitnium Fixture |
+|starting at URL| / |
+|enter |Magnetic Reason| in input field | xpath=//input[@name='q']|
+|click element | btnG |
+|wait For Page To Load For | 5 | seconds |
+|click link | xpath=//a[em='Magnetic Reason'][1] |
+|wait For Page To Load For | 15 | seconds |
+|check|title of current page | Magnetic Reason |
+|write to debug | test complete |
+
+This should return us the same page
+
+| script | Base Fitnium Fixture |
+|click the refresh button |
+|wait For Page To Load For | 15 | seconds |
+|check | title Of Current Page | Magnetic Reason |
+
+This section should now fail as we have clicked the back button
+and therefore gone back to the Google search page
+
+| script | Base Fitnium Fixture |
+|click the back button |
+|wait For Page To Load For | 15 | seconds |
+|check | title Of Current Page | Magnetic Reason - Google Search |
+
+When we are finished close the browser to end the test
+
+| script | Base Fitnium Fixture |
+|close the browser|

@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>DialogWaits</rootPath>
+    <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-829188944558241097');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-829188944558241097"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-829188944558241097"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Dialog Wait APIs</h1>Remember that Selenium doesn't display them, we wait for them, which Selenium<br/>notifies us about and then we have to close them to get rid of them<br/>otherwise rest of the tests will fail<br/><br/>Wait for Alert Dialog to 'Appear'<br/><pre>| wait for alert to occur |<br/></pre><br/>Wait for Prompt Dialog to 'Appear'<br/><pre>| wait for prompt to occur |<br/></pre><br/>Wait for Confirmation Dialog to 'Appear'<br/><pre>| wait for confirmation to occur |<br/></pre><br/><h2>Examples</h2>Wait for various dialog boxes to appear<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+<tr><td>click button</td>
+<td colspan="2">btn_alert</td>
+</tr>
+<tr><td colspan="3">wait for alert to occur</td>
+</tr>
+<tr><td colspan="3">close alert dialog</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+<tr><td>answer</td>
+<td>yes</td>
+<td>On Next Prompt</td>
+</tr>
+<tr><td>click button</td>
+<td colspan="2">btn_prompt</td>
+</tr>
+<tr><td colspan="3">wait for prompt to occur</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+<tr><td colspan="3">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click button</td>
+<td colspan="2">btn_confirm</td>
+</tr>
+<tr><td colspan="3">wait for confirmation to occur</td>
+</tr>
+<tr><td colspan="3">close confirmation dialog</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('5680623233149544920');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img5680623233149544920"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="5680623233149544920"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>DialogWaits</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

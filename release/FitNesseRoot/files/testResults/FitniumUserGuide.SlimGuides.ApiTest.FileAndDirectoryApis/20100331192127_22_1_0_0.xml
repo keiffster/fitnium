@@ -1,0 +1,1291 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>FileAndDirectoryApis</rootPath>
+    <result>
+    <counts>
+      <right>22</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-3579536055001769549');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-3579536055001769549"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.SlimGuides.ApiTest.SetUp">.FitniumUserGuide.SlimGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.SlimGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-3579536055001769549"><span class="meta">variable defined: TEST_SYSTEM=slim</span> <br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/><table border="1" cellspacing="0" _TABLENUMBER=4819813259554723089>
+<tr><td>import</td>
+</tr>
+<tr><td>fitnesse.slim.test</td>
+</tr>
+<tr><td>fitnesse.fixtures</td>
+</tr>
+<tr><td>com.magneticreason.fitnium</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=3677486139845156126>
+<tr><td>scenario</td>
+<td colspan="3">jump to test page</td>
+</tr>
+<tr><td>the server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>the server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td>localhost:8090/fitnium/</td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+<tr><td>starting at URL</td>
+<td colspan="3">testpage4api.html</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td>Fitnium Test Page</td>
+</tr>
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td>true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>File And Directory APIs</h1><h2>File APIs</h2>Check a file exists<br/><pre>| check | file named | filename | exists | true|false |<br/></pre><br/>Create a file<br/><pre>| create file named | filename |<br/></pre><br/>Copy a file<br/><pre>| copy file named | filename  | to file named | filename  |<br/></pre><br/>Move a file<br/><pre>| move file named | filename  | to file named | filename  |<br/></pre><br/>Delete a file<br/><pre>| delete file named | filename  |<br/></pre><br/><h2>Directory APIs</h2>Check a directory exists<br/><pre>| check | directory named | directory | exists | true|false |<br/></pre><br/>Create a directory<br/><pre>| create directory named | directory |<br/></pre><br/>Delete a Directory<br/><pre>| delete directory named | directory |<br/></pre><br/><h2>Examples| script | Base Fitnium Fixture |</h2><table border="1" cellspacing="0" _TABLENUMBER=8154693794616848802>
+<tr><td><span class="fail">jump to test page: Bad table: <br/><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.RangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at fitnesse.slimTables.HtmlTable.getColumnCountInRow(HtmlTable.java:71)
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.gatherFunctionsAndVariablesFromColumnHeader(DecisionTable.java:62)
+	at fitnesse.slimTables.DecisionTable$ScenarioCaller.call(DecisionTable.java:92)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:27)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=8840577026491499536>
+<tr class="hidden"><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>check</td>
+<td>directory named</td>
+<td>testdir</td>
+<td>exists</td>
+<td><span class="pass">false</span></td>
+</tr>
+<tr><td>create directory named</td>
+<td colspan="4">testdir</td>
+</tr>
+<tr><td>check</td>
+<td>directory named</td>
+<td>testdir</td>
+<td>exists</td>
+<td><span class="pass">true</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=9045711724083495002>
+<tr class="hidden"><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile1.tmp</td>
+<td>exists</td>
+<td><span class="pass">false</span></td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile2.tmp</td>
+<td>exists</td>
+<td><span class="pass">false</span></td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile3.tmp</td>
+<td>exists</td>
+<td><span class="pass">false</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=8140148275112645410>
+<tr class="hidden"><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>create file named</td>
+<td colspan="4">testfile1.tmp</td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile1.tmp</td>
+<td>exists</td>
+<td><span class="pass">true</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=6130530347962356387>
+<tr class="hidden"><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>copy file named</td>
+<td>testfile1.tmp</td>
+<td>to file named</td>
+<td colspan="2">testfile2.tmp</td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile1.tmp</td>
+<td>exists</td>
+<td><span class="pass">true</span></td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile2.tmp</td>
+<td>exists</td>
+<td><span class="pass">true</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=8103505619557444677>
+<tr class="hidden"><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>move file named</td>
+<td>testfile2.tmp</td>
+<td>to file named</td>
+<td colspan="2">testfile3.tmp</td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile2.tmp</td>
+<td>exists</td>
+<td><span class="pass">false</span></td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile3.tmp</td>
+<td>exists</td>
+<td><span class="pass">true</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=5436816176844221844>
+<tr class="hidden"><td>script</td>
+<td><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>delete file named</td>
+<td>testfile3.tmp</td>
+</tr>
+<tr><td>delete file named</td>
+<td>testfile1.tmp</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=6346520285329850590>
+<tr class="hidden"><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile1.tmp</td>
+<td>exists</td>
+<td><span class="pass">false</span></td>
+</tr>
+<tr><td>check</td>
+<td>file named</td>
+<td>testfile3.tmp</td>
+<td>exists</td>
+<td><span class="pass">false</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=7250626455187153506>
+<tr class="hidden"><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>delete directory named</td>
+<td colspan="4">testdir</td>
+</tr>
+<tr><td>check</td>
+<td>directory named</td>
+<td>testdir</td>
+<td>exists</td>
+<td><span class="pass">false</span></td>
+</tr>
+</table>
+<br/><br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('8576334187085035906');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img8576334187085035906"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.SlimGuides.ApiTest.TearDown">.FitniumUserGuide.SlimGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.SlimGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="8576334187085035906"><br/><table border="1" cellspacing="0" _TABLENUMBER=5945116002200180295>
+<tr class="hidden"><td>script</td>
+<td><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td colspan="2">close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>FileAndDirectoryApis</relativePageName>
+        <tags>null</tags>
+    
+        <tables>
+            <table>
+        <name>import_0</name>
+                <row>
+                    <col><![CDATA[import]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[fitnesse.slim.test]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[fitnesse.fixtures]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[com.magneticreason.fitnium]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scenarioTable_1</name>
+                <row>
+                    <col><![CDATA[scenario]]></col>
+                    <col><![CDATA[jump to test page]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is located at]]></col>
+                    <col><![CDATA[localhost]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is on port]]></col>
+                    <col><![CDATA[4444]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[using the browser]]></col>
+                    <col><![CDATA[*chrome]]></col>
+                    <col><![CDATA[start at]]></col>
+                    <col><![CDATA[localhost:8090/fitnium/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is selenium initialised]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set speed to]]></col>
+                    <col><![CDATA[100]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set timeout to]]></col>
+                    <col><![CDATA[20000]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[write to debug]]></col>
+                    <col><![CDATA[starting test]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[starting at URL]]></col>
+                    <col><![CDATA[testpage4api.html]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[wait for page to load for]]></col>
+                    <col><![CDATA[5]]></col>
+                    <col><![CDATA[seconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[title of current page]]></col>
+                    <col><![CDATA[Magnetic Reason]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[text of element]]></col>
+                    <col><![CDATA[xpath=//h1]]></col>
+                    <col><![CDATA[Fitnium Test Page]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is Text Present]]></col>
+                    <col><![CDATA[This page contains all the elements neccassary to test Fitnium]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_2</name>
+                <row>
+                    <col><![CDATA[<span class="fail">jump to test page: Bad table: <br/><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.RangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at fitnesse.slimTables.HtmlTable.getColumnCountInRow(HtmlTable.java:71)
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.gatherFunctionsAndVariablesFromColumnHeader(DecisionTable.java:62)
+	at fitnesse.slimTables.DecisionTable$ScenarioCaller.call(DecisionTable.java:92)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:27)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span>]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_3</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[directory named]]></col>
+                    <col><![CDATA[testdir]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[create directory named]]></col>
+                    <col><![CDATA[testdir]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[directory named]]></col>
+                    <col><![CDATA[testdir]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_4</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile1.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile2.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile3.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_5</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[create file named]]></col>
+                    <col><![CDATA[testfile1.tmp]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile1.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_6</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[copy file named]]></col>
+                    <col><![CDATA[testfile1.tmp]]></col>
+                    <col><![CDATA[to file named]]></col>
+                    <col><![CDATA[testfile2.tmp]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile1.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile2.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_7</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[move file named]]></col>
+                    <col><![CDATA[testfile2.tmp]]></col>
+                    <col><![CDATA[to file named]]></col>
+                    <col><![CDATA[testfile3.tmp]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile2.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile3.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_8</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[delete file named]]></col>
+                    <col><![CDATA[testfile3.tmp]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[delete file named]]></col>
+                    <col><![CDATA[testfile1.tmp]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_9</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile1.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[file named]]></col>
+                    <col><![CDATA[testfile3.tmp]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_10</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[delete directory named]]></col>
+                    <col><![CDATA[testdir]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[directory named]]></col>
+                    <col><![CDATA[testdir]]></col>
+                    <col><![CDATA[exists]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_11</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[close the browser]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_0, import, fitnesse.slim.test]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_1, import, fitnesse.fixtures]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_2, import, com.magneticreason.fitnium]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_1, call, scriptTableActor, directoryNamedExists, testdir]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>4</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[false]]></expected>
+                              <evaluationMessage><![CDATA[pass(false)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_2, call, scriptTableActor, createDirectoryNamed, testdir]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[create directory named]]></expected>
+                              <evaluationMessage><![CDATA[create directory named]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_3, call, scriptTableActor, directoryNamedExists, testdir]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_1, call, scriptTableActor, fileNamedExists, testfile1.tmp]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>4</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[false]]></expected>
+                              <evaluationMessage><![CDATA[pass(false)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_2, call, scriptTableActor, fileNamedExists, testfile2.tmp]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_2</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[false]]></expected>
+                              <evaluationMessage><![CDATA[pass(false)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_3, call, scriptTableActor, fileNamedExists, testfile3.tmp]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_3</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[false]]></expected>
+                              <evaluationMessage><![CDATA[pass(false)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_5_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_1, call, scriptTableActor, createFileNamed, testfile1.tmp]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[create file named]]></expected>
+                              <evaluationMessage><![CDATA[create file named]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_2, call, scriptTableActor, fileNamedExists, testfile1.tmp]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_5_2</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_6_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_1, call, scriptTableActor, copyFileNamedToFileNamed, testfile1.tmp, testfile2.tmp]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[copy file named]]></expected>
+                              <evaluationMessage><![CDATA[copy file named]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_2, call, scriptTableActor, fileNamedExists, testfile1.tmp]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_6_2</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_3, call, scriptTableActor, fileNamedExists, testfile2.tmp]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_6_3</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_7_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_1, call, scriptTableActor, moveFileNamedToFileNamed, testfile2.tmp, testfile3.tmp]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[move file named]]></expected>
+                              <evaluationMessage><![CDATA[move file named]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_2, call, scriptTableActor, fileNamedExists, testfile2.tmp]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_7_2</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[false]]></expected>
+                              <evaluationMessage><![CDATA[pass(false)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_3, call, scriptTableActor, fileNamedExists, testfile3.tmp]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_7_3</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_8_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_1, call, scriptTableActor, deleteFileNamed, testfile3.tmp]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[delete file named]]></expected>
+                              <evaluationMessage><![CDATA[delete file named]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_2, call, scriptTableActor, deleteFileNamed, testfile1.tmp]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[delete file named]]></expected>
+                              <evaluationMessage><![CDATA[delete file named]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_9_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_1, call, scriptTableActor, fileNamedExists, testfile1.tmp]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_9_1</instructionId>
+          <col>4</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[false]]></expected>
+                              <evaluationMessage><![CDATA[pass(false)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_2, call, scriptTableActor, fileNamedExists, testfile3.tmp]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_9_2</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[false]]></expected>
+                              <evaluationMessage><![CDATA[pass(false)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_10_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_10_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_10_1, call, scriptTableActor, deleteDirectoryNamed, testdir]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[delete directory named]]></expected>
+                              <evaluationMessage><![CDATA[delete directory named]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_10_2, call, scriptTableActor, directoryNamedExists, testdir]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_10_2</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[false]]></expected>
+                              <evaluationMessage><![CDATA[pass(false)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_11_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_11_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_11_1, call, scriptTableActor, closeTheBrowser]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_11_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[close the browser]]></expected>
+                              <evaluationMessage><![CDATA[close the browser]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

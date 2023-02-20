@@ -1,0 +1,28 @@
+The people at fitnesse.org create regular drops of the fitnesse.jar on their website http://www.fitnesse.org
+
+!2 Option 1 - Full Install
+If you want to upgrade to the latest version, download the latest version of the jar from the website and copy into the root folder of Fitnium
+
+Then just run up Fitnesse as normal with java -jar fitnesse.jar
+
+This will install the latest version, and update the FitnesseRoot folder, the only problem with this approach is that it overwrites the root fitnesse page and you will loose the link to the FitniumUserGuide
+
+To fix this, edit the root page and replace the table with the following table
+
+{{{| '''To Learn More...'''|
+| [[A One-Minute Description][FitNesse.UserGuide.OneMinuteDescription]]|''What is [[FitNesse][FitNesse.FitNesse]]? Start here.''|
+| [[A Two-Minute Example][FitNesse.UserGuide.TwoMinuteExample]]|''A brief example. Read this one next.''|
+| [[User Guide][FitNesse.UserGuide]]|''Answer the rest of your questions here.''|
+| [[Acceptance Tests][FitNesse.SuiteAcceptanceTests]]|''FitNesse's suite of Acceptance Tests''|
+| [[Fitnium User Guide][FitniumUserGuide]]|'Fitnium User Guides'|
+}}}
+Or just add the bottom line
+{{{| [[Fitnium User Guide][FitniumUserGuide]]|'Fitnium User Guides'|
+}}}
+
+!2 Option 2 - Jar Install
+Alternatively download fitnesse.jar from the Fitnesse.org and install into a seperate folder. From here you can just copy the fitnesse.jar that gets created during this process into the Fitnium folder
+
+This option is useful if you do not need the latest FitnesseRoot contents
+
+

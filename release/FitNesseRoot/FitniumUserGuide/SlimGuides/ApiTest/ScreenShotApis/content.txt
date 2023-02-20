@@ -1,0 +1,22 @@
+!1 Screen Shot APIs
+To capture the screen as an .png image use the following command
+{{{| capture Screen To File |image-name |
+}}}
+To store the screen as contents of a string to compare later, use
+{{{| store screen as string in | string-name |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| capture Screen To File | test.png |
+| store screen as string in | screen1 |
+| note | Imagine doing something to the screen |
+| store screen as string in | screen2 |
+
+HTML Source APIs
+
+-| script | Base Fitnium Fixture |
+| store html source in | html1 |
+| note | Imagine doing something to the screen |
+| store html source in | html2 |
+| check | does | !{html1} | equal | !{html2} | true |

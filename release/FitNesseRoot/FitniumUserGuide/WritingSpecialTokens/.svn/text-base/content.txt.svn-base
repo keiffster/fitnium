@@ -1,0 +1,52 @@
+All special tokens ( apart from the system default ones ) are loaded via the properties file fitnium.properties located in the root of fitnium
+
+Each line takes the format
+
+       fitnium.plugins.tokens.n=name:path
+
+Where
+
+       n    - A consecutive number, starting from 1, for each token to load
+       name - Name of the token to use in the fitnium test
+       path - Full java classpath to the token to load
+
+For example
+
+fitnium.plugins.tokens.1=telephone:com.magneticreason.fitnium.plugins.tokens.TelephoneToken
+fitnium.plugins.tokens.2=null:com.magneticreason.fitnium.plugins.tokens.NullToken
+
+
+A token takes for the form of the following Java class
+{{{
+public class RandomToken {
+
+    public String getString() {
+		return Long.toString(System.currentTimeMillis(), Character.MAX_RADIX).toUpperCase();
+	}
+
+	public String getEmail() {
+		return getString() + "@gmail.com";
+	}
+
+	public String getInt() {
+		Random generator = new Random(System.currentTimeMillis());
+		return Integer.toString(generator.nextInt(10000));
+	}
+
+	public String getDigits(int digits) {
+		Random generator = new Random(System.currentTimeMillis());
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < digits; i++) {
+			sb.append(generator.nextInt(10));
+		}
+		return sb.toString();
+	}
+}
+}}}
+This class then offers the following token commands
+
+@{rand.string}
+@{rand.email}
+@{rand.int}
+@{rand.digits}
+

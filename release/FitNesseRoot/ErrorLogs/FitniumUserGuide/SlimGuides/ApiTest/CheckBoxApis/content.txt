@@ -1,0 +1,6 @@
+!3 !-slim-!
+|'''Date: '''|!-12:35:15 PM (BST) on Tuesday, May 25, 2010-!|
+|'''Test Page: '''|.FitniumUserGuide.SlimGuides.ApiTest.CheckBoxApis|
+|'''Command: '''|!-java -cp fitnesse.jar;fitnesse.jar;fitlibrary.jar;C:\Dev\src\Fitnium2\.\lib\ant.jar;C:\Dev\src\Fitnium2\.\lib\easymock.jar;C:\Dev\src\Fitnium2\.\lib\fitlibrary.jar;C:\Dev\src\Fitnium2\.\lib\fitnium2.jar;C:\Dev\src\Fitnium2\.\lib\flashselenium-java-client-extension-1.0.jar;C:\Dev\src\Fitnium2\.\lib\flex-ui-selenium-0.1.1.jar;C:\Dev\src\Fitnium2\.\lib\htmlparser.jar;C:\Dev\src\Fitnium2\.\lib\json.jar;C:\Dev\src\Fitnium2\.\lib\junit-4.6.jar;C:\Dev\src\Fitnium2\.\lib\poi-3.2-FINAL-20081019.jar;C:\Dev\src\Fitnium2\.\lib\resolver.jar;C:\Dev\src\Fitnium2\.\lib\selenium-java-client-driver.jar;C:\Dev\src\Fitnium2\.\lib\selenium-server.jar;C:\Dev\src\Fitnium2\.\lib\serializer.jar;C:\Dev\src\Fitnium2\.\lib\velocity-1.6.2-dep.jar;C:\Dev\src\Fitnium2\.\lib\xerces.jar;C:\Dev\src\Fitnium2\.\lib\xercesImpl.jar;C:\Dev\src\Fitnium2\.\lib\xml-apis.jar fitnesse.slim.SlimService  8089-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-12.38 seconds-!|

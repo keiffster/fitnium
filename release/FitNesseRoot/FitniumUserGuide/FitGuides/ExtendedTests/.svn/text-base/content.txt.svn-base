@@ -1,0 +1,35 @@
+Every API that uses an element locator has a suite of APIs in the ExtendedFitniumFixture that provide
+a refinement of the use of the locator.
+
+With the BasicFitniumFixture API's you can pass in any locator string, as defined in the Selenium API
+To make it a little more readable, each API is extended with 6 child APIs which specific which type
+of locator is in use, and negates the need to include the locator prefix. Eg
+
+BasicFitniumFixture has the API
+
+        textOfElementWithName
+
+You can pass any locator string into this API, as long as you include the locator prefix
+
+        id=
+        identifier=
+        name=
+        xpath=
+        dom=
+        css=
+
+ExtendedFitniumFixture has the following child APIs
+
+	textOfElementWithIdentifier
+	textOfElementWithId
+	textOfElementIdentifiedByXpath
+	textOfElementIdentifiedByDom
+	textOfElementIdentifiedByCss
+
+For each of these the xxx= section of the locator can be excluded.
+
+These are purely to make the tests more readable, they add no additional functionality
+
+
+!contents -R
+

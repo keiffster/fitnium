@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ListApis</rootPath>
+    <result>
+    <counts>
+      <right>32</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-776130705433849559');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-776130705433849559"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-776130705433849559"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium <br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+Single Selection List APIs<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does list</td>
+<td>form_country</td>
+<td>contain options</td>
+<td>Wales,Scotland,Ireland,England,Other</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list options</td>
+<td>form_country</td>
+<td colspan="3" class="pass">Wales,Scotland,Ireland,England,Other</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>select Option</td>
+<td>England</td>
+<td>In List</td>
+<td colspan="2">form_country</td>
+</tr>
+<tr><td>check</td>
+<td>does List</td>
+<td>form_country</td>
+<td>Have Selection</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>list</td>
+<td>form_country</td>
+<td>Selected Item Id is</td>
+<td>eng</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_country</td>
+<td>Selected Item Index is</td>
+<td>3</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_country</td>
+<td>Selected Item Label is</td>
+<td>England</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_country</td>
+<td>Selected Item Value is</td>
+<td>eng</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store does list</td>
+<td>form_country</td>
+<td>have selection in</td>
+<td>val1</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_country</td>
+<td>selected item id in</td>
+<td colspan="3">val2</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val2</td>
+<td colspan="3" class="pass">eng</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val2}</td>
+<td>contain  value</td>
+<td>eng</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_country</td>
+<td>selected item index in</td>
+<td colspan="3">val3</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val3</td>
+<td colspan="3" class="pass">3</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val3}</td>
+<td>contain  value</td>
+<td>3</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_country</td>
+<td>selected item label in</td>
+<td colspan="3">val4</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val4</td>
+<td colspan="3" class="pass">England</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val4}</td>
+<td>contain  value</td>
+<td>England</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_country</td>
+<td>selected item value in</td>
+<td colspan="3">val5</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val5</td>
+<td colspan="3" class="pass">eng</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val5}</td>
+<td>contain  value</td>
+<td>eng</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><br/>Multiple Selection List APIs<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does list</td>
+<td>form_car</td>
+<td>contain options</td>
+<td>Volvo,Saab,Audi,Mercedes,Other</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list options</td>
+<td>form_car</td>
+<td colspan="3" class="pass">Volvo,Saab,Audi,Mercedes,Other</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>add Selection Option</td>
+<td>Volvo</td>
+<td>To List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>add Selection Option</td>
+<td>Audi</td>
+<td>To List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>add Selection Option</td>
+<td>Saab</td>
+<td>To List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>remove Selection Option</td>
+<td>Volvo</td>
+<td>From List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>remove Selection Option</td>
+<td>Other</td>
+<td>From List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>check</td>
+<td>does List</td>
+<td>form_country</td>
+<td>Have Selection</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>list</td>
+<td>form_car</td>
+<td>Selected Item Ids are</td>
+<td>saab,audi</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_car</td>
+<td>Selected Item Indexes are</td>
+<td>1,2</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_car</td>
+<td>Selected Item Labels are</td>
+<td>Saab,Audi</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_car</td>
+<td>Selected Item Values are</td>
+<td>saab,audi</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>selected item ids in</td>
+<td colspan="3">val6</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val6</td>
+<td colspan="3" class="pass">saab,audi</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val6}</td>
+<td>contain any values</td>
+<td>saab,audi</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>selected item indexes in</td>
+<td>val7</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val7</td>
+<td class="pass">1,2</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>selected item labels in</td>
+<td>val8</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val8</td>
+<td class="pass">Saab,Audi</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>selected item values in</td>
+<td>val9</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val9</td>
+<td class="pass">saab,audi</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>options in</td>
+<td>val10</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val10</td>
+<td class="pass">Volvo,Saab,Audi,Mercedes,Other</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-1769740533324815771');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-1769740533324815771"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-1769740533324815771"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>ListApis</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

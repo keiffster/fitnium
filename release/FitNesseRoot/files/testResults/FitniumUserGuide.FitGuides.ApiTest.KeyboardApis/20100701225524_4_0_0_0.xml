@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>KeyboardApis</rootPath>
+    <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-5234399671811239229');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-5234399671811239229"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-5234399671811239229"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Keyboard APIs</h1><h3>Commands to control the  ctrl, alt, shift and meta keys</h3>Press and Release Control Key<br/><pre>| while holding the control key down |<br/>| release the control key |<br/></pre><br/>Press and Release Alt Key<br/><pre>| while holding the alt key down |<br/>| release the alt key |<br/></pre><br/>Press and Release the Shift Key<br/><pre>| while holding the shift key down |<br/>| release the shift key |<br/></pre><br/>Press and Release the Meta Key<br/><pre>| while holding the meta key down |<br/>| release the meta key |<br/></pre><br/><h3>Commands to press specific keys in specific elements</h3><pre>| press key | letter | down in element | locator  |<br/>| release key | letter | up in element | locator  |<br/></pre><br/><h3>Commands to control the cursor position in an edit field</h3><pre>| set Cursor At | pos | In Element | locator |<br/>| check | get cursor position in element | locator  | pos |<br/>| store cursor position in element | locator  | in | var |<br/></pre><br/><h2>Examples</h2><h3>Commands to control the  ctrl, alt, shift and meta keys</h3><br/><table border="1" cellspacing="0">
+<tr><td>while holding the control key down</td>
+</tr>
+<tr><td>release the control key</td>
+</tr>
+<tr><td>while holding the alt key down</td>
+</tr>
+<tr><td>release the alt key</td>
+</tr>
+<tr><td>while holding the shift key down</td>
+</tr>
+<tr><td>release the shift key</td>
+</tr>
+<tr><td>while holding the meta key down</td>
+</tr>
+<tr><td>release the meta key</td>
+</tr>
+</table>
+<br/><h3>Commands to press specific keys in specific elements</h3><br/><table border="1" cellspacing="0">
+<tr><td>press key</td>
+<td>K</td>
+<td>down in element</td>
+<td>name=firstname</td>
+</tr>
+<tr><td>release key</td>
+<td>K</td>
+<td>up in element</td>
+<td>name=firstname</td>
+</tr>
+<tr><td>press key</td>
+<td>S</td>
+<td>down in element</td>
+<td>name=firstname</td>
+</tr>
+<tr><td>release key</td>
+<td>S</td>
+<td>up in element</td>
+<td>name=firstname</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>press key</td>
+<td>K</td>
+<td>sequence in element</td>
+<td>name=firstname</td>
+</tr>
+</table>
+<br/><h3>Commands to control the cursor position in an edit field</h3><br/><table border="1" cellspacing="0">
+<tr><td>enter</td>
+<td>keith</td>
+<td>in input field</td>
+<td>form_surname</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="4">comment</td>
+</tr>
+<tr><td>set Cursor At</td>
+<td>3</td>
+<td>In Element</td>
+<td>form_surname</td>
+</tr>
+<tr><td>check</td>
+<td>get cursor position in element</td>
+<td>form_surname</td>
+<td>3</td>
+</tr>
+<tr><td>store cursor position in element</td>
+<td>form_surname</td>
+<td>in</td>
+<td>position</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('744149383288420559');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img744149383288420559"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="744149383288420559"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>KeyboardApis</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

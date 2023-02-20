@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>GeneratorApis</rootPath>
+    <result>
+    <counts>
+      <right>15</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('2571275516761495958');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img2571275516761495958"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="2571275516761495958"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Generator APIs</h1><br/>Note that additional jar files are required to use the Excel Generator described below in the examples<br/>We currently use POI and this jar file needs to be included in the path<br/><br/>Load a Generator and give it a name<br/><pre>| load Unique Value Generator | generator | Into | name |<br/></pre><br/>Get the next value from the generator<br/><pre>| next Unique Value From | name |<br/></pre><br/>Store the next value from the generator into a Variable<br/><pre>| store next unique value from | name | in | variable |<br/></pre><br/><h2>Examples</h2><span class="meta">classpath: poi-3.2-FINAL-20081019.jar</span><br/><br/><table border="1" cellspacing="0">
+<tr><td>load Unique Value Generator</td>
+<td>com.magneticreason.fitnium.generator.IntegerCounter<a title="create page" href="IntegerCounter?edit&nonExistent=true">[?]</a></td>
+<td>Into</td>
+<td>idGen</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>idGen</td>
+<td class="pass">0</td>
+</tr>
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>idGen</td>
+<td class="pass">1</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store next unique value from</td>
+<td>idGen</td>
+<td>in</td>
+<td colspan="3">value1</td>
+</tr>
+<tr><td>check</td>
+<td>does</td>
+<td>!{value1}</td>
+<td>equal</td>
+<td>2</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>load Unique Value Generator</td>
+<td>com.magneticreason.fitnium.generator.RandomNumber<a title="create page" href="RandomNumber?edit&nonExistent=true">[?]</a></td>
+<td>Into</td>
+<td>randGen</td>
+</tr>
+</table>
+<br/>For obvious reasons these next 2 API calls will fail so comment them out<br/><table border="1" cellspacing="0">
+<tr><td colspan="4">comment</td>
+</tr>
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>randGen</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>randGen</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>load Unique Value Generator</td>
+<td>com.magneticreason.fitnium.generator.ExcelSpreadsheet<a title="create page" href="ExcelSpreadsheet?edit&nonExistent=true">[?]</a></td>
+<td>Into</td>
+<td>xlsGen</td>
+<td>and initialise with</td>
+<td>test.xls,Sheet1</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>xlsGen</td>
+<td>with params</td>
+<td>0,0</td>
+<td class="pass">1</td>
+</tr>
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>xlsGen</td>
+<td>with params</td>
+<td>1,0</td>
+<td class="pass">2</td>
+</tr>
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>xlsGen</td>
+<td>with params</td>
+<td>2,0</td>
+<td class="pass">3</td>
+</tr>
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>xlsGen</td>
+<td>with params</td>
+<td>3,0</td>
+<td class="pass">4</td>
+</tr>
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>xlsGen</td>
+<td>with params</td>
+<td>4,0</td>
+<td class="pass">5</td>
+</tr>
+<tr><td>check</td>
+<td>next Unique Value From</td>
+<td>xlsGen</td>
+<td>with params</td>
+<td>5,0</td>
+<td class="pass">6</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store next unique value from</td>
+<td>xlsGen</td>
+<td>with params</td>
+<td>6,0</td>
+<td>in</td>
+<td>value2</td>
+</tr>
+<tr><td>check</td>
+<td>does</td>
+<td>!{value2}</td>
+<td>equal</td>
+<td>7</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>If a cell doesn't contain a value, then a empty string "" is returned<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>next unique value from</td>
+<td>xlsGen</td>
+<td>with params</td>
+<td>99,99</td>
+<td class="pass">&nbsp;</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('1126158672746624453');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img1126158672746624453"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="1126158672746624453"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>GeneratorApis</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

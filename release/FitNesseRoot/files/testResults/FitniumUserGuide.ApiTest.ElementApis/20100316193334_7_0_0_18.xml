@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ElementApis</rootPath>
+    <result>
+    <counts>
+      <right>7</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>18</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('3644593360412848603');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img3644593360412848603"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.ApiTest.SetUp">.FitniumUserGuide.ApiTest.SetUp</a> <a href="FitniumUserGuide.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="3644593360412848603"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium <br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">wait for page to load for<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: Timed out waiting for action to finish
+	at org.openqa.selenium.internal.seleniumemulation.Timer.run(Timer.java:57)
+	at org.openqa.selenium.WebDriverCommandProcessor.execute(WebDriverCommandProcessor.java:281)
+	at org.openqa.selenium.WebDriverCommandProcessor.doCommand(WebDriverCommandProcessor.java:193)
+	at com.thoughtworks.selenium.DefaultSelenium.waitForPageToLoad(DefaultSelenium.java:653)
+	at com.magneticreason.fitnium.api.FitniumWaitAPI.waitForPageToLoadForSeconds(FitniumWaitAPI.java:1316)
+	at com.magneticreason.fitnium.BaseFitniumFixture.waitForPageToLoadForSeconds(BaseFitniumFixture.java:4375)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask$Sync.innerGet(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at org.openqa.selenium.internal.seleniumemulation.Timer.run(Timer.java:47)
+	... 25 more
+</div></pre></td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="error">true<hr><pre><div class="fit_stacktrace">java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.internal.seleniumemulation.JavascriptLibrary.callEmbeddedHtmlUtils(JavascriptLibrary.java:59)
+	at org.openqa.selenium.internal.seleniumemulation.IsTextPresent.handleSeleneseCommand(IsTextPresent.java:45)
+	at org.openqa.selenium.internal.seleniumemulation.IsTextPresent.handleSeleneseCommand(IsTextPresent.java:30)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div></pre></td>
+</tr>
+</table>
+</div>
+</div>
+Element management commands<br/><br/>First wait for elements to appear<br/><br/><table border="1" cellspacing="0">
+<tr><td>wait for element</td>
+<td colspan="4">name=firstname</td>
+</tr>
+<tr><td>wait for element</td>
+<td>name=firstname</td>
+<td>for</td>
+<td>10</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/>First set up some text so that we check for it<br/><br/><table border="1" cellspacing="0">
+<tr><td>enter</td>
+<td>Keith</td>
+<td>in input field</td>
+<td>name=firstname</td>
+</tr>
+</table>
+<br/>Then we can check the element using various commands<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>value of element</td>
+<td>name=firstname</td>
+<td colspan="2" class="pass">Keith</td>
+</tr>
+<tr><td>check</td>
+<td>index of element</td>
+<td>name=firstname</td>
+<td colspan="2" class="error">0<hr><pre><div class="fit_stacktrace">java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.internal.seleniumemulation.JavascriptLibrary.executeScript(JavascriptLibrary.java:64)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementIndex.handleSeleneseCommand(GetElementIndex.java:49)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementIndex.handleSeleneseCommand(GetElementIndex.java:23)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>element</td>
+<td>name=firstname</td>
+<td>height</td>
+<td class="error">20<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:457)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementHeight.handleSeleneseCommand(GetElementHeight.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementHeight.handleSeleneseCommand(GetElementHeight.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:453)
+	... 9 more
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>element</td>
+<td>name=firstname</td>
+<td>width</td>
+<td class="error">155<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:457)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementWidth.handleSeleneseCommand(GetElementWidth.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementWidth.handleSeleneseCommand(GetElementWidth.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:453)
+	... 9 more
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>is element present</td>
+<td>name=firstname</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>is element visible</td>
+<td>name=firstname</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+</table>
+<br/>Any element that contains text ( i.e inbetween the &lt;&gt; tags ) can be obtains using "text of element"<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=/html/body/div[@id='outer']/div[@id='content']/div[@id='primaryContentContainer']/div[@id='primaryContent']/div/h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/>We can also obtain some position information about elements<br/><br/>I don't really care about the positions in this test and even a minor<br/>change to the screen could change the positions, therefore the test<br/>is really to ensure the API call is correct<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>element</td>
+<td>name=firstname</td>
+<td>width</td>
+<td colspan="2" class="error">155<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:457)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementWidth.handleSeleneseCommand(GetElementWidth.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementWidth.handleSeleneseCommand(GetElementWidth.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:453)
+	... 9 more
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>element</td>
+<td>name=firstname</td>
+<td>height</td>
+<td colspan="2" class="error">20<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:457)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementHeight.handleSeleneseCommand(GetElementHeight.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementHeight.handleSeleneseCommand(GetElementHeight.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:453)
+	... 9 more
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>left position of element</td>
+<td>id=header</td>
+<td colspan="3" class="error">0<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:445)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionLeft.handleSeleneseCommand(GetElementPositionLeft.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionLeft.handleSeleneseCommand(GetElementPositionLeft.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:443)
+	... 9 more
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>left position of element</td>
+<td>id=header</td>
+<td>is</td>
+<td>0</td>
+<td class="error">true<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:445)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionLeft.handleSeleneseCommand(GetElementPositionLeft.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionLeft.handleSeleneseCommand(GetElementPositionLeft.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:443)
+	... 9 more
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>top position of element</td>
+<td>id=header</td>
+<td colspan="3" class="error">0<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:445)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionTop.handleSeleneseCommand(GetElementPositionTop.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionTop.handleSeleneseCommand(GetElementPositionTop.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:443)
+	... 9 more
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>top position of element</td>
+<td>id=header</td>
+<td>is</td>
+<td>0</td>
+<td class="error">true<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:445)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionTop.handleSeleneseCommand(GetElementPositionTop.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionTop.handleSeleneseCommand(GetElementPositionTop.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:443)
+	... 9 more
+</div></pre></td>
+</tr>
+</table>
+<br/>We can also store all teh various values in fitnim variables<br/><br/><table border="1" cellspacing="0">
+<tr><td>store is element</td>
+<td>name=firstname</td>
+<td>present in</td>
+<td>value1</td>
+</tr>
+<tr><td>store is element</td>
+<td>name=firstname</td>
+<td>visible in</td>
+<td>value2</td>
+</tr>
+<tr><td>store text of element</td>
+<td>name=firstname</td>
+<td>in</td>
+<td>value3</td>
+</tr>
+<tr><td class="error">store index of element<hr><pre><div class="fit_stacktrace">java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.internal.seleniumemulation.JavascriptLibrary.executeScript(JavascriptLibrary.java:64)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementIndex.handleSeleneseCommand(GetElementIndex.java:49)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementIndex.handleSeleneseCommand(GetElementIndex.java:23)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div></pre></td>
+<td>name=firstname</td>
+<td>in</td>
+<td>value4</td>
+</tr>
+<tr><td class="error">store element<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:457)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementHeight.handleSeleneseCommand(GetElementHeight.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementHeight.handleSeleneseCommand(GetElementHeight.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:453)
+	... 9 more
+</div></pre></td>
+<td>name=firstname</td>
+<td>height in</td>
+<td>value5</td>
+</tr>
+<tr><td class="error">store element<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:457)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementWidth.handleSeleneseCommand(GetElementWidth.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementWidth.handleSeleneseCommand(GetElementWidth.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getSize(HtmlUnitWebElement.java:453)
+	... 9 more
+</div></pre></td>
+<td>name=firstname</td>
+<td>width in</td>
+<td>value6</td>
+</tr>
+<tr><td class="error">store left position of element<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:445)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionLeft.handleSeleneseCommand(GetElementPositionLeft.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionLeft.handleSeleneseCommand(GetElementPositionLeft.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:443)
+	... 9 more
+</div></pre></td>
+<td>name=firstname</td>
+<td>in</td>
+<td>value7</td>
+</tr>
+<tr><td class="error">store top position of element<hr><pre><div class="fit_stacktrace">org.openqa.selenium.WebDriverException: Cannot determine size of element
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_14'
+Driver info: driver.version: htmlunit
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:445)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionTop.handleSeleneseCommand(GetElementPositionTop.java:34)
+	at org.openqa.selenium.internal.seleniumemulation.GetElementPositionTop.handleSeleneseCommand(GetElementPositionTop.java:25)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getEffectiveStyle(HtmlUnitWebElement.java:774)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getValueOfCssProperty(HtmlUnitWebElement.java:762)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.readAndRound(HtmlUnitWebElement.java:462)
+	at org.openqa.selenium.htmlunit.HtmlUnitWebElement.getLocation(HtmlUnitWebElement.java:443)
+	... 9 more
+</div></pre></td>
+<td>name=firstname</td>
+<td>in</td>
+<td>value8</td>
+</tr>
+</table>
+<br/><br/>Finally for debuggin purposes we can highlight the element of change its id<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">highlight element<hr><pre><div class="fit_stacktrace">java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.internal.seleniumemulation.JavascriptLibrary.callEmbeddedHtmlUtils(JavascriptLibrary.java:59)
+	at org.openqa.selenium.internal.seleniumemulation.Highlight.handleSeleneseCommand(Highlight.java:33)
+	at org.openqa.selenium.internal.seleniumemulation.Highlight.handleSeleneseCommand(Highlight.java:22)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:30)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div></pre></td>
+<td colspan="3">name=firstname</td>
+</tr>
+<tr><td class="error">assign element<hr><pre><div class="fit_stacktrace">java.lang.UnsupportedOperationException: Javascript is not enabled for this HtmlUnitDriver instance
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.executeScript(HtmlUnitDriver.java:336)
+	at org.openqa.selenium.internal.seleniumemulation.JavascriptLibrary.executeScript(JavascriptLibrary.java:64)
+	at org.openqa.selenium.internal.seleniumemulation.AssignId.handleSeleneseCommand(AssignId.java:33)
+	at org.openqa.selenium.internal.seleniumemulation.AssignId.handleSeleneseCommand(AssignId.java:22)
+	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:33)
+	at org.openqa.selenium.WebDriverCommandProcessor$1.call(WebDriverCommandProcessor.java:283)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div></pre></td>
+<td>name=firstname</td>
+<td>id</td>
+<td>newname</td>
+</tr>
+</table>
+<br/><br/><br/><br/><br/><br/><br/><br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-6975667175397925884');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-6975667175397925884"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.ApiTest.TearDown">.FitniumUserGuide.ApiTest.TearDown</a> <a href="FitniumUserGuide.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-6975667175397925884"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>ElementApis</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

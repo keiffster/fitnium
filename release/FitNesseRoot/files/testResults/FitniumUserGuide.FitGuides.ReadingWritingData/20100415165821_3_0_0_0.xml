@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ReadingWritingData</rootPath>
+    <result>
+    <counts>
+      <right>3</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<h1>Reading and Writing Data</h1><h2>Writing Data</h2>To write data to a datasource we first need to load the datasource and give it a name.<br/>When we load it we can pass parameters into the write that will be application specific<br/><pre>| load writer | java-classpath-to-writer | into | write-name | with params | parameter-list |<br/></pre><br/>Once we have a write loaded we can start writing values into it<br/><pre>| store value | value | with params | parameter-list | in writer | write-name |<br/></pre><br/>This bits is important. To store the data to the system you must make sure you call flush<br/>to actually store the data in the underlying data source<br/><pre>| flush writer | writer-name |<br/></pre><br/><h2>Reading Data</h2><h4>Fitnium 1</h4>Load a Unique Value Generator UNG and give it a name<br/><pre>| load unique value generator | classpath | into | name |<br/></pre><br/>Load a Unique Value Generator UNG and give it a name and starting from a specific value<br/>This is useful if you want a counter to start at a specific value<br/><pre>| load unique value generator | classpath | into | name | with starting value | value |<br/></pre><br/><h4>Fitnium 2</h4>To provide more consistency I have added additional methods which complement the Write type APIs by providing<br/>Reader APIs. These are really just proxies to the Fitnium 1 Unique Value Generator APIs<br/>Load a Reader and give it a name<br/><pre>| load reader | classpath | into | name |<br/></pre><br/>Load a Reader and give it a name and starting from a specific value<br/><pre>| load reader | classpath | into | name | with starting value | value |<br/></pre><br/>Once you have a UVG/Reader you can start reading data from it with<br/><pre>| store next unique value from | reader-name | with params | parameter-list | in | fitnium-variable |<br/></pre><pre>| next unique value from | name |<br/></pre><br/><h2>Example</h2><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./lib/*.jar</span><br/><br/><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*firefox</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>10</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>50000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>load writer</td>
+<td>com.magneticreason.fitnium.writer.ExcelSpreadsheet<a title="create page" href="ExcelSpreadsheet?edit&nonExistent=true">[?]</a></td>
+<td>into</td>
+<td>testSheet1</td>
+<td>with params</td>
+<td>testBook.xls,testSheet</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store value</td>
+<td>Name:</td>
+<td>with params</td>
+<td>1,1</td>
+<td>in writer</td>
+<td>testSheet1</td>
+</tr>
+<tr><td>store value</td>
+<td>Keith</td>
+<td>with params</td>
+<td>1,2</td>
+<td>in writer</td>
+<td>testSheet1</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store value</td>
+<td>Surname:</td>
+<td>with params</td>
+<td>2,1</td>
+<td>in writer</td>
+<td>testSheet1</td>
+</tr>
+<tr><td>store value</td>
+<td>Sterling</td>
+<td>with params</td>
+<td>2,2</td>
+<td>in writer</td>
+<td>testSheet1</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>flush writer</td>
+<td>testSheet1</td>
+</tr>
+</table>
+<br/>Some time later, possibly in a totally different test<br/><br/>Fitnium 1 Example<br/><br/><table border="1" cellspacing="0">
+<tr><td>load Unique Value Generator</td>
+<td>com.magneticreason.fitnium.generator.ExcelSpreadsheet</td>
+<td>Into</td>
+<td>testSheet2</td>
+<td>and initialise with</td>
+<td>testBook.xls,testSheet</td>
+</tr>
+<tr><td>store next unique value from</td>
+<td>testSheet2</td>
+<td>with params</td>
+<td>1,2</td>
+<td>in</td>
+<td>firstname</td>
+</tr>
+<tr><td>store next unique value from</td>
+<td>testSheet2</td>
+<td>with params</td>
+<td>2,2</td>
+<td>in</td>
+<td>surname</td>
+</tr>
+</table>
+<br/>Fitnium 2 Example, you can use 'unique value generator' and 'reader' interchangeably<br/><br/><table border="1" cellspacing="0">
+<tr><td>load reader</td>
+<td>com.magneticreason.fitnium.generator.ExcelSpreadsheet</td>
+<td>Into</td>
+<td>testSheet3</td>
+<td>and initialise with</td>
+<td>testBook.xls,testSheet</td>
+</tr>
+<tr><td>store next unique value from</td>
+<td>testSheet3</td>
+<td>with params</td>
+<td>1,2</td>
+<td>in</td>
+<td>firstname</td>
+</tr>
+<tr><td>store next unique value from</td>
+<td>testSheet3</td>
+<td>with params</td>
+<td>2,2</td>
+<td>in</td>
+<td>surname</td>
+</tr>
+</table>
+<br/><br/>Use the values, here we just compare them, but we could fill in input boxes or what ever<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does</td>
+<td>!{firstname}</td>
+<td>equal</td>
+<td>Keith</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>does</td>
+<td>!{surname}</td>
+<td>equal</td>
+<td>Sterling</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>ReadingWritingData</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

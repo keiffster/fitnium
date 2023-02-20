@@ -1,0 +1,500 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>BrowserApis</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>13</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('28767988546563640');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img28767988546563640"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.ApiTest.SetUp">.FitniumUserGuide.ApiTest.SetUp</a> <a href="FitniumUserGuide.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="28767988546563640"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium <br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td class="error">Using the browser<hr><pre><div class="fit_stacktrace">java.lang.NoClassDefFoundError: com/google/common/collect/Maps
+	at org.openqa.selenium.WebDriverCommandProcessor.<init>(WebDriverCommandProcessor.java:131)
+	at org.openqa.selenium.WebDriverCommandProcessor.<init>(WebDriverCommandProcessor.java:145)
+	at org.openqa.selenium.WebDriverCommandProcessor.<init>(WebDriverCommandProcessor.java:176)
+	at org.openqa.selenium.WebDriverBackedSelenium.<init>(WebDriverBackedSelenium.java:24)
+	at com.magneticreason.fitnium.BaseFitniumFixture.usingTheBrowserStartAt(BaseFitniumFixture.java:221)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.lang.ClassNotFoundException: com.google.common.collect.Maps
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	... 27 more
+</div></pre></td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="fail">true <span class="fit_label">expected</span><hr>false <span class="fit_label">actual</span></td>
+</tr>
+<tr><td class="error">set speed to<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumSeleniumAPI.setSpeedToMilliseconds(FitniumSeleniumAPI.java:29)
+	at com.magneticreason.fitnium.BaseFitniumFixture.setSpeedToMilliseconds(BaseFitniumFixture.java:320)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td class="error">set timeout to<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumSeleniumAPI.setTimeoutToMilliseconds(FitniumSeleniumAPI.java:53)
+	at com.magneticreason.fitnium.BaseFitniumFixture.setTimeoutToMilliseconds(BaseFitniumFixture.java:342)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td class="error">write to debug<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumDebugAPI.writeToDebug(FitniumDebugAPI.java:22)
+	at com.magneticreason.fitnium.BaseFitniumFixture.writeToDebug(BaseFitniumFixture.java:151)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">starting at URL<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumSeleniumAPI.startingAtURL(FitniumSeleniumAPI.java:17)
+	at com.magneticreason.fitnium.BaseFitniumFixture.startingAtURL(BaseFitniumFixture.java:309)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">wait for page to load for<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumWaitAPI.waitForPageToLoadForSeconds(FitniumWaitAPI.java:1316)
+	at com.magneticreason.fitnium.BaseFitniumFixture.waitForPageToLoadForSeconds(BaseFitniumFixture.java:4373)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="error">Magnetic Reason<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumWindowAPI.titleOfCurrentPage(FitniumWindowAPI.java:219)
+	at com.magneticreason.fitnium.BaseFitniumFixture.titleOfCurrentPage(BaseFitniumFixture.java:2906)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="error">Fitnium Test Page<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumElementAPI.textOfElement(FitniumElementAPI.java:94)
+	at com.magneticreason.fitnium.BaseFitniumFixture.textOfElement(BaseFitniumFixture.java:1047)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="error">true<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumTextAPI.isTextPresent(FitniumTextAPI.java:25)
+	at com.magneticreason.fitnium.BaseFitniumFixture.isTextPresent(BaseFitniumFixture.java:921)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+</div>
+</div>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="4">comment</td>
+</tr>
+<tr><td colspan="4">These commands tell the browser how to start</td>
+</tr>
+<tr><td colspan="4">They are commented out because we've already called them above in the Setup Fixture</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>browser</td>
+<td>start at</td>
+<td>URL</td>
+</tr>
+<tr><td colspan="4">In addition there are a number of short cut methods for starting a specific browser</td>
+</tr>
+<tr><td>using firefox start at</td>
+<td colspan="3">URL</td>
+</tr>
+<tr><td>using explorer start at</td>
+<td colspan="3">URL</td>
+</tr>
+<tr><td>using explorer in HTA mode start at</td>
+<td colspan="3">URL</td>
+</tr>
+<tr><td>using chrome start at</td>
+<td colspan="3">URL</td>
+</tr>
+<tr><td colspan="4">And to close the browser</td>
+</tr>
+<tr><td colspan="4">close the browser</td>
+</tr>
+</table>
+<br/>Run through browser buttons<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">click the back button<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumBrowserAPI.clickTheBackButton(FitniumBrowserAPI.java:41)
+	at com.magneticreason.fitnium.BaseFitniumFixture.clickTheBackButton(BaseFitniumFixture.java:481)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+<tr><td class="error">click the refresh button<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumBrowserAPI.clickTheRefreshButton(FitniumBrowserAPI.java:53)
+	at com.magneticreason.fitnium.BaseFitniumFixture.clickTheRefreshButton(BaseFitniumFixture.java:493)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+<tr><td class="error">click the close button<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumBrowserAPI.clickTheCloseButton(FitniumBrowserAPI.java:29)
+	at com.magneticreason.fitnium.BaseFitniumFixture.clickTheCloseButton(BaseFitniumFixture.java:469)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="2">comment</td>
+</tr>
+<tr><td colspan="2">You can control what the browsers writes to its console</td>
+</tr>
+<tr><td>set browser log level</td>
+<td>debug info warn error off</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-2473661970943464156');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-2473661970943464156"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.ApiTest.TearDown">.FitniumUserGuide.ApiTest.TearDown</a> <a href="FitniumUserGuide.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-2473661970943464156"><br/><table border="1" cellspacing="0">
+<tr><td class="error">close the browser<hr><pre><div class="fit_stacktrace">java.lang.NullPointerException
+	at com.magneticreason.fitnium.api.FitniumBrowserAPI.closeTheBrowser(FitniumBrowserAPI.java:17)
+	at com.magneticreason.fitnium.BaseFitniumFixture.closeTheBrowser(BaseFitniumFixture.java:457)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>BrowserApis</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

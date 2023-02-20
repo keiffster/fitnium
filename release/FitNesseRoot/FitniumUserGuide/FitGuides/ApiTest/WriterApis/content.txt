@@ -1,0 +1,27 @@
+!1 Writer APIs
+
+Note that additional jar files are required to use the Excel Generator described below in the examples
+We currently use POI and this jar file needs to be included in the path
+
+Load writer, give it a name, and passing in any additional parameters
+{{{| load writer | classpath | into | name | with params | params-list |
+}}}
+Store a value in the writer
+{{{| store value | value | with params | params-list | in writer | name |
+}}}
+Flush the writer, This is important as nothing is writing to the write until flush is called
+If you do not call flush, you will loose your data
+{{{| flush writer | name |
+}}}
+!2 Examples
+!path poi-3.2-FINAL-20081019.jar
+
+| load writer | com.magneticreason.fitnium.writer.ExcelSpreadsheet | into | testSheet | with params | testBook.xls,testSheet |
+
+| store value | Name: | with params | 1,1 | in writer | testSheet |
+| store value | Keith | with params | 1,2 | in writer | testSheet |
+
+| store value | Surname: | with params | 2,1 | in writer | testSheet |
+| store value | Sterling | with params | 2,2 | in writer | testSheet |
+
+| flush writer | testSheet |

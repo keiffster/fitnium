@@ -1,0 +1,79 @@
+!1 List Wait APIs
+Wait for a list to have anything selected
+{{{| wait for listbox | locator | to have something selected  |
+}}}
+Wait for a list to have a specific id selected
+{{{| wait for listbox | locator | to have selected id | id |
+}}}
+Wait for a list to have a specific index selected
+{{{| wait for listbox | locator | to have selected index | index |
+}}}
+Wait for a list to have a specific label selected
+{{{| wait for listbox | locator | to have selected label | label |
+}}}
+Wait for a list to have a specific value selected
+{{{| wait for listbox | locator | to have selected value | value |
+}}}
+Wait for a list to have a specific set of ids selected
+{{{| wait for listbox | locator | to have selected ids | id-list |
+}}}
+Wait for a list to have a specific set of indexes selected
+{{{| wait for listbox | locator | to have selected indexes | index-list |
+}}}
+Wait for a list to have a specific set of labels selected
+{{{| wait for listbox | locator | to have selected labels | label-list |
+}}}
+Wait for a list to have a specific set of values selected
+{{{| wait for listbox | locator | to have selected values | value-list |
+}}}
+Wait for a list to have a specific set of options selected
+{{{| wait for listbox | locator | to have selected options | options-list |
+}}}
+!2Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| select Option | England | In List | id=form_country |
+| wait for listbox | id=form_country | to have something selected  |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| select Option | England | In List | id=form_country |
+| wait for listbox | form_country  | to have selected id | eng |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| select Option | England | In List | id=form_country |
+| wait for listbox | form_country  | to have selected index | 3 |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| select Option | England | In List | id=form_country |
+| wait for listbox | form_country | to have selected label | England |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| select Option | England | In List | id=form_country |
+| wait for listbox | form_country | to have selected value | eng |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| add Selection Option | Audi | To List | form_car |
+| add Selection Option | Saab | To List | form_car |
+| wait for listbox | form_car | to have selected ids | saab,audi |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| add Selection Option | Audi | To List | form_car |
+| add Selection Option | Saab | To List | form_car |
+| wait for listbox | form_car | to have selected indexes | 1,2 |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| add Selection Option | Audi | To List | form_car |
+| add Selection Option | Saab | To List | form_car |
+| wait for listbox | form_car | to have selected labels | Saab,Audi |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| add Selection Option | Audi | To List | form_car |
+| add Selection Option | Saab | To List | form_car |
+| wait for listbox | form_car | to have selected values | saab,audi |
+| click the refresh button |
+| wait for page to load for | 10 | seconds |
+| add Selection Option | Audi | To List | form_car |
+| add Selection Option | Saab | To List | form_car |
+| wait for listbox | form_car | to have selected options | Volvo,Saab,Audi,Mercedes,Other |

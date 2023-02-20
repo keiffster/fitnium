@@ -1,0 +1,9 @@
+!1 Cookie API
+Wait for Cookie with specific name to be present
+{{{| wait for cookie | name | to be present |
+}}}
+!2 Examples
+| click the refresh button |
+| create cookie named | fitnium | with value | is cool |
+| create cookie named | fitnesse | with value | is great |
+| wait for cookie | fitnium | to be present |

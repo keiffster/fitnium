@@ -1,0 +1,1861 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>JavascriptDialogApis</rootPath>
+    <result>
+    <counts>
+      <right>21</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('606877129426423798');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img606877129426423798"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.SlimGuides.ApiTest.SetUp">.FitniumUserGuide.SlimGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.SlimGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="606877129426423798"><span class="meta">variable defined: TEST_SYSTEM=slim</span> <br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/><table border="1" cellspacing="0" _TABLENUMBER=5303866563602375126>
+<tr><td>import</td>
+</tr>
+<tr><td>fitnesse.slim.test</td>
+</tr>
+<tr><td>fitnesse.fixtures</td>
+</tr>
+<tr><td>com.magneticreason.fitnium</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=5831439993945408248>
+<tr><td>scenario</td>
+<td colspan="3">jump to test page</td>
+</tr>
+<tr><td>the server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>the server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td>localhost:8090/fitnium/</td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+<tr><td>starting at URL</td>
+<td colspan="3">testpage4api.html</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td>Fitnium Test Page</td>
+</tr>
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td>true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Javascript Dialog APIs</h1><h3>Alert Dialog APIs</h3>Check the message in an alert box<br/><pre>| check | alert dialog message | message |<br/>| check | alert dialog message is | message | true|false |<br/></pre><br/>Store the message in an alert box in a variable<br/><pre>| store alert dialog message in | variable |<br/></pre><br/>Check an alert box has occured<br/><pre>| check | has Alert Occurred | true|false |<br/></pre><br/>Close the alert box<br/><pre>| close Alert Dialog |<br/></pre><br/><h3>Prompt Dialog APIs</h3>Set the text to be entered into the next prompt box automatically<br/><pre>| answer | text | On Next Prompt |<br/></pre><br/>Check a prompt box has occurred<br/><pre>| check | has Prompt Occurred | true|false |<br/></pre><br/>Check the text of a prompt box<br/><pre>| check | Prompt Dialog Message | text |<br/></pre><br/><pre>| check | Prompt Dialog Message is |text  | true|false |<br/></pre><br/>Store the text of a prompt box in a variable<br/><pre>| store prompt dialog message in | variable |<br/></pre><br/>Close a prompt box<br/><pre>| close prompt Dialog |<br/></pre><br/><h3>Confirmation Dialog APIs</h3>Press the Cancel button when the next confirmation box is displayed<br/><pre>| choose Cancel On Next Confirmation |<br/></pre><br/>Press the Okbutton when the next confirmation box is displayed<br/><pre>| choose Ok On Next Confirmation |<br/></pre><br/>Check if a confirmation box has occurred<br/><pre>| check | has Confirmation Occurred | true|false |<br/></pre><br/>Close a confirmation box<br/><pre>| close confirmation Dialog |<br/></pre><br/>Check the message of a confirmation box<br/><pre>| check | Confirmation Dialog Message | text |<br/>| store confirmation dialog message in | variable |<br/></pre><br/><h2>Examples</h2><h3>Alert Dialog APIs</h3><table border="1" cellspacing="0" _TABLENUMBER=6134327873332051395>
+<tr><td>script</td>
+<td colspan="3"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td colspan="4" class=pass>jump to test page</td>
+<TD class=pass><div class="collapse_rim">
+	<a href="javascript:toggleCollapsable('1524141751862043374');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img1524141751862043374"/>
+	</a>
+	<span id="test_status" class=pass>Scenario</span>
+	<div class="hidden" id="1524141751862043374"><table border="1" cellspacing="0" _TABLENUMBER=36562121030951993 table_name="scriptTable_2_1/scriptTable_1">
+<tr><td>scenario</td>
+<td colspan="3">jump to test page</td>
+</tr>
+<tr><td>the server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>the server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td>localhost:8090/fitnium/</td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2"><span class="pass">true</span></td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+<tr><td>starting at URL</td>
+<td colspan="3">testpage4api.html</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2"><span class="pass">Magnetic Reason</span></td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td><span class="pass">Fitnium Test Page</span></td>
+</tr>
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td><span class="pass">true</span></td>
+</tr>
+</table></div>
+</div></TD></tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_alert</td>
+</tr>
+<tr><td>check</td>
+<td>alert dialog message</td>
+<td colspan="2"><span class="pass">Alert Message</span></td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_alert</td>
+</tr>
+<tr><td>check</td>
+<td>alert dialog message is</td>
+<td>Alert Message</td>
+<td><span class="pass">true</span></td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_alert</td>
+</tr>
+<tr><td>store alert dialog message in</td>
+<td colspan="3">alert</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_alert</td>
+</tr>
+<tr><td>check</td>
+<td>has Alert Occurred</td>
+<td colspan="2"><span class="pass">true</span></td>
+</tr>
+<tr><td colspan="4">close Alert Dialog</td>
+</tr>
+</table>
+<h3>Prompt Dialog APIs</h3><table border="1" cellspacing="0" _TABLENUMBER=1062239700718223374>
+<tr><td>script</td>
+<td colspan="3"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_prompt</td>
+</tr>
+<tr><td>check</td>
+<td>has Prompt Occurred</td>
+<td colspan="2"><span class="pass">true</span></td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_prompt</td>
+</tr>
+<tr><td>check</td>
+<td>prompt Dialog Message</td>
+<td colspan="2"><span class="pass">Is this what you meant</span></td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_prompt</td>
+</tr>
+<tr><td>check</td>
+<td>prompt Dialog Message is</td>
+<td>Is this what you meant</td>
+<td><span class="pass">true</span></td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_prompt</td>
+</tr>
+<tr><td>store prompt dialog message in</td>
+<td colspan="3">prompt</td>
+</tr>
+<tr><td>answer</td>
+<td>yes</td>
+<td colspan="2">On Next Prompt</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_prompt</td>
+</tr>
+<tr><td>check</td>
+<td>has Prompt Occurred</td>
+<td colspan="2"><span class="pass">true</span></td>
+</tr>
+<tr><td>check</td>
+<td>prompt Dialog Message</td>
+<td colspan="2"><span class="pass">Is this what you meant</span></td>
+</tr>
+<tr><td colspan="4">close Prompt Dialog</td>
+</tr>
+</table>
+<h3>Confirmation Dialog APIs</h3><table border="1" cellspacing="0" _TABLENUMBER=8444632062096462448>
+<tr><td>script</td>
+<td colspan="3"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td colspan="4">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_confirm</td>
+</tr>
+<tr><td>check</td>
+<td>has Confirmation Occurred</td>
+<td colspan="2"><span class="pass">true</span></td>
+</tr>
+<tr><td colspan="4">close confirmation Dialog</td>
+</tr>
+<tr><td colspan="4">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_confirm</td>
+</tr>
+<tr><td>check</td>
+<td>confirmation Dialog Message</td>
+<td colspan="2"><span class="pass">Do you want to continue ?</span></td>
+</tr>
+<tr><td colspan="4">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_confirm</td>
+</tr>
+<tr><td>check</td>
+<td>confirmation Dialog Message is</td>
+<td>Do you want to continue ?</td>
+<td><span class="pass">true</span></td>
+</tr>
+<tr><td colspan="4">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_confirm</td>
+</tr>
+<tr><td>store confirmation dialog message in</td>
+<td colspan="3">confirm</td>
+</tr>
+<tr><td colspan="4">choose cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_confirm</td>
+</tr>
+<tr><td>check</td>
+<td>has Confirmation Occurred</td>
+<td colspan="2"><span class="pass">true</span></td>
+</tr>
+<tr><td>check</td>
+<td>confirmation Dialog Message</td>
+<td colspan="2"><span class="pass">Do you want to continue ?</span></td>
+</tr>
+</table>
+<br/><br/><br/><br/><br/><br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-3047071271471193450');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-3047071271471193450"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.SlimGuides.ApiTest.TearDown">.FitniumUserGuide.SlimGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.SlimGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-3047071271471193450"><br/><table border="1" cellspacing="0" _TABLENUMBER=7216616436915348982>
+<tr class="hidden"><td>script</td>
+<td><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td colspan="2">close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>JavascriptDialogApis</relativePageName>
+        <tags>null</tags>
+    
+        <tables>
+            <table>
+        <name>import_0</name>
+                <row>
+                    <col><![CDATA[import]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[fitnesse.slim.test]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[fitnesse.fixtures]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[com.magneticreason.fitnium]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scenarioTable_1</name>
+                <row>
+                    <col><![CDATA[scenario]]></col>
+                    <col><![CDATA[jump to test page]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is located at]]></col>
+                    <col><![CDATA[localhost]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is on port]]></col>
+                    <col><![CDATA[4444]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[using the browser]]></col>
+                    <col><![CDATA[*chrome]]></col>
+                    <col><![CDATA[start at]]></col>
+                    <col><![CDATA[localhost:8090/fitnium/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is selenium initialised]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set speed to]]></col>
+                    <col><![CDATA[100]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set timeout to]]></col>
+                    <col><![CDATA[20000]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[write to debug]]></col>
+                    <col><![CDATA[starting test]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[starting at URL]]></col>
+                    <col><![CDATA[testpage4api.html]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[wait for page to load for]]></col>
+                    <col><![CDATA[5]]></col>
+                    <col><![CDATA[seconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[title of current page]]></col>
+                    <col><![CDATA[Magnetic Reason]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[text of element]]></col>
+                    <col><![CDATA[xpath=//h1]]></col>
+                    <col><![CDATA[Fitnium Test Page]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is Text Present]]></col>
+                    <col><![CDATA[This page contains all the elements neccassary to test Fitnium]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_2</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[jump to test page]]></col>
+                    <col><![CDATA[pass(scenario:scriptTable_2_1/scriptTable_1)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_alert]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[alert dialog message]]></col>
+                    <col><![CDATA[pass(Alert Message)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_alert]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[alert dialog message is]]></col>
+                    <col><![CDATA[Alert Message]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_alert]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[store alert dialog message in]]></col>
+                    <col><![CDATA[alert]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_alert]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[has Alert Occurred]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[close Alert Dialog]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_2_1/scriptTable_1</name>
+                <row>
+                    <col><![CDATA[scenario]]></col>
+                    <col><![CDATA[jump to test page]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is located at]]></col>
+                    <col><![CDATA[localhost]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is on port]]></col>
+                    <col><![CDATA[4444]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[using the browser]]></col>
+                    <col><![CDATA[*chrome]]></col>
+                    <col><![CDATA[start at]]></col>
+                    <col><![CDATA[localhost:8090/fitnium/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is selenium initialised]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set speed to]]></col>
+                    <col><![CDATA[100]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set timeout to]]></col>
+                    <col><![CDATA[20000]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[write to debug]]></col>
+                    <col><![CDATA[starting test]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[starting at URL]]></col>
+                    <col><![CDATA[testpage4api.html]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[wait for page to load for]]></col>
+                    <col><![CDATA[5]]></col>
+                    <col><![CDATA[seconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[title of current page]]></col>
+                    <col><![CDATA[pass(Magnetic Reason)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[text of element]]></col>
+                    <col><![CDATA[xpath=//h1]]></col>
+                    <col><![CDATA[pass(Fitnium Test Page)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is Text Present]]></col>
+                    <col><![CDATA[This page contains all the elements neccassary to test Fitnium]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_3</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_prompt]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[has Prompt Occurred]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_prompt]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[prompt Dialog Message]]></col>
+                    <col><![CDATA[pass(Is this what you meant)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_prompt]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[prompt Dialog Message is]]></col>
+                    <col><![CDATA[Is this what you meant]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_prompt]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[store prompt dialog message in]]></col>
+                    <col><![CDATA[prompt]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[answer]]></col>
+                    <col><![CDATA[yes]]></col>
+                    <col><![CDATA[On Next Prompt]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_prompt]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[has Prompt Occurred]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[prompt Dialog Message]]></col>
+                    <col><![CDATA[pass(Is this what you meant)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[close Prompt Dialog]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_4</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[choose Cancel On Next Confirmation]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_confirm]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[has Confirmation Occurred]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[close confirmation Dialog]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[choose Cancel On Next Confirmation]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_confirm]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[confirmation Dialog Message]]></col>
+                    <col><![CDATA[pass(Do you want to continue ?)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[choose Cancel On Next Confirmation]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_confirm]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[confirmation Dialog Message is]]></col>
+                    <col><![CDATA[Do you want to continue ?]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[choose Cancel On Next Confirmation]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_confirm]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[store confirmation dialog message in]]></col>
+                    <col><![CDATA[confirm]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[choose cancel On Next Confirmation]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=btn_confirm]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[has Confirmation Occurred]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[confirmation Dialog Message]]></col>
+                    <col><![CDATA[pass(Do you want to continue ?)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_5</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[close the browser]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_0, import, fitnesse.slim.test]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_1, import, fitnesse.fixtures]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_2, import, com.magneticreason.fitnium]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_0, call, scriptTableActor, theServerIsLocatedAt, localhost]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_0</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[the server is located at]]></expected>
+                              <evaluationMessage><![CDATA[the server is located at]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_1, call, scriptTableActor, theServerIsOnPort, 4444]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_1</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[the server is on port]]></expected>
+                              <evaluationMessage><![CDATA[the server is on port]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_2, call, scriptTableActor, usingTheBrowserStartAt, *chrome, localhost:8090/fitnium/]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_2</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_2</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[using the browser]]></expected>
+                              <evaluationMessage><![CDATA[using the browser]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_3, call, scriptTableActor, isSeleniumInitialised]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_3</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_4, call, scriptTableActor, setSpeedToMilliseconds, 100]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_4</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[set speed to]]></expected>
+                              <evaluationMessage><![CDATA[set speed to]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_5, call, scriptTableActor, setTimeoutToMilliseconds, 20000]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_5</instructionId>
+          <col>1</col>
+          <row>6</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[set timeout to]]></expected>
+                              <evaluationMessage><![CDATA[set timeout to]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_6, call, scriptTableActor, writeToDebug, starting test]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_6</instructionId>
+          <col>1</col>
+          <row>7</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[write to debug]]></expected>
+                              <evaluationMessage><![CDATA[write to debug]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_7, call, scriptTableActor, startingAtURL, testpage4api.html]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_7</instructionId>
+          <col>1</col>
+          <row>8</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_7</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[starting at URL]]></expected>
+                              <evaluationMessage><![CDATA[starting at URL]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_8, call, scriptTableActor, waitForPageToLoadForSeconds, 5]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_8</instructionId>
+          <col>1</col>
+          <row>9</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_8</instructionId>
+          <col>0</col>
+          <row>9</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[wait for page to load for]]></expected>
+                              <evaluationMessage><![CDATA[wait for page to load for]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_9, call, scriptTableActor, titleOfCurrentPage]]]></instruction>
+        <slimResult><![CDATA[Magnetic Reason]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_9</instructionId>
+          <col>2</col>
+          <row>10</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Magnetic Reason]]></actual>
+                              <expected><![CDATA[Magnetic Reason]]></expected>
+                              <evaluationMessage><![CDATA[pass(Magnetic Reason)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_10, call, scriptTableActor, textOfElement, xpath=//h1]]]></instruction>
+        <slimResult><![CDATA[Fitnium Test Page]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_10</instructionId>
+          <col>3</col>
+          <row>11</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Fitnium Test Page]]></actual>
+                              <expected><![CDATA[Fitnium Test Page]]></expected>
+                              <evaluationMessage><![CDATA[pass(Fitnium Test Page)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_10</instructionId>
+          <col>2</col>
+          <row>11</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1/scriptTable_1_11, call, scriptTableActor, isTextPresent, This page contains all the elements neccassary to test Fitnium]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_11</instructionId>
+          <col>3</col>
+          <row>12</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1/scriptTable_1_11</instructionId>
+          <col>2</col>
+          <row>12</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_2, call, scriptTableActor, clickElement, id=btn_alert]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_3, call, scriptTableActor, alertDialogMessage]]]></instruction>
+        <slimResult><![CDATA[Alert Message]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Alert Message]]></actual>
+                              <expected><![CDATA[Alert Message]]></expected>
+                              <evaluationMessage><![CDATA[pass(Alert Message)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_4, call, scriptTableActor, clickElement, id=btn_alert]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_4</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_5, call, scriptTableActor, alertDialogMessageIs, Alert Message]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_5</instructionId>
+          <col>3</col>
+          <row>5</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_5</instructionId>
+          <col>2</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_6, call, scriptTableActor, clickElement, id=btn_alert]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_6</instructionId>
+          <col>1</col>
+          <row>6</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_6</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_7, call, scriptTableActor, storeAlertDialogMessageIn, alert]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_7</instructionId>
+          <col>1</col>
+          <row>7</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_7</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[store alert dialog message in]]></expected>
+                              <evaluationMessage><![CDATA[store alert dialog message in]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_8, call, scriptTableActor, clickElement, id=btn_alert]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_8</instructionId>
+          <col>1</col>
+          <row>8</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_8</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_9, call, scriptTableActor, hasAlertOccurred]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_9</instructionId>
+          <col>2</col>
+          <row>9</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_10, call, scriptTableActor, closeAlertDialog]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_10</instructionId>
+          <col>0</col>
+          <row>10</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[close Alert Dialog]]></expected>
+                              <evaluationMessage><![CDATA[close Alert Dialog]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_1, call, scriptTableActor, clickElement, id=btn_prompt]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_2, call, scriptTableActor, hasPromptOccurred]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_3, call, scriptTableActor, clickElement, id=btn_prompt]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_4, call, scriptTableActor, promptDialogMessage]]]></instruction>
+        <slimResult><![CDATA[Is this what you meant]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Is this what you meant]]></actual>
+                              <expected><![CDATA[Is this what you meant]]></expected>
+                              <evaluationMessage><![CDATA[pass(Is this what you meant)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_5, call, scriptTableActor, clickElement, id=btn_prompt]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_5</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_6, call, scriptTableActor, promptDialogMessageIs, Is this what you meant]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_6</instructionId>
+          <col>3</col>
+          <row>6</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_6</instructionId>
+          <col>2</col>
+          <row>6</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_7, call, scriptTableActor, clickElement, id=btn_prompt]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_7</instructionId>
+          <col>1</col>
+          <row>7</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_7</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_8, call, scriptTableActor, storePromptDialogMessageIn, prompt]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_8</instructionId>
+          <col>1</col>
+          <row>8</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_8</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[store prompt dialog message in]]></expected>
+                              <evaluationMessage><![CDATA[store prompt dialog message in]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_9, call, scriptTableActor, answerOnNextPrompt, yes]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_9</instructionId>
+          <col>1</col>
+          <row>9</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_9</instructionId>
+          <col>0</col>
+          <row>9</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[answer]]></expected>
+                              <evaluationMessage><![CDATA[answer]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_10, call, scriptTableActor, clickElement, id=btn_prompt]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_10</instructionId>
+          <col>1</col>
+          <row>10</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_10</instructionId>
+          <col>0</col>
+          <row>10</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_11, call, scriptTableActor, hasPromptOccurred]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_11</instructionId>
+          <col>2</col>
+          <row>11</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_12, call, scriptTableActor, promptDialogMessage]]]></instruction>
+        <slimResult><![CDATA[Is this what you meant]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_12</instructionId>
+          <col>2</col>
+          <row>12</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Is this what you meant]]></actual>
+                              <expected><![CDATA[Is this what you meant]]></expected>
+                              <evaluationMessage><![CDATA[pass(Is this what you meant)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_13, call, scriptTableActor, closePromptDialog]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_13</instructionId>
+          <col>0</col>
+          <row>13</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[close Prompt Dialog]]></expected>
+                              <evaluationMessage><![CDATA[close Prompt Dialog]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_1, call, scriptTableActor, chooseCancelOnNextConfirmation]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[choose Cancel On Next Confirmation]]></expected>
+                              <evaluationMessage><![CDATA[choose Cancel On Next Confirmation]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_2, call, scriptTableActor, clickElement, id=btn_confirm]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_3, call, scriptTableActor, hasConfirmationOccurred]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_4, call, scriptTableActor, closeConfirmationDialog]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[close confirmation Dialog]]></expected>
+                              <evaluationMessage><![CDATA[close confirmation Dialog]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_5, call, scriptTableActor, chooseCancelOnNextConfirmation]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[choose Cancel On Next Confirmation]]></expected>
+                              <evaluationMessage><![CDATA[choose Cancel On Next Confirmation]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_6, call, scriptTableActor, clickElement, id=btn_confirm]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_6</instructionId>
+          <col>1</col>
+          <row>6</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_6</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_7, call, scriptTableActor, confirmationDialogMessage]]]></instruction>
+        <slimResult><![CDATA[Do you want to continue ?]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_7</instructionId>
+          <col>2</col>
+          <row>7</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Do you want to continue ?]]></actual>
+                              <expected><![CDATA[Do you want to continue ?]]></expected>
+                              <evaluationMessage><![CDATA[pass(Do you want to continue ?)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_8, call, scriptTableActor, chooseCancelOnNextConfirmation]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_8</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[choose Cancel On Next Confirmation]]></expected>
+                              <evaluationMessage><![CDATA[choose Cancel On Next Confirmation]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_9, call, scriptTableActor, clickElement, id=btn_confirm]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_9</instructionId>
+          <col>1</col>
+          <row>9</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_9</instructionId>
+          <col>0</col>
+          <row>9</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_10, call, scriptTableActor, confirmationDialogMessageIs, Do you want to continue ?]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_10</instructionId>
+          <col>3</col>
+          <row>10</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_10</instructionId>
+          <col>2</col>
+          <row>10</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_11, call, scriptTableActor, chooseCancelOnNextConfirmation]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_11</instructionId>
+          <col>0</col>
+          <row>11</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[choose Cancel On Next Confirmation]]></expected>
+                              <evaluationMessage><![CDATA[choose Cancel On Next Confirmation]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_12, call, scriptTableActor, clickElement, id=btn_confirm]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_12</instructionId>
+          <col>1</col>
+          <row>12</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_12</instructionId>
+          <col>0</col>
+          <row>12</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_13, call, scriptTableActor, storeConfirmationDialogMessageIn, confirm]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_13</instructionId>
+          <col>1</col>
+          <row>13</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_13</instructionId>
+          <col>0</col>
+          <row>13</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[store confirmation dialog message in]]></expected>
+                              <evaluationMessage><![CDATA[store confirmation dialog message in]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_14, call, scriptTableActor, chooseCancelOnNextConfirmation]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_14</instructionId>
+          <col>0</col>
+          <row>14</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[choose cancel On Next Confirmation]]></expected>
+                              <evaluationMessage><![CDATA[choose cancel On Next Confirmation]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_15, call, scriptTableActor, clickElement, id=btn_confirm]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_15</instructionId>
+          <col>1</col>
+          <row>15</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_15</instructionId>
+          <col>0</col>
+          <row>15</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_16, call, scriptTableActor, hasConfirmationOccurred]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_16</instructionId>
+          <col>2</col>
+          <row>16</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_17, call, scriptTableActor, confirmationDialogMessage]]]></instruction>
+        <slimResult><![CDATA[Do you want to continue ?]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_17</instructionId>
+          <col>2</col>
+          <row>17</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Do you want to continue ?]]></actual>
+                              <expected><![CDATA[Do you want to continue ?]]></expected>
+                              <evaluationMessage><![CDATA[pass(Do you want to continue ?)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_5_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_1, call, scriptTableActor, closeTheBrowser]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[close the browser]]></expected>
+                              <evaluationMessage><![CDATA[close the browser]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

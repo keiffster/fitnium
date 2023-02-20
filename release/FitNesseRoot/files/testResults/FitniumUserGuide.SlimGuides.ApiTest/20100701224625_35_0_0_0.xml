@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ApiTest</rootPath>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.AttributeApis</name>
+    <date>07/01/2010 22:46:25</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.AttributeApis?pageHistory&amp;resultDate=20100701224625</pageHistoryLink>
+    <counts>
+      <right>11</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.BrowserApis</name>
+    <date>07/01/2010 22:46:38</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.BrowserApis?pageHistory&amp;resultDate=20100701224638</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.ButtonApis</name>
+    <date>07/01/2010 22:46:48</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.ButtonApis?pageHistory&amp;resultDate=20100701224648</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.CheckBoxApis</name>
+    <date>07/01/2010 22:46:59</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.CheckBoxApis?pageHistory&amp;resultDate=20100701224659</pageHistoryLink>
+    <counts>
+      <right>17</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.CookieApis</name>
+    <date>07/01/2010 22:47:12</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.CookieApis?pageHistory&amp;resultDate=20100701224712</pageHistoryLink>
+    <counts>
+      <right>18</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.DebugApis</name>
+    <date>07/01/2010 22:47:24</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.DebugApis?pageHistory&amp;resultDate=20100701224724</pageHistoryLink>
+    <counts>
+      <right>10</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.ElementApis</name>
+    <date>07/01/2010 22:47:34</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.ElementApis?pageHistory&amp;resultDate=20100701224734</pageHistoryLink>
+    <counts>
+      <right>21</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.FileAndDirectoryApis</name>
+    <date>07/01/2010 22:47:56</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.FileAndDirectoryApis?pageHistory&amp;resultDate=20100701224756</pageHistoryLink>
+    <counts>
+      <right>27</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.FormApis</name>
+    <date>07/01/2010 22:48:05</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.FormApis?pageHistory&amp;resultDate=20100701224805</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.GeneratorApis</name>
+    <date>07/01/2010 22:48:14</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.GeneratorApis?pageHistory&amp;resultDate=20100701224814</pageHistoryLink>
+    <counts>
+      <right>20</right>
+      <wrong>0</wrong>
+      <ignores>2</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.InputApis</name>
+    <date>07/01/2010 22:48:23</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.InputApis?pageHistory&amp;resultDate=20100701224823</pageHistoryLink>
+    <counts>
+      <right>11</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.JavascriptApis</name>
+    <date>07/01/2010 22:48:33</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.JavascriptApis?pageHistory&amp;resultDate=20100701224833</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.JavascriptDialogApis</name>
+    <date>07/01/2010 22:48:43</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.JavascriptDialogApis?pageHistory&amp;resultDate=20100701224843</pageHistoryLink>
+    <counts>
+      <right>21</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.KeyboardApis</name>
+    <date>07/01/2010 22:48:57</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.KeyboardApis?pageHistory&amp;resultDate=20100701224857</pageHistoryLink>
+    <counts>
+      <right>10</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.LinkApis</name>
+    <date>07/01/2010 22:49:08</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.LinkApis?pageHistory&amp;resultDate=20100701224908</pageHistoryLink>
+    <counts>
+      <right>10</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.ListApis</name>
+    <date>07/01/2010 22:49:18</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.ListApis?pageHistory&amp;resultDate=20100701224918</pageHistoryLink>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.ListApis.MultiSelectLists</name>
+    <date>07/01/2010 22:49:19</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.ListApis.MultiSelectLists?pageHistory&amp;resultDate=20100701224919</pageHistoryLink>
+    <counts>
+      <right>30</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.ListApis.SingleSelectLists</name>
+    <date>07/01/2010 22:49:31</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.ListApis.SingleSelectLists?pageHistory&amp;resultDate=20100701224931</pageHistoryLink>
+    <counts>
+      <right>28</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.MouseApis</name>
+    <date>07/01/2010 22:49:42</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.MouseApis?pageHistory&amp;resultDate=20100701224942</pageHistoryLink>
+    <counts>
+      <right>7</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.ParameterApis</name>
+    <date>07/01/2010 22:49:53</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.ParameterApis?pageHistory&amp;resultDate=20100701224953</pageHistoryLink>
+    <counts>
+      <right>41</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.RadioButtonApis</name>
+    <date>07/01/2010 22:50:04</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.RadioButtonApis?pageHistory&amp;resultDate=20100701225004</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.ScreenShotApis</name>
+    <date>07/01/2010 22:50:14</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.ScreenShotApis?pageHistory&amp;resultDate=20100701225014</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.TableApis</name>
+    <date>07/01/2010 22:50:27</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.TableApis?pageHistory&amp;resultDate=20100701225027</pageHistoryLink>
+    <counts>
+      <right>7</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.TextApis</name>
+    <date>07/01/2010 22:50:36</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.TextApis?pageHistory&amp;resultDate=20100701225036</pageHistoryLink>
+    <counts>
+      <right>9</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.TimeApis</name>
+    <date>07/01/2010 22:50:46</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.TimeApis?pageHistory&amp;resultDate=20100701225046</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.BasicWaits</name>
+    <date>07/01/2010 22:50:56</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.BasicWaits?pageHistory&amp;resultDate=20100701225056</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.CookieWaits</name>
+    <date>07/01/2010 22:51:11</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.CookieWaits?pageHistory&amp;resultDate=20100701225111</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.DialogWaits</name>
+    <date>07/01/2010 22:51:22</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.DialogWaits?pageHistory&amp;resultDate=20100701225122</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.ElementWaits</name>
+    <date>07/01/2010 22:51:33</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.ElementWaits?pageHistory&amp;resultDate=20100701225133</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.HtmlWaits</name>
+    <date>07/01/2010 22:51:43</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.HtmlWaits?pageHistory&amp;resultDate=20100701225143</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.JavascriptWaits</name>
+    <date>07/01/2010 22:51:57</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.JavascriptWaits?pageHistory&amp;resultDate=20100701225157</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.ListWaits</name>
+    <date>07/01/2010 22:52:07</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.ListWaits?pageHistory&amp;resultDate=20100701225207</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.WindowWaits</name>
+    <date>07/01/2010 22:52:23</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WaitApis.WindowWaits?pageHistory&amp;resultDate=20100701225223</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WindowApis</name>
+    <date>07/01/2010 22:52:33</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WindowApis?pageHistory&amp;resultDate=20100701225233</pageHistoryLink>
+    <counts>
+      <right>18</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.SlimGuides.ApiTest.WriterApis</name>
+    <date>07/01/2010 22:52:45</date>
+    <pageHistoryLink>FitniumUserGuide.SlimGuides.ApiTest.WriterApis?pageHistory&amp;resultDate=20100701225245</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <finalCounts>
+    <right>35</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+
+</suiteResults>
+

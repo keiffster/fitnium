@@ -1,0 +1,28 @@
+!1 Debug APIs
+
+To write an line of text to the debug console in Selenium
+{{{| write to debug | message-string |
+}}}
+To set the debug level
+{{{| set browser log level | debug-value |
+}}}
+Valid values for debug are "debug", "info", "warn", "error" or "off"
+!2 Examples
+| write to debug | Setting debug level to debug |
+| set browser log level | debug |
+
+| write to debug | Setting debug level to warn |
+| set browser log level | warn |
+
+| write to debug | Setting debug level to error |
+| set browser log level | error |
+
+| write to debug | Setting debug level to off |
+| set browser log level | off |
+
+This is the last one as its default
+
+| write to debug | Setting debug level to info |
+| set browser log level | error |
+
+

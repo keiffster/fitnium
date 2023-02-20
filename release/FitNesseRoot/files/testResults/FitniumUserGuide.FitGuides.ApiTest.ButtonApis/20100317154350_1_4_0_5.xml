@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ButtonApis</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>4</wrong>
+      <ignores>0</ignores>
+      <exceptions>5</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('7879915805277347504');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img7879915805277347504"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="7879915805277347504"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium <br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td>http:/localhost:8090/fitnium/</td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">starting at URL<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: XHR ERROR: URL = http://http/localhost:8090/fitnium/testpage4api.html Response_Code = -1 Error_Message = Request Error
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.open(DefaultSelenium.java:335)
+	at com.magneticreason.fitnium.api.FitniumSeleniumAPI.startingAtURL(FitniumSeleniumAPI.java:17)
+	at com.magneticreason.fitnium.BaseFitniumFixture.startingAtURL(BaseFitniumFixture.java:300)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">wait for page to load for<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: Timed out after 5000ms
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.waitForPageToLoad(DefaultSelenium.java:635)
+	at com.magneticreason.fitnium.api.FitniumWaitAPI.waitForPageToLoadForSeconds(FitniumWaitAPI.java:1316)
+	at com.magneticreason.fitnium.BaseFitniumFixture.waitForPageToLoadForSeconds(BaseFitniumFixture.java:4364)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="fail">Magnetic Reason <span class="fit_label">expected</span><hr>Problem loading page <span class="fit_label">actual</span></td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="error">Fitnium Test Page<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR: Element xpath=//h1 not found
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.DefaultSelenium.getText(DefaultSelenium.java:435)
+	at com.magneticreason.fitnium.api.FitniumElementAPI.textOfElement(FitniumElementAPI.java:94)
+	at com.magneticreason.fitnium.BaseFitniumFixture.textOfElement(BaseFitniumFixture.java:1038)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="fail">true <span class="fit_label">expected</span><hr>false <span class="fit_label">actual</span></td>
+</tr>
+</table>
+</div>
+</div>
+Button APIs<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does button With Id</td>
+<td>send</td>
+<td>exist</td>
+<td class="fail">true <span class="fit_label">expected</span><hr>false <span class="fit_label">actual</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">click button<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR: Element send not found
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.click(DefaultSelenium.java:167)
+	at com.magneticreason.fitnium.api.FitniumButtonAPI.clickButton(FitniumButtonAPI.java:22)
+	at com.magneticreason.fitnium.BaseFitniumFixture.clickButton(BaseFitniumFixture.java:1899)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>send</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">wait for page to load for<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: Timed out after 5000ms
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.waitForPageToLoad(DefaultSelenium.java:635)
+	at com.magneticreason.fitnium.api.FitniumWaitAPI.waitForPageToLoadForSeconds(FitniumWaitAPI.java:1316)
+	at com.magneticreason.fitnium.BaseFitniumFixture.waitForPageToLoadForSeconds(BaseFitniumFixture.java:4364)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>click the back button</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store all buttons in</td>
+<td>list</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>do buttons with ids exist</td>
+<td>!{list}</td>
+<td class="fail">true <span class="fit_label">expected</span><hr>false <span class="fit_label">actual</span></td>
+</tr>
+</table>
+<br/><br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-5775955907849449954');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-5775955907849449954"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-5775955907849449954"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>ButtonApis</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

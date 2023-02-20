@@ -1,0 +1,37 @@
+!2 Writing Readers
+Example classes can be found in the Fitnium source in the package com.magneticreason.fitnium.generator
+All readers must implement the following interface
+{{{public interface FitniumUniqueValueGenerator {
+
+	public void initialise ( String params ) throws Exception;
+
+	public String getNextValue ()  throws Exception ;
+	public String getNextValue ( String params )  throws Exception ;
+
+	public void reset ( String intialValue )  throws Exception ;
+	public void reset ()  throws Exception ;
+
+}
+}}}
+| Method | Description |
+| initialise() | Initiales the reader with the passed in parameters, typically a comma seperated list of values we parse |
+| getNextValue() | Get the next value from the reader. Optional list of parameters. In the Excel example we use this to locate the cell to read from |
+| reset() | Reset the reader/generator to a know state. If the generator is a counter this can be used to reset it the value back to its start state |
+!2 Writing Writers
+Source code for all the Fitnium writers can be found in the Fitnium source package com.magneticreason.fitnium.writer
+All writes must implement the following interface
+{{{
+public interface FitniumWriter {
+
+	public void initialise ( String params ) throws Exception;
+
+	public void saveValue ( String value ) throws Exception ;
+	public void saveValue ( String value, String params ) throws Exception ;
+
+	public void flush () throws Exception;
+}
+}}}
+| Method | Description |
+| initialise() | Initialises the write with the parametes, typically this is a string or comma seperated values that you parse |
+| saveValue () | Stores the Value passed in, with optional parameters. For example we use this in the Excel write to know which cell to write the value into |
+| flush () | Writes the values to the underlying data source. This is optional if your datasource is a database or webservice in which case the store() method may write directly. We use this in the Excel example to speed up the writing, by only writing at the end |

@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>JavascriptDialogApis</rootPath>
+    <result>
+    <counts>
+      <right>17</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-4908822781584899169');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-4908822781584899169"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-4908822781584899169"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium <br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Javascript Dialog APIs</h1><h3>Alert Dialog APIs</h3>Check the message in an alert box<br/><pre>| check | alert dialog message | message |<br/>| check | alert dialog message is | message | true|false |<br/></pre><br/>Store the message in an alert box in a variable<br/><pre>| store alert dialog message in | variable |<br/></pre><br/>Check an alert box has occured<br/><pre>| check | has Alert Occurred | true|false |<br/></pre><br/>Close the alert box<br/><pre>| close Alert Dialog |<br/></pre><br/><h3>Prompt Dialog APIs</h3>Set the text to be entered into the next prompt box automatically<br/><pre>| answer | text | On Next Prompt |<br/></pre><br/>Check a prompt box has occurred<br/><pre>| check | has Prompt Occurred | true|false |<br/></pre><br/>Check the text of a prompt box<br/><pre>| check | Prompt Dialog Message | text |<br/></pre><br/><pre>| check | Prompt Dialog Message is |text  | true|false |<br/></pre><br/>Store the text of a prompt box in a variable<br/><pre>| store prompt dialog message in | variable |<br/></pre><br/>Close a prompt box<br/><pre>| close prompt Dialog |<br/></pre><br/><h3>Confirmation Dialog APIs</h3>Press the Cancel button when the next confirmation box is displayed<br/><pre>| choose Cancel On Next Confirmation |<br/></pre><br/>Press the Okbutton when the next confirmation box is displayed<br/><pre>| choose Ok On Next Confirmation |<br/></pre><br/>Check if a confirmation box has occurred<br/><pre>| check | has Confirmation Occurred | true|false |<br/></pre><br/>Close a confirmation box<br/><pre>| close confirmation Dialog |<br/></pre><br/>Check the message of a confirmation box<br/><pre>| check | Confirmation Dialog Message | text |<br/>| store confirmation dialog message in | variable |<br/></pre><br/><h2>Examples</h2><h3>Alert Dialog APIs</h3><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td colspan="2">id=btn_alert</td>
+</tr>
+<tr><td>check</td>
+<td>alert dialog message</td>
+<td class="pass">Alert Message</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td colspan="3">id=btn_alert</td>
+</tr>
+<tr><td>check</td>
+<td>alert dialog message is</td>
+<td>Alert Message</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td>id=btn_alert</td>
+</tr>
+<tr><td>store alert dialog message in</td>
+<td>alert</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td colspan="2">id=btn_alert</td>
+</tr>
+<tr><td>check</td>
+<td>has Alert Occurred</td>
+<td class="pass">true</td>
+</tr>
+<tr><td colspan="3">close Alert Dialog</td>
+</tr>
+</table>
+<h3>Prompt Dialog APIs</h3><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td colspan="2">id=btn_prompt</td>
+</tr>
+<tr><td>check</td>
+<td>has Prompt Occurred</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td colspan="2">id=btn_prompt</td>
+</tr>
+<tr><td>check</td>
+<td>Prompt Dialog Message</td>
+<td class="pass">Is this what you meant</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td colspan="3">id=btn_prompt</td>
+</tr>
+<tr><td>check</td>
+<td>Prompt Dialog Message is</td>
+<td>Is this what you meant</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td>id=btn_prompt</td>
+</tr>
+<tr><td>store prompt dialog message in</td>
+<td>prompt</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>answer</td>
+<td>yes</td>
+<td>On Next Prompt</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="2">id=btn_prompt</td>
+</tr>
+<tr><td>check</td>
+<td>has Prompt Occurred</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>Prompt Dialog Message</td>
+<td class="pass">Is this what you meant</td>
+</tr>
+<tr><td colspan="3">close prompt Dialog</td>
+</tr>
+</table>
+<h3>Confirmation Dialog APIs</h3><table border="1" cellspacing="0">
+<tr><td colspan="3">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="2">id=btn_confirm</td>
+</tr>
+<tr><td>check</td>
+<td>has Confirmation Occurred</td>
+<td class="pass">true</td>
+</tr>
+<tr><td colspan="3">close confirmation Dialog</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="2">id=btn_confirm</td>
+</tr>
+<tr><td>check</td>
+<td>Confirmation Dialog Message</td>
+<td class="pass">Do you want to continue ?</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="4">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=btn_confirm</td>
+</tr>
+<tr><td>check</td>
+<td>Confirmation Dialog Message is</td>
+<td>Do you want to continue ?</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="2">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td>id=btn_confirm</td>
+</tr>
+<tr><td>store confirmation dialog message in</td>
+<td>confirm</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">choose Cancel On Next Confirmation</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="2">id=btn_confirm</td>
+</tr>
+<tr><td>check</td>
+<td>has Confirmation Occurred</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>Confirmation Dialog Message</td>
+<td class="pass">Do you want to continue ?</td>
+</tr>
+</table>
+<br/><br/><br/><br/><br/><br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-1460828615702304157');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-1460828615702304157"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-1460828615702304157"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>JavascriptDialogApis</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

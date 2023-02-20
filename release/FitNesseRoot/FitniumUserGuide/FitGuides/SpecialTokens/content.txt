@@ -1,0 +1,63 @@
+To see how to write you own tokens, click the link [[Writing Special Tokens][.FitniumUserGuide.WritingSpecialTokens]]
+
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+!|com.magneticreason.fitnium.BaseFitniumFixture|
+
+Set up the browser and connect to selenium
+
+|The server is located at | localhost |
+|The server is on port | 4444 |
+|Using the browser | *firefox | start at | http://localhost:8090/fitnium/ |
+|check | is selenium initialised | true |
+|set speed to |100| milliseconds |
+|set timeout to |20000| milliseconds |
+|write to debug | starting test |
+
+Lets first start at the Fitnium home page at Magnetic Reason
+
+| starting at URL| tokenpage.html |
+
+| wait for page to load for | 5 | seconds |
+
+| check| title of current page | Magnetic Reason |
+| check|text of element | xpath=//h1 | Fitnium Test Page |
+
+| check |is Text Present| This page contains all the elements neccassary to test Fitnium Tokens | true |
+
+Random Tokens
+
+| enter | @{rand.int} | in input field | id=rand_integer |
+
+| enter | @{rand.string} | in input field | id=rand_string |
+
+| enter | @{rand.email} | in input field | id=rand_email |
+
+| enter | @{rand.digits(9)} | in input field | id=rand_digits |
+
+Date
+
+| enter | @{date.now} | in input field | id=date_now |
+
+| enter | @{date.before(1)} | in input field | id=date_before |
+
+| enter | @{date.after(1)} | in input field | id=date_after |
+
+Calendar
+
+| enter | @{calendar.now} | in input field | id=cal_now |
+
+| enter | @{calendar.before(1)} | in input field | id=cal_before |
+
+| enter | @{calendar.after(1)} | in input field | id=cal_after |
+
+Telephone
+
+| enter | @{telephone.landline} | in input field | id=tele_landline |
+
+| enter | @{telephone.mobile} | in input field | id=tele_mobile |
+
+|close the browser|
+

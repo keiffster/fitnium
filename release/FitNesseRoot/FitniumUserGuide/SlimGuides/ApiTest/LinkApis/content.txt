@@ -1,0 +1,35 @@
+!1 Link APIs
+Click a link
+{{{| click Link | locator |
+}}}
+Click a link with specific text
+{{{| click Link With Text | text |
+}}}
+Store all links in a variable
+{{{| store all links in | var|
+}}}
+Check a link exists
+{{{| check | does Link With Id | id| Exist | true|false |
+}}}
+Check a list of links exist
+{{{| check | do links with ids | list | exist | true|false |
+}}}
+!2 Examples
+
+| script | Base Fitnium Fixture |
+| jump to test page |
+| check | does Link With Id | tsandcs | Exist | true |
+
+-| script | Base Fitnium Fixture |
+| click Link | tsandcs |
+| wait for page to load for | 5 | seconds |
+| click the back button |
+| wait for page to load for | 5 | seconds |
+| click Link With Text | Click here to read terms and conditions |
+| wait for page to load for | 5 | seconds |
+| click the back button |
+| wait for page to load for | 5 | seconds |
+
+-| script | Base Fitnium Fixture |
+| store all links in | links |
+| check | do links with ids | id1,id2,id3 | exist | false |

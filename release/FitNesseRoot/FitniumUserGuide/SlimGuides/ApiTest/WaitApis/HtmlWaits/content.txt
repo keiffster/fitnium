@@ -1,0 +1,72 @@
+!1 HTML Element Wait APIs
+Wait for HTML page source to contain specific HTML code
+{{{| wait for html source to contain | source |
+}}}
+Wait for HTML body text to contain specific text
+{{{| wait for body text | text | to be present |
+}}}
+Wait for specific text to present anywhere on the page
+{{{| wait for text | text | to be present |
+}}}
+Wait for the HTML title to be specific text
+{{{| wait for title | title | to be present |
+}}}
+Wait for an Element attribute to be a specific value in current window
+{{{| wait for attribute | attribute-locator | to be present |
+}}}
+Wait for an Element attribute to be a specific value in all windows
+{{{| wait for attribute | id | from all windows to be present |
+}}}
+Wait for a specific button to be present
+{{{| wait for buttons | button-list | to be present |
+}}}
+Wait for a specific list of fields to be present
+{{{| wait for fields | field-list | to be present |
+}}}
+Wait for a specific list of links to be present
+{{{| wait for links | link| to be present |
+}}}
+Wait for a radio button to be checked
+{{{| wait for radio button | locator | to be checked |
+}}}
+Wait for a check box to be checked
+{{{| wait for check box | locator | to be checked |
+}}}
+Wait for a specific text to appear in a table
+{{{| wait for text | text | in table | table-locator | to occur |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| click the refresh button |
+| wait for html source to contain | <div id="content"> |
+| click the refresh button |
+| wait for body text | Fitnium Test Page | to be present |
+| click the refresh button |
+| wait for text | Fitnium Test Page | to be present |
+| click the refresh button |
+| wait for title | Magnetic Reason | to be present |
+| click the refresh button |
+| wait for page to load for | 5 | seconds |
+| wait for attribute | firstname@name | to be present |
+| click the refresh button |
+| wait for attribute | id | from all windows to be present |
+| click the refresh button |
+| wait for buttons | send | to be present |
+| click the refresh button |
+| wait for fields | form_telephone,form_email | to be present |
+| click the refresh button |
+| wait for links | tsandcs | to be present |
+| click the refresh button |
+| wait for page to load for | 5 | seconds |
+| click radio button | form_sexmale |
+| wait for radio button | form_sexmale | to be checked |
+| click the refresh button |
+| wait for page to load for | 5 | seconds |
+| click check box | form_tsandcs |
+| wait for check box | form_tsandcs | to be checked |
+| click the refresh button |
+| wait for page to load for | 5 | seconds |
+| wait for text | Are you ? | in table | testtable.4.0 | to occur |
+
+

@@ -1,0 +1,44 @@
+!2 Fitnium 2.0.0
+
+Fitnium is a Non Specific Domain Specific Language ( DSL ) that provides the power of Selenium  for automating web based acceptance tests with the power of !-FitNesse-!
+
+Fitnium provides you with the ability to write and execute Selenium tests using the !-FitNesse-! framework but without the need to write a single line of code
+
+Orignally based on a !-FitNesse DoFixture-!, but now also supporting the Slim Script Table, Fitnium provides a English language interpretation of the Selenium API that you would normally call from Java, Ruby, Python, Perl or C#. In this instance it allows none developers, testers, and even customers to write UI driven automated acceptance tests
+!3 What's new in Ver 2.0
+!4 API Support
+We now support nearly 100% of the Selenium API available to Java, Ruby, Python, Perl or C# developers is now available as an easily understand english phrase that anyone can use to develop their own tests, and this number is growing all the time as we complete and test more and more
+!4 SLiM Compatible
+Fitnium has now been ported to the SLiM Fixture runner, you can continue to use Fit as the execution engine, but we are now focused on the use of SLiM. If you are new to Fitnium, then we recommend starting with SLiM
+!4 Code Rewrite
+The code base has been completely refactored to make it much more extensible and modular. The now contains a single Fitnium base class, which then makes use of individual classes for specific functionality, splitting the code into easily extensible modules
+!4 use of Jetty
+A lot of the examples used to use pages hosted at www.magneticreason.com. I for one sometimes for cross with this especially when on trains or away from internet link. SO I've used Jetty to provide a local website to run the tests
+!3 Getting Started
+Running Fitnium click [[Here][FitniumUserGuide.RunningFitnium]]
+
+To start using/learning Fitnium using SLiM click [[Here][FitniumUserGuide.SlimGuides]]
+
+To continue to use Fit as your Engine click [[Here][FitniumUserGuide.FitGuides]]
+
+An API Quick Reference page can be found at [[API Quick Reference][.FitniumUserGuide.ApiQuickReference]]
+!3 Tutorials
+[[New to Selenium ?][FitniumUserGuide.NewToSelenium]], then click here for a set of resources explaining Selenium and how it works
+
+[[Upgrading Fitnesse][FitniumUserGuide.UpgradeFitnesse]], tells you all about how to upgrade to new versions of Fitnesse as they are released
+
+[[Upgrading Selenium][FitniumUserGuide.UpgradeSelenium]], tells you all about how to upgrade to new versions of Selenium as they are released
+
+[[XPath Tutorial][FitniumUserGuide.XpathTutorial]] - Is a great introduction to using XPath to locate objects on a page
+
+[[Working with Lists][FitniumUserGuide.WorkingWithLists]] - Fitnium uses lists of data to check, read how to use them here
+
+[[History of Fitnium][FitniumUserGuide.FitniumHistory]] - Found out about the history of Fitnium from its early stages to the present day
+
+[[Building Fitnium][FitniumUserGuide.BuildingFitniun]] - Shows you how to build your own Fitnium2.jar from the source
+
+[[Contribute to Fitnium][FitniumUserGuide.ContributeToFitnium]] - Shows you how to contribute to the Fitnium project, whether its plugins or new APIs all the information is provided
+
+Fitnium is located at http://www.magneticreason.com/tools/fitnium/fitnium.html
+
+

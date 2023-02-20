@@ -1,0 +1,103 @@
+!1 Multiple Select List APIs
+Check a list contains a list of options
+{{{| check | does list | locator | contain options | list | true|false |
+| check | list options | locator  | list |
+}}}
+Select an item in a list box
+{{{| add Selection Option | option | To List | locator  |
+| add selection label | label | to list | locator  |
+| add selection value | value | to list | locator  |
+| add selection id | id | to list | locator  |
+| add Selection index | index | to list | locator  |
+}}}
+Unselect an item in a list box
+{{{| remove Selection Option | option | From List | locator  |
+}}}
+Check a list box has one or more elements selected
+{{{| check | does List | locator  | Have Selection | true|false |
+}}}
+Check if a list of ids are selected
+{{{| check | list | locator | Selected Item Ids are | list_of_ids | true|false |
+}}}
+Check if a list of indexes are selected
+{{{| check | list | locator  | Selected Item Indexes are | list_of_indexes | true|false|
+}}}
+Check if a list of labels are selected
+{{{| check | list |locator  | Selected Item Labels are | list_of_labels | true|false|
+}}}
+Check if a list of values are selected
+{{{| check | list | locator  | Selected Item Values are | list_of_values | true|false|
+}}}
+Store a list of selected ids in a variable
+{{{| store list | locator  | selected item indexes in | var |
+}}}
+Store a list of selected indexes in a variable
+{{{| store list | locator  | selected item labels in | var |
+}}}
+Store a list of selected labels in a variable
+{{{| store list | locator  | selected item values in | var |
+}}}
+Store a list of selected options in a variable
+{{{| store list | locator  | options in | var |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| check | does list | form_car | contain options | Volvo,Saab,Audi,Mercedes,Other | true |
+| check | list options | form_car | Volvo,Saab,Audi,Mercedes,Other |
+
+Add remove a selection using the label of an item
+-| script | Base Fitnium Fixture |
+| add selection label | Saab | to list | form_car |
+| remove selection label | Saab | from list | form_car |
+
+Add remove a selection using the value of an item
+-| script | Base Fitnium Fixture |
+| add selection value | saab | to list | form_car |
+| remove selection value | saab | from list | form_car |
+
+Add remove a selection using the id of an item
+-| script | Base Fitnium Fixture |
+| add selection id | saab | to list | form_car |
+| remove selection id | saab | from list | form_car |
+
+Add remove a selection using the index of an item
+-| script | Base Fitnium Fixture |
+| add Selection index | 1 | to list | form_car |
+| remove selection index | 1 | from list | form_car |
+
+Multiple selections in the same list
+-| script | Base Fitnium Fixture |
+| add Selection Option | Volvo | To List | form_car |
+| add Selection Option | Audi | To List | form_car |
+| add Selection Option | Saab | To List | form_car |
+| remove Selection Option | Volvo | From List | form_car |
+| remove Selection Option | Other | From List | form_car |
+| check | does List | form_country | Have Selection | true |
+
+-| script | Base Fitnium Fixture |
+| check | list | form_car | Selected Item Ids are | saab,audi | true |
+| check | list | form_car | Selected Item Indexes are | 1,2 | true |
+| check | list | form_car | Selected Item Labels are | Saab,Audi | true |
+| check | list | form_car | Selected Item Values are | saab,audi | true |
+
+-| script | Base Fitnium Fixture |
+| store list| form_car | selected item ids in | val6 |
+| check | get fitnium variable called | val6 | saab,audi |
+| check | does list | !{val6} | contain any values | saab,audi | true |
+
+-| script | Base Fitnium Fixture |
+| store list| form_car | selected item indexes in | val7 |
+| check | get fitnium variable called | val7 | 1,2 |
+
+-| script | Base Fitnium Fixture |
+| store list| form_car | selected item labels in | val8 |
+| check | get fitnium variable called | val8 | Saab,Audi |
+
+-| script | Base Fitnium Fixture |
+| store list| form_car | selected item values in | val9 |
+| check | get fitnium variable called | val9 | saab,audi |
+
+-| script | Base Fitnium Fixture |
+| store list| form_car | options in | val10 |
+| check | get fitnium variable called | val10 | Volvo,Saab,Audi,Mercedes,Other |

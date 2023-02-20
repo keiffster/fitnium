@@ -1,0 +1,92 @@
+!1 Element APIs
+
+Check Text of an Element
+{{{| check| text of element | locator |text |
+}}}
+Check Value of an Element
+{{{| check| value of element | locator | value|
+}}}
+Check Index of an Element
+{{{| check| index of element |locator | index |
+}}}
+Check Height of an Element
+{{{| check| element | locator | height | value |
+}}}
+Check Width of an Element
+{{{| check| element | locator | width | value |
+}}}
+Check Element is Visible
+{{{| check | is element visible | locator | true|false |
+}}}
+Check Element is Present
+{{{| check| is element present | locator | true|false |
+}}}
+Store Values of Elements in Variables
+{{{| store is element | locator | present in | var |
+| store is element | locator | visible in | var |
+| store text of element | locator  | in | var |
+| store index of element | locator  | in | var |
+| store element | locator  | height in | var |
+| store element | locator  | width in | var |
+| store left position of element | locator  | in | var |
+| store top position of element | locator  | in | var |
+}}}
+!2 Examples
+First wait for elements to appear
+
+| wait for element | name=firstname |
+| wait for element | name=firstname | for | 10 | seconds |
+
+First set up some text so that we check for it
+
+| enter | Keith | in input field | name=firstname |
+
+Then we can check the element using various commands
+
+| check | value of element | name=firstname | Keith |
+| check| index of element | name=firstname | 0 |
+| element | name=firstname | height |
+| element | name=firstname | width |
+| check| is element present | name=firstname | true |
+| check| is element visible | name=firstname | true |
+
+Any element that contains text ( i.e inbetween the <> tags ) can be obtains using "text of element"
+
+| check| text of element | xpath=/html/body/div[@id='outer']/div[@id='content']/div[@id='primaryContentContainer']/div[@id='primaryContent']/div/h1 | Fitnium Test Page |
+
+We can also obtain some position information about elements
+
+I don't really care about the positions in this test and even a minor
+change to the screen could change the positions, therefore the test
+is really to ensure the API call is correct
+
+| element | name=firstname | width |
+| element | name=firstname | height |
+| check | left position of element | id=header | 0 |
+| check | left position of element | id=header | is | 0 | true |
+| check | top position of element | id=header | 0 |
+| check | top position of element | id=header | is | 0 | true |
+
+We can also store all teh various values in fitnim variables
+
+| store is element | name=firstname | present in | value1 |
+| store is element | name=firstname | visible in | value2 |
+| store text of element | name=firstname | in | value3 |
+| store index of element | name=firstname | in | value4 |
+| store element | name=firstname | height in | value5 |
+| store element | name=firstname | width in | value6 |
+| store left position of element | name=firstname | in | value7 |
+| store top position of element | name=firstname | in | value8 |
+
+
+Finally for debuggin purposes we can highlight the element of change its id
+
+| highlight element | name=firstname |
+| assign element | name=firstname | id | newname |
+
+
+
+
+
+
+

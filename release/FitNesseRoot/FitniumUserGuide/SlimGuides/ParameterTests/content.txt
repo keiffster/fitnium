@@ -1,0 +1,65 @@
+NOTE : To see the parameters actually in use you will need to click Edit on the left
+to view the source, as in web view some of the variables will have been substituted
+by Fitnesse
+
+!define TEST_SYSTEM {slim}
+
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+|import|
+|fitnesse.slim.test|
+|fitnesse.fixtures|
+|com.magneticreason.fitnium|
+
+| script | Base Fitnium Fixture |
+|the server is located at | localhost |
+|the server is on port | 4444 |
+|using the browser | *firefox | start at | www.magneticreason.com |
+|check | is selenium initialised | true |
+|set speed to |500| milliseconds |
+|set timeout to |50000| milliseconds |
+|write to debug | starting test |
+
+Lets first start at the FitNium home page at Magnetic Reason
+
+| script | Base Fitnium Fixture |
+| starting at URL| /tools/fitnium/testpage4api.html |
+| check| title of current page | Magnetic Reason |
+| check|text of element | xpath=//h1 | Fitnium Test Page |
+| check|is Text Present|This page contains all the elements neccassary |true|
+
+We can define Fitnesse variables using th !define {} command, these will then act as
+substitutions in your scripts, the variable is replaced in your script whereever it occurs
+
+!define firstname {Keith}
+!define surname {Sterling}
+
+My name is ${firstname} ${surname}
+
+Fitnium variables are defined as !{name} and can be used as parameters into your tests
+
+| script | Base Fitnium Fixture |
+| set fitnium variable called | surname | with value | sterling |
+| check | get fitnium variable called | surname | sterling |
+
+Now we can used our variable in our scripts instead of actual values
+
+| script | Base Fitnium Fixture |
+| enter | !{name} | in input field | surname |
+
+Finally you can also store values directly in the Selenium Javascript environment, making them acessible
+to Javascript commands in your scripts
+
+However Selenium variables are not accessible to Fitnium
+
+Selenium variables are defined as !-${name}-! and are available to Javascript inside Selenium
+
+To use selenium variables you need to have started a browser
+
+| script | Base Fitnium Fixture |
+| set selenium variable called | name | with value | keith |
+| check | get selenium variable called | name | keith |
+| close the browser |
+

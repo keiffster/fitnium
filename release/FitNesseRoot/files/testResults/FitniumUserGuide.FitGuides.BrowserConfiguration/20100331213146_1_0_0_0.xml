@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>BrowserConfiguration</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[Fitnium uses Selenium Java Client library to connect to the Selenium server<br/>from FitNesse<a title="create page" href="FitniumUserGuide.FitGuides.FitNesse?edit&nonExistent=true">[?]</a>, therefore this jar must be included in the path, along with<br/>the FitNium<a title="create page" href="FitniumUserGuide.FitGuides.FitNium?edit&nonExistent=true">[?]</a> code itself. These lines should be the first lines in any Fitnium<br/>tests you write<br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/>Fitnium is based around a DoFixture<a title="create page" href="FitniumUserGuide.FitGuides.DoFixture?edit&nonExistent=true">[?]</a>, the next line is required to instantiate<br/>the FitNium<a title="create page" href="FitniumUserGuide.FitGuides.FitNium?edit&nonExistent=true">[?]</a> BaseFitniumFixture<a title="create page" href="FitniumUserGuide.FitGuides.BaseFitniumFixture?edit&nonExistent=true">[?]</a> fixture class before you make any API calls<br/><br/><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>The following section is used to configure the browser to talk to selenium<br/>The server and port are those which you started selenium on<br/><br/>The browser by default is *firefox but can be any support by selenium and the host OS<br/><br/>You can also set speed and timeout periods in this section<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*firefox</td>
+<td>start at</td>
+<td><a href="http://www.google.co.uk">http://www.google.co.uk</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>50</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>50000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="2">comment</td>
+</tr>
+<tr><td colspan="2">In addition there are a number of short cut methods for starting a specific browser</td>
+</tr>
+<tr><td>using firefox start at</td>
+<td>URL</td>
+</tr>
+<tr><td>using explorer start at</td>
+<td>URL</td>
+</tr>
+<tr><td>using explorer in HTA mode start at</td>
+<td>URL</td>
+</tr>
+<tr><td>using chrome start at</td>
+<td>URL</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="2">comment</td>
+</tr>
+<tr><td colspan="2">You can control what the browsers writes to its console</td>
+</tr>
+<tr><td>set browser log level</td>
+<td>debug info warn error off</td>
+</tr>
+</table>
+<br/><br/>]]></content>
+    <relativePageName>BrowserConfiguration</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

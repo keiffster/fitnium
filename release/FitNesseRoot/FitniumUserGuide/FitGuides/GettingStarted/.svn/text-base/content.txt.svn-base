@@ -1,0 +1,9 @@
+We start by setting two path statements, the first is to the jar or folder that contains
+the fitnium classes, and the second is to the Selenium Java client driver jar
+
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+
+!|com.magneticreason.fitnium.BaseFitniumFixture|

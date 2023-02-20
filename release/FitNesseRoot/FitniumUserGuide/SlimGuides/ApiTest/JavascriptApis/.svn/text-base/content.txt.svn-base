@@ -1,0 +1,25 @@
+!1 Javascript based APIs
+Wait for a Pop Up Window with a specific Id for a period of time
+{{{| wait for popup with id | id | for | time | seconds |
+}}}
+Get the Value of a Javascript expression
+{{{| value of javascript | script |
+}}}
+Store the vaue of a Javascript expression in a variable
+{{{| store value of javascript | script | in | variable |
+}}}
+Fire a javascript event against an element
+{{{| fire event | event | against element | locator |
+}}}
+Wait for a period of time for a script condition to occur
+{{{| wait | time | seconds for script condition | condition |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| value of javascript | 1+1 |
+| store value of javascript | 1+1 | in | var |
+| fire event | event | against element | firstname |
+| wait | 3 | seconds for script | 2>1 | to be true |
+
+

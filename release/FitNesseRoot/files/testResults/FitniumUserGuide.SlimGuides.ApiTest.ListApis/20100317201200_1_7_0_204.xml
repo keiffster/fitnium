@@ -1,0 +1,2739 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ListApis</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>7</wrong>
+      <ignores>0</ignores>
+      <exceptions>204</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('2056061524067312846');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img2056061524067312846"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.SlimGuides.ApiTest.SetUp">.FitniumUserGuide.SlimGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.SlimGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="2056061524067312846"><span class="meta">variable defined: TEST_SYSTEM=slim</span> <br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/><table border="1" cellspacing="0" _TABLENUMBER=8531503574801775889>
+<tr><td>import</td>
+</tr>
+<tr><td>fitnesse.slim.test</td>
+</tr>
+<tr><td>fitnesse.fixtures</td>
+</tr>
+<tr><td>com.magneticreason.fitnium</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=2050264100504182115>
+<tr><td>scenario</td>
+<td colspan="3">jump to test page</td>
+</tr>
+<tr><td>the server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>the server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td>localhost:8090/fitnium/</td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+<tr><td>starting at URL</td>
+<td colspan="3">testpage4api.html</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td>Fitnium Test Page</td>
+</tr>
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td>true</td>
+</tr>
+</table>
+</div>
+</div>
+Single Selection List APIs<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=3784246290746047422>
+<tr><td><span class="fail">check: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span></td>
+<td>does list</td>
+<td>form_country</td>
+<td>contain options</td>
+<td>Wales,Scotland,Ireland,England,Other</td>
+<td>true</td>
+</tr>
+<tr><td>check</td>
+<td>list options</td>
+<td>form_country</td>
+<td colspan="3">Wales,Scotland,Ireland,England,Other</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=8368170935496072277>
+<tr><td><span class="fail">select Option: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span></td>
+<td>England</td>
+<td>In List</td>
+<td colspan="2">form_country</td>
+</tr>
+<tr><td>check</td>
+<td>does List</td>
+<td>form_country</td>
+<td>Have Selection</td>
+<td>true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=1436147935170775472>
+<tr><td>check <span class="error">Could not invoke constructor for check[5]</span></td>
+<td>list <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>form_country <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>Selected Item Id is <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>eng <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>true <span class="error">The instance decisionTable_4. does not exist</span></td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_country</td>
+<td>Selected Item Index is</td>
+<td>3</td>
+<td>true</td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>list <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>form_country <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>Selected Item Label is <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>England <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>true <span class="error">The instance decisionTable_4. does not exist</span></td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>list <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>form_country <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>Selected Item Value is <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>eng <span class="error">The instance decisionTable_4. does not exist</span></td>
+<td>true <span class="error">The instance decisionTable_4. does not exist</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=1161843528636260759>
+<tr><td>store does list <span class="error">Could not invoke constructor for StoreDoesList[3]</span></td>
+<td>form_country <span class="error">The instance decisionTable_5. does not exist</span></td>
+<td>have selection in <span class="error">The instance decisionTable_5. does not exist</span></td>
+<td>val1 <span class="error">The instance decisionTable_5. does not exist</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=8589693039135153107>
+<tr><td>store list <span class="error">Could not invoke constructor for StoreList[3]</span></td>
+<td>form_country <span class="error">The instance decisionTable_6. does not exist</span></td>
+<td>selected item id in <span class="error">The instance decisionTable_6. does not exist</span></td>
+<td colspan="3">val2 <span class="error">The instance decisionTable_6. does not exist</span></td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val2</td>
+<td colspan="3">eng</td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_6. does not exist</span></td>
+<td>does list <span class="error">The instance decisionTable_6. does not exist</span></td>
+<td>!{val2} <span class="error">The instance decisionTable_6. does not exist</span></td>
+<td>contain  value <span class="error">The instance decisionTable_6. does not exist</span></td>
+<td>eng</td>
+<td>true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=692340642335379133>
+<tr><td>store list <span class="error">Could not invoke constructor for StoreList[3]</span></td>
+<td>form_country <span class="error">The instance decisionTable_7. does not exist</span></td>
+<td>selected item index in <span class="error">The instance decisionTable_7. does not exist</span></td>
+<td colspan="3">val3 <span class="error">The instance decisionTable_7. does not exist</span></td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val3</td>
+<td colspan="3">3</td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_7. does not exist</span></td>
+<td>does list <span class="error">The instance decisionTable_7. does not exist</span></td>
+<td>!{val3} <span class="error">The instance decisionTable_7. does not exist</span></td>
+<td>contain  value <span class="error">The instance decisionTable_7. does not exist</span></td>
+<td>3</td>
+<td>true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=1314834998001720362>
+<tr><td>store list <span class="error">Could not invoke constructor for StoreList[3]</span></td>
+<td>form_country <span class="error">The instance decisionTable_8. does not exist</span></td>
+<td>selected item label in <span class="error">The instance decisionTable_8. does not exist</span></td>
+<td colspan="3">val4 <span class="error">The instance decisionTable_8. does not exist</span></td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val4</td>
+<td colspan="3">England</td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_8. does not exist</span></td>
+<td>does list <span class="error">The instance decisionTable_8. does not exist</span></td>
+<td>!{val4} <span class="error">The instance decisionTable_8. does not exist</span></td>
+<td>contain  value <span class="error">The instance decisionTable_8. does not exist</span></td>
+<td>England</td>
+<td>true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=8018328494557627042>
+<tr><td>store list <span class="error">Could not invoke constructor for StoreList[3]</span></td>
+<td>form_country <span class="error">The instance decisionTable_9. does not exist</span></td>
+<td>selected item value in <span class="error">The instance decisionTable_9. does not exist</span></td>
+<td colspan="3">val5 <span class="error">The instance decisionTable_9. does not exist</span></td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val5</td>
+<td colspan="3">eng</td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_9. does not exist</span></td>
+<td>does list <span class="error">The instance decisionTable_9. does not exist</span></td>
+<td>!{val5} <span class="error">The instance decisionTable_9. does not exist</span></td>
+<td>contain  value <span class="error">The instance decisionTable_9. does not exist</span></td>
+<td>eng</td>
+<td>true</td>
+</tr>
+</table>
+<br/><br/>Multiple Selection List APIs<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=228387554086961646>
+<tr><td><span class="fail">check: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span></td>
+<td>does list</td>
+<td>form_car</td>
+<td>contain options</td>
+<td>Volvo,Saab,Audi,Mercedes,Other</td>
+<td>true</td>
+</tr>
+<tr><td>check</td>
+<td>list options</td>
+<td>form_car</td>
+<td colspan="3">Volvo,Saab,Audi,Mercedes,Other</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=52600534269767155>
+<tr><td>add Selection Option <span class="error">Could not invoke constructor for AddSelectionOption[3]</span></td>
+<td>Volvo <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>To List <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td colspan="2">form_car <span class="error">The instance decisionTable_11. does not exist</span></td>
+</tr>
+<tr><td>add Selection Option</td>
+<td>Audi</td>
+<td>To List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>add Selection Option <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>Saab <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>To List <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td colspan="2">form_car <span class="error">The instance decisionTable_11. does not exist</span></td>
+</tr>
+<tr><td>remove Selection Option <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>Volvo <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>From List <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td colspan="2">form_car <span class="error">The instance decisionTable_11. does not exist</span></td>
+</tr>
+<tr><td>remove Selection Option <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>Other <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>From List <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td colspan="2">form_car <span class="error">The instance decisionTable_11. does not exist</span></td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>does List <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>form_country <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>Have Selection <span class="error">The instance decisionTable_11. does not exist</span></td>
+<td>true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=7174213976512138744>
+<tr><td>check <span class="error">Could not invoke constructor for check[5]</span></td>
+<td>list <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>form_car <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>Selected Item Ids are <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>saab,audi <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>true <span class="error">The instance decisionTable_12. does not exist</span></td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_car</td>
+<td>Selected Item Indexes are</td>
+<td>1,2</td>
+<td>true</td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>list <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>form_car <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>Selected Item Labels are <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>Saab,Audi <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>true <span class="error">The instance decisionTable_12. does not exist</span></td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>list <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>form_car <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>Selected Item Values are <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>saab,audi <span class="error">The instance decisionTable_12. does not exist</span></td>
+<td>true <span class="error">The instance decisionTable_12. does not exist</span></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=3690802132223260825>
+<tr><td>store list <span class="error">Could not invoke constructor for StoreList[3]</span></td>
+<td>form_car <span class="error">The instance decisionTable_13. does not exist</span></td>
+<td>selected item ids in <span class="error">The instance decisionTable_13. does not exist</span></td>
+<td colspan="3">val6 <span class="error">The instance decisionTable_13. does not exist</span></td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val6</td>
+<td colspan="3">saab,audi</td>
+</tr>
+<tr><td>check <span class="error">The instance decisionTable_13. does not exist</span></td>
+<td>does list <span class="error">The instance decisionTable_13. does not exist</span></td>
+<td>!{val6} <span class="error">The instance decisionTable_13. does not exist</span></td>
+<td>contain any values <span class="error">The instance decisionTable_13. does not exist</span></td>
+<td>saab,audi</td>
+<td>true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=6105254313770231692>
+<tr><td><span class="fail">store list: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span></td>
+<td>form_car</td>
+<td>selected item indexes in</td>
+<td>val7</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val7</td>
+<td>1,2</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=6923653074094002003>
+<tr><td><span class="fail">store list: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span></td>
+<td>form_car</td>
+<td>selected item labels in</td>
+<td>val8</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val8</td>
+<td>Saab,Audi</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=1402572586563057079>
+<tr><td><span class="fail">store list: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span></td>
+<td>form_car</td>
+<td>selected item values in</td>
+<td>val9</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val9</td>
+<td>saab,audi</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=3545778446528800818>
+<tr><td><span class="fail">store list: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span></td>
+<td>form_car</td>
+<td>options in</td>
+<td>val10</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val10</td>
+<td>Volvo,Saab,Audi,Mercedes,Other</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('2622018787957597075');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img2622018787957597075"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.SlimGuides.ApiTest.TearDown">.FitniumUserGuide.SlimGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.SlimGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="2622018787957597075"><br/><table border="1" cellspacing="0" _TABLENUMBER=6382542538190306832>
+<tr class="hidden"><td>script</td>
+<td><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td colspan="2">close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>ListApis</relativePageName>
+        <tags>null</tags>
+    
+        <tables>
+            <table>
+        <name>import_0</name>
+                <row>
+                    <col><![CDATA[import]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[fitnesse.slim.test]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[fitnesse.fixtures]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[com.magneticreason.fitnium]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scenarioTable_1</name>
+                <row>
+                    <col><![CDATA[scenario]]></col>
+                    <col><![CDATA[jump to test page]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is located at]]></col>
+                    <col><![CDATA[localhost]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is on port]]></col>
+                    <col><![CDATA[4444]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[using the browser]]></col>
+                    <col><![CDATA[*chrome]]></col>
+                    <col><![CDATA[start at]]></col>
+                    <col><![CDATA[localhost:8090/fitnium/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is selenium initialised]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set speed to]]></col>
+                    <col><![CDATA[100]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set timeout to]]></col>
+                    <col><![CDATA[20000]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[write to debug]]></col>
+                    <col><![CDATA[starting test]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[starting at URL]]></col>
+                    <col><![CDATA[testpage4api.html]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[wait for page to load for]]></col>
+                    <col><![CDATA[5]]></col>
+                    <col><![CDATA[seconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[title of current page]]></col>
+                    <col><![CDATA[Magnetic Reason]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[text of element]]></col>
+                    <col><![CDATA[xpath=//h1]]></col>
+                    <col><![CDATA[Fitnium Test Page]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is Text Present]]></col>
+                    <col><![CDATA[This page contains all the elements neccassary to test Fitnium]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_2</name>
+                <row>
+                    <col><![CDATA[<span class="fail">check: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span>]]></col>
+                    <col><![CDATA[does list]]></col>
+                    <col><![CDATA[form_country]]></col>
+                    <col><![CDATA[contain options]]></col>
+                    <col><![CDATA[Wales,Scotland,Ireland,England,Other]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[list options]]></col>
+                    <col><![CDATA[form_country]]></col>
+                    <col><![CDATA[Wales,Scotland,Ireland,England,Other]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_3</name>
+                <row>
+                    <col><![CDATA[<span class="fail">select Option: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span>]]></col>
+                    <col><![CDATA[England]]></col>
+                    <col><![CDATA[In List]]></col>
+                    <col><![CDATA[form_country]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[does List]]></col>
+                    <col><![CDATA[form_country]]></col>
+                    <col><![CDATA[Have Selection]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_4</name>
+                <row>
+                    <col><![CDATA[check error(Could not invoke constructor for check[5])]]></col>
+                    <col><![CDATA[list error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[form_country error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[Selected Item Id is error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[eng error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[true error(The instance decisionTable_4. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[list]]></col>
+                    <col><![CDATA[form_country]]></col>
+                    <col><![CDATA[Selected Item Index is]]></col>
+                    <col><![CDATA[3]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[list error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[form_country error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[Selected Item Label is error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[England error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[true error(The instance decisionTable_4. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[list error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[form_country error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[Selected Item Value is error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[eng error(The instance decisionTable_4. does not exist)]]></col>
+                    <col><![CDATA[true error(The instance decisionTable_4. does not exist)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_5</name>
+                <row>
+                    <col><![CDATA[store does list error(Could not invoke constructor for StoreDoesList[3])]]></col>
+                    <col><![CDATA[form_country error(The instance decisionTable_5. does not exist)]]></col>
+                    <col><![CDATA[have selection in error(The instance decisionTable_5. does not exist)]]></col>
+                    <col><![CDATA[val1 error(The instance decisionTable_5. does not exist)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_6</name>
+                <row>
+                    <col><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></col>
+                    <col><![CDATA[form_country error(The instance decisionTable_6. does not exist)]]></col>
+                    <col><![CDATA[selected item id in error(The instance decisionTable_6. does not exist)]]></col>
+                    <col><![CDATA[val2 error(The instance decisionTable_6. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[get fitnium variable called]]></col>
+                    <col><![CDATA[val2]]></col>
+                    <col><![CDATA[eng]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_6. does not exist)]]></col>
+                    <col><![CDATA[does list error(The instance decisionTable_6. does not exist)]]></col>
+                    <col><![CDATA[!{val2} error(The instance decisionTable_6. does not exist)]]></col>
+                    <col><![CDATA[contain  value error(The instance decisionTable_6. does not exist)]]></col>
+                    <col><![CDATA[eng]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_7</name>
+                <row>
+                    <col><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></col>
+                    <col><![CDATA[form_country error(The instance decisionTable_7. does not exist)]]></col>
+                    <col><![CDATA[selected item index in error(The instance decisionTable_7. does not exist)]]></col>
+                    <col><![CDATA[val3 error(The instance decisionTable_7. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[get fitnium variable called]]></col>
+                    <col><![CDATA[val3]]></col>
+                    <col><![CDATA[3]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_7. does not exist)]]></col>
+                    <col><![CDATA[does list error(The instance decisionTable_7. does not exist)]]></col>
+                    <col><![CDATA[!{val3} error(The instance decisionTable_7. does not exist)]]></col>
+                    <col><![CDATA[contain  value error(The instance decisionTable_7. does not exist)]]></col>
+                    <col><![CDATA[3]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_8</name>
+                <row>
+                    <col><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></col>
+                    <col><![CDATA[form_country error(The instance decisionTable_8. does not exist)]]></col>
+                    <col><![CDATA[selected item label in error(The instance decisionTable_8. does not exist)]]></col>
+                    <col><![CDATA[val4 error(The instance decisionTable_8. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[get fitnium variable called]]></col>
+                    <col><![CDATA[val4]]></col>
+                    <col><![CDATA[England]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_8. does not exist)]]></col>
+                    <col><![CDATA[does list error(The instance decisionTable_8. does not exist)]]></col>
+                    <col><![CDATA[!{val4} error(The instance decisionTable_8. does not exist)]]></col>
+                    <col><![CDATA[contain  value error(The instance decisionTable_8. does not exist)]]></col>
+                    <col><![CDATA[England]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_9</name>
+                <row>
+                    <col><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></col>
+                    <col><![CDATA[form_country error(The instance decisionTable_9. does not exist)]]></col>
+                    <col><![CDATA[selected item value in error(The instance decisionTable_9. does not exist)]]></col>
+                    <col><![CDATA[val5 error(The instance decisionTable_9. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[get fitnium variable called]]></col>
+                    <col><![CDATA[val5]]></col>
+                    <col><![CDATA[eng]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_9. does not exist)]]></col>
+                    <col><![CDATA[does list error(The instance decisionTable_9. does not exist)]]></col>
+                    <col><![CDATA[!{val5} error(The instance decisionTable_9. does not exist)]]></col>
+                    <col><![CDATA[contain  value error(The instance decisionTable_9. does not exist)]]></col>
+                    <col><![CDATA[eng]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_10</name>
+                <row>
+                    <col><![CDATA[<span class="fail">check: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span>]]></col>
+                    <col><![CDATA[does list]]></col>
+                    <col><![CDATA[form_car]]></col>
+                    <col><![CDATA[contain options]]></col>
+                    <col><![CDATA[Volvo,Saab,Audi,Mercedes,Other]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[list options]]></col>
+                    <col><![CDATA[form_car]]></col>
+                    <col><![CDATA[Volvo,Saab,Audi,Mercedes,Other]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_11</name>
+                <row>
+                    <col><![CDATA[add Selection Option error(Could not invoke constructor for AddSelectionOption[3])]]></col>
+                    <col><![CDATA[Volvo error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[To List error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[form_car error(The instance decisionTable_11. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[add Selection Option]]></col>
+                    <col><![CDATA[Audi]]></col>
+                    <col><![CDATA[To List]]></col>
+                    <col><![CDATA[form_car]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[add Selection Option error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[Saab error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[To List error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[form_car error(The instance decisionTable_11. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[remove Selection Option error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[Volvo error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[From List error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[form_car error(The instance decisionTable_11. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[remove Selection Option error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[Other error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[From List error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[form_car error(The instance decisionTable_11. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[does List error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[form_country error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[Have Selection error(The instance decisionTable_11. does not exist)]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_12</name>
+                <row>
+                    <col><![CDATA[check error(Could not invoke constructor for check[5])]]></col>
+                    <col><![CDATA[list error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[form_car error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[Selected Item Ids are error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[saab,audi error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[true error(The instance decisionTable_12. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[list]]></col>
+                    <col><![CDATA[form_car]]></col>
+                    <col><![CDATA[Selected Item Indexes are]]></col>
+                    <col><![CDATA[1,2]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[list error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[form_car error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[Selected Item Labels are error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[Saab,Audi error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[true error(The instance decisionTable_12. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[list error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[form_car error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[Selected Item Values are error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[saab,audi error(The instance decisionTable_12. does not exist)]]></col>
+                    <col><![CDATA[true error(The instance decisionTable_12. does not exist)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_13</name>
+                <row>
+                    <col><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></col>
+                    <col><![CDATA[form_car error(The instance decisionTable_13. does not exist)]]></col>
+                    <col><![CDATA[selected item ids in error(The instance decisionTable_13. does not exist)]]></col>
+                    <col><![CDATA[val6 error(The instance decisionTable_13. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[get fitnium variable called]]></col>
+                    <col><![CDATA[val6]]></col>
+                    <col><![CDATA[saab,audi]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_13. does not exist)]]></col>
+                    <col><![CDATA[does list error(The instance decisionTable_13. does not exist)]]></col>
+                    <col><![CDATA[!{val6} error(The instance decisionTable_13. does not exist)]]></col>
+                    <col><![CDATA[contain any values error(The instance decisionTable_13. does not exist)]]></col>
+                    <col><![CDATA[saab,audi]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_14</name>
+                <row>
+                    <col><![CDATA[<span class="fail">store list: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span>]]></col>
+                    <col><![CDATA[form_car]]></col>
+                    <col><![CDATA[selected item indexes in]]></col>
+                    <col><![CDATA[val7]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[get fitnium variable called]]></col>
+                    <col><![CDATA[val7]]></col>
+                    <col><![CDATA[1,2]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_15</name>
+                <row>
+                    <col><![CDATA[<span class="fail">store list: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span>]]></col>
+                    <col><![CDATA[form_car]]></col>
+                    <col><![CDATA[selected item labels in]]></col>
+                    <col><![CDATA[val8]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[get fitnium variable called]]></col>
+                    <col><![CDATA[val8]]></col>
+                    <col><![CDATA[Saab,Audi]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_16</name>
+                <row>
+                    <col><![CDATA[<span class="fail">store list: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span>]]></col>
+                    <col><![CDATA[form_car]]></col>
+                    <col><![CDATA[selected item values in]]></col>
+                    <col><![CDATA[val9]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[get fitnium variable called]]></col>
+                    <col><![CDATA[val9]]></col>
+                    <col><![CDATA[saab,audi]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_17</name>
+                <row>
+                    <col><![CDATA[<span class="fail">store list: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:83)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:276)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:258)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:245)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:201)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:121)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:101)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:87)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:78)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:57)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:37)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:46)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Unknown Source)
+</pre></span>]]></col>
+                    <col><![CDATA[form_car]]></col>
+                    <col><![CDATA[options in]]></col>
+                    <col><![CDATA[val10]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[get fitnium variable called]]></col>
+                    <col><![CDATA[val10]]></col>
+                    <col><![CDATA[Volvo,Saab,Audi,Mercedes,Other]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_18</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[close the browser]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_0, import, fitnesse.slim.test]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_1, import, fitnesse.fixtures]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_2, import, com.magneticreason.fitnium]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_0, make, decisionTable_4, check, list, form_country, Selected Item Id is, eng, true]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for check[5]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for check[5]]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(Could not invoke constructor for check[5])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_1, call, decisionTable_4, table, [[check, list, form_country, Selected Item Index is, 3, true], [check, list, form_country, Selected Item Label is, England, true], [check, list, form_country, Selected Item Value is, eng, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[list]]></expected>
+                              <evaluationMessage><![CDATA[list error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[form_country]]></expected>
+                              <evaluationMessage><![CDATA[form_country error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[Selected Item Id is]]></expected>
+                              <evaluationMessage><![CDATA[Selected Item Id is error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_1</instructionId>
+          <col>4</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[eng]]></expected>
+                              <evaluationMessage><![CDATA[eng error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_1</instructionId>
+          <col>5</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[true error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_2, call, decisionTable_4, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_3, call, decisionTable_4, setCheck, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_3</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_4, call, decisionTable_4, setList, list]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[list]]></expected>
+                              <evaluationMessage><![CDATA[list error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_5, call, decisionTable_4, setForm_country, form_country]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[form_country]]></expected>
+                              <evaluationMessage><![CDATA[form_country error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_6, call, decisionTable_4, setSelectedItemIndexIs, Selected Item Label is]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[Selected Item Label is]]></expected>
+                              <evaluationMessage><![CDATA[Selected Item Label is error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_7, call, decisionTable_4, set3, England]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[England]]></expected>
+                              <evaluationMessage><![CDATA[England error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_8, call, decisionTable_4, setTrue, true]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_8</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[true error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_9, call, decisionTable_4, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_10, call, decisionTable_4, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_11, call, decisionTable_4, setCheck, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_11</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_12, call, decisionTable_4, setList, list]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_12</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[list]]></expected>
+                              <evaluationMessage><![CDATA[list error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_13, call, decisionTable_4, setForm_country, form_country]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_13</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[form_country]]></expected>
+                              <evaluationMessage><![CDATA[form_country error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_14, call, decisionTable_4, setSelectedItemIndexIs, Selected Item Value is]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_14</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[Selected Item Value is]]></expected>
+                              <evaluationMessage><![CDATA[Selected Item Value is error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_15, call, decisionTable_4, set3, eng]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_15</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[eng]]></expected>
+                              <evaluationMessage><![CDATA[eng error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_16, call, decisionTable_4, setTrue, true]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_16</instructionId>
+          <col>5</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_4. does not exist]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[true error(The instance decisionTable_4. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_17, call, decisionTable_4, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_4. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_5_0, make, decisionTable_5, StoreDoesList, form_country, have selection in, val1]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for StoreDoesList[3]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_5_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for StoreDoesList[3]]]></actual>
+                              <expected><![CDATA[store does list]]></expected>
+                              <evaluationMessage><![CDATA[store does list error(Could not invoke constructor for StoreDoesList[3])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_5_1, call, decisionTable_5, table, []]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_5. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_5_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_5. does not exist]]></actual>
+                              <expected><![CDATA[form_country]]></expected>
+                              <evaluationMessage><![CDATA[form_country error(The instance decisionTable_5. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_5_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_5. does not exist]]></actual>
+                              <expected><![CDATA[have selection in]]></expected>
+                              <evaluationMessage><![CDATA[have selection in error(The instance decisionTable_5. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_5_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_5. does not exist]]></actual>
+                              <expected><![CDATA[val1]]></expected>
+                              <evaluationMessage><![CDATA[val1 error(The instance decisionTable_5. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_6_0, make, decisionTable_6, StoreList, form_country, selected item id in, val2]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_6_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></actual>
+                              <expected><![CDATA[store list]]></expected>
+                              <evaluationMessage><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_6_1, call, decisionTable_6, table, [[check, get fitnium variable called, val2, eng], [check, does list, !{val2}, contain  value, eng, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_6. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_6_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_6. does not exist]]></actual>
+                              <expected><![CDATA[form_country]]></expected>
+                              <evaluationMessage><![CDATA[form_country error(The instance decisionTable_6. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_6_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_6. does not exist]]></actual>
+                              <expected><![CDATA[selected item id in]]></expected>
+                              <evaluationMessage><![CDATA[selected item id in error(The instance decisionTable_6. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_6_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_6. does not exist]]></actual>
+                              <expected><![CDATA[val2]]></expected>
+                              <evaluationMessage><![CDATA[val2 error(The instance decisionTable_6. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_6_2, call, decisionTable_6, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_6. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_6_3, call, decisionTable_6, setCheck, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_6. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_6_3</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_6. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_6. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_6_4, call, decisionTable_6, setGetFitniumVariableCalled, does list]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_6. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_6_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_6. does not exist]]></actual>
+                              <expected><![CDATA[does list]]></expected>
+                              <evaluationMessage><![CDATA[does list error(The instance decisionTable_6. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_6_5, call, decisionTable_6, setVal2, !{val2}]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_6. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_6_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_6. does not exist]]></actual>
+                              <expected><![CDATA[!{val2}]]></expected>
+                              <evaluationMessage><![CDATA[!{val2} error(The instance decisionTable_6. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_6_6, call, decisionTable_6, setEng, contain  value]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_6. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_6_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_6. does not exist]]></actual>
+                              <expected><![CDATA[contain  value]]></expected>
+                              <evaluationMessage><![CDATA[contain  value error(The instance decisionTable_6. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_6_7, call, decisionTable_6, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_6. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_7_0, make, decisionTable_7, StoreList, form_country, selected item index in, val3]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_7_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></actual>
+                              <expected><![CDATA[store list]]></expected>
+                              <evaluationMessage><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_7_1, call, decisionTable_7, table, [[check, get fitnium variable called, val3, 3], [check, does list, !{val3}, contain  value, 3, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_7. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_7_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_7. does not exist]]></actual>
+                              <expected><![CDATA[form_country]]></expected>
+                              <evaluationMessage><![CDATA[form_country error(The instance decisionTable_7. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_7_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_7. does not exist]]></actual>
+                              <expected><![CDATA[selected item index in]]></expected>
+                              <evaluationMessage><![CDATA[selected item index in error(The instance decisionTable_7. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_7_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_7. does not exist]]></actual>
+                              <expected><![CDATA[val3]]></expected>
+                              <evaluationMessage><![CDATA[val3 error(The instance decisionTable_7. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_7_2, call, decisionTable_7, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_7. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_7_3, call, decisionTable_7, setCheck, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_7. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_7_3</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_7. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_7. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_7_4, call, decisionTable_7, setGetFitniumVariableCalled, does list]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_7. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_7_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_7. does not exist]]></actual>
+                              <expected><![CDATA[does list]]></expected>
+                              <evaluationMessage><![CDATA[does list error(The instance decisionTable_7. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_7_5, call, decisionTable_7, setVal3, !{val3}]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_7. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_7_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_7. does not exist]]></actual>
+                              <expected><![CDATA[!{val3}]]></expected>
+                              <evaluationMessage><![CDATA[!{val3} error(The instance decisionTable_7. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_7_6, call, decisionTable_7, set3, contain  value]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_7. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_7_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_7. does not exist]]></actual>
+                              <expected><![CDATA[contain  value]]></expected>
+                              <evaluationMessage><![CDATA[contain  value error(The instance decisionTable_7. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_7_7, call, decisionTable_7, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_7. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_8_0, make, decisionTable_8, StoreList, form_country, selected item label in, val4]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_8_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></actual>
+                              <expected><![CDATA[store list]]></expected>
+                              <evaluationMessage><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_8_1, call, decisionTable_8, table, [[check, get fitnium variable called, val4, England], [check, does list, !{val4}, contain  value, England, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_8. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_8_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_8. does not exist]]></actual>
+                              <expected><![CDATA[form_country]]></expected>
+                              <evaluationMessage><![CDATA[form_country error(The instance decisionTable_8. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_8_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_8. does not exist]]></actual>
+                              <expected><![CDATA[selected item label in]]></expected>
+                              <evaluationMessage><![CDATA[selected item label in error(The instance decisionTable_8. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_8_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_8. does not exist]]></actual>
+                              <expected><![CDATA[val4]]></expected>
+                              <evaluationMessage><![CDATA[val4 error(The instance decisionTable_8. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_8_2, call, decisionTable_8, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_8. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_8_3, call, decisionTable_8, setCheck, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_8. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_8_3</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_8. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_8. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_8_4, call, decisionTable_8, setGetFitniumVariableCalled, does list]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_8. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_8_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_8. does not exist]]></actual>
+                              <expected><![CDATA[does list]]></expected>
+                              <evaluationMessage><![CDATA[does list error(The instance decisionTable_8. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_8_5, call, decisionTable_8, setVal4, !{val4}]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_8. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_8_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_8. does not exist]]></actual>
+                              <expected><![CDATA[!{val4}]]></expected>
+                              <evaluationMessage><![CDATA[!{val4} error(The instance decisionTable_8. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_8_6, call, decisionTable_8, setEngland, contain  value]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_8. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_8_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_8. does not exist]]></actual>
+                              <expected><![CDATA[contain  value]]></expected>
+                              <evaluationMessage><![CDATA[contain  value error(The instance decisionTable_8. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_8_7, call, decisionTable_8, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_8. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_9_0, make, decisionTable_9, StoreList, form_country, selected item value in, val5]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_9_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></actual>
+                              <expected><![CDATA[store list]]></expected>
+                              <evaluationMessage><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_9_1, call, decisionTable_9, table, [[check, get fitnium variable called, val5, eng], [check, does list, !{val5}, contain  value, eng, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_9. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_9_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_9. does not exist]]></actual>
+                              <expected><![CDATA[form_country]]></expected>
+                              <evaluationMessage><![CDATA[form_country error(The instance decisionTable_9. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_9_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_9. does not exist]]></actual>
+                              <expected><![CDATA[selected item value in]]></expected>
+                              <evaluationMessage><![CDATA[selected item value in error(The instance decisionTable_9. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_9_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_9. does not exist]]></actual>
+                              <expected><![CDATA[val5]]></expected>
+                              <evaluationMessage><![CDATA[val5 error(The instance decisionTable_9. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_9_2, call, decisionTable_9, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_9. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_9_3, call, decisionTable_9, setCheck, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_9. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_9_3</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_9. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_9. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_9_4, call, decisionTable_9, setGetFitniumVariableCalled, does list]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_9. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_9_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_9. does not exist]]></actual>
+                              <expected><![CDATA[does list]]></expected>
+                              <evaluationMessage><![CDATA[does list error(The instance decisionTable_9. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_9_5, call, decisionTable_9, setVal5, !{val5}]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_9. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_9_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_9. does not exist]]></actual>
+                              <expected><![CDATA[!{val5}]]></expected>
+                              <evaluationMessage><![CDATA[!{val5} error(The instance decisionTable_9. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_9_6, call, decisionTable_9, setEng, contain  value]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_9. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_9_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_9. does not exist]]></actual>
+                              <expected><![CDATA[contain  value]]></expected>
+                              <evaluationMessage><![CDATA[contain  value error(The instance decisionTable_9. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_9_7, call, decisionTable_9, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_9. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_0, make, decisionTable_11, AddSelectionOption, Volvo, To List, form_car]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for AddSelectionOption[3]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for AddSelectionOption[3]]]></actual>
+                              <expected><![CDATA[add Selection Option]]></expected>
+                              <evaluationMessage><![CDATA[add Selection Option error(Could not invoke constructor for AddSelectionOption[3])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_1, call, decisionTable_11, table, [[add Selection Option, Audi, To List, form_car], [add Selection Option, Saab, To List, form_car], [remove Selection Option, Volvo, From List, form_car], [remove Selection Option, Other, From List, form_car], [check, does List, form_country, Have Selection, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[Volvo]]></expected>
+                              <evaluationMessage><![CDATA[Volvo error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[To List]]></expected>
+                              <evaluationMessage><![CDATA[To List error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[form_car]]></expected>
+                              <evaluationMessage><![CDATA[form_car error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_2, call, decisionTable_11, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_3, call, decisionTable_11, setAddSelectionOption, add Selection Option]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_3</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[add Selection Option]]></expected>
+                              <evaluationMessage><![CDATA[add Selection Option error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_4, call, decisionTable_11, setAudi, Saab]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[Saab]]></expected>
+                              <evaluationMessage><![CDATA[Saab error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_5, call, decisionTable_11, setToList, To List]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[To List]]></expected>
+                              <evaluationMessage><![CDATA[To List error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_6, call, decisionTable_11, setForm_car, form_car]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[form_car]]></expected>
+                              <evaluationMessage><![CDATA[form_car error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_7, call, decisionTable_11, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_8, call, decisionTable_11, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_9, call, decisionTable_11, setAddSelectionOption, remove Selection Option]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_9</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[remove Selection Option]]></expected>
+                              <evaluationMessage><![CDATA[remove Selection Option error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_10, call, decisionTable_11, setAudi, Volvo]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_10</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[Volvo]]></expected>
+                              <evaluationMessage><![CDATA[Volvo error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_11, call, decisionTable_11, setToList, From List]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_11</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[From List]]></expected>
+                              <evaluationMessage><![CDATA[From List error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_12, call, decisionTable_11, setForm_car, form_car]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_12</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[form_car]]></expected>
+                              <evaluationMessage><![CDATA[form_car error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_13, call, decisionTable_11, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_14, call, decisionTable_11, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_15, call, decisionTable_11, setAddSelectionOption, remove Selection Option]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_15</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[remove Selection Option]]></expected>
+                              <evaluationMessage><![CDATA[remove Selection Option error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_16, call, decisionTable_11, setAudi, Other]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_16</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[Other]]></expected>
+                              <evaluationMessage><![CDATA[Other error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_17, call, decisionTable_11, setToList, From List]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_17</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[From List]]></expected>
+                              <evaluationMessage><![CDATA[From List error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_18, call, decisionTable_11, setForm_car, form_car]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_18</instructionId>
+          <col>3</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[form_car]]></expected>
+                              <evaluationMessage><![CDATA[form_car error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_19, call, decisionTable_11, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_20, call, decisionTable_11, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_21, call, decisionTable_11, setAddSelectionOption, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_21</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_22, call, decisionTable_11, setAudi, does List]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_22</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[does List]]></expected>
+                              <evaluationMessage><![CDATA[does List error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_23, call, decisionTable_11, setToList, form_country]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_23</instructionId>
+          <col>2</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[form_country]]></expected>
+                              <evaluationMessage><![CDATA[form_country error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_24, call, decisionTable_11, setForm_car, Have Selection]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_24</instructionId>
+          <col>3</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_11. does not exist]]></actual>
+                              <expected><![CDATA[Have Selection]]></expected>
+                              <evaluationMessage><![CDATA[Have Selection error(The instance decisionTable_11. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_25, call, decisionTable_11, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_0, make, decisionTable_12, check, list, form_car, Selected Item Ids are, saab,audi, true]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for check[5]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for check[5]]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(Could not invoke constructor for check[5])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_1, call, decisionTable_12, table, [[check, list, form_car, Selected Item Indexes are, 1,2, true], [check, list, form_car, Selected Item Labels are, Saab,Audi, true], [check, list, form_car, Selected Item Values are, saab,audi, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[list]]></expected>
+                              <evaluationMessage><![CDATA[list error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[form_car]]></expected>
+                              <evaluationMessage><![CDATA[form_car error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[Selected Item Ids are]]></expected>
+                              <evaluationMessage><![CDATA[Selected Item Ids are error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_1</instructionId>
+          <col>4</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[saab,audi]]></expected>
+                              <evaluationMessage><![CDATA[saab,audi error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_1</instructionId>
+          <col>5</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[true error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_2, call, decisionTable_12, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_3, call, decisionTable_12, setCheck, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_3</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_4, call, decisionTable_12, setList, list]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[list]]></expected>
+                              <evaluationMessage><![CDATA[list error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_5, call, decisionTable_12, setForm_car, form_car]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[form_car]]></expected>
+                              <evaluationMessage><![CDATA[form_car error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_6, call, decisionTable_12, setSelectedItemIndexesAre, Selected Item Labels are]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[Selected Item Labels are]]></expected>
+                              <evaluationMessage><![CDATA[Selected Item Labels are error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_7, call, decisionTable_12, set12, Saab,Audi]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[Saab,Audi]]></expected>
+                              <evaluationMessage><![CDATA[Saab,Audi error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_8, call, decisionTable_12, setTrue, true]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_8</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[true error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_9, call, decisionTable_12, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_10, call, decisionTable_12, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_11, call, decisionTable_12, setCheck, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_11</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_12, call, decisionTable_12, setList, list]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_12</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[list]]></expected>
+                              <evaluationMessage><![CDATA[list error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_13, call, decisionTable_12, setForm_car, form_car]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_13</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[form_car]]></expected>
+                              <evaluationMessage><![CDATA[form_car error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_14, call, decisionTable_12, setSelectedItemIndexesAre, Selected Item Values are]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_14</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[Selected Item Values are]]></expected>
+                              <evaluationMessage><![CDATA[Selected Item Values are error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_15, call, decisionTable_12, set12, saab,audi]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_15</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[saab,audi]]></expected>
+                              <evaluationMessage><![CDATA[saab,audi error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_16, call, decisionTable_12, setTrue, true]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_12_16</instructionId>
+          <col>5</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_12. does not exist]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[true error(The instance decisionTable_12. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_12_17, call, decisionTable_12, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_12. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_13_0, make, decisionTable_13, StoreList, form_car, selected item ids in, val6]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_13_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for StoreList[3]]]></actual>
+                              <expected><![CDATA[store list]]></expected>
+                              <evaluationMessage><![CDATA[store list error(Could not invoke constructor for StoreList[3])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_13_1, call, decisionTable_13, table, [[check, get fitnium variable called, val6, saab,audi], [check, does list, !{val6}, contain any values, saab,audi, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_13. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_13_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_13. does not exist]]></actual>
+                              <expected><![CDATA[form_car]]></expected>
+                              <evaluationMessage><![CDATA[form_car error(The instance decisionTable_13. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_13_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_13. does not exist]]></actual>
+                              <expected><![CDATA[selected item ids in]]></expected>
+                              <evaluationMessage><![CDATA[selected item ids in error(The instance decisionTable_13. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_13_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_13. does not exist]]></actual>
+                              <expected><![CDATA[val6]]></expected>
+                              <evaluationMessage><![CDATA[val6 error(The instance decisionTable_13. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_13_2, call, decisionTable_13, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_13. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_13_3, call, decisionTable_13, setCheck, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_13. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_13_3</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_13. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_13. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_13_4, call, decisionTable_13, setGetFitniumVariableCalled, does list]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_13. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_13_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_13. does not exist]]></actual>
+                              <expected><![CDATA[does list]]></expected>
+                              <evaluationMessage><![CDATA[does list error(The instance decisionTable_13. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_13_5, call, decisionTable_13, setVal6, !{val6}]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_13. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_13_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_13. does not exist]]></actual>
+                              <expected><![CDATA[!{val6}]]></expected>
+                              <evaluationMessage><![CDATA[!{val6} error(The instance decisionTable_13. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_13_6, call, decisionTable_13, setSaabAudi, contain any values]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_13. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_13_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_13. does not exist]]></actual>
+                              <expected><![CDATA[contain any values]]></expected>
+                              <evaluationMessage><![CDATA[contain any values error(The instance decisionTable_13. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_13_7, call, decisionTable_13, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_13. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_18_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_18_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_18_1, call, scriptTableActor, closeTheBrowser]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_18_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[close the browser]]></expected>
+                              <evaluationMessage><![CDATA[close the browser]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

@@ -1,0 +1,18 @@
+!3 !-slim-!
+|'''Date: '''|!-2:04:04 PM (BST) on Thursday, May 27, 2010-!|
+|'''Test Page: '''|.FitniumUserGuide.SlimGuides.ParameterTests|
+|'''Command: '''|!-java -cp fitnesse.jar;fitnesse.jar;fitlibrary.jar;C:\Dev\src\Fitnium2-Release\.\lib\ant.jar;C:\Dev\src\Fitnium2-Release\.\lib\easymock.jar;C:\Dev\src\Fitnium2-Release\.\lib\fitnium2.jar;C:\Dev\src\Fitnium2-Release\.\lib\flashselenium-java-client-extension-1.0.jar;C:\Dev\src\Fitnium2-Release\.\lib\flex-ui-selenium-0.1.1.jar;C:\Dev\src\Fitnium2-Release\.\lib\htmlparser.jar;C:\Dev\src\Fitnium2-Release\.\lib\json.jar;C:\Dev\src\Fitnium2-Release\.\lib\junit-4.6.jar;C:\Dev\src\Fitnium2-Release\.\lib\poi-3.2-FINAL-20081019.jar;C:\Dev\src\Fitnium2-Release\.\lib\resolver.jar;C:\Dev\src\Fitnium2-Release\.\lib\selenium-java-client-driver.jar;C:\Dev\src\Fitnium2-Release\.\lib\selenium-server.jar;C:\Dev\src\Fitnium2-Release\.\lib\serializer.jar;C:\Dev\src\Fitnium2-Release\.\lib\velocity-1.6.2-dep.jar;C:\Dev\src\Fitnium2-Release\.\lib\xerces.jar;C:\Dev\src\Fitnium2-Release\.\lib\xercesImpl.jar;C:\Dev\src\Fitnium2-Release\.\lib\xml-apis.jar fitnesse.slim.SlimService  8090-!|
+|'''Exit code: '''|!-1-!|
+|'''Time elapsed: '''|!-30.031 seconds-!|
+----'''Standard Error:'''
+{{{Exception in thread "main" java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at fitnesse.socketservice.SocketService.<init>(SocketService.java:20)
+	at fitnesse.slim.SlimService.<init>(SlimService.java:43)
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:28)
+	at fitnesse.slim.SlimService.main(SlimService.java:17)
+}}}

@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>WindowApis</rootPath>
+    <result>
+    <counts>
+      <right>13</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-7914359957928550568');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-7914359957928550568"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-7914359957928550568"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Window APIs</h1><h3>Windows</h3>Control Browser buttons<br/><pre>| click the back button |<br/>| click the refresh button |<br/>| click the close button |<br/></pre><br/>Check title of current page<br/><pre>| check | title Of Current Page | title |<br/>| check | title Of Current Page Is | title | true|false |<br/>| check | does Window With Title Exist | title | true|false |<br/></pre><br/>Check absolute url of current page<br/><pre>| check | absolute Url Of Current Page | url |<br/>| check | Absolute Url Of Current Page Is | url | true|false |<br/></pre><br/>Select a window by its title<br/><pre>| select Window With Title |title |<br/></pre><br/>Check the windows with titles in the list all exist<br/><pre>| check | do windows with titles | list | exist | true|false |<br/></pre><br/>Set the focus of the selected window<br/><pre>| set focus to currently selected window |<br/></pre><br/>Maximize the current window<br/><pre>| maximise Currently Selected Window |<br/></pre><br/>Check a window with specific id exists<br/><pre>| check | does Window With Id | id | Exist | true|false |<br/></pre><br/>Open a url in a window and assign it an id<br/><pre>| open url | url | in window and assign id |id |<br/></pre><br/>Select a window based on its id<br/><pre>| select window with id | id|<br/></pre><br/>Check all windows with ids in the list exist<br/><pre>| check | do windows with ids | list | exist | true|false |<br/></pre><br/>Store all window ids in a variable<br/><pre>| store all window ids in | var|<br/></pre><br/>Select a window by its name<br/><pre>| select Window With Name | name|<br/></pre><br/>Check a window with specific name exists<br/><pre>| check | does Window With Name | name| Exist | true|false |<br/></pre><br/>Check all windows with names in the list exist<br/><pre>| check | do windows with names |list | exist | true|false |<br/></pre><br/>Store various aspects of the windows to variables<br/><pre>| store all window names in | var |<br/>| store all window titles in | var |<br/>| store title of current page in | var |<br/>| store absolute url of current page in | var |<br/></pre><br/><h3>Frames</h3><pre>| select Frame | locator |<br/>| select Frame | locator |<br/></pre><br/><h2>Examples</h2><h3>Window based APIs</h3><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title Of Current Page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>title Of Current Page Is</td>
+<td>Magnetic Reason</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>absolute Url Of Current Page</td>
+<td colspan="2" class="pass"><a href="http://localhost:8090/fitnium/testpage4api.html">http://localhost:8090/fitnium/testpage4api.html</a></td>
+</tr>
+<tr><td>check</td>
+<td>Absolute Url Of Current Page Is</td>
+<td><a href="http://localhost:8090/fitnium/testpage4api.html">http://localhost:8090/fitnium/testpage4api.html</a></td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does Window With Title Exist</td>
+<td>Magnetic Reason</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>select Window With Title</td>
+<td colspan="3">Magnetic Reason</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>set focus to currently selected window</td>
+</tr>
+<tr><td>maximise Currently Selected Window</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does Window With Id</td>
+<td>testpage4api</td>
+<td>Exist</td>
+<td class="pass">false</td>
+</tr>
+<tr><td>open url</td>
+<td>testpage4api.html</td>
+<td>in window and assign id</td>
+<td colspan="2">testpage4api</td>
+</tr>
+<tr><td>select window with id</td>
+<td colspan="4">testpage4api</td>
+</tr>
+</table>
+<br/>The next 2 API's fail because the previous API doesn't seem to assign the ID we specified<br/><br/><table border="1" cellspacing="0">
+<tr><td colspan="5">comment</td>
+</tr>
+<tr><td>check</td>
+<td>does Window With Id</td>
+<td>testpage4api</td>
+<td>Exist</td>
+<td>true</td>
+</tr>
+<tr><td>select window with id</td>
+<td colspan="4">testpage4api</td>
+</tr>
+</table>
+<br/>This appears to be a defect and is being followed up on the Selenium website at the moment<br/>Given the above API for checking the name exists, we should be able to check it<br/><br/><table border="1" cellspacing="0">
+<tr><td colspan="5">comment</td>
+</tr>
+<tr><td>select Window With Name</td>
+<td colspan="4">main</td>
+</tr>
+<tr><td>check</td>
+<td>does Window With Name</td>
+<td>main</td>
+<td>Exist</td>
+<td>true</td>
+</tr>
+</table>
+<br/>Check for multiple windows<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>do windows with ids</td>
+<td>id1,id2,id3</td>
+<td>exist</td>
+<td class="pass">false</td>
+</tr>
+<tr><td>check</td>
+<td>do windows with names</td>
+<td>name1,name2,name3</td>
+<td>exist</td>
+<td class="pass">false</td>
+</tr>
+<tr><td>check</td>
+<td>do windows with titles</td>
+<td>title1,title2, title3</td>
+<td>exist</td>
+<td class="pass">false</td>
+</tr>
+</table>
+<br/>Store various aspects of the windows to variables<br/><br/><table border="1" cellspacing="0">
+<tr><td>store all window ids in</td>
+<td>value1</td>
+</tr>
+<tr><td>store all window names in</td>
+<td>value2</td>
+</tr>
+<tr><td>store all window titles in</td>
+<td>value3</td>
+</tr>
+<tr><td>store title of current page in</td>
+<td>value4</td>
+</tr>
+<tr><td>store absolute url of current page in</td>
+<td>value5</td>
+</tr>
+</table>
+<br/>Next three commands are the last in this screen as they mess with<br/>the browser and eventually close it<br/><br/><table border="1" cellspacing="0">
+<tr><td>click the back button</td>
+</tr>
+<tr><td>click the refresh button</td>
+</tr>
+<tr><td>click the close button</td>
+</tr>
+</table>
+<br/><br/><br/><br/><br/><br/><br/><br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-8929042221982505794');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-8929042221982505794"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-8929042221982505794"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>WindowApis</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

@@ -1,0 +1,108 @@
+!1 Window APIs
+!3 Windows
+Control Browser buttons
+{{{| click the back button |
+| click the refresh button |
+| click the close button |
+}}}
+Check title of current page
+{{{| check | title Of Current Page | title |
+| check | title Of current page is | title | true|false |
+| check | does window with title exist | title | true|false |
+}}}
+Check absolute url of current page
+{{{| check | absolute url of current page | url |
+| check | absolute url of current page is | url | true|false |
+}}}
+Select a window by its title
+{{{| select window with title |title |
+}}}
+Check the windows with titles in the list all exist
+{{{| check | do windows with titles | list | exist | true|false |
+}}}
+Set the focus of the selected window
+{{{| set focus to currently selected window |
+}}}
+Maximize the current window
+{{{| maximise currently selected window |
+}}}
+Check a window with specific id exists
+{{{| check | does window with id | id | exist | true|false |
+}}}
+Open a url in a window and assign it an id
+{{{| open url | url | in window and assign id |id |
+}}}
+Select a window based on its id
+{{{| select window with id | id|
+}}}
+Check all windows with ids in the list exist
+{{{| check | do windows with ids | list | exist | true|false |
+}}}
+Store all window ids in a variable
+{{{| store all window ids in | var|
+}}}
+Select a window by its name
+{{{| select window with name | name|
+}}}
+Check a window with specific name exists
+{{{| check | does window with name | name| exist | true|false |
+}}}
+Check all windows with names in the list exist
+{{{| check | do windows with names |list | exist | true|false |
+}}}
+Store various aspects of the windows to variables
+{{{| store all window names in | var |
+| store all window titles in | var |
+| store title of current page in | var |
+| store absolute url of current page in | var |
+}}}
+!3 Frames
+{{{| select frame | locator |
+| select frame | locator |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| check | title of current page | Magnetic Reason |
+| check | title of current page is | Magnetic Reason | true |
+| check | absolute url of current page | !-http://localhost:8090/fitnium/testpage4api.html-! |
+| check | absolute url of current page Is | !-http://localhost:8090/fitnium/testpage4api.html-! | true |
+| check | does window with title exist | Magnetic Reason | true |
+| select window with title | Magnetic Reason |
+| set focus to currently selected window |
+| maximise currently selected window |
+| check | does window with id | testpage4api | exist | false |
+| open url | testpage4api.html | in window and assign id | testpage4api |
+| select window with id | testpage4api |
+
+Check for multiple windows
+
+-| script | Base Fitnium Fixture |
+| check | do windows with ids | id1,id2,id3 | exist | false |
+| check | do windows with names | name1,name2,name3| exist | false |
+| check | do windows with titles | title1,title2, title3 | exist | false |
+
+Store various aspects of the windows to variables
+
+-| script | Base Fitnium Fixture |
+| store all window ids in | value1 |
+| store all window names in | value2 |
+| store all window titles in | value3 |
+| store title of current page in | value4 |
+| store absolute url of current page in | value5 |
+
+Next three commands are the last in this screen as they mess with
+the browser and eventually close it
+
+-| script | Base Fitnium Fixture |
+| click the back button |
+| click the refresh button |
+| click the close button |
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+!3 !-fit-!
+|'''Date: '''|!-10:03:24 PM (BST) on Thursday, July 1, 2010-!|
+|'''Test Page: '''|.FitniumUserGuide.FitGuides.ApiTest.ListApis.SingleSelectLists|
+|'''Command: '''|!-java -cp fitnesse.jar;fitnesse.jar;fitlibrary.jar;C:\Dev\src\Fitnium2-Release\.\lib\ant.jar;C:\Dev\src\Fitnium2-Release\.\lib\easymock.jar;C:\Dev\src\Fitnium2-Release\.\lib\fitnium2.jar;C:\Dev\src\Fitnium2-Release\.\lib\flashselenium-java-client-extension-1.0.jar;C:\Dev\src\Fitnium2-Release\.\lib\flex-ui-selenium-0.1.1.jar;C:\Dev\src\Fitnium2-Release\.\lib\htmlparser.jar;C:\Dev\src\Fitnium2-Release\.\lib\json.jar;C:\Dev\src\Fitnium2-Release\.\lib\junit-4.6.jar;C:\Dev\src\Fitnium2-Release\.\lib\poi-3.2-FINAL-20081019.jar;C:\Dev\src\Fitnium2-Release\.\lib\resolver.jar;C:\Dev\src\Fitnium2-Release\.\lib\selenium-java-client-driver.jar;C:\Dev\src\Fitnium2-Release\.\lib\selenium-server.jar;C:\Dev\src\Fitnium2-Release\.\lib\serializer.jar;C:\Dev\src\Fitnium2-Release\.\lib\velocity-1.6.2-dep.jar;C:\Dev\src\Fitnium2-Release\.\lib\xerces.jar;C:\Dev\src\Fitnium2-Release\.\lib\xercesImpl.jar;C:\Dev\src\Fitnium2-Release\.\lib\xml-apis.jar fit.FitServer Ibanez 80 6-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-24.115 seconds-!|

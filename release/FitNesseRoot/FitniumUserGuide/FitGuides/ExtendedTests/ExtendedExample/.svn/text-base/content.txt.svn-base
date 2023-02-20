@@ -1,0 +1,62 @@
+!path fitnesse.jar
+!path fitlibrary.jar
+!path fitnium.jar
+!path selenium-java-client-driver.jar
+
+!|com.magneticreason.fitnium.ExtendedFitniumFixture|
+
+Set up the browser and connect to selenium
+
+|The server is located at | localhost |
+|The server is on port | 4444 |
+|Using the browser | *firefox | start at | http://www.magneticreason.com |
+|check | is selenium initialised | true |
+|set speed to |500| milliseconds |
+|set timeout to |50000| milliseconds |
+|write to debug | starting test |
+
+Lets first start at the FitNium home page at Magnetic Reason
+
+| starting at URL| /tools/fitnium/testpage4api.html |
+| check| title of current page | Magnetic Reason |
+| check|text of element | xpath=//h1 | Fitnium Test Page |
+
+This is the test you'd normally use in the BasicFitniumFixture examples
+
+| is element | id=send | present |
+
+However ExtendedFitniumFixture provides several convienience methods
+for provided a clearer test text. Functionally they are all identical
+to the above test
+
+| is element with name | send | present |
+| click button with name | send |
+| wait for page to load for | 5 | seconds |
+| click the back button |
+
+| is element with id | send | present |
+| click button with id | send |
+| wait for page to load for | 5 | seconds |
+| click the back button |
+
+| is element with identifier | send | present |
+| click button with identifier | send |
+| wait for page to load for | 5 | seconds |
+| click the back button |
+
+| is element identified by xpath | //input[@id='send'] | present |
+| click button identified by xpath | //input[@id='send'] |
+| wait for page to load for | 5 | seconds |
+| click the back button |
+
+| is element identified by css | input[id="send"] | present |
+| click button identified by css | input[id="send"] |
+| wait for page to load for | 5 | seconds |
+| click the back button |
+
+| is element identified by dom | document.forms['form1'].send | present |
+| click button identified by dom | document.forms['form1'].send |
+| wait for page to load for | 5 | seconds |
+| click the back button |
+
+|close the browser |

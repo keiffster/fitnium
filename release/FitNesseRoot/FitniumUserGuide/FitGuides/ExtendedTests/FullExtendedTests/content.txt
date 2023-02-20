@@ -1,0 +1,460 @@
+The full list of available APIs which will be available are below
+
+Over time we'll document them in detail as they are delivered in future versions
+
+clickButton
+     clickButtonWithName
+     clickButtonWithIdentifier
+     clickButtonWithId
+     clickButtonIdentifiedByXpath
+     clickButtonIdentifiedByDom
+     clickButtonIdentifiedByCss
+
+isElementWithNamePresent
+isElementWithIdentifierPresent
+isElementWithIdPresent
+isElementIdentifiedByXpathPresent
+isElementIdentifiedByDomPresent
+isElementIdentifiedByCssPresent
+
+	 textOfElementWithName
+	 textOfElementWithIdentifier
+	 textOfElementWithId
+	 textOfElementIdentifiedByXpath
+	 textOfElementIdentifiedByDom
+	 textOfElementIdentifiedByCss
+
+	 valueOfElementWithName
+	 valueOfElementWithIdentifier
+	 valueOfElementWithId
+	 valueOfElementIdentifiedByXpath
+	 valueOfElementIdentifiedByDom
+	 valueOfElementIdentifiedByCss
+
+	 indexOfElementWithName
+	 indexOfElementWithIdentifier
+	 indexOfElementWithId
+	 indexOfElementIdentifiedByXpath
+	 indexOfElementIdentifiedByDom
+	 indexOfElementIdentifiedByCss
+
+	 isElementWithNamePresent
+	 isElementWithIdentifierPresent
+	 isElementWithIdPresent
+	 isElementIdentifiedByXpathPresent
+	 isElementIdentifiedByDomPresent
+	 isElementIdentifiedByCssPresent
+
+	 isElementWithNameVisible
+	 isElementWithIdentifierVisible
+	 isElementWithIdVisible
+	 isElementIdentifiedByXpathVisible
+	 isElementIdentifiedByDomVisible
+	 isElementIdentifiedByCssVisible
+
+	 elementWithNameHeight
+	 elementWithIdentifierHeight
+	 elementWithIdHeight
+	 elementIdentifiedByXpathHeight
+	 elementIdentifiedByDomHeight
+	 elementIdentifiedByCssHeight
+
+	 elementWithNameWidth
+	 elementWithIdentifierWidth
+	 elementWithIdWidth
+	 elementIdentifiedByXpathWidth
+	 elementIdentifiedByDomWidth
+	 elementIdentifiedByCssWidth
+
+	 leftPositionOfElementWithName
+	 leftPositionOfElementWithIdentifier
+	 leftPositionOfElementWithId
+	 leftPositionOfElementIdentifiedByXpath
+	 leftPositionOfElementIdentifiedByDom
+	 leftPositionOfElementIdentifiedByCss
+
+	 topPositionOfElementWithName
+	 topPositionOfElementWithIdentifier
+	 topPositionOfElementWithId
+	 topPositionOfElementIdentifiedByXpath
+	 topPositionOfElementIdentifiedByDom
+	 topPositionOfElementIdentifiedByCss
+
+	 attributeWithNameValue
+	 attributeWithIdentifierValue
+	 attributeWithIdValue
+	 attributeIdentifiedByXpathValue
+	 attributeIdentifiedByDomValue
+	 attributeIdentifiedByCssValue
+
+     checkAttributeWithNameValueIs
+     checkAttributeWithIdentifierValueIs
+     checkAttributeWithIdValueIs
+     checkAttributeIdentifiedByXpathValueIs
+     checkAttributeIdentifiedByDomValueIs
+     checkAttributeIdentifiedByCssValueIs
+
+     pressKeyDownInElementWithName
+     pressKeyDownInElementWithIdentifier
+     pressKeyDownInElementWithId
+     pressKeyDownInElementIdentifiedByXpath
+     pressKeyDownInElementIdentifiedByDom
+     pressKeyDownInElementIdentifiedByCss
+
+     releaseKeyUpInElementWithName
+     releaseKeyUpInElementWithIdentifier
+     releaseKeyUpInElementWithId
+     releaseKeyUpInElementIdentifiedByXpath
+     releaseKeyUpInElementIdentifiedByDom
+     releaseKeyUpInElementIdentifiedByCss
+
+     pressKeySequenceInElementWithName
+     pressKeySequenceInElementWithIdentifier
+     pressKeySequenceInElementWithId
+     pressKeySequenceInElementIdentifiedByXpath
+     pressKeySequenceInElementIdentifiedByDom
+     pressKeySequenceInElementIdentifiedByCss
+
+     setCursorAtInElementWithName
+     setCursorAtInElementWithIdentifier
+     setCursorAtInElementWithId
+     setCursorAtInElementIdentifiedByXpath
+     setCursorAtInElementIdentifiedByDom
+     setCursorAtInElementIdentifiedByCss
+
+     clickElementWithName
+     clickElementWithIdentifier
+     clickElementWithId
+     clickElementIdentifiedByXpath
+     clickElementIdentifiedByDom
+     clickElementIdentifiedByCss
+
+     clickElementWithNameAtAnd
+     clickElementWithIdentifierAtAnd
+     clickElementWithIdAtAnd
+     clickElementIdentifiedByXpathAtAnd
+     clickElementIdentifiedByDomAtAnd
+     clickElementIdentifiedByCssAtAnd
+
+     doubleClickElementWithName
+     doubleClickElementWithIdentifier
+     doubleClickElementWithId
+     doubleClickElementIdentifiedByXpath
+     doubleClickElementIdentifiedByDom
+     doubleClickElementIdentifiedByCss
+
+     doubleClickElementWithNameAtAnd
+     doubleClickElementWithIdentifierAtAnd
+     doubleClickElementWithIdAtAnd
+     doubleClickElementIdentifiedByXpathAtAnd
+     doubleClickElementIdentifiedByDomAtAnd
+     doubleClickElementIdentifiedByCssAtAnd
+
+     clickMouseDownOnElementWithName
+     clickMouseDownOnElementWithIdentifier
+     clickMouseDownOnElementWithId
+     clickMouseDownOnElementIdentifiedByXpath
+     clickMouseDownOnElementIdentifiedByDom
+     clickMouseDownOnElementIdentifiedByCss
+
+     clickMouseDownOnElementWithNameAtAnd
+     clickMouseDownOnElementWithIdentifierAtAnd
+     clickMouseDownOnElementWithIdAtAnd
+     clickMouseDownOnElementIdentifiedByXpathAtAnd
+     clickMouseDownOnElementIdentifiedByDomAtAnd
+     clickMouseDownOnElementIdentifiedByCssAtAnd
+
+     releaseMouseUpOnElementWithName
+     releaseMouseUpOnElementWithIdentifier
+     releaseMouseUpOnElementWithId
+     releaseMouseUpOnElementIdentifiedByXpath
+     releaseMouseUpOnElementIdentifiedByDom
+     releaseMouseUpOnElementIdentifiedByCss
+
+     releaseMouseUpOnElementWithNameAtAnd
+     releaseMouseUpOnElementWithIdentifierAtAnd
+     releaseMouseUpOnElementWithIdAtAnd
+     releaseMouseUpOnElementIdentifiedByXpathAtAnd
+     releaseMouseUpOnElementIdentifiedByDomAtAnd
+     releaseMouseUpOnElementIdentifiedByCssAtAnd
+
+     moveMouseInElementWithName
+     moveMouseInElementWithIdentifier
+     moveMouseInElementWithId
+     moveMouseInElementIdentifiedByXpath
+     moveMouseInElementIdentifiedByDom
+     moveMouseInElementIdentifiedByCss
+
+     moveMouseInElementWithNameToAnd
+     moveMouseInElementWithIdentifierToAnd
+     moveMouseInElementWithIdToAnd
+     moveMouseInElementIdentifiedByXpathToAnd
+     moveMouseInElementIdentifiedByDomToAnd
+     moveMouseInElementIdentifiedByCssToAnd
+
+     dragElementWithNameHorizontallyPixelsAndVerticallyPixelsName
+     dragElementWithIdentifierHorizontallyPixelsAndVerticallyPixels
+     dragElementWithIdHorizontallyPixelsAndVerticallyPixels
+     dragElementIdentifiedByXpathHorizontallyPixelsAndVerticallyPixels
+     dragElementIdentifiedByDomHorizontallyPixelsAndVerticallyPixels
+     dragElementIdentifiedByCssHorizontallyPixelsAndVerticallyPixels
+
+     dragElementElementWithNameToElementWithName
+     dragElementElementWithIdentifierToElementWithIdentifier
+     dragElementElementWithIdToElementWithId
+     dragElementElementIdentifiedByXpathToElementIdentifiedByXpath
+     dragElementElementIdentifiedByDomToElementIdentifiedByDom
+     dragElementElementIdentifiedByCssToElementIdentifiedByCss
+
+	 isInputFieldWithNameEditable
+	 isInputFieldWithIdentifierEditable
+	 isInputFieldWithIdEditable
+	 isInputFieldIdentifiedByXpathEditable
+	 isInputFieldIdentifiedByDomEditable
+	 isInputFieldIdentifiedByCssEditable
+
+     enterInInputFieldWithName
+     enterInInputFieldWithIdentifier
+     enterInInputFieldWithId
+     enterInInputFieldIdentifiedByXpath
+     enterInInputFieldIdentifiedByDom
+     enterInInputFieldIdentifiedByCss
+
+     textFromCellAtAndInTableWithName
+     textFromCellAtAndInTableWithIdentifier
+     textFromCellAtAndInTableWithId
+     textFromCellAtAndInTableIdentifiedByXpath
+     textFromCellAtAndInTableIdentifiedByDom
+     textFromCellAtAndInTableIdentifiedByCss
+
+     clickLinkWithName
+     clickLinkWithIdentifier
+     clickLinkWithId
+     clickLinkIdentifiedByXpath
+     clickLinkIdentifiedByDom
+     clickLinkIdentifiedByCss
+
+     selectOptionWithNameInListWithName
+     selectOptionWithIdentifierInListWithIdentifier
+     selectOptionWithIdInListWithId
+     selectOptionIdentifiedByXpathInListIdentifiedByXpath
+     selectOptionIdentifiedByDomInListIdentifiedByDom
+     selectOptionIdentifiedByCssInListIdentifiedByCss
+
+     addSelectionOptionWithNameToListWithName
+     addSelectionOptionWithIdentifierToListWithIdentifier
+     addSelectionOptionWithIdToListWithId
+     addSelectionOptionIdentifiedByXpathToListIdentifiedByXpath
+     addSelectionOptionIdentifiedByDomToListIdentifiedByDom
+     addSelectionOptionIdentifiedByCssToListIdentifiedByCss
+
+     removeSelectionOptionWithNameFromListWithName
+     removeSelectionOptionWithIdentifierFromListWithIdentifier
+     removeSelectionOptionWithIdFromListWithId
+     removeSelectionOptionIdentifiedByXpathFromListIdentifiedByXpath
+     removeSelectionOptionIdentifiedByDomFromListIdentifiedByDom
+     removeSelectionOptionIdentifiedByCssFromListIdentifiedByCss
+
+     listWithNameSelectedItemId
+     listWithIdentifierSelectedItemId
+     listWithIdSelectedItemId
+     listIdentifiedByXpathSelectedItemId
+     listIdentifiedByDomSelectedItemId
+     listIdentifiedByCssSelectedItemId
+
+     listWithNameSelectedItemIndex
+     listWithIdentifierSelectedItemIndex
+     listWithIdSelectedItemIndex
+     listIdentifiedByXpathSelectedItemIndex
+     listIdentifiedByDomSelectedItemIndex
+     listIdentifiedByCssSelectedItemIndex
+
+     listWithNameSelectedItemLabel
+     listWithIdentifierSelectedItemLabel
+     listWithIdSelectedItemLabel
+     listIdentifiedByXpathSelectedItemLabel
+     listIdentifiedByDomSelectedItemLabel
+     listIdentifiedByCssSelectedItemLabel
+
+     listWithNameSelectedItemValue
+     listWithIdentifierSelectedItemValue
+     listWithIdSelectedItemValue
+     listIdentifiedByXpathSelectedItemValue
+     listIdentifiedByDomSelectedItemValue
+     listIdentifiedByCssSelectedItemValue
+
+     listWithNameSelectedItemIds
+     listWithIdentifierSelectedItemIds
+     listWithIdSelectedItemIds
+     listIdentifiedByXpathSelectedItemIds
+     listIdentifiedByDomSelectedItemIds
+     listIdentifiedByCssSelectedItemIds
+
+     listWithNameSelectedItemIndexes
+     listWithIdentifierSelectedItemIndexes
+     listWithIdSelectedItemIndexes
+     listIdentifiedByXpathSelectedItemIndexes
+     listIdentifiedByDomSelectedItemIndexes
+     listIdentifiedByCssSelectedItemIndexes
+
+     listWithNameSelectedItemLabels
+     listWithIdentifierSelectedItemLabels
+     listWithIdSelectedItemLabels
+     listIdentifiedByXpathSelectedItemLabels
+     listIdentifiedByDomSelectedItemLabels
+     listIdentifiedByCssSelectedItemLabels
+
+     listWithNameSelectedItemValues
+     listWithIdentifierSelectedItemValues
+     listWithIdSelectedItemValues
+     listIdentifiedByXpathSelectedItemValues
+     listIdentifiedByDomSelectedItemValues
+     listIdentifiedByCssSelectedItemValues
+
+     listWithNameOptions
+     listWithIdentifierOptions
+     listWithIdOptions
+     listIdentifiedByXpathOptions
+     listIdentifiedByDomOptions
+     listIdentifiedByCssOptions
+
+	 doesListWithNameHaveSelection
+	 doesListWithIdentifierHaveSelection
+	 doesListWithIdHaveSelection
+	 doesListIdentifiedByXpathHaveSelection
+	 doesListIdentifiedByDomHaveSelection
+	 doesListIdentifiedByCssHaveSelection
+
+	 doesListWithNameContainOptions
+	 doesListWithIdentifierContainOptions
+	 doesListWithIdContainOptions
+	 doesListIdentifiedByXpathContainOptions
+	 doesListIdentifiedByDomContainOptions
+	 doesListIdentifiedByCssContainOptions
+
+	 checkListWithNameSelectedItemIdIs
+	 checkListWithIdentifierSelectedItemIdIs
+	 checkListWithIdSelectedItemIdIs
+	 checkListIdentifiedByXpathSelectedItemIdIs
+	 checkListIdentifiedByDomSelectedItemIdIs
+	 checkListIdentifiedByCssSelectedItemIdIs
+
+	 checkListWithNameSelectedItemIndexIs
+	 checkListWithIdentifierSelectedItemIndexIs
+	 checkListWithIdSelectedItemIndexIs
+	 checkListIdentifiedByXpathSelectedItemIndexIs
+	 checkListIdentifiedByDomSelectedItemIndexIs
+	 checkListIdentifiedByCssSelectedItemIndexIs
+
+	 checkListWithNameSelectedItemLabelIs
+	 checkListWithIdentifierSelectedItemLabelIs
+	 checkListWithIdSelectedItemLabelIs
+	 checkListIdentifiedByXpathSelectedItemLabelIs
+	 checkListIdentifiedByDomSelectedItemLabelIs
+	 checkListIdentifiedByCssSelectedItemLabelIs
+
+	 checkListWithNameSelectedItemValueIs
+	 checkListWithIdentifierSelectedItemValueIs
+	 checkListWithIdSelectedItemValueIs
+	 checkListIdentifiedByXpathSelectedItemValueIs
+	 checkListIdentifiedByDomSelectedItemValueIs
+	 checkListIdentifiedByCssSelectedItemValueIs
+
+	 checkListWithNameSelectedItemIdsAre
+	 checkListWithIdentifierSelectedItemIdsAre
+	 checkListWithIdSelectedItemIdsAre
+	 checkListIdentifiedByXpathSelectedItemIdsAre
+	 checkListIdentifiedByDomSelectedItemIdsAre
+	 checkListIdentifiedByCssSelectedItemIdsAre
+
+	 checkListWithNameSelectedItemIndexesAre
+	 checkListWithIdentifierSelectedItemIndexesAre
+	 checkListWithIdSelectedItemIndexesAre
+	 checkListIdentifiedByXpathSelectedItemIndexesAre
+	 checkListIdentifiedByDomSelectedItemIndexesAre
+	 checkListIdentifiedByCssSelectedItemIndexesAre
+
+	 checkListWithNameSelectedItemLabelsAre
+	 checkListWithIdentifierSelectedItemLabelsAre
+	 checkListWithIdSelectedItemLabelsAre
+	 checkListIdentifiedByXpathSelectedItemLabelsAre
+	 checkListIdentifiedByDomSelectedItemLabelsAre
+	 checkListIdentifiedByCssSelectedItemLabelsAre
+
+	 checkListWithNameSelectedItemValuesAre
+	 checkListWithIdentifierSelectedItemValuesAre
+	 checkListWithIdSelectedItemValuesAre
+	 checkListIdentifiedByXpathSelectedItemValuesAre
+	 checkListIdentifiedByDomSelectedItemValuesAre
+	 checkListIdentifiedByCssSelectedItemValuesAre
+
+     clickRadioButtonWithName
+     clickRadioButtonWithIdentifier
+     clickRadioButtonWithId
+     clickRadioButtonIdentifiedByXpath
+     clickRadioButtonIdentifiedByDom
+     clickRadioButtonIdentifiedByCss
+
+     unclickRadioButtonWithName
+     unclickRadioButtonWithIdentifier
+     unclickRadioButtonWithId
+     unclickRadioButtonIdentifiedByXpath
+     unclickRadioButtonIdentifiedByDom
+     unclickRadioButtonIdentifiedByCss
+
+	 HaveSelectionWithNameChecked
+	 isRadioButtonWithIdentifierChecked
+	 isRadioButtonWithIdChecked
+	 isRadioButtonIdentifiedByXpathChecked
+	 isRadioButtonIdentifiedByDomChecked
+	 isRadioButtonIdentifiedByCssChecked
+
+     clickCheckBoxWithName
+     clickCheckBoxWithIdentifier
+     clickCheckBoxWithId
+     clickCheckBoxIdentifiedByXpath
+     clickCheckBoxIdentifiedByDom
+     clickCheckBoxIdentifiedByCss
+
+     unclickCheckBoxWithName
+     unclickCheckBoxWithIdentifier
+     unclickCheckBoxWithId
+     unclickCheckBoxIdentifiedByXpath
+     unclickCheckBoxIdentifiedByDom
+     unclickCheckBoxIdentifiedByCss
+
+	 isCheckBoxWithNameChecked
+	 isCheckBoxWithIdentifierChecked
+	 isCheckBoxWithIdChecked
+	 isCheckBoxIdentifiedByXpathChecked
+	 isCheckBoxIdentifiedByDomChecked
+	 isCheckBoxIdentifiedByCssChecked
+
+     submitFormWithName
+     submitFormWithIdentifier
+     submitFormWithId
+     submitFormIdentifiedByXpath
+     submitFormIdentifiedByDom
+     submitFormIdentifiedByCss
+
+     selectFrameWithName
+     selectFrameWithIdentifier
+     selectFrameWithId
+     selectFrameIdentifiedByXpath
+     selectFrameIdentifiedByDom
+     selectFrameIdentifiedByCss
+
+     selectWindowWithName
+     selectWindowWithIdentifier
+     selectWindowWithId
+     selectWindowIdentifiedByXpath
+     selectWindowIdentifiedByDom
+     selectWindowIdentifiedByCss
+
+     fireEventAgainstElementWithName
+     fireEventAgainstElementWithIdentifier
+     fireEventAgainstElementWithId
+     fireEventAgainstElementIdentifiedByXpath
+     fireEventAgainstElementIdentifiedByDom
+     fireEventAgainstElementIdentifiedByCss
+

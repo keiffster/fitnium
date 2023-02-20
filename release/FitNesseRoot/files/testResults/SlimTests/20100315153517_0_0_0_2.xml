@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>SlimTests</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>2</exceptions>
+    </counts>
+    <content><![CDATA[<table border="1" cellspacing="0">
+<tr><td class="error">import<hr/> <span class="fit_label">Could not find fixture: import.</span></td>
+</tr>
+<tr><td>fitnesse.slim.test</td>
+</tr>
+<tr><td>fitnesse.fixtures</td>
+</tr>
+<tr><td>com.magneticreason.fitnium</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">script<hr/> <span class="fit_label">Could not find fixture: script.</span></td>
+<td>BaseFitniumFixture<a title="create page" href="BaseFitniumFixture?edit&nonExistent=true">[?]</a></td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>SlimTests</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

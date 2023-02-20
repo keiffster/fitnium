@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ParameterTests</rootPath>
+    <result>
+    <counts>
+      <right>3</right>
+      <wrong>2</wrong>
+      <ignores>0</ignores>
+      <exceptions>4</exceptions>
+    </counts>
+    <content><![CDATA[NOTE : To see the parameters actually in use you will need to click Edit on the left<br/>to view the source, as in web view some of the variables will have been substituted<br/>by Fitnesse<br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*firefox</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>500</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>50000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the FitNium<a title="create page" href="FitniumUserGuide.FitGuides.FitNium?edit&nonExistent=true">[?]</a> home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">starting at URL<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: XHR ERROR: URL = http://localhost:8090/tools/fitnium/testpage4api.html Response_Code = 404 Error_Message = Not Found
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.open(DefaultSelenium.java:335)
+	at com.magneticreason.fitnium.api.FitniumSeleniumAPI.startingAtURL(FitniumSeleniumAPI.java:17)
+	at com.magneticreason.fitnium.BaseFitniumFixture.startingAtURL(BaseFitniumFixture.java:300)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td colspan="3">/tools/fitnium/testpage4api.html</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="fail">Magnetic Reason <span class="fit_label">expected</span><hr> <span class="fit_label">actual</span></td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="error">Fitnium Test Page<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR: Element xpath=//h1 not found
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.DefaultSelenium.getText(DefaultSelenium.java:435)
+	at com.magneticreason.fitnium.api.FitniumElementAPI.textOfElement(FitniumElementAPI.java:94)
+	at com.magneticreason.fitnium.BaseFitniumFixture.textOfElement(BaseFitniumFixture.java:1038)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary</td>
+<td class="fail">true <span class="fit_label">expected</span><hr>false <span class="fit_label">actual</span></td>
+</tr>
+</table>
+<br/><br/><br/>We can define Fitnesse variables using th !define {} command, these will then act as<br/>substitutions in your scripts, the variable is replaced in your script where ever it occurs<br/><br/>The follow code is use to define Fitnesse variables<br/><pre>!define firstname {Keith}<br/>!define surname {Sterling} </pre><br/>And looks like this in your code<br/><span class="meta">variable defined: firstname=Keith</span><br/><span class="meta">variable defined: surname=Sterling</span><br/><br/>My name is Keith Sterling<br/><br/><br/>Fitnium variables are defined as !{name} and can be used as parameters into your tests<br/><br/><table border="1" cellspacing="0">
+<tr><td>set fitnium variable called</td>
+<td>surname</td>
+<td>with value</td>
+<td>sterling</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>surname</td>
+<td class="pass">sterling</td>
+</tr>
+</table>
+<br/>Now we can used our vairable in our scripts instead of actual values<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">enter<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR: Element surname not found
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)
+	at com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)
+	at com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>!{name}</td>
+<td>in input field</td>
+<td>surname</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>text of element</td>
+<td>surname</td>
+<td>is</td>
+<td>!{name}</td>
+<td class="error">true<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR: Element surname not found
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.DefaultSelenium.getText(DefaultSelenium.java:435)
+	at com.magneticreason.fitnium.api.FitniumElementAPI.textOfElementIs(FitniumElementAPI.java:108)
+	at com.magneticreason.fitnium.BaseFitniumFixture.textOfElementIs(BaseFitniumFixture.java:1052)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+<br/>Finall you can also store values directly in the Selenium Javascript environment, making them acessible<br/>to Javascript commands in your scripts<br/><br/>However Selenium variables are not accessible to Fitnium<br/><br/>To use selenium variables you need to have started a browser<br/><br/><table border="1" cellspacing="0">
+<tr><td>set selenium variable called</td>
+<td>name</td>
+<td>with value</td>
+<td>keith</td>
+</tr>
+<tr><td>check</td>
+<td>get selenium variable called</td>
+<td>name</td>
+<td class="pass">keith</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>ParameterTests</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

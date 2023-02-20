@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>GettingStarted</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <content><![CDATA[We start by setting two path statements, the first is to the jar or folder that contains<br/>the fitnium classes, and the second is to the Selenium Java client driver jar<br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: fitnium.jar</span><br/><span class="meta">classpath: selenium-java-client-driver.jar</span><br/><br/>Fitnium is based on a DoFixture<a title="create page" href="FitniumUserGuide.SlimGuides.DoFixture?edit&nonExistent=true">[?]</a> and we instantiate it with the the following line<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">com.magneticreason.fitnium.BaseFitniumFixture<hr/> <span class="fit_label">Could not find fixture: com.magneticreason.fitnium.BaseFitniumFixture.</span></td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>GettingStarted</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

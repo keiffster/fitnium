@@ -1,0 +1,88 @@
+!1 Single Select List APIs
+Check a list contains a number of text items
+{{{| check | does list | locator | contain options | list_of_options | true|false |
+}}}
+Check a list contains a number of option items
+{{{| check | list options | locator  |  list_of_options |
+}}}
+Select an item in a single select list box
+{{{| select Option | option| In List | locator  |
+| select label | label | In List | locator  |
+| select value | value | In List | locator  |
+| select id    | id | In List | locator  |
+| select index | index | In List | locator  |
+}}}
+Check a list has an item selected
+{{{| check | does List | locator  | Have Selection | true|false |
+}}}
+Check a selected item id
+{{{| check | list | locator  | Selected Item Id is | id| true|false|
+}}}
+Check a selected item index
+{{{| check | list | locator  | Selected Item Index is | index | true|false|
+}}}
+Check a selected list label
+{{{| check | list | locator  | Selected Item Label is | label | true|false|
+}}}
+Check a selected list value
+{{{| check | list | locator  | Selected Item Value is | value | true|false|
+}}}
+Store if a list has a selection in a variable
+{{{| store does list | locator | have selection in | var |
+}}}
+Store the selected item id in a variable
+{{{| store list | locator  | selected item id in | var |
+}}}
+Store the selected item index in a variable
+{{{| store list | locator  | selected item index in | var |
+}}}
+Store the selected item label in a variable
+{{{| store list | locator  | selected item label in | var |
+}}}
+Store the selected item value in a variable
+{{{| store list | locator  | selected item value in | var |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| check | does list | form_country | contain options | Wales,Scotland,Ireland,England,Other | true |
+| check | list options | form_country | Wales,Scotland,Ireland,England,Other |
+
+-| script | Base Fitnium Fixture |
+| select Option | England | In List | form_country |
+| select label | England | In List | form_country |
+| select value | eng | In List | form_country |
+| select id    | eng | In List | form_country |
+| select index | 3 | In List | form_country |
+| check | does List | form_country | Have Selection | true |
+
+-| script | Base Fitnium Fixture |
+| check | list | form_country | Selected Item Id is | eng | true |
+| check | list | form_country | Selected Item Index is | 3 | true |
+| check | list | form_country | Selected Item Label is |England| true |
+| check | list | form_country | Selected Item Value is | eng | true |
+
+-| script | Base Fitnium Fixture |
+| store does list | form_country | have selection in | val1 |
+
+-| script | Base Fitnium Fixture |
+| store list | form_country | selected item id in | val2 |
+| check | get fitnium variable called | val2 | eng |
+| check | does list | !{val2} | contain  value | eng | true |
+
+-| script | Base Fitnium Fixture |
+| store list | form_country | selected item index in | val3 |
+| check | get fitnium variable called | val3 | 3 |
+| check | does list | !{val3} | contain  value | 3 | true |
+
+-| script | Base Fitnium Fixture |
+| store list | form_country | selected item label in | val4 |
+| check | get fitnium variable called | val4 | England |
+| check | does list | !{val4} | contain  value | England | true |
+
+-| script | Base Fitnium Fixture |
+| store list | form_country | selected item value in | val5 |
+| check | get fitnium variable called | val5 | eng |
+| check | does list | !{val5} | contain  value | eng | true |
+
+

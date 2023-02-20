@@ -1,0 +1,333 @@
+!1 API Quick Reference
+!2 Browser Controls
+!3 Browser Controls
+{{{| Using the browser | browser | start at | URL |
+| using firefox start at | URL |
+| using explorer start at | URL |
+| using explorer in HTA mode start at | URL |
+| using chrome start at | URL |
+| close the browser |
+| click the back button |
+| click the refresh button |
+| click the close button |
+| set browser log level  | debug | info | warn | error | off |}}}
+!3 Debug Commands
+{{{| write to debug | message-string |
+| set browser log level | debug-value |
+}}}
+!3 Screen Shots
+{{{| capture Screen To File |image-name |
+| store screen as string in | string-name |
+}}}
+!2 HTML Elements
+!3 HTML Attributes
+{{{
+| check | attribute | locator | value | value |
+| check | value of attribute | locator | is | value | true |
+| check | does attribute with name | value | exist in any window | true |
+| check | does attribute with name | name | and value | value | exist in any window | true |
+| store attribute | name | from all windows in | attr_name |
+| check | get fitnium variable called | attr_name | name |
+}}}
+!3 Button APIs
+{{{| click button | locator|
+| click the back button |
+| click the close button |
+| click the refresh button |
+| check | does button With Id | send | exist | true |
+| store all buttons in | list |
+| check | do buttons with ids exist | !{list} | true |
+}}}
+!3 Check Box APIs
+{{{| click check box | locator |
+| unclick  check box | locator |
+| check | is  check box | form_tsandcs | checked | false |
+| set check box | locator | to  state | checked|unchecked |
+}}}
+!3 Cookies
+{{{| create cookie named | name | with value | value |
+| check | cookie named | name | is present | true|false |
+| check | value of cookie named | name | is | value | true|false |
+| delete cookie named | name|
+| create cookie named | name| with value | value | and path | path | and max age | age|
+| check | cookie named | name | is present | true|false |
+| check | value of cookie named | name | is | is cool | true|false|
+| delete cookie named | name | with path | path |
+| check | cookies | list of cookies | are present | true|false |
+| store value of all cookies in | cookielist |
+| store value of cookie named | name | in | var|
+| store cookie named | name | is present in | var |
+| store cookie with value | value | and max age | age | option string in | var |
+}}}
+!3 Element APIs
+{{{| check| text of element | locator |text |
+}}}
+Check Value of an Element
+{{{| check| value of element | locator | value|
+| check | index of element |locator | index |
+| check | element | locator | height | value |
+| check | element | locator | width | value |
+| check | is element visible | locator | true|false |
+| check | is element present | locator | true|false |
+| store is element | locator | present in | var |
+| store is element | locator | visible in | var |
+| store text of element | locator  | in | var |
+| store index of element | locator  | in | var |
+| store element | locator  | height in | var |
+| store element | locator  | width in | var |
+| store left position of element | locator  | in | var |
+| store top position of element | locator  | in | var |
+}}}
+!3 HTML Forms
+{{{| submit form | name |
+}}}
+!3 Input Fields
+{{{| enter | text | in input field | locator |
+| type | text | in input field | locator |
+| check | does Input Field With Id | id | Exist | true|false |
+| check | input field | locator | is Editable | true|false |
+| store input field | locator | is editable in | var |
+| store all fields in | var|
+| check | do input fields with ids | list | exist | true|false |
+}}}
+!3 Links
+{{{| click Link | locator |
+| click Link With Text | text |
+| store all links in | var|
+| check | does Link With Id | id| Exist | true|false |
+| check | do links with ids | list | exist | true|false |
+}}}
+!3 List Boxes/Drop Downs
+!4 Single Select Lists
+{{{| check | does list | locator | contain options | list_of_options | true|false |
+| check | list options | locator  |  list_of_options |
+| select Option | option| In List | locator  |
+| check | does List | locator  | Have Selection | true|false |
+| check | list | locator  | Selected Item Id is | id| true|false|
+| check | list | locator  | Selected Item Index is | index | true|false|
+| check | list | locator  | Selected Item Label is | label | true|false|
+| check | list | locator  | Selected Item Value is | value | true|false|
+| store does list | locator | have selection in | var |
+| store list | locator  | selected item id in | var |
+| store list | locator  | selected item index in | var |
+| store list | locator  | selected item label in | var |
+| store list | locator  | selected item value in | var |
+}}}
+!4 Multi Select Lists
+{{{| check | does list | locator | contain options | list | true|false |
+| check | list options | locator  | list |
+| add Selection Option | option | To List | locator  |
+| remove Selection Option | option | From List | locator  |
+| check | does List | locator  | Have Selection | true|false |
+| check | list | locator | Selected Item Ids are | list_of_ids | true|false |
+| check | list | locator  | Selected Item Indexes are | list_of_indexes | true|false|
+| check | list |locator  | Selected Item Labels are | list_of_labels | true|false|
+| check | list | locator  | Selected Item Values are | list_of_values | true|false|
+| store list | locator  | selected item indexes in | var |
+| store list | locator  | selected item labels in | var |
+| store list | locator  | selected item values in | var |
+| store list | locator  | options in | var |
+}}}
+!3 Mouse Commands
+{{{| click element | locator |
+| double click element |locator |
+| double click element | locator  | at | x | and | y |
+| click mouse down on element | locator  |
+| click mouse down on element | locator  | at | x | and | y |
+| release mouse up on element |locator  |
+| release mouse up on element | locator  | at | x | and | y |
+| move mouse in element | locator  |
+| move mouse in element | locator | to | x | and | y |
+| move mouse out of element | locator  |
+| hover mouse over element | locator  |
+| drag element | locator | to element | locator |
+| drag element | locator | horizontally | x| pixels and vertically | y | pixels |
+}}}
+!3 Radio Buttons
+{{{| click radio button | locator |
+| check | is radio button | locator  | checked | true|false |
+| check | is radio button | locator  | checked | true|false |
+| unclick radio button | locator  |
+| store is radio button  | locator  | checked in | var |
+}}}
+!3 Keyboard Commands
+{{{| while holding the control key down |
+| release the control key |
+| while holding the alt key down |
+| release the alt key |
+| while holding the shift key down |
+| release the shift key |
+| while holding the meta key down |
+| release the meta key |
+| press key | letter | down in element | locator  |
+| release key | letter | up in element | locator  |
+| set Cursor At | pos | In Element | locator |
+| check | get cursor position in element | locator  | pos |
+| store cursor position in element | locator  | in | var |
+}}}
+!3 Window Commands
+{{{| click the back button |
+| click the refresh button |
+| click the close button |
+| check | title Of Current Page | title |
+| check | title Of current page is | title | true|false |
+| check | does window with title exist | title | true|false |
+| check | absolute url of current page | url |
+| check | absolute url of current page is | url | true|false |
+| select window with title |title |
+| check | do windows with titles | list | exist | true|false |
+| set focus to currently selected window |
+| maximise currently selected window |
+| check | does window with id | id | exist | true|false |
+| open url | url | in window and assign id |id |
+| select window with id | id|
+| check | do windows with ids | list | exist | true|false |
+| store all window ids in | var|
+| select window with name | name|
+| check | does window with name | name| exist | true|false |
+| check | do windows with names |list | exist | true|false |
+| store all window names in | var |
+| store all window titles in | var |
+| store title of current page in | var |
+| store absolute url of current page in | var |
+| select frame | locator |
+| select frame | locator |
+}}}
+!3 Tables
+{{{| check | text From Cell At | row | And | column | in table | locator | value |
+| store text from cell at | rpw | and | column | in table | locator | in | var|
+}}}
+!3 Text Handling
+{{{| check | is text present | text | true|false |
+| check | is text present | expression | true|false |
+| store is text | text | present in | var |
+| store body text in | var |
+}}}
+!2 Wait Commands
+!3 Basic Waits
+{{{| wait For Page To Load For | time | seconds |
+| wait for | time | milliseconds |
+| wait for | time | seconds |
+| wait for location | url | to be present |
+| wait for xpath | xpath | count to be | num |
+}}}
+!3 Cookie Waits
+{{{| wait for cookie | name | to be present |
+}}}
+!3 Dialog Waits
+{{{| wait for alert to occur |
+| wait for prompt to occur |
+| wait for confirmation to occur |
+}}}
+!3 ElementWaits
+{{{| wait for element | locator |
+| wait for element | locator  | for | time | seconds |
+| wait for element | locator  | to be visible |
+| wait for element | locator  | to be editable |
+| wait for element | locator | to have height | height |
+| wait for element | locator  | to have width | width |
+| wait for element | locator  | to be at left position | x |
+| wait for element | locator  | to be at top position | y |
+| wait for element | locator  | with value | value | to be present |
+}}}
+!3 HtmlWaits
+{{{| wait for html source to contain | source |
+| wait for body text | text | to be present |
+| wait for text | text | to be present |
+| wait for title | title | to be present |
+| wait for attribute | attribute-locator | to be present |
+| wait for attribute | id | from all windows to be present |
+| wait for buttons | button-list | to be present |
+| wait for fields | field-list | to be present |
+| wait for links | link| to be present |
+| wait for radio button | locator | to be checked |
+| wait for check box | locator | to be checked |
+| wait for text | text | in table | table-locator | to occur |
+}}}
+!3 Javascript Waits
+{{{| wait for evaluation | expression | to equal | value |
+| wait | time | seconds for script | expression | to be true |
+}}}
+!3 List Waits
+{{{| wait for listbox | locator | to have something selected  |
+| wait for listbox | locator | to have selected id | id |
+| wait for listbox | locator | to have selected index | index |
+| wait for listbox | locator | to have selected label | label |
+| wait for listbox | locator | to have selected value | value |
+| wait for listbox | locator | to have selected ids | id-list |
+| wait for listbox | locator | to have selected indexes | index-list |
+| wait for listbox | locator | to have selected labels | label-list |
+| wait for listbox | locator | to have selected values | value-list |
+| wait for listbox | locator | to have selected options | options-list |
+}}}
+!3 Window Waits
+{{{| wait for window titles | title | to be present |
+}}}
+!2 Data Commands
+!3 File and Directory Commands
+{{{| check | file named | filename | exists | true|false |
+| create file named | filename |
+| copy file named | filename  | to file named | filename  |
+| move file named | filename  | to file named | filename  |
+| delete file named | filename  |
+| check | directory named | directory | exists | true|false |
+| create directory named | directory |
+| delete directory named | directory |
+}}}
+!3 Generate Data
+{{{| load unique value generator | generator | into | name |
+| next unique value from | name |
+| store next unique value from | name | in | variable |
+}}}
+!3 Timing Commands
+{{{| current time |
+| store current time in | variable |
+| store difference between | variable1 | and | variable2 | in | variable3 |
+}}}
+!3 Writer Commands
+{{{| load writer | classpath | into | name | with params | params-list |
+| store value | value | with params | params-list | in writer | name |
+| flush writer | name |
+}}}
+!3 Parameters
+{{{!define name {value}
+| check | does | var1 | equal | var2 | true |
+| set selenium variable called | name | with value | value |
+| get selenium variable called |
+| check | does selenium variable | variable | equal | value | true|false |
+| set fitnium variable called | name | with value | value |
+| get fitnium variable called | name |
+| check | does fitnium variable | variable | equal value | value| true|false |
+| check | does fitnium variable | fit1 | equal variable | fit2 | true |
+| check | does list | list | contain value | value | true |
+| check | does list | list | equal list | list | true |
+| check | does list | list | contain any values | list | true |
+}}}
+!2 Javascript Commands
+!3 Javacript
+{{{| wait for popup with id | id | for | time | seconds |
+| value of javascript | script |
+| store value of javascript | script | in | variable |
+| fire event | event | against element | locator |
+| wait | time | seconds for script condition | condition |
+}}}
+!3 Javascript Dialogs
+{{{| check | alert dialog message | message |
+| check | alert dialog message is | message | true|false |
+| store alert dialog message in | variable |
+| check | has Alert Occurred | true|false |
+| close Alert Dialog |
+| answer | text | On Next Prompt |
+| check | has Prompt Occurred | true|false |
+| check | Prompt Dialog Message | text |
+| check | Prompt Dialog Message is |text  | true|false |
+| store prompt dialog message in | variable |
+| close prompt Dialog |
+| choose Cancel On Next Confirmation |
+| choose Ok On Next Confirmation |
+| check | has Confirmation Occurred | true|false |
+| close confirmation Dialog |
+| check | Confirmation Dialog Message | text |
+| store confirmation dialog message in | variable |
+}}}
+

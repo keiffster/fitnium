@@ -1,0 +1,42 @@
+!1 Browser Control APIs
+
+Your first command is normally to tell fitnium which browser to start testing in and which URL to start from
+{{{| Using the browser | browser | start at | URL |
+}}}
+Short cut versions of the above command
+{{{| using firefox start at | URL |
+| using explorer start at | URL |
+| using explorer in HTA mode start at | URL |
+| using chrome start at | URL |
+}}}
+Commands to Control the browser
+{{{| close the browser |
+| click the back button |
+| click the refresh button |
+| click the close button |
+}}}
+And finally how to set the Debugging level in Selenium
+{{{| set browser log level  | < debug | info | warn | error | off> |
+}}}
+!2 Examples
+
+| script | Base Fitnium Fixture |
+| jump to test page |
+| click the back button |
+| click the refresh button |
+| click the close button |
+
+
+Run through the debug levels
+
+!| script | Base Fitnium Fixture |
+| set browser log level  | off |
+| set browser log level  | debug  |
+| set browser log level  | info  |
+| set browser log level  | warn  |
+| set browser log level  | error |
+
+The manually click the close button
+
+!| script | Base Fitnium Fixture |
+| click the close button |

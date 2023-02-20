@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>FirstTest</rootPath>
+    <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[This is a basic test to connect to Google and search for Magnetic Reason<br/>Website. At the moment the test relies on the fact that my website occurs<br/>as the first item in a google search. If this changes, the test will fail<br/>but for now it works<br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*firefox</td>
+<td>start at</td>
+<td><a href="http://www.google.co.uk">http://www.google.co.uk</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>50</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>50000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first search for Magnetic Reason home page<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td colspan="3">/</td>
+</tr>
+<tr><td>enter</td>
+<td>Magnetic Reason</td>
+<td>in input field</td>
+<td>xpath=//input[@name='q']</td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">btnG</td>
+</tr>
+<tr><td>wait For Page To Load For</td>
+<td>5</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>click link</td>
+<td colspan="3">xpath=//a[em='Magnetic Reason'][1]</td>
+</tr>
+<tr><td>wait For Page To Load For</td>
+<td>15</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">test complete</td>
+</tr>
+</table>
+<br/>This should return us the same page<br/><br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait For Page To Load For</td>
+<td>15</td>
+<td>seconds</td>
+</tr>
+<tr><td>check</td>
+<td>title Of Current Page</td>
+<td class="pass">Magnetic Reason</td>
+</tr>
+</table>
+<br/>This section should now fail as we have clicked the back button<br/>and therefore gone back to the Google search page<br/><br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the back button</td>
+</tr>
+<tr><td>wait For Page To Load For</td>
+<td>15</td>
+<td>seconds</td>
+</tr>
+<tr><td>check</td>
+<td>title Of Current Page</td>
+<td class="pass">Magnetic Reason - Google Search</td>
+</tr>
+</table>
+<br/>When we are finished close the browser to end the test<br/><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>FirstTest</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

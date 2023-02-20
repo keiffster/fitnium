@@ -1,0 +1,577 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ButtonApis</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>11</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('7603465876733866948');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img7603465876733866948"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="7603465876733866948"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">starting at URL<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: Connection refused: connect
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:107)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:86)
+	at com.thoughtworks.selenium.DefaultSelenium.open(DefaultSelenium.java:335)
+	at com.magneticreason.fitnium.api.FitniumSeleniumAPI.startingAtURL(FitniumSeleniumAPI.java:17)
+	at com.magneticreason.fitnium.FitniumFixture.startingAtURL(FitniumFixture.java:298)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTP(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getResponseCode(HttpCommandProcessor.java:144)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getCommandResponseAsString(HttpCommandProcessor.java:164)
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:104)
+	... 24 more
+</div></pre></td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">wait for page to load for<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: Connection refused: connect
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:107)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:86)
+	at com.thoughtworks.selenium.DefaultSelenium.waitForPageToLoad(DefaultSelenium.java:635)
+	at com.magneticreason.fitnium.api.FitniumWaitAPI.waitForPageToLoadForSeconds(FitniumWaitAPI.java:1316)
+	at com.magneticreason.fitnium.FitniumFixture.waitForPageToLoadForSeconds(FitniumFixture.java:4352)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getOutputStreamWriter(HttpCommandProcessor.java:134)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getCommandResponseAsString(HttpCommandProcessor.java:161)
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:104)
+	... 24 more
+</div></pre></td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="error">Magnetic Reason<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: Connection refused: connect
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:107)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:86)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.DefaultSelenium.getTitle(DefaultSelenium.java:423)
+	at com.magneticreason.fitnium.api.FitniumWindowAPI.titleOfCurrentPage(FitniumWindowAPI.java:219)
+	at com.magneticreason.fitnium.FitniumFixture.titleOfCurrentPage(FitniumFixture.java:2892)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getOutputStreamWriter(HttpCommandProcessor.java:134)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getCommandResponseAsString(HttpCommandProcessor.java:161)
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:104)
+	... 31 more
+</div></pre></td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="error">Fitnium Test Page<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: Connection refused: connect
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:107)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:86)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.DefaultSelenium.getText(DefaultSelenium.java:435)
+	at com.magneticreason.fitnium.api.FitniumElementAPI.textOfElement(FitniumElementAPI.java:94)
+	at com.magneticreason.fitnium.FitniumFixture.textOfElement(FitniumFixture.java:1061)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretAfterFirstRow(DoTraverseInterpreter.java:64)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretInFlow(DoTraverseInterpreter.java:132)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:101)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getOutputStreamWriter(HttpCommandProcessor.java:134)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getCommandResponseAsString(HttpCommandProcessor.java:161)
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:104)
+	... 33 more
+</div></pre></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="error">true<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: Connection refused: connect
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:107)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:86)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getBoolean(HttpCommandProcessor.java:335)
+	at com.thoughtworks.selenium.DefaultSelenium.isTextPresent(DefaultSelenium.java:499)
+	at com.magneticreason.fitnium.api.FitniumTextAPI.isTextPresent(FitniumTextAPI.java:25)
+	at com.magneticreason.fitnium.FitniumFixture.isTextPresent(FitniumFixture.java:938)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getOutputStreamWriter(HttpCommandProcessor.java:134)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getCommandResponseAsString(HttpCommandProcessor.java:161)
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:104)
+	... 31 more
+</div></pre></td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Button APIs</h1><br/>To click a button<br/><pre>| click button | locator|<br/></pre><br/>To click browser buttons ( back, close and refresh )<br/><pre>| click the back button |<br/>| click the close button |<br/>| click the refresh button |<br/></pre><br/>To check a button with a specific id exists<br/><pre>| check | does button With Id | send | exist | true |<br/></pre><br/>Or to grab all the ids of a button into a list and or check a list of ids exist<br/><pre>| store all buttons in | list |<br/>| check | do buttons with ids exist | !{list} | true |<br/></pre><br/><h2>Examples</h2><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does button With Id</td>
+<td>send</td>
+<td>exist</td>
+<td class="error">true<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR Server Exception: sessionId 3aab6eeb36a847e5a2d056358626076d doesn't exist; perhaps this session was already stopped?
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getStringArray(HttpCommandProcessor.java:271)
+	at com.thoughtworks.selenium.DefaultSelenium.getAllButtons(DefaultSelenium.java:515)
+	at com.magneticreason.fitnium.api.FitniumButtonAPI.doesButtonWithIdExist(FitniumButtonAPI.java:34)
+	at com.magneticreason.fitnium.FitniumFixture.doesButtonWithIdExist(FitniumFixture.java:1919)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">click button<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR Server Exception: sessionId 3aab6eeb36a847e5a2d056358626076d doesn't exist; perhaps this session was already stopped?
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.click(DefaultSelenium.java:167)
+	at com.magneticreason.fitnium.api.FitniumButtonAPI.clickButton(FitniumButtonAPI.java:22)
+	at com.magneticreason.fitnium.FitniumFixture.clickButton(FitniumFixture.java:1907)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>send</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">wait for page to load for<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR Server Exception: sessionId 3aab6eeb36a847e5a2d056358626076d doesn't exist; perhaps this session was already stopped?
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.waitForPageToLoad(DefaultSelenium.java:635)
+	at com.magneticreason.fitnium.api.FitniumWaitAPI.waitForPageToLoadForSeconds(FitniumWaitAPI.java:1316)
+	at com.magneticreason.fitnium.FitniumFixture.waitForPageToLoadForSeconds(FitniumFixture.java:4352)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">click the back button<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR Server Exception: sessionId 3aab6eeb36a847e5a2d056358626076d doesn't exist; perhaps this session was already stopped?
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.goBack(DefaultSelenium.java:383)
+	at com.magneticreason.fitnium.api.FitniumBrowserAPI.clickTheBackButton(FitniumBrowserAPI.java:41)
+	at com.magneticreason.fitnium.FitniumFixture.clickTheBackButton(FitniumFixture.java:467)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">store all buttons in<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR Server Exception: sessionId 3aab6eeb36a847e5a2d056358626076d doesn't exist; perhaps this session was already stopped?
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getStringArray(HttpCommandProcessor.java:271)
+	at com.thoughtworks.selenium.DefaultSelenium.getAllButtons(DefaultSelenium.java:515)
+	at com.magneticreason.fitnium.api.FitniumButtonAPI.storeAllButtonsIn(FitniumButtonAPI.java:62)
+	at com.magneticreason.fitnium.FitniumFixture.storeAllButtonsIn(FitniumFixture.java:1943)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.MethodClosure.invokeTyped(MethodClosure.java:24)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:67)
+	at fitlibrary.closure.CalledMethodTarget.invokeTyped(CalledMethodTarget.java:82)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndWrap(CalledMethodTarget.java:242)
+	at fitlibrary.traverse.workflow.caller.ActionCaller.run(ActionCaller.java:25)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+<td>list</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>do buttons with ids exist</td>
+<td>!{list}</td>
+<td class="error">true<hr><pre><div class="fit_stacktrace">com.thoughtworks.selenium.SeleniumException: ERROR Server Exception: sessionId 3aab6eeb36a847e5a2d056358626076d doesn't exist; perhaps this session was already stopped?
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getStringArray(HttpCommandProcessor.java:271)
+	at com.thoughtworks.selenium.DefaultSelenium.getAllButtons(DefaultSelenium.java:515)
+	at com.magneticreason.fitnium.api.FitniumButtonAPI.doButtonsWithIdsExist(FitniumButtonAPI.java:50)
+	at com.magneticreason.fitnium.FitniumFixture.doButtonsWithIdsExist(FitniumFixture.java:1932)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:93)
+	at fitlibrary.closure.CalledMethodTarget.invokeAndCheck(CalledMethodTarget.java:118)
+	at fitlibrary.traverse.workflow.DoTraverse.check(DoTraverse.java:185)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitlibrary.closure.MethodClosure.invoke(MethodClosure.java:31)
+	at fitlibrary.closure.CalledMethodTarget.invoke(CalledMethodTarget.java:64)
+	at fitlibrary.traverse.workflow.caller.SpecialCaller.run(SpecialCaller.java:22)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretRow(DoTraverseInterpreter.java:152)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:94)
+	at fitlibrary.traverse.workflow.DoTraverseInterpreter.interpretWholeTable(DoTraverseInterpreter.java:87)
+	at fitlibrary.DoFixture.interpretWholeTable(DoFixture.java:69)
+	at fitlibrary.suite.InFlowPageRunner.run(InFlowPageRunner.java:34)
+	at fitlibrary.DoFixture.interpretTables(DoFixture.java:42)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+</div></pre></td>
+</tr>
+</table>
+<br/><br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('6053713921298915127');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img6053713921298915127"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="6053713921298915127"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>ButtonApis</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

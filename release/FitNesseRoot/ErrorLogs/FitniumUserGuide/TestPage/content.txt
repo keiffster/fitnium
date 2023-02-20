@@ -1,0 +1,6 @@
+!3 !-fit-!
+|'''Date: '''|!-9:20:07 PM (BST) on Tuesday, April 20, 2010-!|
+|'''Test Page: '''|.FitniumUserGuide.TestPage|
+|'''Command: '''|!-java -cp fitnesse.jar;defaultPath fit.FitServer Ibanez 80 1-!|
+|'''Exit code: '''|!-1-!|
+|'''Time elapsed: '''|!-0.315 seconds-!|

@@ -1,0 +1,22 @@
+On a number of occassions Fitnium commands return a list of values, this is especially relevant when dealing with multi select drop down lists
+
+Fitnium therefore provices a number of additional APIs to allow you to manipulate lists, specifically
+
+Check a list equals another list, the order of elements if either list are irrelevant
+
+{{{| does list | list1 | equal list | list2 |
+| check | does list | list1 | equal list | list2 | true/false |
+}}}
+Check a list contains a specific value
+
+{{{| does list | list1 | contain value | value |
+| check | does list | list1 | contain value | value | true/false |
+}}}
+Check a list contains all the elements of another list
+This essentially checks that list2 is a subset of list1
+{{{| does list | list1 | contain any values | list2 |
+| check | does list | list1 | contain any values | list2 | true/false |
+}}}
+
+
+

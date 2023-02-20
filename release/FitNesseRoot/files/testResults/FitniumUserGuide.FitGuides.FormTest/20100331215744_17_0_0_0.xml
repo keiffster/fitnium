@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>FormTest</rootPath>
+    <result>
+    <counts>
+      <right>17</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[This examples shows the basics of filling in a form with FitNium<a title="create page" href="FitniumUserGuide.FitGuides.FitNium?edit&nonExistent=true">[?]</a><br/><br/>Note: Some of the tests are expected to fail ( i.e show red ) to<br/>demonstrate who to check for failures !!!<br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*firefox</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>500</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>50000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the FitNium<a title="create page" href="FitniumUserGuide.FitGuides.FitNium?edit&nonExistent=true">[?]</a> home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td colspan="3">testpage1.html</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>Complete over kill this bit, buts shows how we can check that the fields are the<br/>atleast editable, or selectable<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>input field</td>
+<td>name=firstname</td>
+<td>is editable</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>input field</td>
+<td>name=midname</td>
+<td>is editable</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>input field</td>
+<td>name=surname</td>
+<td>is editable</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>The next check is unreliable unless you know the order of the items, as this call<br/>just gets a comma list of the values from selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>list</td>
+<td>name=country</td>
+<td>options</td>
+<td class="pass">Wales,Scotland,Ireland,England,Other</td>
+</tr>
+</table>
+<br/>So its better to use the following way to check for list of values<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does list</td>
+<td>name=country</td>
+<td>contain options</td>
+<td>Wales,Scotland,Ireland,England,Other</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>Enter data into the appropriate fields<br/><br/><table border="1" cellspacing="0">
+<tr><td>select option</td>
+<td>Mr</td>
+<td>in list</td>
+<td>name=title</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>enter</td>
+<td>Keith</td>
+<td>in input field</td>
+<td>name=firstname</td>
+</tr>
+<tr><td>enter</td>
+<td>Eugene</td>
+<td>in input field</td>
+<td>name=midname</td>
+</tr>
+<tr><td>enter</td>
+<td>Sterling</td>
+<td>in input field</td>
+<td>name=surname</td>
+</tr>
+<tr><td>enter</td>
+<td>10 Lidgett Lane</td>
+<td>in input field</td>
+<td>name=address1</td>
+</tr>
+<tr><td>enter</td>
+<td>Skelmanthorpe</td>
+<td>in input field</td>
+<td>name=address2</td>
+</tr>
+<tr><td>enter</td>
+<td>Huddersfield</td>
+<td>in input field</td>
+<td>name=city</td>
+</tr>
+<tr><td>enter</td>
+<td>West Yorks</td>
+<td>in input field</td>
+<td>name=county</td>
+</tr>
+<tr><td>enter</td>
+<td>HD8 9AQ</td>
+<td>in input field</td>
+<td>name=postcode</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>select option</td>
+<td>Ireland</td>
+<td>in list</td>
+<td>name=country</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>enter</td>
+<td>01484 866 033</td>
+<td>in input field</td>
+<td>name=telephone</td>
+</tr>
+<tr><td>enter</td>
+<td>+44 7771 597 630</td>
+<td>in input field</td>
+<td>name=mobile</td>
+</tr>
+<tr><td>enter</td>
+<td>+44 1484 866 033</td>
+<td>in input field</td>
+<td>name=fax</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>enter</td>
+<td><a href="mailto:keith@magneticreason.com">keith@magneticreason.com</a></td>
+<td>in input field</td>
+<td>name=email</td>
+</tr>
+</table>
+<br/>We would not normally do this, but lets check that all the values<br/>we entered are in the fields<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>value of element</td>
+<td>name=firstname</td>
+<td class="pass">Keith</td>
+</tr>
+<tr><td>check</td>
+<td>value of element</td>
+<td>name=midname</td>
+<td class="pass">Eugene</td>
+</tr>
+<tr><td>check</td>
+<td>value of element</td>
+<td>name=surname</td>
+<td class="pass">Sterling</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does list</td>
+<td>name=country</td>
+<td>have selection</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>Now lets submit the form<br/><br/><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td colspan="3">id=send</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>10</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//div[@id='primaryContent']/div/p</td>
+<td class="pass">This is the second page that contains all the elements neccassary to test Fitnium</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>click radio button</td>
+<td colspan="3">id=form_sexmale</td>
+</tr>
+<tr><td>enter</td>
+<td>21</td>
+<td>in input field</td>
+<td>name=age</td>
+</tr>
+<tr><td>enter</td>
+<td>This is a description that has no value</td>
+<td>in input field</td>
+<td>name=addinfo</td>
+</tr>
+<tr><td>click check box</td>
+<td colspan="3">name=tsandcs</td>
+</tr>
+<tr><td>click check box</td>
+<td colspan="3">name=junk</td>
+</tr>
+</table>
+<br/>Now lets submit the form again<br/><br/><table border="1" cellspacing="0">
+<tr><td>click element</td>
+<td colspan="3">id=send</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>10</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//div[@id='primaryContent']/div/p</td>
+<td class="pass">Congratulations, you are registered for what ever you have just signed up for</td>
+</tr>
+</table>
+<br/>Test Complete lets close the browser<br/><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>FormTest</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

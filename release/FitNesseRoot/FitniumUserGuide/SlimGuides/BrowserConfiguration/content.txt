@@ -1,0 +1,57 @@
+Fitnium uses Selenium Java Client library to connect to the Selenium server
+from FitNesse, therefore this jar must be included in the path, along with
+the FitNium code itself. These lines should be the first lines in any Fitnium
+tests you write
+
+!define TEST_SYSTEM {slim}
+
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+|import|
+|fitnesse.slim.test|
+|fitnesse.fixtures|
+|com.magneticreason.fitnium|
+
+The following section is used to configure the browser to talk to selenium
+The server and port are those which you started selenium on
+
+The browser by default is *firefox but can be any support by selenium and the host OS
+
+You can also set speed and timeout periods in this section
+
+| script | Base Fitnium Fixture |
+| the server is located at | localhost |
+| the server is on port | 4444 |
+| using the browser | *firefox | start at | www.google.co.uk |
+|check | is selenium initialised | true |
+|set speed to |50| milliseconds |
+|set timeout to |50000| milliseconds |
+|write to debug | starting test |
+| close the browser |
+
+And if we want to connect to a browser using HTTPS instead of HTTP 
+
+| script | Base Fitnium Fixture |
+| the server is located at | localhost |
+| the server is on port | 4444 |
+| using the browser | *firefox | securely start at | www.google.co.uk |
+|check | is selenium initialised | true |
+|set speed to |50| milliseconds |
+|set timeout to |50000| milliseconds |
+|write to debug | starting test |
+| close the browser |
+
+|comment|
+| In addition there are a number of short cut methods for starting a specific browser |
+| using firefox start at | URL |
+| using explorer start at | URL |
+| using explorer in HTA mode start at | URL |
+| using chrome start at | URL |
+
+|comment|
+| You can control what the browsers writes to its console |
+| set browser log level  | debug info warn error off |
+
+

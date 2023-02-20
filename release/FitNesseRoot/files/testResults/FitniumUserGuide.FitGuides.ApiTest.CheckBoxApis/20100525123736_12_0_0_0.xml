@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>CheckBoxApis</rootPath>
+    <result>
+    <counts>
+      <right>12</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('154507557061318436');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img154507557061318436"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="154507557061318436"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Check Box APIs</h1><br/>To check a check box, toggling its state from on/checked to off/unchecked<br/><pre>| click check box | locator |<br/></pre><br/>To uncheck a check box, toggling its state from off/unchecked to on/checked<br/><pre>| unclick  check box | locator |<br/></pre><br/>To check the the check state of a check box<br/><pre>| check | is  check box | form_tsandcs | checked | false |<br/></pre><br/>To set a check box to a specific state based on a variable value<br/><pre>| set check box | locator | to  state | checked|unchecked |<br/></pre><br/>To force a click on check box state based on a variable value<br/><pre>| set check box | locator | to  click | clicked|unclicked |<br/></pre><br/><h2>Examples</h2><table border="1" cellspacing="0">
+<tr><td>click check box</td>
+<td colspan="4">form_tsandcs</td>
+</tr>
+<tr><td>check</td>
+<td>is check box</td>
+<td>form_tsandcs</td>
+<td>checked</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>unclick  check box</td>
+<td colspan="4">form_tsandcs</td>
+</tr>
+<tr><td>check</td>
+<td>is  check box</td>
+<td>form_tsandcs</td>
+<td>checked</td>
+<td class="pass">false</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>set check box</td>
+<td>form_tsandcs</td>
+<td>to state</td>
+<td colspan="2">unchecked</td>
+</tr>
+<tr><td>check</td>
+<td>is  check box</td>
+<td>form_tsandcs</td>
+<td>checked</td>
+<td class="pass">false</td>
+</tr>
+<tr><td>set check box</td>
+<td>form_tsandcs</td>
+<td>to state</td>
+<td colspan="2">checked</td>
+</tr>
+<tr><td>check</td>
+<td>is  check box</td>
+<td>form_tsandcs</td>
+<td>checked</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>Sometimes we don't want the check status, rather we want to force a click<br/>to a specific state based on the actual state. This is useful to force a<br/>Javascript function to fire onClick (), which does not happen on a check () call<br/><br/><table border="1" cellspacing="0">
+<tr><td>set check box</td>
+<td>form_tsandcs</td>
+<td>to  click</td>
+<td colspan="2">clicked</td>
+</tr>
+<tr><td>check</td>
+<td>is check box</td>
+<td>form_tsandcs</td>
+<td>checked</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>set check box</td>
+<td>form_tsandcs</td>
+<td>to  click</td>
+<td colspan="2">clicked</td>
+</tr>
+<tr><td>check</td>
+<td>is check box</td>
+<td>form_tsandcs</td>
+<td>checked</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>set check box</td>
+<td>form_tsandcs</td>
+<td>to  click</td>
+<td colspan="2">unclicked</td>
+</tr>
+<tr><td>check</td>
+<td>is check box</td>
+<td>form_tsandcs</td>
+<td>checked</td>
+<td class="pass">false</td>
+</tr>
+<tr><td>set check box</td>
+<td>form_tsandcs</td>
+<td>to  click</td>
+<td colspan="2">unclicked</td>
+</tr>
+<tr><td>check</td>
+<td>is check box</td>
+<td>form_tsandcs</td>
+<td>checked</td>
+<td class="pass">false</td>
+</tr>
+</table>
+<br/>We can also store the state of a check box in a fitnium variable<br/><br/><table border="1" cellspacing="0">
+<tr><td>store is check box</td>
+<td>form_tsandcs</td>
+<td>checked in</td>
+<td>state</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('2176085269324389775');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img2176085269324389775"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="2176085269324389775"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>CheckBoxApis</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

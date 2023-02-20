@@ -1,0 +1,24 @@
+!define TEST_SYSTEM {slim}
+
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+|import|
+|fitnesse.slim.test|
+|fitnesse.fixtures|
+|com.magneticreason.fitnium|
+
+| scenario | jump to test page |
+| the server is located at | localhost |
+| the server is on port | 4444 |
+| using the browser | *chrome | start at | localhost:8090/fitnium/ |
+| check | is selenium initialised | true |
+| set speed to |100| milliseconds |
+| set timeout to |20000| milliseconds |
+| write to debug | starting test |
+| starting at URL| testpage4api.html |
+| wait for page to load for | 5 | seconds |
+| check| title of current page | Magnetic Reason |
+| check|text of element | xpath=//h1 | Fitnium Test Page |
+| check|is Text Present| This page contains all the elements neccassary to test Fitnium |true|

@@ -1,0 +1,44 @@
+!1 Element APIs
+Wait for element
+{{{| wait for element | locator |
+}}}
+Wait for element for a period of time
+{{{| wait for element | locator  | for | time | seconds |
+}}}
+Wait for element to be visible
+{{{| wait for element | locator  | to be visible |
+}}}
+Wait for elemment to be editable
+{{{| wait for element | locator  | to be editable |
+}}}
+Wait for element to have a specific height
+{{{| wait for element | locator | to have height | height |
+}}}
+Wait for element to have a specific width
+{{{| wait for element | locator  | to have width | width |
+}}}
+Wait for element to be at a specific x position
+{{{| wait for element | locator  | to be at left position | x |
+}}}
+Wait for an element to be at a specific y position
+{{{| wait for element | locator  | to be at top position | y |
+}}}
+Wait for an element with a specific value to be present
+{{{| wait for element | locator  | with value | value | to be present |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| click the refresh button |
+| wait for element | name=firstname |
+| click the refresh button |
+| wait for element | id=form_firstname | for | 3 | seconds |
+| note | On chrome on an a Mac you need to wait for the element to be present with the above call |
+| note | before you can start making the following calls |
+| wait for element | id=form_firstname | to be visible |
+| wait for element | id=form_firstname | to be editable |
+| wait for element | id=header | to be at left position | 0 |
+| wait for element | id=header | to be at top position | 0 |
+| wait for element | id=form_sexmale | for | 3 | seconds |
+| click radio button | id=form_sexmale |
+| wait for element | id=form_sexmale | with value | on | to be present |

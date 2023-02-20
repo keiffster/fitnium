@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ApiTest</rootPath>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.AttributeApis</name>
+    <date>04/20/2010 22:10:55</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.AttributeApis?pageHistory&amp;resultDate=20100420221055</pageHistoryLink>
+    <counts>
+      <right>9</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.BrowserApis</name>
+    <date>04/20/2010 22:11:05</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.BrowserApis?pageHistory&amp;resultDate=20100420221105</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.ButtonApis</name>
+    <date>04/20/2010 22:11:15</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.ButtonApis?pageHistory&amp;resultDate=20100420221115</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.CheckBoxApis</name>
+    <date>04/20/2010 22:11:24</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.CheckBoxApis?pageHistory&amp;resultDate=20100420221124</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.CookieApis</name>
+    <date>04/20/2010 22:11:34</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.CookieApis?pageHistory&amp;resultDate=20100420221134</pageHistoryLink>
+    <counts>
+      <right>11</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.DebugApis</name>
+    <date>04/20/2010 22:11:45</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.DebugApis?pageHistory&amp;resultDate=20100420221145</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.ElementApis</name>
+    <date>04/20/2010 22:11:55</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.ElementApis?pageHistory&amp;resultDate=20100420221155</pageHistoryLink>
+    <counts>
+      <right>13</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.FileAndDirectoryApis</name>
+    <date>04/20/2010 22:12:07</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.FileAndDirectoryApis?pageHistory&amp;resultDate=20100420221207</pageHistoryLink>
+    <counts>
+      <right>17</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.FormApis</name>
+    <date>04/20/2010 22:12:16</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.FormApis?pageHistory&amp;resultDate=20100420221216</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.GeneratorApis</name>
+    <date>04/20/2010 22:12:25</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.GeneratorApis?pageHistory&amp;resultDate=20100420221225</pageHistoryLink>
+    <counts>
+      <right>15</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.InputApis</name>
+    <date>04/20/2010 22:12:34</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.InputApis?pageHistory&amp;resultDate=20100420221234</pageHistoryLink>
+    <counts>
+      <right>9</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.JavascriptApis</name>
+    <date>04/20/2010 22:12:44</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.JavascriptApis?pageHistory&amp;resultDate=20100420221244</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.JavascriptDialogApis</name>
+    <date>04/20/2010 22:12:53</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.JavascriptDialogApis?pageHistory&amp;resultDate=20100420221253</pageHistoryLink>
+    <counts>
+      <right>17</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.KeyboardApis</name>
+    <date>04/20/2010 22:13:07</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.KeyboardApis?pageHistory&amp;resultDate=20100420221307</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.LinkApis</name>
+    <date>04/20/2010 22:13:17</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.LinkApis?pageHistory&amp;resultDate=20100420221317</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.ListApis</name>
+    <date>04/20/2010 22:13:27</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.ListApis?pageHistory&amp;resultDate=20100420221327</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.MouseApis</name>
+    <date>04/20/2010 22:13:35</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.MouseApis?pageHistory&amp;resultDate=20100420221335</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.ParameterApis</name>
+    <date>04/20/2010 22:13:46</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.ParameterApis?pageHistory&amp;resultDate=20100420221346</pageHistoryLink>
+    <counts>
+      <right>16</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.RadioButtonApis</name>
+    <date>04/20/2010 22:13:54</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.RadioButtonApis?pageHistory&amp;resultDate=20100420221354</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.ScreenShotApis</name>
+    <date>04/20/2010 22:14:03</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.ScreenShotApis?pageHistory&amp;resultDate=20100420221403</pageHistoryLink>
+    <counts>
+      <right>5</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.TableApis</name>
+    <date>04/20/2010 22:14:14</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.TableApis?pageHistory&amp;resultDate=20100420221414</pageHistoryLink>
+    <counts>
+      <right>5</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.TextApis</name>
+    <date>04/20/2010 22:14:22</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.TextApis?pageHistory&amp;resultDate=20100420221422</pageHistoryLink>
+    <counts>
+      <right>7</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.TimeApis</name>
+    <date>04/20/2010 22:14:32</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.TimeApis?pageHistory&amp;resultDate=20100420221432</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WaitApis.BasicWaits</name>
+    <date>04/20/2010 22:14:41</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WaitApis.BasicWaits?pageHistory&amp;resultDate=20100420221441</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WaitApis.CookieWaits</name>
+    <date>04/20/2010 22:14:57</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WaitApis.CookieWaits?pageHistory&amp;resultDate=20100420221457</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WaitApis.DialogWaits</name>
+    <date>04/20/2010 22:15:06</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WaitApis.DialogWaits?pageHistory&amp;resultDate=20100420221506</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WaitApis.ElementWaits</name>
+    <date>04/20/2010 22:15:17</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WaitApis.ElementWaits?pageHistory&amp;resultDate=20100420221517</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WaitApis.HtmlWaits</name>
+    <date>04/20/2010 22:15:27</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WaitApis.HtmlWaits?pageHistory&amp;resultDate=20100420221527</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WaitApis.JavascriptWaits</name>
+    <date>04/20/2010 22:15:40</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WaitApis.JavascriptWaits?pageHistory&amp;resultDate=20100420221540</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WaitApis.ListWaits</name>
+    <date>04/20/2010 22:15:50</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WaitApis.ListWaits?pageHistory&amp;resultDate=20100420221550</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WaitApis.WindowWaits</name>
+    <date>04/20/2010 22:16:06</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WaitApis.WindowWaits?pageHistory&amp;resultDate=20100420221606</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WindowApis</name>
+    <date>04/20/2010 22:16:15</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WindowApis?pageHistory&amp;resultDate=20100420221615</pageHistoryLink>
+    <counts>
+      <right>13</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>FitniumUserGuide.FitGuides.ApiTest.WriterApis</name>
+    <date>04/20/2010 22:16:26</date>
+    <pageHistoryLink>FitniumUserGuide.FitGuides.ApiTest.WriterApis?pageHistory&amp;resultDate=20100420221626</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <finalCounts>
+    <right>32</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+
+</suiteResults>
+

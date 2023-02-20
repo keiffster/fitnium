@@ -1,0 +1,51 @@
+!1 Mouse APIs
+
+Click on an element
+{{{| click element | locator |
+}}}
+Double Click on an element
+{{{| double click element |locator |
+| double click element | locator  | at | x | and | y |
+}}}
+Press the mouse button down on an element
+{{{| click mouse down on element | locator  |
+| click mouse down on element | locator  | at | x | and | y |
+}}}
+Release the mouse button on an element
+{{{| release mouse up on element |locator  |
+| release mouse up on element | locator  | at | x | and | y |
+}}}
+Move the mouse over an element
+{{{| move mouse in element | locator  |
+| move mouse in element | locator | to | x | and | y |
+| move mouse out of element | locator  |
+| hover mouse over element | locator  |
+}}}
+Drag and Drop support
+{{{| drag element | locator | to element | locator |
+| drag element | locator | horizontally | x| pixels and vertically | y | pixels |
+}}}
+!2 Examples
+| click element | name=firstname |
+
+| double click element | name=firstname |
+| double click element | name=firstname | at | 2 | and | 2 |
+
+| click mouse down on element | name=firstname |
+| release mouse up on element | name=firstname |
+
+| click mouse down on element | name=firstname | at | 2 | and | 2 |
+| release mouse up on element | name=firstname | at | 2 | and | 2 |
+
+| move mouse in element | name=firstname |
+| move mouse in element | name=firstname | to | 2 | and | 2 |
+
+| move mouse out of element | name=firstname |
+
+| hover mouse over element | name=firstname |
+
+Drag and Drop support
+
+| drag element | firstname | to element | midname |
+| drag element | firstname | horizontally | 10 | pixels and vertically | 10 | pixels |
+

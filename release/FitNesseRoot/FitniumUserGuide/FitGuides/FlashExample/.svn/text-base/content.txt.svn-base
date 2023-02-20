@@ -1,0 +1,40 @@
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./bin
+!path selenium-java-client-driver.jar
+!path flashselenium-java-client-extension-1.0.jar
+
+!|com.magneticreason.fitnium.flash.FitniumFlashFixture|
+
+Set up the browser and connect to selenium
+
+|The server is located at | localhost |
+|The server is on port | 4444 |
+|Using the browser | *chrome | start at | http://localhost:8090/fitnium/ |
+|check | is selenium initialised | true |
+|set speed to |100| milliseconds |
+|set timeout to |20000| milliseconds |
+|write to debug | starting test |
+
+Lets first start at the Fitnium home page at Magnetic Reason
+
+| starting at URL| flashpage.html |
+
+| wait for page to load for | 5 | seconds |
+
+| check| title of current page | Magnetic Reason |
+| check|text of element | xpath=//h1 | Fitnium Flash Test Page |
+
+| wait for element | id=fitflash |
+
+| initialise Flash Application | id=fitflash |
+
+| check | is Flash Application Initialised | true |
+| check | percentage Flash Movie Loaded | 100 |
+| check | number Of Frames In Flash Movie | 10 |
+| play Flash Movie |
+| check | is Flash Movie Playing | true |
+| stop Flash Movie |
+
+| close the browser |
+

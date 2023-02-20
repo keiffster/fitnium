@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ReadingWritingData</rootPath>
+    <result>
+    <counts>
+      <right>3</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*firefox</td>
+<td>start at</td>
+<td><a href="http://www.magneticreason.com">http://www.magneticreason.com</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>10</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>50000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>load writer</td>
+<td>com.magneticreason.fitnium.writer.ExcelSpreadsheet<a title="create page" href="ExcelSpreadsheet?edit&nonExistent=true">[?]</a></td>
+<td>into</td>
+<td>testSheet1</td>
+<td>with params</td>
+<td>testBook.xls,testSheet</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store value</td>
+<td>Name:</td>
+<td>with params</td>
+<td>1,1</td>
+<td>in writer</td>
+<td>testSheet1</td>
+</tr>
+<tr><td>store value</td>
+<td>Keith</td>
+<td>with params</td>
+<td>1,2</td>
+<td>in writer</td>
+<td>testSheet1</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store value</td>
+<td>Surname:</td>
+<td>with params</td>
+<td>2,1</td>
+<td>in writer</td>
+<td>testSheet1</td>
+</tr>
+<tr><td>store value</td>
+<td>Sterling</td>
+<td>with params</td>
+<td>2,2</td>
+<td>in writer</td>
+<td>testSheet1</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>flush writer</td>
+<td>testSheet1</td>
+</tr>
+</table>
+<br/>Some time later, possibly in a totally different test<br/><br/><table border="1" cellspacing="0">
+<tr><td>load Unique Value Generator</td>
+<td>com.magneticreason.fitnium.generator.ExcelSpreadsheet<a title="create page" href="ExcelSpreadsheet?edit&nonExistent=true">[?]</a></td>
+<td>Into</td>
+<td>testSheet2</td>
+<td>and initialise with</td>
+<td>testBook.xls,testSheet</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store next unique value from</td>
+<td>testSheet2</td>
+<td>with params</td>
+<td>1,2</td>
+<td>in</td>
+<td>firstname</td>
+</tr>
+<tr><td>store next unique value from</td>
+<td>testSheet2</td>
+<td>with params</td>
+<td>2,2</td>
+<td>in</td>
+<td>surname</td>
+</tr>
+</table>
+<br/>Use the values, here we just compare them, but we could fill in input boxes or what ever<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does</td>
+<td>!{firstname}</td>
+<td>equal</td>
+<td>Keith</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>does</td>
+<td>!{surname}</td>
+<td>equal</td>
+<td>Sterling</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>]]></content>
+    <relativePageName>ReadingWritingData</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

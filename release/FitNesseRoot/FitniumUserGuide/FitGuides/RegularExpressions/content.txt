@@ -1,0 +1,50 @@
+Regular Expressions
+
+To see how to write you own tokens, click the link [[Writing Special Tokens][WritingSpecialTokens]]
+
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+!|com.magneticreason.fitnium.BaseFitniumFixture|
+
+Set up the browser and connect to selenium
+
+|The server is located at | localhost |
+|The server is on port | 4444 |
+|Using the browser | *firefox | start at | http://localhost:8090/fitnium/ |
+|check | is selenium initialised | true |
+|set speed to |100| milliseconds |
+|set timeout to |20000| milliseconds |
+|write to debug | starting test |
+
+Lets first start at the Fitnium home page at Magnetic Reason
+
+| starting at URL| testpage4api.html |
+
+| wait for page to load for | 10 | seconds |
+
+| check | title of current page | Magnetic Reason |
+| check | title of current page is | regexpi:M[a-z]*.R[a-z]* | true |
+
+| check | text of element | xpath=//h1 | Fitnium Test Page |
+| check | text of element | xpath=//h1 | is | regexp:F[a-z]*.T[a-z]*.P[a-z]* | true |
+
+| check | is Text Present | This page contains all the elements neccassary to test Fitnium  | true |
+| check | is Text Present | !-regexp:T[a-z|A-Z|.]*-! | true |
+
+| check | value of attribute | xpath=(//input[@id='form_firstname'])@name | is | firstname | true |
+| check | value of attribute | xpath=(//input[@id='form_firstname'])@name | is | regexp:first[a-z]{3}e | true |
+
+| create cookie named | fitnium3 | with value | is cool | and path | / | and max age | 30000 |
+| check | value of cookie named | fitnium3 | is | is cool | true |
+| check | value of cookie named | fitnium3 | is | regexpi:[a-z]*.[a-z]* | true |
+
+| enter | Keith | in input field | name=firstname |
+
+| check| value of element | name=firstname | is | Keith | true |
+| check| value of element | name=firstname | is | regexpi:K[a-z]* | true |
+
+
+|close the browser|
+

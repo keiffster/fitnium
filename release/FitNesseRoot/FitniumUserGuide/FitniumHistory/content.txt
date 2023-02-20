@@ -1,0 +1,65 @@
+!1 What is Fitnium
+Fitnium is a Non Specific Domain Specific Language ( DSL ) that provides the power of Selenium  for automating web based acceptance tests with the power of Fitnesse
+
+Fitnium provides you with the ability to write and execute Selenium tests using the Fitnesse framework but without the need to write a single line of code
+
+Based on a Fitnesse !-DoFixture-! Fitnium provides a english language interpretation of the Selenium API that you would normally call from Java, Ruby, Python, Perl or C#. In this instance it allows none developers, testers, and even customers to write UI driven automated acceptance tests
+
+Every single API available to Java, Ruby, Python, Perl or C# developers is now available as an easily understand english phrase that anyone can use to develop their own tests
+
+!2 What is Selenium
+Selenium is a suite of tools to automate web app testing across many platforms.
+Selenium...
+
+    * runs in many browsers and operating systems
+    * can be controlled by many programming languages and testing frameworks.
+
+For more information on how to use Selenium to automate your web testing, click the link Selenium
+
+!2 What is Fitnesse
+Fitnesse is a lightweight, open-source framework that makes it easy for software teams to:
+
+    * Collaboratively define Acceptance Tests -- web pages containing simple tables of inputs and expected outputs.
+    * Run those tests and see the results
+
+For more information on what Fitnesse is and can do, click the link Fitnesse
+
+!2 What is Domain Specific Language
+The term domain-specific language (DSL)is used to indicate:
+
+    * a programming language or
+    * specification language dedicated to a particular problem domain or
+    * a particular problem representation technique, and/or a particular solution technique.
+
+!2 History
+
+!3 Learning Selenium RC
+Fitnium started one day when I was learning Selenium RC, and at the same time I was looking for a good example to use the Fitlibrary DoFixture for a training course I was giving, The 2 seemed ideal and I quickly had an initial version up and running that connected to a Selenium server and allowed a browser to do a Google query and check the results.
+During the course I got the students to develop the Fixture and add various commands they could extract from the Selenium RC documentation. By the end of the course we had quite a small subset of the Selenium RC API available as a DoFixture script.
+
+
+!3 Inspiration
+After seeing that this might be a useful tool for testers who didn't to learn RC, but wanted the power of Fitnesse to run the tests, I started looking round to see who else may have done similar work, and came across 2 people:
+
+    * Gojko Adzic and his great work developing Fitnesse.NET.
+    * Jeremy D. Miller who has written a great number of tutorials on Fitnesse, Selenium and their integration
+
+Unfortunately shortly after discovering this work, Gojko published on his blog that we was stopping his work on WebTest, a version similar to Fitnium, so I decided to continue with Fitnium and get the full API as quickly as possible
+
+!3 Version 1
+Version 1 went through a number of iterations, released in 2007, it was picked up by a few people, but the main version was developed further through my work at BSkyB as it was used daily by a team of automation testers to automate a major CRM project.
+
+This work resulted in features such as Excel read/writes, variables, and regular expressions to be added over time.
+
+Unfortunately my own role at BSkyB took up too much time, and Version 1 didn't progress very much beyond the requirements to support that project
+
+!3 Version 2
+Finally I got out of the BSkyB project and allowed me to spend to time with Version 2. I specifically wanted to refactor the code to make it more modular and extensible, add the rest of Selenium API and at the request of Uncle Bob add support for Slim fixtures
+
+!3 Google Groups and Sourceforge
+I'd always promised everyone that I would move the code base to Sourceforge, rather than provide it as a zip file in the download, this happened April 2010 along with moving the support website from my own company Magnetic Reason to Google Groups
+
+
+Enjoy Fitnium, feel free to provide any feedback via Google Groups
+
+Keith

@@ -1,0 +1,34 @@
+!1 Dialog Wait APIs
+Remember that Selenium doesn't display them, we wait for them, which Selenium
+notifies us about and then we have to close them to get rid of them
+otherwise rest of the tests will fail
+
+Wait for Alert Dialog to 'Appear'
+{{{| wait for alert to occur |
+}}}
+Wait for Prompt Dialog to 'Appear'
+{{{| wait for prompt to occur |
+}}}
+Wait for Confirmation Dialog to 'Appear'
+{{{| wait for confirmation to occur |
+}}}
+!2 Examples
+Wait for various dialog boxes to appear
+| click the refresh button |
+| wait for page to load for | 5 | seconds |
+| click button | btn_alert |
+| wait for alert to occur |
+| close alert dialog |
+
+| click the refresh button |
+| wait for page to load for | 5 | seconds |
+| answer | yes | On Next Prompt |
+| click button | btn_prompt |
+| wait for prompt to occur |
+
+| click the refresh button |
+| wait for page to load for | 5 | seconds |
+| choose Cancel On Next Confirmation |
+| click button | btn_confirm |
+| wait for confirmation to occur |
+| close confirmation dialog |

@@ -1,0 +1,50 @@
+!1 Cookie based APIs
+
+Manage Cookies with name and value only
+{{{| create cookie named | name | with value | value |
+| check | cookie named | name | is present | true|false |
+| check | value of cookie named | name | is | value | true|false |
+| delete cookie named | name|
+}}}
+Manage Cookies with name,value, and max age
+{{{| create cookie named | name| with value | value | and path | path | and max age | age|
+| check | cookie named | name | is present | true|false |
+| check | value of cookie named | name | is | is cool | true|false|
+| delete cookie named | name | with path | path |
+}}}
+Get a list of all cookies
+{{{| check | cookies | list of cookies | are present | true|false |
+}}}
+We can also store the values of cookies in variables for later use
+{{{| store value of all cookies in | cookielist |
+| store value of cookie named | name | in | var|
+| store cookie named | name | is present in | var |
+| store cookie with value | value | and max age | age | option string in | var |
+}}}
+!2 Examples
+Name and Values
+| create cookie named | fitnium | with value | is cool |
+| check | cookie named | fitnium | is present | true |
+| check | value of cookie named | fitnium | is | is cool | true |
+| delete cookie named | fitnium |
+| check | cookie named | fitnium | is present | false |
+
+Name, Values, Paths and Max Age
+| create cookie named | fitnium3 | with value | is cool | and path | / | and max age | 30000 |
+| check | cookie named | fitnium3 | is present | true |
+| check | value of cookie named | fitnium3 | is | is cool | true |
+| delete cookie named | fitnium3 | with path | / |
+| check | cookie named | fitnium3 | is present | false |
+
+Get a list of all cookies
+| create cookie named | fitnium1 | with value | cookie1 |
+| create cookie named | fitnium2 | with value | cookie2 |
+| create cookie named | fitnium3 | with value | cookie3 |
+| check | cookies | fitnium1=cookie1,fitnium2=cookie2,fitnium3=cookie3 | are present | true |
+
+We can also store the values of cookies in variables for later use
+| store value of all cookies in | cookielist |
+| store value of cookie named | fitnium1 | in | value5 |
+| store cookie named | fitnium1 | is present in | value6 |
+| store cookie with value | cookie4 | and max age | 10 | option string in | value4 |
+

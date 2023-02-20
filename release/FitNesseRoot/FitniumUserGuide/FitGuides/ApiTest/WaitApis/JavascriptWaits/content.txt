@@ -1,0 +1,14 @@
+!1 Javascript Waits
+Wait for a Javacript expression to equal a specific value
+{{{| wait for evaluation | expression | to equal | value |
+}}}
+Wait for a specific period of time for a Javascript expression to be true
+{{{| wait | time | seconds for script | expression | to be true |
+}}}
+!2 Examples
+| click the refresh button |
+| wait for evaluation | 2+2 | to equal | 4 |
+
+| click the refresh button |
+| wait | 10 | seconds for script | 1==1 | to be true |
+

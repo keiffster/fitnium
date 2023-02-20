@@ -1,0 +1,6 @@
+!3 !-slim-!
+|'''Date: '''|!-4:50:22 PM (GMT) on Tuesday, March 16, 2010-!|
+|'''Test Page: '''|.SlimTests|
+|'''Command: '''|!-java -cp fitnesse.jar;fitnesse.jar;fitlibrary.jar;./dist/fitnium2.jar;./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar fitnesse.slim.SlimService  8088-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-6.804 seconds-!|

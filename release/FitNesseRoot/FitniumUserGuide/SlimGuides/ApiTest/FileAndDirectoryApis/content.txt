@@ -1,0 +1,67 @@
+!1 File And Directory APIs
+!2 File APIs
+Check a file exists
+{{{| check | file named | filename | exists | true|false |
+}}}
+Create a file
+{{{| create file named | filename |
+}}}
+Copy a file
+{{{| copy file named | filename  | to file named | filename  |
+}}}
+Move a file
+{{{| move file named | filename  | to file named | filename  |
+}}}
+Delete a file
+{{{| delete file named | filename  |
+}}}
+!2 Directory APIs
+Check a directory exists
+{{{| check | directory named | directory | exists | true|false |
+}}}
+Create a directory
+{{{| create directory named | directory |
+}}}
+Delete a Directory
+{{{| delete directory named | directory |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+
+-| script | Base Fitnium Fixture |
+| check | directory named | testdir | exists | false |
+| create directory named | testdir |
+| check | directory named | testdir | exists | true |
+
+-| script | Base Fitnium Fixture |
+| check | file named |  testfile1.tmp | exists | false |
+| check | file named |  testfile2.tmp | exists | false |
+| check | file named |  testfile3.tmp | exists | false |
+
+-| script | Base Fitnium Fixture |
+| create file named | testfile1.tmp |
+| check | file named | testfile1.tmp | exists | true |
+
+-| script | Base Fitnium Fixture |
+| copy file named | testfile1.tmp | to file named | testfile2.tmp |
+| check | file named | testfile1.tmp | exists | true |
+| check | file named | testfile2.tmp | exists | true |
+
+-| script | Base Fitnium Fixture |
+| move file named | testfile2.tmp | to file named | testfile3.tmp |
+| check | file named | testfile2.tmp | exists | false |
+| check | file named | testfile3.tmp | exists | true |
+
+-| script | Base Fitnium Fixture |
+| delete file named | testfile3.tmp |
+| delete file named | testfile1.tmp |
+
+-| script | Base Fitnium Fixture |
+| check | file named | testfile1.tmp | exists | false |
+| check | file named | testfile3.tmp | exists | false |
+
+-| script | Base Fitnium Fixture |
+| delete directory named | testdir |
+| check | directory named | testdir | exists | false |
+

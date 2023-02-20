@@ -1,0 +1,2224 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>FormTest</rootPath>
+    <result>
+    <counts>
+      <right>11</right>
+      <wrong>2</wrong>
+      <ignores>0</ignores>
+      <exceptions>55</exceptions>
+    </counts>
+    <content><![CDATA[This examples shows the basics of filling in a form with FitNium<a title="create page" href="FitniumUserGuide.SlimGuides.FitNium?edit&nonExistent=true">[?]</a><br/><br/>Note: Some of the tests are expected to fail ( i.e show red ) to<br/>demonstrate who to check for failures !!!<br/><br/><span class="meta">variable defined: TEST_SYSTEM=slim</span><br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/><table border="1" cellspacing="0" _TABLENUMBER=6446597216573387912>
+<tr><td>import</td>
+</tr>
+<tr><td>fitnesse.slim.test</td>
+</tr>
+<tr><td>fitnesse.fixtures</td>
+</tr>
+<tr><td>com.magneticreason.fitnium</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=7798143458137990617>
+<tr><td>script</td>
+<td colspan="3"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>the server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>the server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>using the browser</td>
+<td>*firefox</td>
+<td>start at</td>
+<td>localhost:8090/fitnium/</td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2"><span class="pass">true</span></td>
+</tr>
+<tr><td>set speed to</td>
+<td>500</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>50000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the FitNium<a title="create page" href="FitniumUserGuide.SlimGuides.FitNium?edit&nonExistent=true">[?]</a> home page at Magnetic Reason<br/><br/><div id="test_exceptions1"><H3> <span class="fail">Exceptions</span></H3><br/><a name="scriptTable_2_3"/><b></b><div class="collapse_rim"><div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div><a href="javascript:toggleCollapsable('3262014345355388941');"><img src="/files/images/collapsableClosed.gif" class="left" id="img3262014345355388941"/></a>&nbsp;<span class="meta">scriptTable_2_3 </span>
+
+	<div class="hidden" id="3262014345355388941"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element xpath=//h1 not found
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+	at com.thoughtworks.selenium.DefaultSelenium.getText(DefaultSelenium.java:435)
+	at com.magneticreason.fitnium.api.FitniumElementAPI.textOfElement(FitniumElementAPI.java:94)
+	at com.magneticreason.fitnium.BaseFitniumFixture.textOfElement(BaseFitniumFixture.java:1038)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)
+	at fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)
+	at fitnesse.slim.Statement.call(Statement.java:92)
+	at fitnesse.slim.Statement.execute(Statement.java:72)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div>
+</div><a name="scriptTable_2_1"/><b></b><div class="collapse_rim"><div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div><a href="javascript:toggleCollapsable('4986812681984577307');"><img src="/files/images/collapsableClosed.gif" class="left" id="img4986812681984577307"/></a>&nbsp;<span class="meta">scriptTable_2_1 </span>
+
+	<div class="hidden" id="4986812681984577307"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: XHR ERROR: URL = http://localhost:8090/tools/fitnium/testpage1.html Response_Code = 404 Error_Message = Not Found
+	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)
+	at com.thoughtworks.selenium.DefaultSelenium.open(DefaultSelenium.java:335)
+	at com.magneticreason.fitnium.api.FitniumSeleniumAPI.startingAtURL(FitniumSeleniumAPI.java:17)
+	at com.magneticreason.fitnium.BaseFitniumFixture.startingAtURL(BaseFitniumFixture.java:300)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)
+	at fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)
+	at fitnesse.slim.Statement.call(Statement.java:92)
+	at fitnesse.slim.Statement.execute(Statement.java:72)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div>
+</div></div><hr/><table border="1" cellspacing="0" _TABLENUMBER=608185825544386952>
+<tr><td>script</td>
+<td colspan="3"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>starting at URL</td>
+<td colspan="3">/tools/fitnium/testpage1.html</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2">[] <span class="fail">expected [Magnetic Reason]</span></td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td><span class="error">Exception: <a href=#scriptTable_2_3>scriptTable_2_3</a></span></td>
+</tr>
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary</td>
+<td>[false] <span class="fail">expected [true]</span></td>
+</tr>
+</table>
+<br/>Complete over kill this bit, buts shows how we can check that the fields are the<br/>atleast editable, or selectable<br/><br/><script>var existingContent = document.getElementById("test_exceptions1").innerHTML;
+document.getElementById("test_exceptions1").innerHTML = existingContent + "<a name=\"scriptTable_3_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('3002193985538850229');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img3002193985538850229\"/></a>&nbsp;<span class=\"meta\">scriptTable_3_1 </span>\n\n\t<div class=\"hidden\" id=\"3002193985538850229\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=firstname not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getBoolean(HttpCommandProcessor.java:335)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.isEditable(DefaultSelenium.java:511)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.inputFieldIsEditable(FitniumInputFieldAPI.java:24)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.inputFieldIsEditable(BaseFitniumFixture.java:1953)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_3_3\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('4537022487611360697');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img4537022487611360697\"/></a>&nbsp;<span class=\"meta\">scriptTable_3_3 </span>\n\n\t<div class=\"hidden\" id=\"4537022487611360697\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=surname not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getBoolean(HttpCommandProcessor.java:335)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.isEditable(DefaultSelenium.java:511)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.inputFieldIsEditable(FitniumInputFieldAPI.java:24)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.inputFieldIsEditable(BaseFitniumFixture.java:1953)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_3_2\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-5465923539788805588');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-5465923539788805588\"/></a>&nbsp;<span class=\"meta\">scriptTable_3_2 </span>\n\n\t<div class=\"hidden\" id=\"-5465923539788805588\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=midname not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getBoolean(HttpCommandProcessor.java:335)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.isEditable(DefaultSelenium.java:511)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.inputFieldIsEditable(FitniumInputFieldAPI.java:24)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.inputFieldIsEditable(BaseFitniumFixture.java:1953)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=8417681476829069206>
+<tr><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>check</td>
+<td>input field</td>
+<td>name=firstname</td>
+<td>is editable</td>
+<td><span class="error">Exception: <a href=#scriptTable_3_1>scriptTable_3_1</a></span></td>
+</tr>
+<tr><td>check</td>
+<td>input field</td>
+<td>name=midname</td>
+<td>is editable</td>
+<td><span class="error">Exception: <a href=#scriptTable_3_2>scriptTable_3_2</a></span></td>
+</tr>
+<tr><td>check</td>
+<td>input field</td>
+<td>name=surname</td>
+<td>is editable</td>
+<td><span class="error">Exception: <a href=#scriptTable_3_3>scriptTable_3_3</a></span></td>
+</tr>
+</table>
+<br/>The next check is unreliable unless you know the order of the items, as this call<br/>just gets a comma list of the values from selenium<br/><br/><script>var existingContent = document.getElementById("test_exceptions1").innerHTML;
+document.getElementById("test_exceptions1").innerHTML = existingContent + "<a name=\"scriptTable_4_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-7971233251656519979');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-7971233251656519979\"/></a>&nbsp;<span class=\"meta\">scriptTable_4_1 </span>\n\n\t<div class=\"hidden\" id=\"-7971233251656519979\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=country not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getStringArray(HttpCommandProcessor.java:271)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.getSelectOptions(DefaultSelenium.java:491)\r\n\tat com.magneticreason.fitnium.api.FitniumListAPI.listOptions(FitniumListAPI.java:429)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.listOptions(BaseFitniumFixture.java:2518)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=3137546389986937596>
+<tr><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>name=country</td>
+<td>options</td>
+<td><span class="error">Exception: <a href=#scriptTable_4_1>scriptTable_4_1</a></span></td>
+</tr>
+</table>
+<br/>So its better to use the following way to check for list of values<br/><br/><script>var existingContent = document.getElementById("test_exceptions1").innerHTML;
+document.getElementById("test_exceptions1").innerHTML = existingContent + "<a name=\"scriptTable_5_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('7694562676783664062');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img7694562676783664062\"/></a>&nbsp;<span class=\"meta\">scriptTable_5_1 </span>\n\n\t<div class=\"hidden\" id=\"7694562676783664062\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=country not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getStringArray(HttpCommandProcessor.java:271)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.getSelectOptions(DefaultSelenium.java:491)\r\n\tat com.magneticreason.fitnium.api.FitniumListAPI.doesListContainOptions(FitniumListAPI.java:455)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.doesListContainOptions(BaseFitniumFixture.java:2544)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=5680107932595037917>
+<tr><td>script</td>
+<td colspan="5"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>name=country</td>
+<td>contain options</td>
+<td>Wales,Scotland,Ireland,England,Other</td>
+<td><span class="error">Exception: <a href=#scriptTable_5_1>scriptTable_5_1</a></span></td>
+</tr>
+</table>
+<br/>Enter data into the appropriate fields<br/><br/><script>var existingContent = document.getElementById("test_exceptions1").innerHTML;
+document.getElementById("test_exceptions1").innerHTML = existingContent + "<a name=\"scriptTable_6_14\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('4761051455740240978');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img4761051455740240978\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_14 </span>\n\n\t<div class=\"hidden\" id=\"4761051455740240978\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=email not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_9\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('4663028371570168159');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img4663028371570168159\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_9 </span>\n\n\t<div class=\"hidden\" id=\"4663028371570168159\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=postcode not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_7\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('3224840801668813355');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img3224840801668813355\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_7 </span>\n\n\t<div class=\"hidden\" id=\"3224840801668813355\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=city not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_10\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-5454465580756846817');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-5454465580756846817\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_10 </span>\n\n\t<div class=\"hidden\" id=\"-5454465580756846817\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=country not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.select(DefaultSelenium.java:315)\r\n\tat com.magneticreason.fitnium.api.FitniumListAPI.selectOptionInList(FitniumListAPI.java:23)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.selectOptionInList(BaseFitniumFixture.java:2156)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_8\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-8282472085150847834');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-8282472085150847834\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_8 </span>\n\n\t<div class=\"hidden\" id=\"-8282472085150847834\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=county not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_11\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-3167705198413698490');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-3167705198413698490\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_11 </span>\n\n\t<div class=\"hidden\" id=\"-3167705198413698490\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=telephone not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_5\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('3851520058410959650');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img3851520058410959650\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_5 </span>\n\n\t<div class=\"hidden\" id=\"3851520058410959650\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=address1 not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_12\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('904614654546999657');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img904614654546999657\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_12 </span>\n\n\t<div class=\"hidden\" id=\"904614654546999657\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=mobile not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_13\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('1061205727053215857');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img1061205727053215857\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_13 </span>\n\n\t<div class=\"hidden\" id=\"1061205727053215857\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=fax not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_6\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('6936049411506137737');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img6936049411506137737\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_6 </span>\n\n\t<div class=\"hidden\" id=\"6936049411506137737\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=address2 not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_4\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('3755932193406843891');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img3755932193406843891\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_4 </span>\n\n\t<div class=\"hidden\" id=\"3755932193406843891\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=surname not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_3\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-3929638993597546678');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-3929638993597546678\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_3 </span>\n\n\t<div class=\"hidden\" id=\"-3929638993597546678\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=midname not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_2\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('908373272097763595');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img908373272097763595\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_2 </span>\n\n\t<div class=\"hidden\" id=\"908373272097763595\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=firstname not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_6_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('2710706724633060743');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img2710706724633060743\"/></a>&nbsp;<span class=\"meta\">scriptTable_6_1 </span>\n\n\t<div class=\"hidden\" id=\"2710706724633060743\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=title not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.select(DefaultSelenium.java:315)\r\n\tat com.magneticreason.fitnium.api.FitniumListAPI.selectOptionInList(FitniumListAPI.java:23)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.selectOptionInList(BaseFitniumFixture.java:2156)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=2348634486209612401>
+<tr><td>script</td>
+<td colspan="3"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>select option</td>
+<td>Mr</td>
+<td>in list</td>
+<td>name=title</td>
+</tr>
+<tr><td>enter</td>
+<td>Keith</td>
+<td>in input field</td>
+<td>name=firstname</td>
+</tr>
+<tr><td>enter</td>
+<td>Eugene</td>
+<td>in input field</td>
+<td>name=midname</td>
+</tr>
+<tr><td>enter</td>
+<td>Sterling</td>
+<td>in input field</td>
+<td>name=surname</td>
+</tr>
+<tr><td>enter</td>
+<td>10 Lidgett Lane</td>
+<td>in input field</td>
+<td>name=address1</td>
+</tr>
+<tr><td>enter</td>
+<td>Skelmanthorpe</td>
+<td>in input field</td>
+<td>name=address2</td>
+</tr>
+<tr><td>enter</td>
+<td>Huddersfield</td>
+<td>in input field</td>
+<td>name=city</td>
+</tr>
+<tr><td>enter</td>
+<td>West Yorks</td>
+<td>in input field</td>
+<td>name=county</td>
+</tr>
+<tr><td>enter</td>
+<td>HD8 9AQ</td>
+<td>in input field</td>
+<td>name=postcode</td>
+</tr>
+<tr><td>select option</td>
+<td>Ireland</td>
+<td>in list</td>
+<td>name=country</td>
+</tr>
+<tr><td>enter</td>
+<td>01484 866 033</td>
+<td>in input field</td>
+<td>name=telephone</td>
+</tr>
+<tr><td>enter</td>
+<td>+44 7771 597 630</td>
+<td>in input field</td>
+<td>name=mobile</td>
+</tr>
+<tr><td>enter</td>
+<td>+44 1484 866 033</td>
+<td>in input field</td>
+<td>name=fax</td>
+</tr>
+<tr><td>enter</td>
+<td><a href="mailto:keith@magneticreason.com">keith@magneticreason.com</a></td>
+<td>in input field</td>
+<td>name=email</td>
+</tr>
+</table>
+<br/>We would not normally do this, but lets check that all the values<br/>we entered are in the fields<br/><br/><script>var existingContent = document.getElementById("test_exceptions1").innerHTML;
+document.getElementById("test_exceptions1").innerHTML = existingContent + "<a name=\"scriptTable_7_2\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-8427205145426876392');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-8427205145426876392\"/></a>&nbsp;<span class=\"meta\">scriptTable_7_2 </span>\n\n\t<div class=\"hidden\" id=\"-8427205145426876392\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=midname not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.getValue(DefaultSelenium.java:431)\r\n\tat com.magneticreason.fitnium.api.FitniumElementAPI.valueOfElement(FitniumElementAPI.java:139)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.valueOfElement(BaseFitniumFixture.java:1077)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_7_3\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('3881278000044575147');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img3881278000044575147\"/></a>&nbsp;<span class=\"meta\">scriptTable_7_3 </span>\n\n\t<div class=\"hidden\" id=\"3881278000044575147\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=surname not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.getValue(DefaultSelenium.java:431)\r\n\tat com.magneticreason.fitnium.api.FitniumElementAPI.valueOfElement(FitniumElementAPI.java:139)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.valueOfElement(BaseFitniumFixture.java:1077)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_7_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('3551512260661256598');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img3551512260661256598\"/></a>&nbsp;<span class=\"meta\">scriptTable_7_1 </span>\n\n\t<div class=\"hidden\" id=\"3551512260661256598\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=firstname not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.getValue(DefaultSelenium.java:431)\r\n\tat com.magneticreason.fitnium.api.FitniumElementAPI.valueOfElement(FitniumElementAPI.java:139)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.valueOfElement(BaseFitniumFixture.java:1077)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_7_4\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('6405683361633062304');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img6405683361633062304\"/></a>&nbsp;<span class=\"meta\">scriptTable_7_4 </span>\n\n\t<div class=\"hidden\" id=\"6405683361633062304\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=country not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getBoolean(HttpCommandProcessor.java:335)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.isSomethingSelected(DefaultSelenium.java:487)\r\n\tat com.magneticreason.fitnium.api.FitniumListAPI.doesListHaveSelection(FitniumListAPI.java:34)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.doesListHaveSelection(BaseFitniumFixture.java:2167)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=5940356604742991759>
+<tr><td>script</td>
+<td colspan="4"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>check</td>
+<td>value of element</td>
+<td>name=firstname</td>
+<td colspan="2"><span class="error">Exception: <a href=#scriptTable_7_1>scriptTable_7_1</a></span></td>
+</tr>
+<tr><td>check</td>
+<td>value of element</td>
+<td>name=midname</td>
+<td colspan="2"><span class="error">Exception: <a href=#scriptTable_7_2>scriptTable_7_2</a></span></td>
+</tr>
+<tr><td>check</td>
+<td>value of element</td>
+<td>name=surname</td>
+<td colspan="2"><span class="error">Exception: <a href=#scriptTable_7_3>scriptTable_7_3</a></span></td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>name=country</td>
+<td>have selection</td>
+<td><span class="error">Exception: <a href=#scriptTable_7_4>scriptTable_7_4</a></span></td>
+</tr>
+</table>
+<br/>Now lets submit the form<br/><br/><script>var existingContent = document.getElementById("test_exceptions1").innerHTML;
+document.getElementById("test_exceptions1").innerHTML = existingContent + "<a name=\"scriptTable_8_2\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('7068766350491767781');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img7068766350491767781\"/></a>&nbsp;<span class=\"meta\">scriptTable_8_2 </span>\n\n\t<div class=\"hidden\" id=\"7068766350491767781\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: Timed out after 3000ms\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.waitForPageToLoad(DefaultSelenium.java:635)\r\n\tat com.magneticreason.fitnium.api.FitniumWaitAPI.waitForPageToLoadForSeconds(FitniumWaitAPI.java:1316)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.waitForPageToLoadForSeconds(BaseFitniumFixture.java:4364)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_8_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('6300354252078966685');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img6300354252078966685\"/></a>&nbsp;<span class=\"meta\">scriptTable_8_1 </span>\n\n\t<div class=\"hidden\" id=\"6300354252078966685\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element id=send not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.click(DefaultSelenium.java:167)\r\n\tat com.magneticreason.fitnium.api.FitniumMouseAPI.clickElement(FitniumMouseAPI.java:23)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.clickElement(BaseFitniumFixture.java:1727)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_8_3\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-4196750288824494133');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-4196750288824494133\"/></a>&nbsp;<span class=\"meta\">scriptTable_8_3 </span>\n\n\t<div class=\"hidden\" id=\"-4196750288824494133\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element xpath=//h1 not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.getText(DefaultSelenium.java:435)\r\n\tat com.magneticreason.fitnium.api.FitniumElementAPI.textOfElement(FitniumElementAPI.java:94)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.textOfElement(BaseFitniumFixture.java:1038)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_8_4\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-4853181319704121794');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-4853181319704121794\"/></a>&nbsp;<span class=\"meta\">scriptTable_8_4 </span>\n\n\t<div class=\"hidden\" id=\"-4853181319704121794\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element xpath=//div[@id='primaryContent']/div/p not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.getText(DefaultSelenium.java:435)\r\n\tat com.magneticreason.fitnium.api.FitniumElementAPI.textOfElement(FitniumElementAPI.java:94)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.textOfElement(BaseFitniumFixture.java:1038)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=5210605041999188995>
+<tr><td>script</td>
+<td colspan="3"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=send</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>3</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td><span class="error">Exception: <a href=#scriptTable_8_3>scriptTable_8_3</a></span></td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//div[@id='primaryContent']/div/p</td>
+<td><span class="error">Exception: <a href=#scriptTable_8_4>scriptTable_8_4</a></span></td>
+</tr>
+</table>
+<br/><script>var existingContent = document.getElementById("test_exceptions1").innerHTML;
+document.getElementById("test_exceptions1").innerHTML = existingContent + "<a name=\"scriptTable_9_4\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-4262753225386745536');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-4262753225386745536\"/></a>&nbsp;<span class=\"meta\">scriptTable_9_4 </span>\n\n\t<div class=\"hidden\" id=\"-4262753225386745536\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=tsandcs not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.check(DefaultSelenium.java:307)\r\n\tat com.magneticreason.fitnium.api.FitniumCheckBoxAPI.clickCheckBox(FitniumCheckBoxAPI.java:18)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.clickCheckBox(BaseFitniumFixture.java:2623)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_9_5\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('4598794174595440668');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img4598794174595440668\"/></a>&nbsp;<span class=\"meta\">scriptTable_9_5 </span>\n\n\t<div class=\"hidden\" id=\"4598794174595440668\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=junk not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.check(DefaultSelenium.java:307)\r\n\tat com.magneticreason.fitnium.api.FitniumCheckBoxAPI.clickCheckBox(FitniumCheckBoxAPI.java:18)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.clickCheckBox(BaseFitniumFixture.java:2623)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_9_2\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-3307887836454291493');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-3307887836454291493\"/></a>&nbsp;<span class=\"meta\">scriptTable_9_2 </span>\n\n\t<div class=\"hidden\" id=\"-3307887836454291493\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=age not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_9_3\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-5788463682223019920');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-5788463682223019920\"/></a>&nbsp;<span class=\"meta\">scriptTable_9_3 </span>\n\n\t<div class=\"hidden\" id=\"-5788463682223019920\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element name=addinfo not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:291)\r\n\tat com.magneticreason.fitnium.api.FitniumInputFieldAPI.enterInInputField(FitniumInputFieldAPI.java:48)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.enterInInputField(BaseFitniumFixture.java:1977)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_9_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-2504181224908842770');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-2504181224908842770\"/></a>&nbsp;<span class=\"meta\">scriptTable_9_1 </span>\n\n\t<div class=\"hidden\" id=\"-2504181224908842770\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element id=form_sexmale not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.check(DefaultSelenium.java:307)\r\n\tat com.magneticreason.fitnium.api.FitniumRadioButtonAPI.clickRadioButton(FitniumRadioButtonAPI.java:21)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.clickRadioButton(BaseFitniumFixture.java:2571)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=1345379280401588842>
+<tr><td>script</td>
+<td colspan="3"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>click radio button</td>
+<td colspan="3">id=form_sexmale</td>
+</tr>
+<tr><td>enter</td>
+<td>21</td>
+<td>in input field</td>
+<td>name=age</td>
+</tr>
+<tr><td>enter</td>
+<td>This is a description that has no value</td>
+<td>in input field</td>
+<td>name=addinfo</td>
+</tr>
+<tr><td>click check box</td>
+<td colspan="3">name=tsandcs</td>
+</tr>
+<tr><td>click check box</td>
+<td colspan="3">name=junk</td>
+</tr>
+</table>
+<br/>Now lets submit the form again<br/><br/><script>var existingContent = document.getElementById("test_exceptions1").innerHTML;
+document.getElementById("test_exceptions1").innerHTML = existingContent + "<a name=\"scriptTable_10_4\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-6693223467590079377');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-6693223467590079377\"/></a>&nbsp;<span class=\"meta\">scriptTable_10_4 </span>\n\n\t<div class=\"hidden\" id=\"-6693223467590079377\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element xpath=//div[@id='primaryContent']/div/p not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.getText(DefaultSelenium.java:435)\r\n\tat com.magneticreason.fitnium.api.FitniumElementAPI.textOfElement(FitniumElementAPI.java:94)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.textOfElement(BaseFitniumFixture.java:1038)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_10_3\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('5589682617444670248');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img5589682617444670248\"/></a>&nbsp;<span class=\"meta\">scriptTable_10_3 </span>\n\n\t<div class=\"hidden\" id=\"5589682617444670248\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element xpath=//h1 not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.getText(DefaultSelenium.java:435)\r\n\tat com.magneticreason.fitnium.api.FitniumElementAPI.textOfElement(FitniumElementAPI.java:94)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.textOfElement(BaseFitniumFixture.java:1038)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_10_2\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-4401432755278238044');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-4401432755278238044\"/></a>&nbsp;<span class=\"meta\">scriptTable_10_2 </span>\n\n\t<div class=\"hidden\" id=\"-4401432755278238044\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: Timed out after 3000ms\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.waitForPageToLoad(DefaultSelenium.java:635)\r\n\tat com.magneticreason.fitnium.api.FitniumWaitAPI.waitForPageToLoadForSeconds(FitniumWaitAPI.java:1316)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.waitForPageToLoadForSeconds(BaseFitniumFixture.java:4364)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div><a name=\"scriptTable_10_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('7844204311927567749');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img7844204311927567749\"/></a>&nbsp;<span class=\"meta\">scriptTable_10_1 </span>\n\n\t<div class=\"hidden\" id=\"7844204311927567749\"><pre>__EXCEPTION__:com.thoughtworks.selenium.SeleniumException: ERROR: Element id=send not found\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)\r\n\tat com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:91)\r\n\tat com.thoughtworks.selenium.DefaultSelenium.click(DefaultSelenium.java:167)\r\n\tat com.magneticreason.fitnium.api.FitniumMouseAPI.clickElement(FitniumMouseAPI.java:23)\r\n\tat com.magneticreason.fitnium.BaseFitniumFixture.clickElement(BaseFitniumFixture.java:1727)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:47)\r\n\tat fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:31)\r\n\tat fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:87)\r\n\tat fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:155)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:99)\r\n\tat fitnesse.slim.Statement.call(Statement.java:92)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:72)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:93)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:78)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:69)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:55)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=1973736975575575081>
+<tr><td>script</td>
+<td colspan="3"><span class="pass">Base Fitnium Fixture</span></td>
+</tr>
+<tr><td>click element</td>
+<td colspan="3">id=send</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>3</td>
+<td colspan="2">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td><span class="error">Exception: <a href=#scriptTable_10_3>scriptTable_10_3</a></span></td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//div[@id='primaryContent']/div/p</td>
+<td><span class="error">Exception: <a href=#scriptTable_10_4>scriptTable_10_4</a></span></td>
+</tr>
+</table>
+<br/>Test Complete lets close the browser<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=7632152184962113188>
+<tr><td>close the browser <span class="error">Could not invoke constructor for CloseTheBrowser[0]</span></td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>FormTest</relativePageName>
+    
+        <tables>
+            <table>
+        <name>import_0</name>
+                <row>
+                    <col><![CDATA[import]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[fitnesse.slim.test]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[fitnesse.fixtures]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[com.magneticreason.fitnium]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_1</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is located at]]></col>
+                    <col><![CDATA[localhost]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[the server is on port]]></col>
+                    <col><![CDATA[4444]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[using the browser]]></col>
+                    <col><![CDATA[*firefox]]></col>
+                    <col><![CDATA[start at]]></col>
+                    <col><![CDATA[localhost:8090/fitnium/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is selenium initialised]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set speed to]]></col>
+                    <col><![CDATA[500]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set timeout to]]></col>
+                    <col><![CDATA[50000]]></col>
+                    <col><![CDATA[milliseconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[write to debug]]></col>
+                    <col><![CDATA[starting test]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_2</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[starting at URL]]></col>
+                    <col><![CDATA[/tools/fitnium/testpage1.html]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[title of current page]]></col>
+                    <col><![CDATA[[] fail(expected [Magnetic Reason])]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[text of element]]></col>
+                    <col><![CDATA[xpath=//h1]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_2_3>scriptTable_2_3</a>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is Text Present]]></col>
+                    <col><![CDATA[This page contains all the elements neccassary]]></col>
+                    <col><![CDATA[[false] fail(expected [true])]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_3</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[input field]]></col>
+                    <col><![CDATA[name=firstname]]></col>
+                    <col><![CDATA[is editable]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_3_1>scriptTable_3_1</a>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[input field]]></col>
+                    <col><![CDATA[name=midname]]></col>
+                    <col><![CDATA[is editable]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_3_2>scriptTable_3_2</a>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[input field]]></col>
+                    <col><![CDATA[name=surname]]></col>
+                    <col><![CDATA[is editable]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_3_3>scriptTable_3_3</a>)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_4</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[list]]></col>
+                    <col><![CDATA[name=country]]></col>
+                    <col><![CDATA[options]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_4_1>scriptTable_4_1</a>)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_5</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[does list]]></col>
+                    <col><![CDATA[name=country]]></col>
+                    <col><![CDATA[contain options]]></col>
+                    <col><![CDATA[Wales,Scotland,Ireland,England,Other]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_5_1>scriptTable_5_1</a>)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_6</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[select option]]></col>
+                    <col><![CDATA[Mr]]></col>
+                    <col><![CDATA[in list]]></col>
+                    <col><![CDATA[name=title]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[Keith]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=firstname]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[Eugene]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=midname]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[Sterling]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=surname]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[10 Lidgett Lane]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=address1]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[Skelmanthorpe]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=address2]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[Huddersfield]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=city]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[West Yorks]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=county]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[HD8 9AQ]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=postcode]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[select option]]></col>
+                    <col><![CDATA[Ireland]]></col>
+                    <col><![CDATA[in list]]></col>
+                    <col><![CDATA[name=country]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[01484 866 033]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=telephone]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[+44 7771 597 630]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=mobile]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[+44 1484 866 033]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=fax]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[<a href="mailto:keith@magneticreason.com">keith@magneticreason.com</a>]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=email]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_7</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[value of element]]></col>
+                    <col><![CDATA[name=firstname]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_7_1>scriptTable_7_1</a>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[value of element]]></col>
+                    <col><![CDATA[name=midname]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_7_2>scriptTable_7_2</a>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[value of element]]></col>
+                    <col><![CDATA[name=surname]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_7_3>scriptTable_7_3</a>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[does list]]></col>
+                    <col><![CDATA[name=country]]></col>
+                    <col><![CDATA[have selection]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_7_4>scriptTable_7_4</a>)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_8</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=send]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[wait for page to load for]]></col>
+                    <col><![CDATA[3]]></col>
+                    <col><![CDATA[seconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[text of element]]></col>
+                    <col><![CDATA[xpath=//h1]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_8_3>scriptTable_8_3</a>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[text of element]]></col>
+                    <col><![CDATA[xpath=//div[@id='primaryContent']/div/p]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_8_4>scriptTable_8_4</a>)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_9</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click radio button]]></col>
+                    <col><![CDATA[id=form_sexmale]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[21]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=age]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter]]></col>
+                    <col><![CDATA[This is a description that has no value]]></col>
+                    <col><![CDATA[in input field]]></col>
+                    <col><![CDATA[name=addinfo]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click check box]]></col>
+                    <col><![CDATA[name=tsandcs]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click check box]]></col>
+                    <col><![CDATA[name=junk]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_10</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(Base Fitnium Fixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[click element]]></col>
+                    <col><![CDATA[id=send]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[wait for page to load for]]></col>
+                    <col><![CDATA[3]]></col>
+                    <col><![CDATA[seconds]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[text of element]]></col>
+                    <col><![CDATA[xpath=//h1]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_10_3>scriptTable_10_3</a>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[text of element]]></col>
+                    <col><![CDATA[xpath=//div[@id='primaryContent']/div/p]]></col>
+                    <col><![CDATA[error(Exception: <a href=#scriptTable_10_4>scriptTable_10_4</a>)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_11</name>
+                <row>
+                    <col><![CDATA[close the browser error(Could not invoke constructor for CloseTheBrowser[0])]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_0, import, fitnesse.slim.test]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_1, import, fitnesse.fixtures]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[import_0_2, import, com.magneticreason.fitnium]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_1_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_1, call, scriptTableActor, theServerIsLocatedAt, localhost]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[the server is located at]]></expected>
+                              <evaluationMessage><![CDATA[the server is located at]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_2, call, scriptTableActor, theServerIsOnPort, 4444]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[the server is on port]]></expected>
+                              <evaluationMessage><![CDATA[the server is on port]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_3, call, scriptTableActor, usingTheBrowserStartAt, *firefox, localhost:8090/fitnium/]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[using the browser]]></expected>
+                              <evaluationMessage><![CDATA[using the browser]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_4, call, scriptTableActor, isSeleniumInitialised]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_1_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_5, call, scriptTableActor, setSpeedToMilliseconds, 500]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_5</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[set speed to]]></expected>
+                              <evaluationMessage><![CDATA[set speed to]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_6, call, scriptTableActor, setTimeoutToMilliseconds, 50000]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_6</instructionId>
+          <col>1</col>
+          <row>6</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_6</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[set timeout to]]></expected>
+                              <evaluationMessage><![CDATA[set timeout to]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_7, call, scriptTableActor, writeToDebug, starting test]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_7</instructionId>
+          <col>1</col>
+          <row>7</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_7</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[write to debug]]></expected>
+                              <evaluationMessage><![CDATA[write to debug]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1, call, scriptTableActor, startingAtURL, /tools/fitnium/testpage1.html]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_2_1>scriptTable_2_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_2_1>scriptTable_2_1</a>]]></actual>
+                              <expected><![CDATA[starting at URL]]></expected>
+                              <evaluationMessage><![CDATA[starting at URL]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_2, call, scriptTableActor, titleOfCurrentPage]]]></instruction>
+        <slimResult><![CDATA[]]></slimResult>
+                <expectation>
+          <status>wrong</status>
+          <instructionId>scriptTable_2_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[]]></actual>
+                              <expected><![CDATA[Magnetic Reason]]></expected>
+                              <evaluationMessage><![CDATA[[] fail(expected [Magnetic Reason])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_3, call, scriptTableActor, textOfElement, xpath=//h1]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_2_3>scriptTable_2_3</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_3</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_2_3>scriptTable_2_3</a>]]></actual>
+                              <expected><![CDATA[Fitnium Test Page]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_2_3>scriptTable_2_3</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_4, call, scriptTableActor, isTextPresent, This page contains all the elements neccassary]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>wrong</status>
+          <instructionId>scriptTable_2_4</instructionId>
+          <col>3</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[[false] fail(expected [true])]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_1, call, scriptTableActor, inputFieldIsEditable, name=firstname]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_3_1>scriptTable_3_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>4</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_3_1>scriptTable_3_1</a>]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_3_1>scriptTable_3_1</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_2, call, scriptTableActor, inputFieldIsEditable, name=midname]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_3_2>scriptTable_3_2</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_2</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_3_2>scriptTable_3_2</a>]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_3_2>scriptTable_3_2</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_3, call, scriptTableActor, inputFieldIsEditable, name=surname]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_3_3>scriptTable_3_3</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_3_3>scriptTable_3_3</a>]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_3_3>scriptTable_3_3</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_1, call, scriptTableActor, listOptions, name=country]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_4_1>scriptTable_4_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>4</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_4_1>scriptTable_4_1</a>]]></actual>
+                              <expected><![CDATA[Wales,Scotland,Ireland,England,Other]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_4_1>scriptTable_4_1</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_5_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_1, call, scriptTableActor, doesListContainOptions, name=country, Wales,Scotland,Ireland,England,Other]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_5_1>scriptTable_5_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>5</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_5_1>scriptTable_5_1</a>]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_5_1>scriptTable_5_1</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>4</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_6_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_1, call, scriptTableActor, selectOptionInList, Mr, name=title]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_1>scriptTable_6_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_1>scriptTable_6_1</a>]]></actual>
+                              <expected><![CDATA[select option]]></expected>
+                              <evaluationMessage><![CDATA[select option]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_2, call, scriptTableActor, enterInInputField, Keith, name=firstname]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_2>scriptTable_6_2</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_2</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_2>scriptTable_6_2</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_3, call, scriptTableActor, enterInInputField, Eugene, name=midname]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_3>scriptTable_6_3</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_3</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_3</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_3>scriptTable_6_3</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_4, call, scriptTableActor, enterInInputField, Sterling, name=surname]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_4>scriptTable_6_4</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_4</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_4</instructionId>
+          <col>3</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_4>scriptTable_6_4</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_5, call, scriptTableActor, enterInInputField, 10 Lidgett Lane, name=address1]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_5>scriptTable_6_5</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_5</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_5</instructionId>
+          <col>3</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_5>scriptTable_6_5</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_6, call, scriptTableActor, enterInInputField, Skelmanthorpe, name=address2]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_6>scriptTable_6_6</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_6</instructionId>
+          <col>1</col>
+          <row>6</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_6</instructionId>
+          <col>3</col>
+          <row>6</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_6</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_6>scriptTable_6_6</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_7, call, scriptTableActor, enterInInputField, Huddersfield, name=city]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_7>scriptTable_6_7</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_7</instructionId>
+          <col>1</col>
+          <row>7</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_7</instructionId>
+          <col>3</col>
+          <row>7</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_7</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_7>scriptTable_6_7</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_8, call, scriptTableActor, enterInInputField, West Yorks, name=county]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_8>scriptTable_6_8</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_8</instructionId>
+          <col>1</col>
+          <row>8</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_8</instructionId>
+          <col>3</col>
+          <row>8</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_8</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_8>scriptTable_6_8</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_9, call, scriptTableActor, enterInInputField, HD8 9AQ, name=postcode]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_9>scriptTable_6_9</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_9</instructionId>
+          <col>1</col>
+          <row>9</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_9</instructionId>
+          <col>3</col>
+          <row>9</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_9</instructionId>
+          <col>0</col>
+          <row>9</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_9>scriptTable_6_9</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_10, call, scriptTableActor, selectOptionInList, Ireland, name=country]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_10>scriptTable_6_10</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_10</instructionId>
+          <col>1</col>
+          <row>10</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_10</instructionId>
+          <col>3</col>
+          <row>10</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_10</instructionId>
+          <col>0</col>
+          <row>10</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_10>scriptTable_6_10</a>]]></actual>
+                              <expected><![CDATA[select option]]></expected>
+                              <evaluationMessage><![CDATA[select option]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_11, call, scriptTableActor, enterInInputField, 01484 866 033, name=telephone]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_11>scriptTable_6_11</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_11</instructionId>
+          <col>1</col>
+          <row>11</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_11</instructionId>
+          <col>3</col>
+          <row>11</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_11</instructionId>
+          <col>0</col>
+          <row>11</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_11>scriptTable_6_11</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_12, call, scriptTableActor, enterInInputField, +44 7771 597 630, name=mobile]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_12>scriptTable_6_12</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_12</instructionId>
+          <col>1</col>
+          <row>12</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_12</instructionId>
+          <col>3</col>
+          <row>12</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_12</instructionId>
+          <col>0</col>
+          <row>12</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_12>scriptTable_6_12</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_13, call, scriptTableActor, enterInInputField, +44 1484 866 033, name=fax]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_13>scriptTable_6_13</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_13</instructionId>
+          <col>1</col>
+          <row>13</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_13</instructionId>
+          <col>3</col>
+          <row>13</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_13</instructionId>
+          <col>0</col>
+          <row>13</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_13>scriptTable_6_13</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_14, call, scriptTableActor, enterInInputField, <a href="mailto:keith@magneticreason.com">keith@magneticreason.com</a>, name=email]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_6_14>scriptTable_6_14</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_14</instructionId>
+          <col>1</col>
+          <row>14</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_14</instructionId>
+          <col>3</col>
+          <row>14</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_14</instructionId>
+          <col>0</col>
+          <row>14</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_6_14>scriptTable_6_14</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_7_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_1, call, scriptTableActor, valueOfElement, name=firstname]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_7_1>scriptTable_7_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_7_1>scriptTable_7_1</a>]]></actual>
+                              <expected><![CDATA[Keith]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_7_1>scriptTable_7_1</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_2, call, scriptTableActor, valueOfElement, name=midname]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_7_2>scriptTable_7_2</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_2</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_7_2>scriptTable_7_2</a>]]></actual>
+                              <expected><![CDATA[Eugene]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_7_2>scriptTable_7_2</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_3, call, scriptTableActor, valueOfElement, name=surname]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_7_3>scriptTable_7_3</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_3</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_7_3>scriptTable_7_3</a>]]></actual>
+                              <expected><![CDATA[Sterling]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_7_3>scriptTable_7_3</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_4, call, scriptTableActor, doesListHaveSelection, name=country]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_7_4>scriptTable_7_4</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_4</instructionId>
+          <col>4</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_7_4>scriptTable_7_4</a>]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_7_4>scriptTable_7_4</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_8_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_1, call, scriptTableActor, clickElement, id=send]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_8_1>scriptTable_8_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_8_1>scriptTable_8_1</a>]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_2, call, scriptTableActor, waitForPageToLoadForSeconds, 3]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_8_2>scriptTable_8_2</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_8_2>scriptTable_8_2</a>]]></actual>
+                              <expected><![CDATA[wait for page to load for]]></expected>
+                              <evaluationMessage><![CDATA[wait for page to load for]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_3, call, scriptTableActor, textOfElement, xpath=//h1]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_8_3>scriptTable_8_3</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_3</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_8_3>scriptTable_8_3</a>]]></actual>
+                              <expected><![CDATA[Fitnium Test Page]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_8_3>scriptTable_8_3</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_4, call, scriptTableActor, textOfElement, xpath=//div[@id='primaryContent']/div/p]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_8_4>scriptTable_8_4</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_4</instructionId>
+          <col>3</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_8_4>scriptTable_8_4</a>]]></actual>
+                              <expected><![CDATA[This is the second page that contains all the elements neccassary to test Fitnium]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_8_4>scriptTable_8_4</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_9_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_1, call, scriptTableActor, clickRadioButton, id=form_sexmale]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_9_1>scriptTable_9_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_9_1>scriptTable_9_1</a>]]></actual>
+                              <expected><![CDATA[click radio button]]></expected>
+                              <evaluationMessage><![CDATA[click radio button]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_2, call, scriptTableActor, enterInInputField, 21, name=age]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_9_2>scriptTable_9_2</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_2</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_9_2>scriptTable_9_2</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_3, call, scriptTableActor, enterInInputField, This is a description that has no value, name=addinfo]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_9_3>scriptTable_9_3</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_3</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_3</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_9_3>scriptTable_9_3</a>]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_4, call, scriptTableActor, clickCheckBox, name=tsandcs]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_9_4>scriptTable_9_4</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_4</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_9_4>scriptTable_9_4</a>]]></actual>
+                              <expected><![CDATA[click check box]]></expected>
+                              <evaluationMessage><![CDATA[click check box]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_5, call, scriptTableActor, clickCheckBox, name=junk]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_9_5>scriptTable_9_5</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_5</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_9_5>scriptTable_9_5</a>]]></actual>
+                              <expected><![CDATA[click check box]]></expected>
+                              <evaluationMessage><![CDATA[click check box]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_10_0, make, scriptTableActor, BaseFitniumFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_10_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Base Fitnium Fixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Base Fitnium Fixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_10_1, call, scriptTableActor, clickElement, id=send]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_10_1>scriptTable_10_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_10_1>scriptTable_10_1</a>]]></actual>
+                              <expected><![CDATA[click element]]></expected>
+                              <evaluationMessage><![CDATA[click element]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_10_2, call, scriptTableActor, waitForPageToLoadForSeconds, 3]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_10_2>scriptTable_10_2</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_10_2>scriptTable_10_2</a>]]></actual>
+                              <expected><![CDATA[wait for page to load for]]></expected>
+                              <evaluationMessage><![CDATA[wait for page to load for]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_10_3, call, scriptTableActor, textOfElement, xpath=//h1]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_10_3>scriptTable_10_3</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_3</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_10_3>scriptTable_10_3</a>]]></actual>
+                              <expected><![CDATA[Fitnium Test Page]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_10_3>scriptTable_10_3</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_10_4, call, scriptTableActor, textOfElement, xpath=//div[@id='primaryContent']/div/p]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_10_4>scriptTable_10_4</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_4</instructionId>
+          <col>3</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_10_4>scriptTable_10_4</a>]]></actual>
+                              <expected><![CDATA[Congratulations, you are registered for what ever you have just signed up for]]></expected>
+                              <evaluationMessage><![CDATA[error(Exception: <a href=#scriptTable_10_4>scriptTable_10_4</a>)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_10_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_0, make, decisionTable_11, CloseTheBrowser]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for CloseTheBrowser[0]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_11_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for CloseTheBrowser[0]]]></actual>
+                              <expected><![CDATA[close the browser]]></expected>
+                              <evaluationMessage><![CDATA[close the browser error(Could not invoke constructor for CloseTheBrowser[0])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_11_1, call, decisionTable_11, table, []]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_11. does not exist]]></slimResult>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

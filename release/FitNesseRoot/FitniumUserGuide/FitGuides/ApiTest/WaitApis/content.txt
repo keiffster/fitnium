@@ -1,0 +1,8 @@
+In these tests, we refresh to simulate a new page being rendered to demonstrate each
+wait statements on its own
+
+!contents -R2 -g -p -f -h
+
+
+
+

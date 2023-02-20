@@ -1,0 +1,28 @@
+Fitnium2 now also supports the use of the SLiM Script Table fixture
+
+A Script table is a series of actions and checks. Similar to Do Fixture.
+
+For more information on the Script Table, see the SLiM documentation here http://fitnesse.org/FitNesse.UserGuide.SliM.ScriptTable
+
+[[Getting Started][SlimGuides.GettingStarted]] - Shows you how to configure the class path to include Fitnium libraries
+
+[[Browser Configuration][SlimGuides.BrowserConfiguration]] - Show how to connect to Selenium and open a URL
+
+[[Your first test][SlimGuides.FirstTest]] - A basic test that connects to google and searches for a really cool website
+
+[[API Guides][SlimGuides.ApiTest]] - A complete set of documentation and tests which demonstrate all Fitnium APIs
+
+[[Parameterising your tests][SlimGuides.ParameterTests]] - Provides the ability to parametise our tests and store values in variables for checking later
+
+[[Special Tokens][SlimGuides.SpecialTokens]] - Provides the ability to dynamically create data during your tests
+
+[[Regular Expressions][SlimGuides.RegularExpressions]] - Show how to use regular expressions in your tests to make them more dynamic
+
+[[Reading and Writing Data][SlimGuides.ReadingWritingData]] - Show how to write data to a file, and read it back in later tests
+
+[[Form Testing][SlimGuides.FormTest]] - How to test forms with Fitnium
+
+[[Checking Links on a page][SlimGuides.LinkChecking]] - How to check links with Fitnium
+
+!3 Table to Contents
+!contents -R2 -g -p -f -h

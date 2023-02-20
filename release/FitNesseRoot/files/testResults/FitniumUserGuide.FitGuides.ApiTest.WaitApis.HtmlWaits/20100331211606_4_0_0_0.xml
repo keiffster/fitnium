@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>HtmlWaits</rootPath>
+    <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-4066514936829231307');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-4066514936829231307"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-4066514936829231307"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium <br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>HTML Element Wait APIs</h1>Wait for HTML page source to contain specific HTML code<br/><pre>| wait for html source to contain | source |<br/></pre><br/>Wait for HTML body text to contain specific text<br/><pre>| wait for body text | text | to be present |<br/></pre><br/>Wait for specific text to present anywhere on the page<br/><pre>| wait for text | text | to be present |<br/></pre><br/>Wait for the HTML title to be specific text<br/><pre>| wait for title | title | to be present |<br/></pre><br/>Wait for an Element attribute to be a specific value in current window<br/><pre>| wait for attribute | attribute-locator | to be present |<br/></pre><br/>Wait for an Element attribute to be a specific value in all windows<br/><pre>| wait for attribute | id | from all windows to be present |<br/></pre><br/>Wait for a specific button to be present<br/><pre>| wait for buttons | button-list | to be present |<br/></pre><br/>Wait for a specific list of fields to be present<br/><pre>| wait for fields | field-list | to be present |<br/></pre><br/>Wait for a specific list of links to be present<br/><pre>| wait for links | link| to be present |<br/></pre><br/>Wait for a radio button to be checked<br/><pre>| wait for radio button | locator | to be checked |<br/></pre><br/>Wait for a check box to be checked<br/><pre>| wait for check box | locator | to be checked |<br/></pre><br/>Wait for a specific text to appear in a table<br/><pre>| wait for text | text | in table | table-locator | to occur |<br/></pre><br/><h2>Examples</h2><table border="1" cellspacing="0">
+<tr><td colspan="2">click the refresh button</td>
+</tr>
+<tr><td>wait for html source to contain</td>
+<td>&lt;div id="content"&gt;</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for body text</td>
+<td>Fitnium Test Page</td>
+<td>to be present</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for text</td>
+<td>Fitnium Test Page</td>
+<td>to be present</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for title</td>
+<td>Magnetic Reason</td>
+<td>to be present</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for attribute</td>
+<td>firstname@name</td>
+<td>to be present</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for attribute</td>
+<td>id</td>
+<td>from all windows to be present</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for buttons</td>
+<td>send</td>
+<td>to be present</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for fields</td>
+<td>form_telephone,form_email</td>
+<td>to be present</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for links</td>
+<td>tsandcs</td>
+<td>to be present</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+<tr><td>click radio button</td>
+<td colspan="2">form_sexmale</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for radio button</td>
+<td>form_sexmale</td>
+<td>to be checked</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+<tr><td>click check box</td>
+<td colspan="2">form_tsandcs</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for check box</td>
+<td>form_tsandcs</td>
+<td>to be checked</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for text</td>
+<td>Are you ?</td>
+<td>in table</td>
+<td>testtable.4.0</td>
+<td>to occur</td>
+</tr>
+</table>
+<br/><br/><br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('6281338762421977669');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img6281338762421977669"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="6281338762421977669"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>HtmlWaits</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

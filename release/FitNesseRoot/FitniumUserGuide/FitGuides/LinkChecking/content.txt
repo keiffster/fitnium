@@ -1,0 +1,72 @@
+This example will check all the links on a page go to their respective pages.
+
+Our acceptance critiera is to check the main header of the page is what we expect
+When we have checked the link, we click the back button to return us to the original page
+
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+!|com.magneticreason.fitnium.BaseFitniumFixture|
+
+Set up the browser and connect to selenium
+
+|The server is located at | localhost |
+|The server is on port | 4444 |
+|Using the browser | *firefox | start at | http://www.magneticreason.com/ |
+|check | is selenium initialised | true |
+|set speed to |500| milliseconds |
+|set timeout to |50000| milliseconds |
+|write to debug | starting test |
+
+Lets first start at the FitNium home page at Magnetic Reason
+
+|starting at URL| / |
+|check| title of current page | Magnetic Reason |
+
+Lets check all the links work
+
+| click link with text | Customers |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h1 | Agile Customers |
+| click the back button |
+| click link with text | Managers |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h1 | Agile Managers |
+| click the back button |
+| click link with text | Developers |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h1 | Agile Developers |
+| click the back button |
+| click link with text | Testers |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h1 | Agile Testers |
+| click the back button |
+| click link with text | Analysts |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h1 | Agile Analysts |
+| click the back button |
+| click link with text | Vignettes |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h1 | Agile Vignettes |
+| click the back button |
+| click link with text | Games |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h1 | Index Of Games |
+| click the back button |
+| click link with text | Exercises |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h1 | Index Of Exercises |
+| click the back button |
+| click link with text | Coaching |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h4 | Agile Coaching |
+| click the back button |
+| click link with text | Training |
+| wait for page to load for | 10 | seconds |
+|check|text of element | xpath=//h4 | Standard Courses |
+| click the back button |
+
+Test Complete lets close the browser
+
+|close the browser|

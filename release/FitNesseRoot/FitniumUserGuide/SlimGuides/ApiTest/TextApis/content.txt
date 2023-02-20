@@ -1,0 +1,25 @@
+!1 Text APIs
+Check if some text is present on the page
+{{{| check | is text present | text | true|false |
+}}}
+And using a regular expression
+{{{| check | is text present | expression | true|false |
+}}}
+Store if text is present on a page in a variable
+{{{| store is text | text | present in | var |
+}}}
+Store the text content of the HTML body in a variable
+{{{| store body text in | var |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| check | is text present |This page contains all the elements neccassary to test Fitnium |true|
+| store is text |This page contains all the elements neccassary to test Fitnium | present in | present |
+| store body text in | body1 |
+| note | Imagine changing the screen |
+| store body text in | body2 |
+| check | body text is | !{body1} | true |
+| check | body text is | !{body2} | true |
+
+

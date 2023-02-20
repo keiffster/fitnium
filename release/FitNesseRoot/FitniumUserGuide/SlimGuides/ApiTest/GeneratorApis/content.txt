@@ -1,0 +1,46 @@
+!1 Generator APIs
+
+Note that additional jar files are required to use the Excel Generator described below in the examples
+We currently use POI and this jar file needs to be included in the path
+
+Load a Generator and give it a name
+{{{| load unique value generator | generator | into | name |
+}}}
+Get the next value from the generator
+{{{| next unique value from | name |
+}}}
+Store the next value from the generator into a Variable
+{{{| store next unique value from | name | in | variable |
+}}}
+!2 Examples
+!path ./lib/poi-3.2-FINAL-20081019.jar
+
+| script | Base Fitnium Fixture |
+| jump to test page |
+| load unique value generator | !-com.magneticreason.fitnium.generator.IntegerCounter-! | into | idGen |
+| check | next unique value from | idGen | 0 |
+| check | next unique value from | idGen | 1 |
+| store next unique value from | idGen | in | value1 |
+| check | does | !{value1} | equal | 2 | true |
+
+-| script | Base Fitnium Fixture |
+| load unique value generator | !-com.magneticreason.fitnium.generator.RandomNumber-! | into | randGen |
+| check | next unique value from | randGen ||
+| check | next unique value from | randGen ||
+
+-| script | Base Fitnium Fixture |
+| load unique value generator | !-com.magneticreason.fitnium.generator.ExcelSpreadsheet-! | into | xlsGen | and initialise with | test.xls,Sheet1 |
+| check | next unique value from | xlsGen | with params | 0,0 | 1 |
+| check | next unique value from | xlsGen | with params | 1,0 | 2 |
+| check | next unique value from | xlsGen | with params | 2,0 | 3 |
+| check | next unique value from | xlsGen | with params | 3,0 | 4 |
+| check | next unique value from | xlsGen | with params | 4,0 | 5 |
+| check | next Unique value from | xlsGen | with params | 5,0 | 6 |
+| store next unique value from | xlsGen | with params | 6,0 | in | value2 |
+| check | does | !{value2} | equal | 7 | true |
+
+If a cell doesn't contain a value, then a empty string "" is returned
+
+-| script | Base Fitnium Fixture |
+| load unique value generator | !-com.magneticreason.fitnium.generator.ExcelSpreadsheet-! | into | xlsGen | and initialise with | test.xls,Sheet1 |
+| check | next unique value from | xlsGen | with params | 99,99 |  |

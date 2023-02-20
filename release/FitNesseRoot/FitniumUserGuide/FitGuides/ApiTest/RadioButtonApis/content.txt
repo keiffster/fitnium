@@ -1,0 +1,25 @@
+!1 Radio Button APIs
+Click a radio button ( toggle the status )
+{{{| click radio button | locator |
+}}}
+Check a radio button ( set it to checked )
+{{{| check | is radio button | locator  | checked | true|false |
+}}}
+Check if a radio button is checked
+{{{| check | is radio button | locator  | checked | true|false |
+}}}
+Uncheck a radio button ( set it to unchecked )
+{{{| unclick radio button | locator  |
+}}}
+Store status of radio button in a variable
+{{{| store is radio button  | locator  | checked in | var |
+}}}
+!2 Examples
+| click radio button | form_sexmale |
+| check | is radio button | form_sexmale | checked | true |
+| unclick radio button | form_sexmale |
+| check | is radio button | form_sexmale | checked | false |
+
+We can also store the state of a radio button in a fitnium variable
+
+| store is radio button  | form_sexmale | checked in | state |

@@ -1,0 +1,35 @@
+!1 Input Field APIs
+
+Enter text into an input field
+{{{| enter | text | in input field | locator |
+}}}
+Type text into an input field
+{{{| type | text | in input field | locator |
+}}}
+Check an input field exists
+{{{| check | does Input Field With Id | id | Exist | true|false |
+}}}
+Check an input field is editable
+{{{| check | input field | locator | is Editable | true|false |
+}}}
+Store the contents of an input field in a variable
+{{{| store input field | locator | is editable in | var |
+}}}
+Store all input fields on the screen in a variable
+{{{| store all fields in | var|
+}}}
+Check if a series of input fields exist
+{{{| check | do input fields with ids | list | exist | true|false |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| enter | keith | in input field | form_surname |
+| type | keith | in input field | form_surname |
+| check | does Input Field With Id | form_surname | Exist | true |
+| check | input field | surname | is Editable | true |
+| check | input field | uneditable | is Editable | false |
+| store input field | form_surname | is editable in | value1 |
+| store all fields in | value2 |
+| check | do input fields with ids | form_firstname | exist | true |
+| check | do input fields with ids | form_firstname,form_midname,form_surname,form_unedit,form_telephone,form_email | exist | true |

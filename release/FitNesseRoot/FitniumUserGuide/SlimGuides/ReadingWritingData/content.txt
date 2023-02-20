@@ -1,0 +1,96 @@
+!1 Reading and Writing Data
+To see how to developer your own Readers and Writers click the link [[Writing Readers and Writers][.FitniumUserGuide.WritingReadersAndWriters]]
+!2 Writing Data
+To write data to a datasource we first need to load the datasource and give it a name.
+When we load it we can pass parameters into the write that will be application specific
+{{{| load writer | java-classpath-to-writer | into | write-name | with params | parameter-list |
+}}}
+Once we have a write loaded we can start writing values into it
+{{{| store value | value | with params | parameter-list | in writer | write-name |
+}}}
+This bits is important. To store the data to the system you must make sure you call flush
+to actually store the data in the underlying data source
+{{{| flush writer | writer-name |
+}}}
+!2 Reading Data
+!4 Fitnium 1
+Load a Unique Value Generator UNG and give it a name
+{{{| load unique value generator | classpath | into | name |
+}}}
+Load a Unique Value Generator UNG and give it a name and starting from a specific value
+This is useful if you want a counter to start at a specific value
+{{{| load unique value generator | classpath | into | name | with starting value | value |
+}}}
+!4 Fitnium 2
+To provide more consistency I have added additional methods which complement the Write type APIs by providing
+Reader APIs. These are really just proxies to the Fitnium 1 Unique Value Generator APIs
+Load a Reader and give it a name
+{{{| load reader | classpath | into | name |
+}}}
+Load a Reader and give it a name and starting from a specific value
+{{{| load reader | classpath | into | name | with starting value | value |
+}}}
+Once you have a UVG/Reader you can start reading data from it with
+{{{| store next unique value from | reader-name | with params | parameter-list | in | fitnium-variable |
+}}}{{{| next unique value from | name |
+}}}
+!2 Example
+Define out system to be SLiM
+!define TEST_SYSTEM {slim}
+
+Next step up the class paths for Fitnesse, FitLibrary and our application specific class
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+Finally import the classes we are going to use
+|import|
+|fitnesse.slim.test|
+|fitnesse.fixtures|
+|com.magneticreason.fitnium|
+
+Out basic scripts connects to our test page
+| script | Base Fitnium Fixture |
+|the server is located at | localhost |
+|the server is on port | 4444 |
+|using the browser | *firefox | start at | localhost:8090/fitnium/ |
+|check | is selenium initialised | true |
+|set speed to |10| milliseconds |
+|set timeout to |50000| milliseconds |
+|write to debug | starting test |
+
+We load a write by specifying the class path to the writer, the name we want to load the write into and
+any parameters the write needs to run
+
+| script | Base Fitnium Fixture |
+| load writer | !-com.magneticreason.fitnium.writer.ExcelSpreadsheet-! | into | testSheet1 | with params | testBook.xls,testSheet |
+| store value | Name: | with params | 1,1 | in writer | testSheet1 |
+| store value | Keith | with params | 1,2 | in writer | testSheet1 |
+| store value | Surname: | with params | 2,1 | in writer | testSheet1 |
+| store value | Sterling | with params | 2,2 | in writer | testSheet1 |
+| flush writer | testSheet1 |
+
+Fitnium uses Unique Value Generators ( Essentially Readers ) to load data from external sources
+In this instance we have a class which provides the ability to read data from an Excel spreadsheet
+but could be a database, a csv file, or anything we can access from Java, even a Web Service wow !
+
+Fitnium 1 Example
+
+| script | Base Fitnium Fixture |
+| load Unique Value Generator | !-com.magneticreason.fitnium.generator.ExcelSpreadsheet-! | Into | testSheet2 | and initialise with |  testBook.xls,testSheet |
+| store next unique value from | testSheet2 | with params | 1,2 | in | firstname |
+| store next unique value from | testSheet2 | with params | 2,2 | in | surname |
+
+Fitnium 2 Example, you can use 'unique value generator' and 'reader' interchangeably
+
+| script | Base Fitnium Fixture |
+| load reader | !-com.magneticreason.fitnium.generator.ExcelSpreadsheet-! | Into | testSheet3 | and initialise with |  testBook.xls,testSheet |
+| store next unique value from | testSheet3 | with params | 1,2 | in | firstname |
+| store next unique value from | testSheet3 | with params | 2,2 | in | surname |
+
+Use the values, here we just compare them, but we could fill in input boxes or what ever
+
+| script | Base Fitnium Fixture |
+| check | does | !{firstname} | equal | Keith | true |
+| check | does | !{surname} | equal | Sterling | true |
+| close the browser |

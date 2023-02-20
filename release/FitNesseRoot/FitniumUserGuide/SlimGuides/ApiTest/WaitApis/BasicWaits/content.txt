@@ -1,0 +1,31 @@
+!1 Basic Wait APIs
+Wait for a page to load for n seconds
+{{{| wait For Page To Load For | time | seconds |
+}}}
+Wait for n milliseconds
+{{{| wait for | time | milliseconds |
+}}}
+Wait for n seconds
+{{{| wait for | time | seconds |
+}}}
+Wait for an link location to be present
+{{{| wait for location | url | to be present |
+}}}
+Wait for an xpath statement to evaluate to true
+{{{| wait for xpath | xpath | count to be | num |
+}}}
+!2 Examples
+Firstly we can wait for page to load
+
+| script | Base Fitnium Fixture |
+| jump to test page |
+| click the refresh button |
+| wait For Page To Load For | 10 | seconds |
+| note | Next we can just wait, sleep, pause etc for a period of time |
+| write to debug | Waiting for 3 Seconds |
+| wait for | 3000 | milliseconds |
+| write to debug | Waiting for 3 seconds |
+| wait for | 3 | seconds |
+| click the refresh button |
+| wait for location |!-http://localhost:8090/fitnium/testpage4api.html-! | to be present |
+| wait for xpath | !-//tr-! | count to be | 21 |

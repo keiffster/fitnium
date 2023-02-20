@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>BasicWaits</rootPath>
+    <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-2451859939237092462');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-2451859939237092462"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-2451859939237092462"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Basic Wait APIs</h1>Wait for a page to load for n seconds<br/><pre>| wait For Page To Load For | time | seconds |<br/></pre><br/>Wait for n milliseconds<br/><pre>| wait for | time | milliseconds |<br/></pre><br/>Wait for n seconds<br/><pre>| wait for | time | seconds |<br/></pre><br/>Wait for an link location to be present<br/><pre>| wait for location | url | to be present |<br/></pre><br/>Wait for an xpath statement to evaluate to true<br/><pre>| wait for xpath | xpath | count to be | num |<br/></pre><br/><h2>Examples</h2>Firstly we can wait for page to load<br/><br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait For Page To Load For</td>
+<td>10</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/>Next we can just wait, sleep, pause etc for a period of time<br/><br/><table border="1" cellspacing="0">
+<tr><td>write to debug</td>
+<td colspan="2">Waiting for 3 Seconds</td>
+</tr>
+<tr><td>wait for</td>
+<td>3000</td>
+<td>milliseconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>write to debug</td>
+<td colspan="2">Waiting for 3 seconds</td>
+</tr>
+<tr><td>wait for</td>
+<td>3</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="3">click the refresh button</td>
+</tr>
+<tr><td>wait for location</td>
+<td><a href="http://localhost:8090/fitnium/testpage4api.html">http://localhost:8090/fitnium/testpage4api.html</a></td>
+<td>to be present</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for xpath</td>
+<td>//tr</td>
+<td>count to be</td>
+<td>21</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('6358919236323961170');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img6358919236323961170"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="6358919236323961170"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>BasicWaits</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

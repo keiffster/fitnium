@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>MultiSelectLists</rootPath>
+    <result>
+    <counts>
+      <right>17</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-7601805732612956793');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-7601805732612956793"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-7601805732612956793"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Multiple Select List APIs</h1><br/>Check a list contains a list of options<br/><pre>| check | does list | locator | contain options | list | true|false |<br/>| check | list options | locator  | list |<br/></pre><br/>Select an item in a list box<br/><pre>| add selection option | option | to list | locator  |<br/>| add selection label | label | to list | locator  |<br/>| add selection value | value | to list | locator  |<br/>| add selection id | id | to list | locator  |<br/>| add Selection index | index | to list | locator  |<br/></pre><br/>Unselect an item in a list box<br/><pre>| remove selection Option | option | from list | locator  |<br/>| remove selection label | label| from list | locator  |<br/>| remove selection value | value | from list | locator  |<br/>| remove selection id | id | from list | locator  |<br/>| remove selection index | index | from list | locator  |<br/></pre><br/>Check a list box has one or more elements selected<br/><pre>| check | does List | locator  | Have Selection | true|false |<br/></pre><br/>Check if a list of ids are selected<br/><pre>| check | list | locator | Selected Item Ids are | list_of_ids | true|false |<br/></pre><br/>Check if a list of indexes are selected<br/><pre>| check | list | locator  | Selected Item Indexes are | list_of_indexes | true|false|<br/></pre><br/>Check if a list of labels are selected<br/><pre>| check | list |locator  | Selected Item Labels are | list_of_labels | true|false|<br/></pre><br/>Check if a list of values are selected<br/><pre>| check | list | locator  | Selected Item Values are | list_of_values | true|false|<br/></pre><br/>Store a list of selected ids in a variable<br/><pre>| store list | locator  | selected item indexes in | var |<br/></pre><br/>Store a list of selected indexes in a variable<br/><pre>| store list | locator  | selected item labels in | var |<br/></pre><br/>Store a list of selected labels in a variable<br/><pre>| store list | locator  | selected item values in | var |<br/></pre><br/>Store a list of selected options in a variable<br/><pre>| store list | locator  | options in | var |<br/></pre><br/><h2>Examples</h2><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does list</td>
+<td>form_car</td>
+<td>contain options</td>
+<td>Volvo,Saab,Audi,Mercedes,Other</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list options</td>
+<td>form_car</td>
+<td colspan="3" class="pass">Volvo,Saab,Audi,Mercedes,Other</td>
+</tr>
+</table>
+<br/>Add remove a selection using the label of an item<br/><table border="1" cellspacing="0">
+<tr><td>add selection label</td>
+<td>Saab</td>
+<td>to list</td>
+<td>form_car</td>
+</tr>
+<tr><td>remove selection label</td>
+<td>Saab</td>
+<td>from list</td>
+<td>form_car</td>
+</tr>
+</table>
+<br/>Add remove a selection using the value of an item<br/><table border="1" cellspacing="0">
+<tr><td>add selection value</td>
+<td>saab</td>
+<td>to list</td>
+<td>form_car</td>
+</tr>
+<tr><td>remove selection value</td>
+<td>saab</td>
+<td>from list</td>
+<td>form_car</td>
+</tr>
+</table>
+<br/>Add remove a selection using the id of an item<br/><table border="1" cellspacing="0">
+<tr><td>add selection id</td>
+<td>saab</td>
+<td>to list</td>
+<td>form_car</td>
+</tr>
+<tr><td>remove selection id</td>
+<td>saab</td>
+<td>from list</td>
+<td>form_car</td>
+</tr>
+</table>
+<br/>Add remove a selection using the index of an item<br/><table border="1" cellspacing="0">
+<tr><td>add Selection index</td>
+<td>1</td>
+<td>to list</td>
+<td>form_car</td>
+</tr>
+<tr><td>remove selection index</td>
+<td>1</td>
+<td>from list</td>
+<td>form_car</td>
+</tr>
+</table>
+<br/>Multiple selections in the same list<br/><table border="1" cellspacing="0">
+<tr><td>add Selection Option</td>
+<td>Volvo</td>
+<td>To List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>add Selection Option</td>
+<td>Audi</td>
+<td>To List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>add Selection Option</td>
+<td>Saab</td>
+<td>To List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>remove Selection Option</td>
+<td>Volvo</td>
+<td>From List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>remove Selection Option</td>
+<td>Other</td>
+<td>From List</td>
+<td colspan="2">form_car</td>
+</tr>
+<tr><td>check</td>
+<td>does List</td>
+<td>form_car</td>
+<td>Have Selection</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>list</td>
+<td>form_car</td>
+<td>Selected Item Ids are</td>
+<td>saab,audi</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_car</td>
+<td>Selected Item Indexes are</td>
+<td>1,2</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_car</td>
+<td>Selected Item Labels are</td>
+<td>Saab,Audi</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_car</td>
+<td>Selected Item Values are</td>
+<td>saab,audi</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>selected item ids in</td>
+<td colspan="3">val6</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val6</td>
+<td colspan="3" class="pass">saab,audi</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val6}</td>
+<td>contain any values</td>
+<td>saab,audi</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>selected item indexes in</td>
+<td>val7</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val7</td>
+<td class="pass">1,2</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>selected item labels in</td>
+<td>val8</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val8</td>
+<td class="pass">Saab,Audi</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>selected item values in</td>
+<td>val9</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val9</td>
+<td class="pass">saab,audi</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_car</td>
+<td>options in</td>
+<td>val10</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val10</td>
+<td class="pass">Volvo,Saab,Audi,Mercedes,Other</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('5457520991287873992');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img5457520991287873992"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="5457520991287873992"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>MultiSelectLists</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

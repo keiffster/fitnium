@@ -1,0 +1,62 @@
+This page is used to test all API's are available and working, for quick reference of all API, see
+[[API Quick Reference][.FitniumUserGuide.ApiQuickReference]]
+
+!path fitnesse.jar
+!path fitlibrary.jar
+!path ./lib/*.jar
+
+!|com.magneticreason.fitnium.BaseFitniumFixture|
+
+The suite of tests included in this section run against a basic form with
+all the controls needed to test Fitnium. The form can be viewed online at
+
+If you have configured Fitnium to run with Jetty as a local http server, then the files
+are hosted at :
+
+http://localhost:8090/fitnium/testpage4api.html
+
+Its not designed to be a perfect form, just the right content for the tests
+
+!2 API Guide
+!3 Browser Controls
+| [[Browser Controls][ApiTest.BrowserApis]] | How to control the browser under test |
+| [[Debug Commands][ApiTest.DebugApis]] | How to control debug information and write to the log file |
+| [[Screen Shots][ApiTest.ScreenShotApis]] | How to capture and store screen shots during your tests |
+!3 HTML Elements
+| [[HTML Attributes][ApiTest.AttributeApis]] | How to test HTML Attributes |
+| [[Button APIs][ApiTest.ButtonApis]] | How to test buttons |
+| [[Check Box APIs][ApiTest.CheckBoxApis]] | How to test check boxes |
+| [[Cookies][ApiTest.CookieApis]] | How to test cookies |
+| [[Element APIs][ApiTest.ElementApis]] | How to test HTML elements, the most basic/common form of testing |
+| [[HTML Forms][ApiTest.FormApis]] | How to test HTML forms |
+| [[Input Fields][ApiTest.InputApis]] | How to test text boxes, single and multi line |
+| [[Links][ApiTest.LinkApis]] | How to test HTML links |
+| [[List Boxes/Drop Downs][ApiTest.ListApis]] | How to test lists and combo boxes |
+| [[Mouse Commands][ApiTest.MouseApis]] | How to control and testing using the mouse |
+| [[Radio Buttons][ApiTest.RadioButtonApis]] | How to test radio buttons |
+| [[Keyboard Commands][ApiTest.KeyboardApis]] | How to test using keyboard commands |
+| [[Window Commands][ApiTest.WindowApis]] | How to test and control HTML windows |
+| [[Tables][ApiTest.TableApis]] | How to test the content of HTML tables |
+| [[Text Handling][ApiTest.TextApis]] | How to test for text fields in tests |
+!3 Wait Commands
+| [[Wait Commands][ApiTest.WaitApis]] | How to make your tests wait for events |
+| [[Basic Waits][ApiTest.WaitApis.BasicWaits]] | Common wait commands, timing, links and xpath |
+| [[Cookie Waits][ApiTest.WaitApis.CookieWaits]] | How to wait for cookie values |
+| [[Dialog Waits][ApiTest.WaitApis.DialogWaits]] | How to wait for dialogs |
+| [[ElementWaits][ApiTest.WaitApis.ElementWaits]] | How to wait for specific HTML elements |
+| [[HtmlWaits][ApiTest.WaitApis.HtmlWaits]] | How to wait for specific HTML  |
+| [[Javascript Waits][ApiTest.WaitApis.JavascriptWaits]] | How to wait for Javascript events, or use Javascript to wait |
+| [[List Waits][ApiTest.WaitApis.ListWaits]] | How to wait on the contents of lists |
+| [[Window Waits][ApiTest.WaitApis.WindowWaits]] | How to wait for specific HTML windows |
+!3 Data Commands
+| [[File and Directory Commands][ApiTest.FileAndDirectoryApis]] | How to read/write/copy/move/delete files and create/delete directories |
+| [[Generate Data][ApiTest.GeneratorApis]] | How to generate custom defined data |
+| [[Timing Commands ][ApiTest.TimeApis]] | How to record timing information in your tests |
+| [[Writer Commands ][ApiTest.WriterApis]] | How to read and write data to and from external sources |
+| [[Parameters][ApiTest.ParameterApis]] | How to parameterise your tests |
+!3 Javascript Commands
+| [[Javacript][ApiTest.JavascriptApis]] | How to use Javascript to enhance your testing |
+| [[Javascript Dialogs][ApiTest.JavascriptDialogApis]] | How to handle/test Alert, Warning and Confirmation Dialogs |
+
+!contents -R
+

@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ParameterApis</rootPath>
+    <result>
+    <counts>
+      <right>16</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-7575874309126127181');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-7575874309126127181"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-7575874309126127181"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Parameter APIs</h1><h2>Fitnesse Variables</h2>Define a Fitnesse Variable<br/><pre>!define name {value}<br/></pre><br/>Compare 2 Fitnesse Variables<br/><pre>| check | does | var1 | equal | var2 | true |<br/></pre><br/><h2>Selenium Variables</h2>Define a Selenium Variable<br/><pre>| set selenium variable called | name | with value | value |<br/></pre><br/>Get the value of a selenium variable<br/><pre>| get selenium variable called |<br/></pre><br/>Check value of selenium variable<br/><pre>| check | does selenium variable | variable | equal | value | true|false |<br/></pre><br/><h2>Fitnium Variables</h2>Define a Fitnium Variable<br/><pre>| set fitnium variable called | name | with value | value |<br/></pre><br/>Get the value of fitnium variable<br/><pre>| get fitnium variable called | name |<br/></pre><br/>Check a fitnium variable equals a specific value<br/><pre>| check | does fitnium variable | variable | equal value | value| true|false |<br/></pre><br/>Check a fitnium variable equals another fitnium variable<br/><pre>| check | does fitnium variable | fit1 | equal variable | fit2 | true |<br/></pre><br/><h2>List Helper Methods</h2>Does a list contain a specific value<br/><pre>| check | does list | list | contain value | value | true |<br/></pre><br/>Does a list contain a list of specific values<br/><pre>| check | does list | list | equal list | list | true |<br/></pre><br/>Does list contain any one of the specific values<br/><pre>| check | does list | list | contain any values | list | true |<br/></pre><br/><h2>Examples</h2>Fitnesse Variable Substition<br/><br/><span class="meta">variable defined: var1=keith</span><br/><span class="meta">variable defined: var2=keith</span><br/><span class="meta">variable defined: var3=sterling</span><br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does</td>
+<td>keith</td>
+<td>equal</td>
+<td>keith</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>does</td>
+<td>keith</td>
+<td>equal</td>
+<td>sterling</td>
+<td class="pass">false</td>
+</tr>
+</table>
+<br/>Selenium variables are defined as <span class="meta">undefined variable: name</span> and are available to Javascript inside Selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>set selenium variable called</td>
+<td>sel1</td>
+<td>with value</td>
+<td colspan="3">selenium</td>
+</tr>
+<tr><td>check</td>
+<td>get selenium variable called</td>
+<td>sel1</td>
+<td colspan="3" class="pass">selenium</td>
+</tr>
+<tr><td>check</td>
+<td>does selenium variable</td>
+<td>sel1</td>
+<td>equal</td>
+<td>selenium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>Fitnium variables are defined as !{name} and can be used as parameters into your tests<br/><br/><table border="1" cellspacing="0">
+<tr><td>set fitnium variable called</td>
+<td>fit1</td>
+<td>with value</td>
+<td>fitnium</td>
+</tr>
+<tr><td>set fitnium variable called</td>
+<td>fit2</td>
+<td>with value</td>
+<td>fitnium</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>fit1</td>
+<td colspan="3" class="pass">fitnium</td>
+</tr>
+<tr><td>check</td>
+<td>does fitnium variable</td>
+<td>fit1</td>
+<td>equal value</td>
+<td>fitnium</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>does fitnium variable</td>
+<td>fit1</td>
+<td>equal variable</td>
+<td>fit2</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does</td>
+<td>!{fit1}</td>
+<td>equal</td>
+<td>fitnium</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>does</td>
+<td>!{fit1}</td>
+<td>equal</td>
+<td>!{fit2}</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><br/>Helper methods for parsing comma seperated lists<br/><br/>Does a list contain a specific value<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does list</td>
+<td>x,y,z</td>
+<td>contain value</td>
+<td>y</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>Does a list contain a list of specific values<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does list</td>
+<td>x,y,z</td>
+<td>equal list</td>
+<td>x,y,z</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>Does list contain any one of the specific values<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does list</td>
+<td>x,y,z</td>
+<td>contain any values</td>
+<td>x,y</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('8926645528460491240');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img8926645528460491240"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="8926645528460491240"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>ParameterApis</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

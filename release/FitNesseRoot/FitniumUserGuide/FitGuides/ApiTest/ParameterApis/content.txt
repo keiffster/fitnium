@@ -1,0 +1,121 @@
+!1 Parameter APIs
+!2 Fitnesse Variables
+Define a Fitnesse Variable
+{{{!define name {value}
+}}}
+Compare 2 Fitnesse Variables
+{{{| check | does | var1 | equal | var2 | true |
+}}}
+!2 Selenium Variables
+Define a Selenium Variable
+{{{| set selenium variable called | name | with value | value |
+}}}
+Get the value of a selenium variable
+{{{| get selenium variable called |
+}}}
+Check value of selenium variable
+{{{| check | does selenium variable | variable | equal | value | true|false |
+}}}
+!2 Fitnium Variables
+Define a Fitnium Variable
+{{{| set fitnium variable called | name | with value | value |
+}}}
+Get the value of fitnium variable
+{{{| get fitnium variable called | name |
+}}}
+Check a fitnium variable equals a specific value
+{{{| check | does fitnium variable | variable | equal value | value| true|false |
+}}}
+Check a fitnium variable equals another fitnium variable
+{{{| check | does fitnium variable | fit1 | equal variable | fit2 | true |
+}}}
+Replace a text in a string and store the result in a fitnium variable
+{{{| replace | find | with | rep| in | str | and store in fitnium variable | var |
+}}}
+Extract a pattern from a text string and store in a fitnium variable
+{{{| extract text in variable | var | matching pattern | pattern | and store in | varname |
+}}}
+!2 List Helper Methods
+Does a list contain a specific value
+{{{| check | does list | list | contain value | value | true |
+}}}
+Does a list contain a list of specific values
+{{{| check | does list | list | equal list | list | true |
+}}}
+Does list contain any one of the specific values
+{{{| check | does list | list | contain any values | list | true |
+}}}
+!2 Examples
+Fitnesse Variable Substition
+
+!define var1 {keith}
+!define var2 {keith}
+!define var3 {sterling}
+
+| check | does | ${var1} | equal | ${var2} | true |
+| check | does | ${var1} | equal | ${var3} | false |
+
+Selenium variables are defined as !-${name}-! and are available to Javascript inside Selenium
+Note you will need to surround the variable name with !- !--! -! to stop Fitnesse parsing it out
+
+| set selenium variable called | sel1 | with value | selenium |
+| check | get selenium variable called | sel1 | selenium |
+| check | does selenium variable | sel1 | equal | selenium | true |
+
+Assign a Selenium variable to another Selenium variable
+
+| set selenium variable called | sel2 | with value | !-${sel1}-! |
+| check | get selenium variable called | sel2 | selenium |
+| check | does selenium variable | sel2 | equal | selenium | true |
+
+Fitnium variables are defined as !{name} and can be used as parameters into your tests
+
+| set fitnium variable called | fit1 | with value | fitnium |
+| set fitnium variable called | fit2 | with value | fitnium |
+
+| check | get fitnium variable called | fit1 | fitnium |
+| check | does fitnium variable | fit1 | equal value | fitnium | true |
+| check | does fitnium variable | fit1 | equal variable | fit2 | true |
+
+| check | does | !{fit1} | equal | fitnium | true |
+| check | does | !{fit1} | equal | !{fit2} | true |
+
+Assign a fitnium variable to another fitnium variable
+
+| set fitnium variable called | fit3 | with value | !{fit2} |
+| check | does | !{fit3} | equal | !{fit2} | true |
+| check | does | !{fit3} | equal | fitnium | true |
+
+Even assign a fitnium variable to a selenium variable
+| set selenium variable called | selA | with value | fitnium |
+| check | does selenium variable | selA | equal | fitnium | true |
+| set fitnium variable called | fitB | with value | !-${selA}-! |
+| check | does fitnium variable | fitB | equal value | fitnium | true |
+
+And assign a selenium variable to a fitnium variable
+| set fitnium variable called | fitA | with value | fitnium |
+| check | does fitnium variable | fitA | equal value | fitnium | true |
+| set selenium variable called | selB | with value | !{fitA} |
+| check | does selenium variable | selB | equal| fitnium | true |
+
+Replace the content of a string and store in a variable
+
+| replace | Goo| with | Bea | in | Google | and store in fitnium variable | fit4 |
+| check | does | !{fit4} | equal | Beagle | true |
+
+Extract a segment of a string into a fitnium variable
+
+| set fitnium variable called | error | with value | !-#255 (Maven deploy - Java heap space fatal error-! |
+| extract text in variable | error | matching pattern | [0-9]+ | and store in | errnum |
+| check | does | !{errnum} | equal | 255 | true |
+
+Helper methods for parsing comma seperated lists
+
+Does a list contain a specific value
+| check | does list | x,y,z | contain value | y | true |
+
+Does a list contain a list of specific values
+| check | does list | x,y,z | equal list | x,y,z | true |
+
+Does list contain any one of the specific values
+| check | does list | x,y,z | contain any values | x,y | true |

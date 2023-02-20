@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>RegularExpressions</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>3</exceptions>
+    </counts>
+    <content><![CDATA[Regular Expressions<br/><br/>To see how to write you own tokens, click the link <a href="FitniumUserGuide.SlimGuides.WritingSpecialTokens">Writing Special Tokens</a><br/><br/><span class="meta">classpath: fitnesse.jar</span><br/><span class="meta">classpath: fitlibrary.jar</span><br/><span class="meta">classpath: ./dist/fitnium2.jar</span><br/><span class="meta">classpath: ./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar</span><br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">import<hr/> <span class="fit_label">Could not find fixture: import.</span></td>
+</tr>
+<tr><td>fitnesse.slim.test</td>
+</tr>
+<tr><td>fitnesse.fixtures</td>
+</tr>
+<tr><td>com.magneticreason.fitnium</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td class="error">script<hr/> <span class="fit_label">Could not find fixture: script.</span></td>
+<td colspan="3">Base Fitnium Fixture</td>
+</tr>
+<tr><td>the server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>the server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*firefox</td>
+<td>start at</td>
+<td>localhost:8090/fitnium/</td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">script<hr/> <span class="fit_label">Could not find fixture: script.</span></td>
+<td colspan="7">Base Fitnium Fixture</td>
+</tr>
+<tr><td>starting at URL</td>
+<td colspan="7">testpage4api.html</td>
+</tr>
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td colspan="6">seconds</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="6">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>title of current page is</td>
+<td>regexpi:M[a-z]*.R[a-z]*</td>
+<td colspan="5">true</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td colspan="5">Fitnium Test Page</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td>is</td>
+<td>regexp:F[a-z]*.T[a-z]*.P[a-z]*</td>
+<td colspan="3">true</td>
+</tr>
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td colspan="5">true</td>
+</tr>
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>regexp:T[a-z|A-Z|.]*</td>
+<td colspan="5">true</td>
+</tr>
+<tr><td>check</td>
+<td>value of attribute</td>
+<td>xpath=(//input[@id='form_firstname'])@name</td>
+<td>is</td>
+<td>firstname</td>
+<td colspan="3">true</td>
+</tr>
+<tr><td>check</td>
+<td>value of attribute</td>
+<td>xpath=(//input[@id='form_firstname'])@name</td>
+<td>is</td>
+<td>regexp:first[a-z]{3}e</td>
+<td colspan="3">true</td>
+</tr>
+<tr><td>create cookie named</td>
+<td>fitnium3</td>
+<td>with value</td>
+<td>is cool</td>
+<td>and path</td>
+<td>/</td>
+<td>and max age</td>
+<td>30000</td>
+</tr>
+<tr><td>check</td>
+<td>value of cookie named</td>
+<td>fitnium3</td>
+<td>is</td>
+<td>is cool</td>
+<td colspan="3">true</td>
+</tr>
+<tr><td>check</td>
+<td>value of cookie named</td>
+<td>fitnium3</td>
+<td>is</td>
+<td>regexpi:[a-z]*.[a-z]*</td>
+<td colspan="3">true</td>
+</tr>
+<tr><td>enter</td>
+<td>Keith</td>
+<td>in input field</td>
+<td colspan="5">name=firstname</td>
+</tr>
+<tr><td>check</td>
+<td>value of element</td>
+<td>name=firstname</td>
+<td>is</td>
+<td>Keith</td>
+<td colspan="3">true</td>
+</tr>
+<tr><td>check</td>
+<td>value of element</td>
+<td>name=firstname</td>
+<td>is</td>
+<td>regexpi:K[a-z]*</td>
+<td colspan="3">true</td>
+</tr>
+<tr><td colspan="8">close the browser</td>
+</tr>
+</table>
+<br/>]]></content>
+    <relativePageName>RegularExpressions</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

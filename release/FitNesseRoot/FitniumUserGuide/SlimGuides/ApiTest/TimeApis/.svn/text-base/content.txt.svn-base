@@ -1,0 +1,20 @@
+!1 Timing APIs
+Get the current time in milliseconds
+{{{| current time |
+}}}
+Store the current time in milliseconds in a variable
+{{{| store current time in | variable |
+}}}
+Store the difference between 2 timings
+{{{| store difference between | variable1 | and | variable2 | in | variable3 |
+}}}
+!2 Examples
+| script | Base Fitnium Fixture |
+| jump to test page |
+| current time |
+| store current time in | time1 |
+| wait for | 1 | seconds |
+| store current time in | time2 |
+| store difference between | !{time2} | and | !{time1} | in | testtime |
+
+

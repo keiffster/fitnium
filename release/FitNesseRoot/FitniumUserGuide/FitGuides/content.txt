@@ -1,0 +1,28 @@
+The original version of Fitnium uses the DoFixture from the FitLIbrary set of fixtures.
+
+DoFixture can be used to describe story-like tests, almost in plain English. It is a much more efficient replacement for ActionFixture and also has some great features like flow-mode coordination and wrapping domain objects
+
+For more information on the Fixture Library DoFixture click http://www.fitnesse.info/fixturegallery:fitlibraryfixtures:dofixture
+
+[[Getting Started][FitGuides.GettingStarted]] - Shows you how to configure the class path to include Fitnium libraries
+
+[[Browser Configuration][FitGuides.BrowserConfiguration]] - Show how to connect to Selenium and open a URL
+
+[[Your first test][FitGuides.FirstTest]] - A basic test that connects to google and searches for a really cool website
+
+[[API Guides][FitGuides.ApiTest]] - A complete set of documentation and tests which demonstrated all Fitnium APIs
+
+[[Parameterising your tests][FitGuides.ParameterTests]] - Provides the ability to parametise our tests and store values in variables for checking later
+
+[[Special Tokens][FitGuides.SpecialTokens]] - Provides the ability to dynamically create data during your tests
+
+[[Regular Expressions][FitGuides.RegularExpressions]] - Show how to use regular expressions in your tests to make them more dynamic
+
+[[Reading and Writing Data][FitGuides.ReadingWritingData]] - Show how to write data to a file, and read it back in later tests
+
+[[Form Testing][FitGuides.FormTest]] - How to test forms with Fitnium
+
+[[Checking Links on a page][FitGuides.LinkChecking]] - How to check links with Fitnium
+
+!3 Table to Contents
+!contents -R2 -g -p -f -h

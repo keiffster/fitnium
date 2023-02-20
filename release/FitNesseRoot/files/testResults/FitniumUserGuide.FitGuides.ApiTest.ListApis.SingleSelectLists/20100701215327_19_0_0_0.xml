@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>SingleSelectLists</rootPath>
+    <result>
+    <counts>
+      <right>19</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('468763641244052527');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img468763641244052527"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="468763641244052527"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Single Select List APIs</h1>Check a list contains a number of text items<br/><pre>| check | does list | locator | contain options | list_of_options | true|false |<br/></pre><br/>Check a list contains a number of option items<br/><pre>| check | list options | locator  |  list_of_options |<br/></pre><br/>Select an item in a single select list box<br/><pre>| select option | option | In List | locator  |<br/>| select label | label | In List | locator  |<br/>| select value | value | In List | locator  |<br/>| select id    | id | In List | locator  |<br/>| select index | index | In List | locator  |<br/></pre><br/>Check a list has an item selected<br/><pre>| check | does List | locator  | Have Selection | true|false |<br/></pre><br/>Check a selected item id<br/><pre>| check | list | locator  | Selected Item Id is | id| true|false|<br/></pre><br/>Check a selected item index<br/><pre>| check | list | locator  | Selected Item Index is | index | true|false|<br/></pre><br/>Check a selected list label<br/><pre>| check | list | locator  | Selected Item Label is | label | true|false|<br/></pre><br/>Check a selected list value<br/><pre>| check | list | locator  | Selected Item Value is | value | true|false|<br/></pre><br/>Store if a list has a selection in a variable<br/><pre>| store does list | locator | have selection in | var |<br/></pre><br/>Store the selected item id in a variable<br/><pre>| store list | locator  | selected item id in | var |<br/></pre><br/>Store the selected item index in a variable<br/><pre>| store list | locator  | selected item index in | var |<br/></pre><br/>Store the selected item label in a variable<br/><pre>| store list | locator  | selected item label in | var |<br/></pre><br/>Store the selected item value in a variable<br/><pre>| store list | locator  | selected item value in | var |<br/></pre><br/><h2>Examples</h2><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>does list</td>
+<td>form_country</td>
+<td>contain options</td>
+<td>Wales,Scotland,Ireland,England,Other</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list options</td>
+<td>form_country</td>
+<td colspan="3" class="pass">Wales,Scotland,Ireland,England,Other</td>
+</tr>
+</table>
+<br/>Select a single select list item in a variety of ways with a variety of APIs<br/><br/><table border="1" cellspacing="0">
+<tr><td>select Option</td>
+<td>England</td>
+<td>In List</td>
+<td colspan="2">form_country</td>
+</tr>
+<tr><td>select label</td>
+<td>England</td>
+<td>In List</td>
+<td colspan="2">form_country</td>
+</tr>
+<tr><td>select value</td>
+<td>eng</td>
+<td>In List</td>
+<td colspan="2">form_country</td>
+</tr>
+<tr><td>select id</td>
+<td>eng</td>
+<td>In List</td>
+<td colspan="2">form_country</td>
+</tr>
+<tr><td>select index</td>
+<td>3</td>
+<td>In List</td>
+<td colspan="2">form_country</td>
+</tr>
+<tr><td>check</td>
+<td>does List</td>
+<td>form_country</td>
+<td>Have Selection</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>list</td>
+<td>form_country</td>
+<td>Selected Item Id is</td>
+<td>eng</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_country</td>
+<td>Selected Item Index is</td>
+<td>3</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_country</td>
+<td>Selected Item Label is</td>
+<td>England</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>list</td>
+<td>form_country</td>
+<td>Selected Item Value is</td>
+<td>eng</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store does list</td>
+<td>form_country</td>
+<td>have selection in</td>
+<td>val1</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_country</td>
+<td>selected item id in</td>
+<td colspan="3">val2</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val2</td>
+<td colspan="3" class="pass">eng</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val2}</td>
+<td>contain  value</td>
+<td>eng</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_country</td>
+<td>selected item index in</td>
+<td colspan="3">val3</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val3</td>
+<td colspan="3" class="pass">3</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val3}</td>
+<td>contain  value</td>
+<td>3</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_country</td>
+<td>selected item label in</td>
+<td colspan="3">val4</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val4</td>
+<td colspan="3" class="pass">England</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val4}</td>
+<td>contain  value</td>
+<td>England</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store list</td>
+<td>form_country</td>
+<td>selected item value in</td>
+<td colspan="3">val5</td>
+</tr>
+<tr><td>check</td>
+<td>get fitnium variable called</td>
+<td>val5</td>
+<td colspan="3" class="pass">eng</td>
+</tr>
+<tr><td>check</td>
+<td>does list</td>
+<td>!{val5}</td>
+<td>contain  value</td>
+<td>eng</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-3570939693760479666');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-3570939693760479666"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-3570939693760479666"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>SingleSelectLists</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

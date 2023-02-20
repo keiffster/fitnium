@@ -1,0 +1,12 @@
+!define TEST_SYSTEM {slim}
+
+!path C:\Dev\src\Java\SlimFitnium\dist\SlimFitnium.jar
+
+|import|
+|fitnesse.slim.test|
+|fitnesse.fixtures|
+
+
+|script| fitnium tests |
+| start fitnium at | http://www.google.co.uk/ | using | *firefox |
+| stop fitnium |

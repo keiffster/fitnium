@@ -1,0 +1,9 @@
+!1 Window Wait APIs
+Wait for a window title to be present
+{{{| wait for window titles | title | to be present |
+}}}
+!2 Examples
+| click the refresh button |
+| wait for window titles | Magnetic Reason | to be present |
+
+

@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>ElementApis</rootPath>
+    <result>
+    <counts>
+      <right>12</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('8405067973532878335');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img8405067973532878335"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="8405067973532878335"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium <br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Element APIs</h1><br/>Check Text of an Element<br/><pre>| check| text of element | locator |text |<br/></pre><br/>Check Value of an Element<br/><pre>| check| value of element | locator | value|<br/></pre><br/>Check Index of an Element<br/><pre>| check| index of element |locator | index |<br/></pre><br/>Check Height of an Element<br/><pre>| check| element | locator | height | value |<br/></pre><br/>Check Width of an Element<br/><pre>| check| element | locator | width | value |<br/></pre><br/>Check Element is Visible<br/><pre>| check | is element visible | locator | true|false |<br/></pre><br/>Check Element is Present<br/><pre>| check| is element present | locator | true|false |<br/></pre><br/>Store Values of Elements in Variables<br/><pre>| store is element | locator | present in | var |<br/>| store is element | locator | visible in | var |<br/>| store text of element | locator  | in | var |<br/>| store index of element | locator  | in | var |<br/>| store element | locator  | height in | var |<br/>| store element | locator  | width in | var |<br/>| store left position of element | locator  | in | var |<br/>| store top position of element | locator  | in | var |<br/></pre><br/><h2>Examples</h2>First wait for elements to appear<br/><br/><table border="1" cellspacing="0">
+<tr><td>wait for element</td>
+<td colspan="4">name=firstname</td>
+</tr>
+<tr><td>wait for element</td>
+<td>name=firstname</td>
+<td>for</td>
+<td>10</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/>First set up some text so that we check for it<br/><br/><table border="1" cellspacing="0">
+<tr><td>enter</td>
+<td>Keith</td>
+<td>in input field</td>
+<td>name=firstname</td>
+</tr>
+</table>
+<br/>Then we can check the element using various commands<br/><br/><table border="1" cellspacing="0">
+<tr><td class="error">value of element<hr/> <span class="fit_label">Missing methods: public TypeOfResult valueOfElementKeith(Type1 arg1) { } in class com.magneticreason.fitnium.BaseFitniumFixture</span></td>
+<td>name=firstname</td>
+<td colspan="2">Keith</td>
+</tr>
+<tr><td>check</td>
+<td>index of element</td>
+<td>name=firstname</td>
+<td class="pass">0</td>
+</tr>
+<tr><td>element</td>
+<td>name=firstname</td>
+<td colspan="2">height</td>
+</tr>
+<tr><td>element</td>
+<td>name=firstname</td>
+<td colspan="2">width</td>
+</tr>
+<tr><td>check</td>
+<td>is element present</td>
+<td>name=firstname</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>is element visible</td>
+<td>name=firstname</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>Any element that contains text ( i.e inbetween the &lt;&gt; tags ) can be obtains using "text of element"<br/><br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=/html/body/div[@id='outer']/div[@id='content']/div[@id='primaryContentContainer']/div[@id='primaryContent']/div/h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/>We can also obtain some position information about elements<br/><br/>I don't really care about the positions in this test and even a minor<br/>change to the screen could change the positions, therefore the test<br/>is really to ensure the API call is correct<br/><br/><table border="1" cellspacing="0">
+<tr><td>element</td>
+<td>name=firstname</td>
+<td colspan="4">width</td>
+</tr>
+<tr><td>element</td>
+<td>name=firstname</td>
+<td colspan="4">height</td>
+</tr>
+<tr><td>check</td>
+<td>left position of element</td>
+<td>id=header</td>
+<td colspan="3" class="pass">0</td>
+</tr>
+<tr><td>check</td>
+<td>left position of element</td>
+<td>id=header</td>
+<td>is</td>
+<td>0</td>
+<td class="pass">true</td>
+</tr>
+<tr><td>check</td>
+<td>top position of element</td>
+<td>id=header</td>
+<td colspan="3" class="pass">0</td>
+</tr>
+<tr><td>check</td>
+<td>top position of element</td>
+<td>id=header</td>
+<td>is</td>
+<td>0</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/>We can also store all teh various values in fitnim variables<br/><br/><table border="1" cellspacing="0">
+<tr><td>store is element</td>
+<td>name=firstname</td>
+<td>present in</td>
+<td>value1</td>
+</tr>
+<tr><td>store is element</td>
+<td>name=firstname</td>
+<td>visible in</td>
+<td>value2</td>
+</tr>
+<tr><td>store text of element</td>
+<td>name=firstname</td>
+<td>in</td>
+<td>value3</td>
+</tr>
+<tr><td>store index of element</td>
+<td>name=firstname</td>
+<td>in</td>
+<td>value4</td>
+</tr>
+<tr><td>store element</td>
+<td>name=firstname</td>
+<td>height in</td>
+<td>value5</td>
+</tr>
+<tr><td>store element</td>
+<td>name=firstname</td>
+<td>width in</td>
+<td>value6</td>
+</tr>
+<tr><td>store left position of element</td>
+<td>name=firstname</td>
+<td>in</td>
+<td>value7</td>
+</tr>
+<tr><td>store top position of element</td>
+<td>name=firstname</td>
+<td>in</td>
+<td>value8</td>
+</tr>
+</table>
+<br/><br/>Finally for debuggin purposes we can highlight the element of change its id<br/><br/><table border="1" cellspacing="0">
+<tr><td>highlight element</td>
+<td colspan="3">name=firstname</td>
+</tr>
+<tr><td>assign element</td>
+<td>name=firstname</td>
+<td>id</td>
+<td>newname</td>
+</tr>
+</table>
+<br/><br/><br/><br/><br/><br/><br/><br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('1411071097319424994');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img1411071097319424994"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="1411071097319424994"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>ElementApis</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

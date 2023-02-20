@@ -1,0 +1,28 @@
+!1 Button APIs
+
+To click a button
+{{{| click button | locator|
+}}}
+To click browser buttons ( back, close and refresh )
+{{{| click the back button |
+| click the close button |
+| click the refresh button |
+}}}
+To check a button with a specific id exists
+{{{| check | does button With Id | send | exist | true |
+}}}
+Or to grab all the ids of a button into a list and or check a list of ids exist
+{{{| store all buttons in | list |
+| check | do buttons with ids exist | !{list} | true |
+}}}
+!2 Examples
+
+| script | Base Fitnium Fixture |
+| jump to test page |
+| check | does button With Id | send | exist | true |
+| click button | send |
+| wait for page to load for | 5 | seconds |
+| click the back button |
+| store all buttons in | list |
+| check | do buttons with ids exist | !{list} | true |
+

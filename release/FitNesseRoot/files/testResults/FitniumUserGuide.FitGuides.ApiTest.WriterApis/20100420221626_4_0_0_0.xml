@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>WriterApis</rootPath>
+    <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="setup">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-105919214655962234');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-105919214655962234"/>
+	</a>
+&nbsp;<span class="meta">Set Up: <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp">.FitniumUserGuide.FitGuides.ApiTest.SetUp</a> <a href="FitniumUserGuide.FitGuides.ApiTest.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-105919214655962234"><table border="1" cellspacing="0">
+<tr><td>com.magneticreason.fitnium.BaseFitniumFixture</td>
+</tr>
+</table>
+<br/>Set up the browser and connect to selenium<br/><br/><table border="1" cellspacing="0">
+<tr><td>The server is located at</td>
+<td colspan="3">localhost</td>
+</tr>
+<tr><td>The server is on port</td>
+<td colspan="3">4444</td>
+</tr>
+<tr><td>Using the browser</td>
+<td>*chrome</td>
+<td>start at</td>
+<td><a href="http://localhost:8090/fitnium/">http://localhost:8090/fitnium/</a></td>
+</tr>
+<tr><td>check</td>
+<td>is selenium initialised</td>
+<td colspan="2" class="pass">true</td>
+</tr>
+<tr><td>set speed to</td>
+<td>100</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>set timeout to</td>
+<td>20000</td>
+<td colspan="2">milliseconds</td>
+</tr>
+<tr><td>write to debug</td>
+<td colspan="3">starting test</td>
+</tr>
+</table>
+<br/>Lets first start at the Fitnium home page at Magnetic Reason<br/><br/><table border="1" cellspacing="0">
+<tr><td>starting at URL</td>
+<td>testpage4api.html</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>wait for page to load for</td>
+<td>5</td>
+<td>seconds</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>title of current page</td>
+<td colspan="2" class="pass">Magnetic Reason</td>
+</tr>
+<tr><td>check</td>
+<td>text of element</td>
+<td>xpath=//h1</td>
+<td class="pass">Fitnium Test Page</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>check</td>
+<td>is Text Present</td>
+<td>This page contains all the elements neccassary to test Fitnium</td>
+<td class="pass">true</td>
+</tr>
+</table>
+</div>
+</div>
+<h1>Writer APIs</h1><br/>Note that additional jar files are required to use the Excel Generator described below in the examples<br/>We currently use POI and this jar file needs to be included in the path<br/><br/>Load writer, give it a name, and passing in any additional parameters<br/><pre>| load writer | classpath | into | name | with params | params-list |<br/></pre><br/>Store a value in the writer<br/><pre>| store value | value | with params | params-list | in writer | name |<br/></pre><br/>Flush the writer, This is important as nothing is writing to the write until flush is called<br/>If you do not call flush, you will loose your data<br/><pre>| flush writer | name |<br/></pre><br/><h2>Examples</h2><span class="meta">classpath: poi-3.2-FINAL-20081019.jar</span><br/><br/><table border="1" cellspacing="0">
+<tr><td>load writer</td>
+<td>com.magneticreason.fitnium.writer.ExcelSpreadsheet<a title="create page" href="ExcelSpreadsheet?edit&nonExistent=true">[?]</a></td>
+<td>into</td>
+<td>testSheet</td>
+<td>with params</td>
+<td>testBook.xls,testSheet</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store value</td>
+<td>Name:</td>
+<td>with params</td>
+<td>1,1</td>
+<td>in writer</td>
+<td>testSheet</td>
+</tr>
+<tr><td>store value</td>
+<td>Keith</td>
+<td>with params</td>
+<td>1,2</td>
+<td>in writer</td>
+<td>testSheet</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>store value</td>
+<td>Surname:</td>
+<td>with params</td>
+<td>2,1</td>
+<td>in writer</td>
+<td>testSheet</td>
+</tr>
+<tr><td>store value</td>
+<td>Sterling</td>
+<td>with params</td>
+<td>2,2</td>
+<td>in writer</td>
+<td>testSheet</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td>flush writer</td>
+<td>testSheet</td>
+</tr>
+</table>
+<br/><div class="teardown">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-2122707912575789992');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-2122707912575789992"/>
+	</a>
+&nbsp;<span class="meta">Tear Down: <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown">.FitniumUserGuide.FitGuides.ApiTest.TearDown</a> <a href="FitniumUserGuide.FitGuides.ApiTest.TearDown?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="-2122707912575789992"><br/><table border="1" cellspacing="0">
+<tr><td>close the browser</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>WriterApis</relativePageName>
+        <tags>null</tags>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

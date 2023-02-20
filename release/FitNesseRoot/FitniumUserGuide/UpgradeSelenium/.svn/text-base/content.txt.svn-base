@@ -1,0 +1,16 @@
+!2 Selenium 1
+
+All you need to do to upgrade to a new version of Selenium is download the RC Server and Client jars from Selenium HQ
+
+Copy the jars into the Fitnium folder structure and update the path files in your tests, then restart and you are good to go
+
+!2 Selenium 2
+
+Fitnium 2 is currently not compatible with Selenium 2 which uses Web Driver as its native UI kernel.
+
+We are currently working on a version of Fitnium which should allow you to switch between Selenium 1 and Selenium 2
+
+This is likely to form the basis of Fitnium 3 due out later this year
+
+
+

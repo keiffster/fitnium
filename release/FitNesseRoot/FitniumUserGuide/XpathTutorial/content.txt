@@ -1,0 +1,90 @@
+A basic HTML document ( the system under tests looks something like )
+
+{{{
+<html>
+  <head>
+  </head>
+  <body>
+  </body>
+</html>
+}}}
+
+The information rendered ( i.e displayed ) in your browser window, is normally contained within the section surrounded by <body> ... </body>
+
+Within this section you will find all of the html elements which creates a screen. For example a typical web page would look something like
+
+{{{
+<html>
+  <head>
+    <title>This is the title</title>
+  </head>
+  <body>
+    <h1>This is a header</h1>
+    <h2>This is a slightly smaller header</h2>
+    <p>
+       A paragraph of text. A paragraph of text. A paragraph of text. A paragraph of text.
+       A paragraph of text. A paragraph of text. A paragraph of text. A paragraph of text.
+       <h3>Another header</h3>
+       <h3>Yet another header</h3>
+    </p>
+  </body>
+</html>
+}}}
+
+CSS allows us to select any of the HTML elements by viewing the web page structure as a tree and by providing a path that traverses the tree
+
+For example the above web page can also be viewed as a tree
+
+{{{
+html
+   + head
+        + title
+   + body
+        + h1
+        + h2
+        + p
+            + h3
+            + h3
+}}}
+CSS uses the tree to select elements, either by
+
+a) Specifying the full path of the element from the root of the document
+
+{{{
+/body/h1         Selects the h1 elements
+/body/p/h3[1]    Selects the first h3 element under the p, under the body element. We need to specify which one we want, [1] means number 1, the first
+}}}
+
+b) Specify a partial path which CSS searches for
+
+//p              Will find any p element anywhere in the document
+//p/h3           Will find any h3, under a p element, anywhere in the docment
+//p/h3[2]        Will find the second h3, under a p element, anywhere in the docment
+
+Now we understand the basics we can show a series of XPath selectors you are likely to use in Fitnium
+
+Input with id firstname
+
+//input[@id='firstname']
+
+3rd element of the 2nd row of a table
+
+//table/tr[2]/td[3]
+
+First element, of the last row of the table
+
+//table/tr[last()]/td[1]
+
+Get the second element of the row, which has an element whose value is 1000 2234 1134
+This example allows you to select other columns of a row, once you have found the row with td[text()='']
+The examples, once selects the element with the text, it pops back up the tree and then selects another
+column at the same level
+
+//table/tr/td[text()='1000 2234 1134'/../td[2]
+
+
+
+
+
+
+

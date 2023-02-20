@@ -1,0 +1,6 @@
+!3 !-fit-!
+|'''Date: '''|!-7:22:13 PM (BST) on Monday, March 29, 2010-!|
+|'''Test Page: '''|.FitniumUserGuide.FitGuides.ApiTest.FormApis|
+|'''Command: '''|!-java -cp fitnesse.jar;fitnesse.jar;fitlibrary.jar;./dist/fitnium2.jar;./selenium-remote-control-1.0.3/selenium-java-client-driver-1.0.1/selenium-java-client-driver.jar fit.FitServer Ibanez 80 4-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-12.003 seconds-!|

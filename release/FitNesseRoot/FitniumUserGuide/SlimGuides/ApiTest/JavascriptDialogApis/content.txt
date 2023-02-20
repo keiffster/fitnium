@@ -1,0 +1,102 @@
+!1 Javascript Dialog APIs
+!3 Alert Dialog APIs
+Check the message in an alert box
+{{{| check | alert dialog message | message |
+| check | alert dialog message is | message | true|false |
+}}}
+Store the message in an alert box in a variable
+{{{| store alert dialog message in | variable |
+}}}
+Check an alert box has occured
+{{{| check | has Alert Occurred | true|false |
+}}}
+Close the alert box
+{{{| close Alert Dialog |
+}}}
+!3 Prompt Dialog APIs
+Set the text to be entered into the next prompt box automatically
+{{{| answer | text | On Next Prompt |
+}}}
+Check a prompt box has occurred
+{{{| check | has Prompt Occurred | true|false |
+}}}
+Check the text of a prompt box
+{{{| check | Prompt Dialog Message | text |
+}}}
+{{{| check | Prompt Dialog Message is |text  | true|false |
+}}}
+Store the text of a prompt box in a variable
+{{{| store prompt dialog message in | variable |
+}}}
+Close a prompt box
+{{{| close prompt Dialog |
+}}}
+!3 Confirmation Dialog APIs
+Press the Cancel button when the next confirmation box is displayed
+{{{| choose Cancel On Next Confirmation |
+}}}
+Press the Okbutton when the next confirmation box is displayed
+{{{| choose Ok On Next Confirmation |
+}}}
+Check if a confirmation box has occurred
+{{{| check | has Confirmation Occurred | true|false |
+}}}
+Close a confirmation box
+{{{| close confirmation Dialog |
+}}}
+Check the message of a confirmation box
+{{{| check | Confirmation Dialog Message | text |
+| store confirmation dialog message in | variable |
+}}}
+!2 Examples
+!3 Alert Dialog APIs
+| script | Base Fitnium Fixture |
+| jump to test page |
+| click element | id=btn_alert |
+| check | alert dialog message | Alert Message |
+| click element | id=btn_alert |
+| check | alert dialog message is | Alert Message | true |
+| click element | id=btn_alert |
+| store alert dialog message in | alert |
+| click element | id=btn_alert |
+| check | has Alert Occurred | true |
+| close Alert Dialog |
+!3 Prompt Dialog APIs
+| script | Base Fitnium Fixture |
+| click element | id=btn_prompt |
+| check | has Prompt Occurred | true |
+| click element | id=btn_prompt |
+| check | prompt Dialog Message | Is this what you meant |
+| click element | id=btn_prompt |
+| check | prompt Dialog Message is | Is this what you meant | true |
+| click element | id=btn_prompt |
+| store prompt dialog message in | prompt |
+| answer | yes | On Next Prompt |
+| click element | id=btn_prompt |
+| check | has Prompt Occurred | true |
+| check | prompt Dialog Message | Is this what you meant |
+| close Prompt Dialog |
+!3 Confirmation Dialog APIs
+| script | Base Fitnium Fixture |
+| choose Cancel On Next Confirmation |
+| click element | id=btn_confirm |
+| check | has Confirmation Occurred | true |
+| close confirmation Dialog |
+| choose Cancel On Next Confirmation |
+| click element | id=btn_confirm |
+| check | confirmation Dialog Message | Do you want to continue ? |
+| choose Cancel On Next Confirmation |
+| click element | id=btn_confirm |
+| check | confirmation Dialog Message is | Do you want to continue ? | true |
+| choose Cancel On Next Confirmation |
+| click element | id=btn_confirm |
+| store confirmation dialog message in | confirm |
+| choose cancel On Next Confirmation |
+| click element | id=btn_confirm |
+| check | has Confirmation Occurred | true |
+| check | confirmation Dialog Message | Do you want to continue ? |
+
+
+
+
+
